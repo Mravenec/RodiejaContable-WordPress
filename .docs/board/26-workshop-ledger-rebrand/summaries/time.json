@@ -32,15 +32,32 @@
       ]
     },
     "APP-26-3": {
-      "active_ms": 0,
+      "active_ms": 68088,
       "paused": false,
-      "open": {
-        "start": "2026-11-10T15:18:43.877Z",
-        "last": "2026-11-10T15:19:51.561Z",
-        "agent": "plugin-agent-1",
-        "event": "checklist"
-      },
-      "segments": []
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T15:18:43.877Z",
+          "end": "2026-11-10T15:19:51.965Z",
+          "ms": 68088,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        }
+      ]
+    },
+    "APP-26-4": {
+      "active_ms": 12430,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T15:19:59.276Z",
+          "end": "2026-11-10T15:20:11.706Z",
+          "ms": 12430,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        }
+      ]
     }
   },
   "land": {
