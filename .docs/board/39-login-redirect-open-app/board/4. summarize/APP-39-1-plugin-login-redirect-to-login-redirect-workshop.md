@@ -9,6 +9,7 @@ blocked_by: []
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T17:07:00.194Z"
+summary_html: summaries/39-login-redirect-open-app-beginner.html
 ---
 ## Objetivo
 
@@ -52,6 +53,8 @@ http_ok: true
 
 ## History
 
+- 2026-11-10T17:13:17.596Z epic summary HTML → summaries/39-login-redirect-open-app-beginner.html
+- 2026-11-10T17:13:17.574Z moved done → summarize
 - 2026-11-10T17:08:03.488Z moved testing → done
 - 2026-11-10T17:07:35.523Z checklist item 2 marked
 - 2026-11-10T17:07:29.170Z moved doing → testing

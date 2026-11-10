@@ -1,0 +1,13 @@
+{
+  "status": "landed",
+  "started_at": "2026-11-10T17:13:47.480Z",
+  "finished_at": "2026-11-10T17:14:10.133Z",
+  "merge_commit": "0a700e7900d1381c30c05eacc55aa8ccf2dd4188",
+  "conflicts": [],
+  "smoke_ok": true,
+  "smoke_at": "2026-11-10T17:13:55.765Z",
+  "git": "git push origin main",
+  "note": "Login from public header/footer now redirects to Workshop Ledger hub (Open app). Verified: Login href redirect_to=admin.php?page=workshop-ledger; LoginChrome::login_redirect(home) → hub; layer-audit green.",
+  "recorded_at": "2026-11-10T17:14:03.676Z",
+  "pushed_at": "2026-11-10T17:14:10.133Z"
+}

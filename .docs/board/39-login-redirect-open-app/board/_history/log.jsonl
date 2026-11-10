@@ -7,3 +7,4 @@
 {"at":"2026-11-10T17:07:35.525Z","type":"checklist","issueId":"APP-39-1","item":"2"}
 {"at":"2026-11-10T17:08:02.567Z","type":"evidence","issueId":"APP-39-1","title":"GATE_HTTP login redirect"}
 {"at":"2026-11-10T17:08:03.491Z","type":"move","issueId":"APP-39-1","from":"testing","to":"done"}
+{"at":"2026-11-10T17:13:17.597Z","type":"move","issueId":"APP-39-1","from":"done","to":"summarize","summary_html":"summaries/39-login-redirect-open-app-beginner.html"}

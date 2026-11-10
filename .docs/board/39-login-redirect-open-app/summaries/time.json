@@ -14,15 +14,30 @@
           "ms": 63296,
           "close": "done",
           "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T17:13:17.577Z",
+          "end": "2026-11-10T17:13:17.577Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": "plugin-agent-1"
         }
       ]
     }
   },
   "land": {
-    "started_at": null,
-    "finished_at": null,
+    "started_at": "2026-11-10T17:13:47.491Z",
+    "finished_at": "2026-11-10T17:14:10.134Z",
     "paused": false,
     "open": null,
-    "segments": []
+    "segments": [
+      {
+        "start": "2026-11-10T17:13:47.491Z",
+        "end": "2026-11-10T17:14:10.134Z",
+        "ms": 22643,
+        "close": "land-finish",
+        "agent": "land-agent"
+      }
+    ]
   }
 }
