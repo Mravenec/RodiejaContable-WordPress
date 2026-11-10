@@ -69,7 +69,7 @@ final class HeaderAuthLinks {
 		}
 
 		return $this->item(
-			wp_login_url( home_url( '/' ) ),
+			wp_login_url( admin_url( 'admin.php?page=workshop-ledger' ) ),
 			__( 'Login', 'workshop-ledger' )
 		);
 	}
