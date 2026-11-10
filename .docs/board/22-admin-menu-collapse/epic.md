@@ -5,7 +5,7 @@
 | Id | 22 |
 | Slug | admin-menu-collapse |
 | Status | in_progress |
-| Progress | **66%** (0/1 in summarize · column + checklist) |
+| Progress | **83%** (0/1 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -31,11 +31,11 @@ _empty_
 
 ### 2. testing
 
-- `APP-22-1` plugin: Collapse current admin submenu on parent re-click _(role:plugin)_
+_empty_
 
 ### 3. done
 
-_empty_
+- `APP-22-1` plugin: Collapse current admin submenu on parent re-click _(role:plugin)_
 
 ### 4. summarize
 

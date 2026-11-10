@@ -34,6 +34,7 @@ toggle rodieja-submenu-collapsed on current menu-top click
 
 ## History
 
+- 2026-11-10T08:07:00.910Z moved testing → done
 - 2026-11-10T08:07:00.568Z checklist item 2 marked
 - 2026-11-10T08:07:00.492Z moved doing → testing
 - 2026-11-10T08:07:00.293Z checklist item 1 marked
