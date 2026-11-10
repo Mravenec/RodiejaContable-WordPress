@@ -18,15 +18,18 @@
       ]
     },
     "APP-19-2": {
-      "active_ms": 0,
+      "active_ms": 71033,
       "paused": false,
-      "open": {
-        "start": "2026-11-10T07:41:29.789Z",
-        "last": "2026-11-10T07:42:40.453Z",
-        "agent": "plugin-agent-1",
-        "event": "checklist"
-      },
-      "segments": []
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T07:41:29.789Z",
+          "end": "2026-11-10T07:42:40.822Z",
+          "ms": 71033,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        }
+      ]
     }
   },
   "land": {

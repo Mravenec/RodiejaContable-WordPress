@@ -35,6 +35,7 @@ __('Vehicles') / __('View by Generations')
 
 ## History
 
+- 2026-11-10T07:42:40.820Z moved testing → done
 - 2026-11-10T07:42:40.452Z checklist item 2 marked
 - 2026-11-10T07:42:40.369Z moved doing → testing
 - 2026-11-10T07:42:40.172Z checklist item 1 marked

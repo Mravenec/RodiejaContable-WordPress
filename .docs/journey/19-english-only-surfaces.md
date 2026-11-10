@@ -1,6 +1,6 @@
 # Epic 19 — english-only-surfaces
 
-**Status:** In progress · Board: `.linear/epics/19-english-only-surfaces/` · Snapshot: `.docs/board/19-english-only-surfaces/`
+**Status:** Done · LANDED on `origin/main` · Board: `.linear/epics/19-english-only-surfaces/` · Snapshot: `.docs/board/19-english-only-surfaces/`
 
 ## Title
 
@@ -12,36 +12,32 @@ Spanish/Spanglish leaked into journeys and wp-admin labels. Product must be Engl
 
 ## What we did
 
-- [x] Adopt english-only rule/skill/spec/adapters
-- [x] Rewrite journeys 1–18 (+ epic titles) in English
-- [x] Translate plugin admin __() strings to English
-- [x] Land origin/main
+- [x] Adopt english-only rule/skill/spec/adapters (parity with harness)
+- [x] Rewrite journeys 1–19 (+ epic meta titles) in English
+- [x] Translate plugin `__()` admin UI strings to English
+- [x] Land to origin/main
 
 ## Acceptance
 
-- Given agent-authored journeys or Rodieja admin labels
-- Expect English
+- Given any journey or Rodieja admin menu label authored by agents
+- Expect English prose/labels
 - Read-Only repo untouched
 
-## Agent notes (constraints / edge cases)
+## Agent notes
 
 CPT/meta keys may stay Spanish-derived; labels English. Never edit Read-Only.
 
-## Board issues (= tickets)
+## Board issues
 
 - APP-19-1 English journeys + meta titles
 - APP-19-2 plugin __() UI English
 
 ## How to verify
 
-- `Spot-check journeys`
-- `Spot-check AdminMenu/PostTypeRegistrar`
-- `No Read-Only paths in diff`
-
-```bash
-node .linear/scripts/board.mjs progress --epic 19
-```
+- Spot-check journeys for Spanish
+- Spot-check AdminMenu / PostTypeRegistrar `__()` strings
+- Diff must not touch Read-Only
 
 ## Outcome
 
-(At land.)
+English-only surfaces shipped on origin/main. Harness and Rodieja share the english-only rule/skill/spec.
