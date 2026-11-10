@@ -4,15 +4,18 @@
   "finished_at": null,
   "issues": {
     "APP-39-1": {
-      "active_ms": 0,
+      "active_ms": 63296,
       "paused": false,
-      "open": {
-        "start": "2026-11-10T17:07:00.196Z",
-        "last": "2026-11-10T17:08:02.568Z",
-        "agent": "plugin-agent-1",
-        "event": "evidence"
-      },
-      "segments": []
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T17:07:00.196Z",
+          "end": "2026-11-10T17:08:03.492Z",
+          "ms": 63296,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        }
+      ]
     }
   },
   "land": {

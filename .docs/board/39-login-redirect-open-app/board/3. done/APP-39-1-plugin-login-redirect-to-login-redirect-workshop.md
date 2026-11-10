@@ -52,6 +52,7 @@ http_ok: true
 
 ## History
 
+- 2026-11-10T17:08:03.488Z moved testing → done
 - 2026-11-10T17:07:35.523Z checklist item 2 marked
 - 2026-11-10T17:07:29.170Z moved doing → testing
 - 2026-11-10T17:07:29.079Z checklist item 1 marked
