@@ -1,0 +1,9 @@
+id: 27
+slug: vehicle-add-readonly-form
+title: "Add Vehicle: classic form like Read-Only (native cascade)"
+color: "#b45309"
+status: in_progress
+created_at: "2026-11-10T15:30:34.951Z"
+updated_at: "2026-11-10T15:32:18.595Z"
+summary_html: summaries/27-vehicle-add-readonly-form-beginner.html
+summary_updated_at: "2026-11-10T15:32:18.600Z"

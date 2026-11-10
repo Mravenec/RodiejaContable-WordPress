@@ -10,6 +10,7 @@ namespace WorkshopLedger\Providers;
 use WorkshopLedger\Admin\AdminAssets;
 use WorkshopLedger\Admin\AdminChrome;
 use WorkshopLedger\Admin\AdminMenu;
+use WorkshopLedger\Admin\ClassicEditorForce;
 use WorkshopLedger\Admin\CptListChrome;
 use WorkshopLedger\Admin\CatalogAdminFilters;
 use WorkshopLedger\Admin\CatalogListColumns;
@@ -105,6 +106,7 @@ final class ServiceProvider {
 		$container->set( MetaRegistrar::class, static fn() => new MetaRegistrar() );
 		$container->set( AdminAssets::class, static fn() => new AdminAssets() );
 		$container->set( AdminChrome::class, static fn() => new AdminChrome() );
+		$container->set( ClassicEditorForce::class, static fn() => new ClassicEditorForce() );
 		$container->set(
 			CptListChrome::class,
 			static fn( Container $c ) => new CptListChrome(

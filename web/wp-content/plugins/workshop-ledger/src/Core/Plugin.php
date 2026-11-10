@@ -12,6 +12,7 @@ namespace WorkshopLedger\Core;
 use WorkshopLedger\Admin\AdminAssets;
 use WorkshopLedger\Admin\AdminChrome;
 use WorkshopLedger\Admin\AdminMenu;
+use WorkshopLedger\Admin\ClassicEditorForce;
 use WorkshopLedger\Admin\CptListChrome;
 use WorkshopLedger\Admin\CatalogAdminFilters;
 use WorkshopLedger\Admin\CatalogListColumns;
@@ -83,6 +84,7 @@ final class Plugin {
 		$this->container->get( MetaRegistrar::class )->register();
 		$this->container->get( AdminAssets::class )->register();
 		$this->container->get( AdminChrome::class )->register();
+		$this->container->get( ClassicEditorForce::class )->register();
 		$this->container->get( CptListChrome::class )->register();
 		$this->container->get( HeaderAuthLinks::class )->register();
 		$this->container->get( LoginChrome::class )->register();
