@@ -34,6 +34,7 @@ Layer artifacts for the living HTML (code, commands, results). Compact windows �
 
 ## History
 
+- 2026-11-10T07:49:49.099Z moved testing → done
 - 2026-11-10T07:49:48.766Z checklist item 2 marked
 - 2026-11-10T07:49:48.687Z moved doing → testing
 - 2026-11-10T07:49:48.496Z checklist item 1 marked
