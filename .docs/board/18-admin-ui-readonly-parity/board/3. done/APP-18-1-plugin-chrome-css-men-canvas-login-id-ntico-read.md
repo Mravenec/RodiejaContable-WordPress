@@ -4,6 +4,8 @@ title: Plugin · chrome CSS menú/canvas/login idéntico Read-Only
 role: plugin
 epic: 18
 estimate: 1
+http_ok: true
+tests_ok: true
 blocked_by: []
 blocks: []
 agent: plugin-agent-1
@@ -32,6 +34,7 @@ body.rodieja-contable-admin #adminmenuback{background:#001529} /* Ant sider */
 
 ## History
 
+- 2026-11-10T07:33:59.623Z moved testing → done
 - 2026-11-10T07:33:44.986Z checklist item 2 marked
 - 2026-11-10T07:33:44.908Z moved doing → testing
 - 2026-11-10T07:33:44.681Z checklist item 1 marked
