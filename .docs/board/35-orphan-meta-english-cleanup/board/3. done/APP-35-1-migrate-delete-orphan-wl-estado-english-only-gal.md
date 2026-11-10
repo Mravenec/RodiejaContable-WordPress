@@ -34,6 +34,7 @@ OrphanEstadoMigrate::maybe_run(); // wl_estado → wl_estado_vehiculo then delet
 
 ## History
 
+- 2026-11-10T16:24:00.061Z moved testing → done
 - 2026-11-10T16:23:59.632Z checklist item 2 marked
 - 2026-11-10T16:23:59.554Z moved doing → testing
 - 2026-11-10T16:23:59.356Z checklist item 1 marked

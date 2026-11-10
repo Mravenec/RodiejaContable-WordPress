@@ -4,3 +4,4 @@
 {"at":"2026-11-10T16:23:59.440Z","type":"evidence","issueId":"APP-35-1","title":"orphan-migrate"}
 {"at":"2026-11-10T16:23:59.556Z","type":"move","issueId":"APP-35-1","from":"doing","to":"testing"}
 {"at":"2026-11-10T16:23:59.633Z","type":"checklist","issueId":"APP-35-1","item":"2"}
+{"at":"2026-11-10T16:24:00.063Z","type":"move","issueId":"APP-35-1","from":"testing","to":"done"}
