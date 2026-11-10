@@ -1,0 +1,12 @@
+{
+  "status": "smoke-main",
+  "started_at": "2026-11-10T14:13:42.615Z",
+  "finished_at": null,
+  "merge_commit": "ca799e0d270c8fd660947c90f494dfe167d2783a",
+  "conflicts": [],
+  "smoke_ok": null,
+  "smoke_at": null,
+  "git": "git push origin main",
+  "note": null,
+  "recorded_at": null
+}
