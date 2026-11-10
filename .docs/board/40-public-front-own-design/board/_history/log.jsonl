@@ -1,0 +1,8 @@
+{"at":"2026-11-10T19:03:02.510Z","type":"create","issueId":"APP-40-1","column":"backlog"}
+{"at":"2026-11-10T19:03:02.627Z","type":"claim","issueId":"APP-40-1","agent":"plugin-agent-1"}
+{"at":"2026-11-10T19:04:02.433Z","type":"evidence","issueId":"APP-40-1","title":"public landing"}
+{"at":"2026-11-10T19:04:02.529Z","type":"checklist","issueId":"APP-40-1","item":"1"}
+{"at":"2026-11-10T19:04:02.627Z","type":"move","issueId":"APP-40-1","from":"doing","to":"testing"}
+{"at":"2026-11-10T19:04:02.721Z","type":"evidence","issueId":"APP-40-1","title":"front smoke"}
+{"at":"2026-11-10T19:04:02.817Z","type":"checklist","issueId":"APP-40-1","item":"2"}
+{"at":"2026-11-10T19:04:03.503Z","type":"move","issueId":"APP-40-1","from":"testing","to":"done"}
