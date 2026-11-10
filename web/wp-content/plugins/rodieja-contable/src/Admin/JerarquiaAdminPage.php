@@ -37,37 +37,37 @@ final class JerarquiaAdminPage {
 		?>
 		<div class="wrap rodieja-admin-wrap">
 			<div class="rodieja-page-head">
-				<h1><?php echo $this->escaper->html( __( 'Ver por Generaciones', 'rodieja-contable' ) ); ?></h1>
-				<p class="rodieja-admin-lede"><?php echo $this->escaper->html( __( 'Árbol Marca → Modelo → Generación → Vehículo — misma vista que Rodieja Contable Read-Only, con CPT y meta nativos.', 'rodieja-contable' ) ); ?></p>
+				<h1><?php echo $this->escaper->html( __( 'View by Generations', 'rodieja-contable' ) ); ?></h1>
+				<p class="rodieja-admin-lede"><?php echo $this->escaper->html( __( 'Brand → Model → Generation → Vehicle tree — same view as Rodieja Contable Read-Only, with native CPT and meta.', 'rodieja-contable' ) ); ?></p>
 			</div>
 
 			<div class="rodieja-toolbar">
-				<strong><?php echo $this->escaper->html( sprintf( /* translators: %d brand count */ _n( '%d marca', '%d marcas', $marca_n, 'rodieja-contable' ), $marca_n ) ); ?></strong>
-				<p class="rodieja-toolbar__hint"><?php echo $this->escaper->html( __( 'Expande cada nivel · Editar abre el CPT correspondiente', 'rodieja-contable' ) ); ?></p>
-				<a class="button button-primary" href="<?php echo $this->escaper->url( admin_url( 'edit.php?post_type=rodieja_vehiculo' ) ); ?>"><?php echo $this->escaper->html( __( 'Lista de Vehículos', 'rodieja-contable' ) ); ?></a>
+				<strong><?php echo $this->escaper->html( sprintf( /* translators: %d brand count */ _n( '%d brand', '%d brands', $marca_n, 'rodieja-contable' ), $marca_n ) ); ?></strong>
+				<p class="rodieja-toolbar__hint"><?php echo $this->escaper->html( __( 'Expand each level · Edit opens the matching CPT', 'rodieja-contable' ) ); ?></p>
+				<a class="button button-primary" href="<?php echo $this->escaper->url( admin_url( 'edit.php?post_type=rodieja_vehiculo' ) ); ?>"><?php echo $this->escaper->html( __( 'Vehicle list', 'rodieja-contable' ) ); ?></a>
 			</div>
 
 			<?php if ( empty( $tree ) ) : ?>
 				<div class="rodieja-admin-card">
-					<p><?php echo $this->escaper->html( __( 'No hay marcas aún. Crea Marcas, Modelos, Generaciones y Vehículos en el menú Vehículos.', 'rodieja-contable' ) ); ?></p>
+					<p><?php echo $this->escaper->html( __( 'No brands yet. Create Brands, Models, Generations, and Vehicles under Vehicles.', 'rodieja-contable' ) ); ?></p>
 				</div>
 			<?php else : ?>
-				<div class="rodieja-hierarchy" role="tree" aria-label="<?php echo $this->escaper->attr( __( 'Jerarquía de vehículos', 'rodieja-contable' ) ); ?>">
+				<div class="rodieja-hierarchy" role="tree" aria-label="<?php echo $this->escaper->attr( __( 'Vehicle hierarchy', 'rodieja-contable' ) ); ?>">
 					<?php foreach ( $tree as $marca ) : ?>
 						<details class="rodieja-hierarchy__marca" open>
 							<summary>
 								<span class="dashicons dashicons-tag" aria-hidden="true"></span>
 								<strong><?php echo $this->escaper->html( (string) $marca['title'] ); ?></strong>
-								<span class="rodieja-hierarchy__count"><?php echo $this->escaper->html( (string) count( $marca['modelos'] ) ); ?> <?php echo $this->escaper->html( __( 'modelos', 'rodieja-contable' ) ); ?></span>
-								<a class="rodieja-hierarchy__edit" href="<?php echo $this->escaper->url( get_edit_post_link( (int) $marca['id'], 'raw' ) ?: '#' ); ?>"><?php echo $this->escaper->html( __( 'Editar', 'rodieja-contable' ) ); ?></a>
+								<span class="rodieja-hierarchy__count"><?php echo $this->escaper->html( (string) count( $marca['modelos'] ) ); ?> <?php echo $this->escaper->html( __( 'models', 'rodieja-contable' ) ); ?></span>
+								<a class="rodieja-hierarchy__edit" href="<?php echo $this->escaper->url( get_edit_post_link( (int) $marca['id'], 'raw' ) ?: '#' ); ?>"><?php echo $this->escaper->html( __( 'Edit', 'rodieja-contable' ) ); ?></a>
 							</summary>
 							<?php foreach ( $marca['modelos'] as $modelo ) : ?>
 								<details class="rodieja-hierarchy__modelo" open>
 									<summary>
 										<span class="dashicons dashicons-category" aria-hidden="true"></span>
 										<?php echo $this->escaper->html( (string) $modelo['title'] ); ?>
-										<span class="rodieja-hierarchy__count"><?php echo $this->escaper->html( (string) count( $modelo['generaciones'] ) ); ?> <?php echo $this->escaper->html( __( 'generaciones', 'rodieja-contable' ) ); ?></span>
-										<a class="rodieja-hierarchy__edit" href="<?php echo $this->escaper->url( get_edit_post_link( (int) $modelo['id'], 'raw' ) ?: '#' ); ?>"><?php echo $this->escaper->html( __( 'Editar', 'rodieja-contable' ) ); ?></a>
+										<span class="rodieja-hierarchy__count"><?php echo $this->escaper->html( (string) count( $modelo['generaciones'] ) ); ?> <?php echo $this->escaper->html( __( 'generations', 'rodieja-contable' ) ); ?></span>
+										<a class="rodieja-hierarchy__edit" href="<?php echo $this->escaper->url( get_edit_post_link( (int) $modelo['id'], 'raw' ) ?: '#' ); ?>"><?php echo $this->escaper->html( __( 'Edit', 'rodieja-contable' ) ); ?></a>
 									</summary>
 									<?php foreach ( $modelo['generaciones'] as $gen ) : ?>
 										<details class="rodieja-hierarchy__gen" open>
@@ -77,11 +77,11 @@ final class JerarquiaAdminPage {
 												<?php if ( '' !== (string) $gen['anio_inicio'] || '' !== (string) $gen['anio_fin'] ) : ?>
 													<span class="rodieja-hierarchy__years"><?php echo $this->escaper->html( (string) $gen['anio_inicio'] ); ?>–<?php echo $this->escaper->html( (string) $gen['anio_fin'] ); ?></span>
 												<?php endif; ?>
-												<span class="rodieja-hierarchy__count"><?php echo $this->escaper->html( (string) count( $gen['vehiculos'] ) ); ?> <?php echo $this->escaper->html( __( 'vehículos', 'rodieja-contable' ) ); ?></span>
-												<a class="rodieja-hierarchy__edit" href="<?php echo $this->escaper->url( get_edit_post_link( (int) $gen['id'], 'raw' ) ?: '#' ); ?>"><?php echo $this->escaper->html( __( 'Editar', 'rodieja-contable' ) ); ?></a>
+												<span class="rodieja-hierarchy__count"><?php echo $this->escaper->html( (string) count( $gen['vehiculos'] ) ); ?> <?php echo $this->escaper->html( __( 'vehicles', 'rodieja-contable' ) ); ?></span>
+												<a class="rodieja-hierarchy__edit" href="<?php echo $this->escaper->url( get_edit_post_link( (int) $gen['id'], 'raw' ) ?: '#' ); ?>"><?php echo $this->escaper->html( __( 'Edit', 'rodieja-contable' ) ); ?></a>
 											</summary>
 											<?php if ( empty( $gen['vehiculos'] ) ) : ?>
-												<p class="rodieja-hierarchy__empty"><?php echo $this->escaper->html( __( 'Sin vehículos en esta generación.', 'rodieja-contable' ) ); ?></p>
+												<p class="rodieja-hierarchy__empty"><?php echo $this->escaper->html( __( 'No vehicles in this generation.', 'rodieja-contable' ) ); ?></p>
 											<?php else : ?>
 												<ul class="rodieja-hierarchy__vehiculos">
 													<?php foreach ( $gen['vehiculos'] as $veh ) : ?>

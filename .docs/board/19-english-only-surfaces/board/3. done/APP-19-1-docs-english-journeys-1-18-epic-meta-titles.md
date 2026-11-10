@@ -33,6 +33,7 @@ Status: Done · Title: Admin UI: maximum visual fidelity...
 
 ## History
 
+- 2026-11-10T07:41:26.434Z moved testing → done
 - 2026-11-10T07:41:26.055Z checklist item 2 marked
 - 2026-11-10T07:41:25.977Z moved doing → testing
 - 2026-11-10T07:41:25.785Z checklist item 1 marked

@@ -5,3 +5,9 @@
 {"at":"2026-11-10T07:41:25.867Z","type":"evidence","issueId":"APP-19-1","title":"english-journeys"}
 {"at":"2026-11-10T07:41:25.978Z","type":"move","issueId":"APP-19-1","from":"doing","to":"testing"}
 {"at":"2026-11-10T07:41:26.056Z","type":"checklist","issueId":"APP-19-1","item":"2"}
+{"at":"2026-11-10T07:41:26.435Z","type":"move","issueId":"APP-19-1","from":"testing","to":"done"}
+{"at":"2026-11-10T07:41:29.789Z","type":"claim","issueId":"APP-19-2","agent":"plugin-agent-1"}
+{"at":"2026-11-10T07:42:40.173Z","type":"checklist","issueId":"APP-19-2","item":"1"}
+{"at":"2026-11-10T07:42:40.254Z","type":"evidence","issueId":"APP-19-2","title":"ui-english"}
+{"at":"2026-11-10T07:42:40.371Z","type":"move","issueId":"APP-19-2","from":"doing","to":"testing"}
+{"at":"2026-11-10T07:42:40.452Z","type":"checklist","issueId":"APP-19-2","item":"2"}

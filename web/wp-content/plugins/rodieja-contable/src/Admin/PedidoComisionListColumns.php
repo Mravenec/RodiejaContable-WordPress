@@ -25,8 +25,8 @@ final class PedidoComisionListColumns {
 	 * @return array<string, string>
 	 */
 	public function cols( array $cols ): array {
-		$cols['rodieja_comision_pagada'] = __( 'Comisión pagada', 'rodieja-contable' );
-		$cols['rodieja_comision_monto']  = __( 'Comisión', 'rodieja-contable' );
+		$cols['rodieja_comision_pagada'] = __( 'Commission pagada', 'rodieja-contable' );
+		$cols['rodieja_comision_monto']  = __( 'Commission', 'rodieja-contable' );
 		return $cols;
 	}
 
@@ -34,7 +34,7 @@ final class PedidoComisionListColumns {
 		if ( 'rodieja_comision_pagada' === $col ) {
 			$paid = (string) get_post_meta( $post_id, 'rodieja_comision_pagada', true );
 			$yes  = in_array( $paid, array( '1', 'yes', 'si', 'sí' ), true );
-			echo $this->escaper->html( $yes ? __( 'Sí', 'rodieja-contable' ) : __( 'No', 'rodieja-contable' ) );
+			echo $this->escaper->html( $yes ? __( 'Yes', 'rodieja-contable' ) : __( 'No', 'rodieja-contable' ) );
 			return;
 		}
 		if ( 'rodieja_comision_monto' === $col ) {

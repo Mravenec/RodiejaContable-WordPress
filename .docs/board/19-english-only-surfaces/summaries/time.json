@@ -4,12 +4,26 @@
   "finished_at": null,
   "issues": {
     "APP-19-1": {
+      "active_ms": 72440,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T07:40:13.996Z",
+          "end": "2026-11-10T07:41:26.436Z",
+          "ms": 72440,
+          "close": "done",
+          "agent": "orchestrator-1"
+        }
+      ]
+    },
+    "APP-19-2": {
       "active_ms": 0,
       "paused": false,
       "open": {
-        "start": "2026-11-10T07:40:13.996Z",
-        "last": "2026-11-10T07:41:26.056Z",
-        "agent": "orchestrator-1",
+        "start": "2026-11-10T07:41:29.789Z",
+        "last": "2026-11-10T07:42:40.453Z",
+        "agent": "plugin-agent-1",
         "event": "checklist"
       },
       "segments": []

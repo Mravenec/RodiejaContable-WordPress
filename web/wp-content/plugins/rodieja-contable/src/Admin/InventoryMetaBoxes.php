@@ -31,7 +31,7 @@ final class InventoryMetaBoxes {
 	public function add_boxes(): void {
 		add_meta_box(
 			'rodieja_repuesto_inv',
-			__( 'Inventario · Repuesto', 'rodieja-contable' ),
+			__( 'Inventory · Part', 'rodieja-contable' ),
 			array( $this, 'render' ),
 			'rodieja_repuesto',
 			'normal',
@@ -48,7 +48,7 @@ final class InventoryMetaBoxes {
 		$precio   = get_post_meta( $post->ID, 'rodieja_precio', true );
 		$stock    = get_post_meta( $post->ID, 'rodieja_stock', true );
 
-		echo '<p><label>' . $this->escaper->html( __( 'Vehículo origen', 'rodieja-contable' ) ) . '</label><br />';
+		echo '<p><label>' . $this->escaper->html( __( 'Vehicle origen', 'rodieja-contable' ) ) . '</label><br />';
 		$vehicles = get_posts(
 			array(
 				'post_type'      => 'rodieja_vehiculo',
@@ -69,11 +69,11 @@ final class InventoryMetaBoxes {
 			);
 		}
 		echo '</select></p>';
-		echo '<p><label>' . $this->escaper->html( __( 'Precio', 'rodieja-contable' ) ) . '</label><br />';
+		echo '<p><label>' . $this->escaper->html( __( 'Price', 'rodieja-contable' ) ) . '</label><br />';
 		echo '<input type="number" step="0.01" name="rodieja_precio" value="' . $this->escaper->attr( (string) $precio ) . '" class="regular-text" /></p>';
 		echo '<p><label>' . $this->escaper->html( __( 'Stock', 'rodieja-contable' ) ) . '</label><br />';
 		echo '<input type="number" name="rodieja_stock" value="' . $this->escaper->attr( (string) $stock ) . '" class="small-text" /></p>';
-		echo '<p class="description">' . $this->escaper->html( __( 'Asigna la taxonomía Parte en el panel lateral (nativo).', 'rodieja-contable' ) ) . '</p>';
+		echo '<p class="description">' . $this->escaper->html( __( 'Assign the Part taxonomy in the side panel (native).', 'rodieja-contable' ) ) . '</p>';
 	}
 
 	public function save( int $post_id, \WP_Post $post ): void {
@@ -97,8 +97,8 @@ final class InventoryMetaBoxes {
 	 * @return array<string, string>
 	 */
 	public function columns( array $cols ): array {
-		$cols['rodieja_vehiculo'] = __( 'Vehículo', 'rodieja-contable' );
-		$cols['rodieja_precio']   = __( 'Precio', 'rodieja-contable' );
+		$cols['rodieja_vehiculo'] = __( 'Vehicle', 'rodieja-contable' );
+		$cols['rodieja_precio']   = __( 'Price', 'rodieja-contable' );
 		$cols['rodieja_stock']    = __( 'Stock', 'rodieja-contable' );
 		return $cols;
 	}

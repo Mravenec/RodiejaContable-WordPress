@@ -4,11 +4,13 @@ title: Plugin · translate admin __() UI strings to English
 role: plugin
 epic: 19
 estimate: 1
+http_ok: true
+tests_ok: true
 blocked_by:
   - APP-19-1
 blocks: []
-agent: null
-claimed_at: null
+agent: plugin-agent-1
+claimed_at: "2026-11-10T07:41:29.787Z"
 ---
 ## Objetivo
 
@@ -18,13 +20,23 @@ Plugin · translate admin __() UI strings to English
 
 Mark in order, one `checklist <id> n` command per item, immediately after that step is finished.
 
-- [ ] Implement
-- [ ] Verify locally (in testing — after `move testing`)
+- [x] Implement
+- [x] Verify locally (in testing — after `move testing`)
 
 ## Evidence
 
 Layer artifacts for the living HTML (code, commands, results). Compact windows — not the whole file. After each checklist item: `evidence <id> --title …`.
 
+### ui-english
+
+```php
+__('Vehicles') / __('View by Generations')
+```
+
 ## History
 
+- 2026-11-10T07:42:40.452Z checklist item 2 marked
+- 2026-11-10T07:42:40.369Z moved doing → testing
+- 2026-11-10T07:42:40.172Z checklist item 1 marked
+- 2026-11-10T07:41:29.788Z claimed by plugin-agent-1 → doing
 - 2026-11-10T07:40:13.906Z created → backlog

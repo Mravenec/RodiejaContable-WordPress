@@ -31,7 +31,7 @@ final class FinanceMetaBoxes {
 	public function add_boxes(): void {
 		add_meta_box(
 			'rodieja_tx_meta',
-			__( 'Finanzas · Transacción', 'rodieja-contable' ),
+			__( 'Finance · Transaction', 'rodieja-contable' ),
 			array( $this, 'render' ),
 			'rodieja_transaccion',
 			'normal',
@@ -50,19 +50,19 @@ final class FinanceMetaBoxes {
 		$vehiculo  = (int) get_post_meta( $post->ID, 'rodieja_vehiculo_id', true );
 		$empleado  = (int) get_post_meta( $post->ID, 'rodieja_empleado_id', true );
 
-		echo '<p><label>' . $this->escaper->html( __( 'Monto', 'rodieja-contable' ) ) . '</label><br />';
+		echo '<p><label>' . $this->escaper->html( __( 'Amount', 'rodieja-contable' ) ) . '</label><br />';
 		echo '<input type="number" step="0.01" name="rodieja_monto" value="' . $this->escaper->attr( (string) $monto ) . '" class="regular-text" /></p>';
-		echo '<p><label>' . $this->escaper->html( __( 'Fecha', 'rodieja-contable' ) ) . '</label><br />';
+		echo '<p><label>' . $this->escaper->html( __( 'Date', 'rodieja-contable' ) ) . '</label><br />';
 		echo '<input type="date" name="rodieja_fecha" value="' . $this->escaper->attr( $fecha ) . '" /></p>';
 		echo '<p><label>' . $this->escaper->html( __( 'Sentido', 'rodieja-contable' ) ) . '</label><br />';
 		echo '<select name="rodieja_sentido">';
-		foreach ( array( 'ingreso' => __( 'Ingreso', 'rodieja-contable' ), 'egreso' => __( 'Egreso', 'rodieja-contable' ) ) as $k => $lab ) {
+		foreach ( array( 'ingreso' => __( 'Income', 'rodieja-contable' ), 'egreso' => __( 'Expense', 'rodieja-contable' ) ) as $k => $lab ) {
 			printf( '<option value="%1$s" %2$s>%3$s</option>', $this->escaper->attr( $k ), selected( $sentido, $k, false ), $this->escaper->html( $lab ) );
 		}
 		echo '</select></p>';
-		$this->select_posts( 'rodieja_vehiculo', 'rodieja_vehiculo_id', $vehiculo, __( 'Vehículo', 'rodieja-contable' ) );
-		$this->select_posts( 'rodieja_empleado', 'rodieja_empleado_id', $empleado, __( 'Empleado', 'rodieja-contable' ) );
-		echo '<p class="description">' . $this->escaper->html( __( 'Tipo (Ingreso/Egreso tax) en el panel lateral nativo.', 'rodieja-contable' ) ) . '</p>';
+		$this->select_posts( 'rodieja_vehiculo', 'rodieja_vehiculo_id', $vehiculo, __( 'Vehicle', 'rodieja-contable' ) );
+		$this->select_posts( 'rodieja_empleado', 'rodieja_empleado_id', $empleado, __( 'Employee', 'rodieja-contable' ) );
+		echo '<p class="description">' . $this->escaper->html( __( 'Tipo (Income/Expense tax) en el panel lateral native.', 'rodieja-contable' ) ) . '</p>';
 	}
 
 	public function save( int $post_id, \WP_Post $post ): void {
@@ -96,10 +96,10 @@ final class FinanceMetaBoxes {
 	 * @return array<string, string>
 	 */
 	public function columns( array $cols ): array {
-		$cols['rodieja_monto']    = __( 'Monto', 'rodieja-contable' );
+		$cols['rodieja_monto']    = __( 'Amount', 'rodieja-contable' );
 		$cols['rodieja_sentido']  = __( 'Sentido', 'rodieja-contable' );
-		$cols['rodieja_fecha']    = __( 'Fecha', 'rodieja-contable' );
-		$cols['rodieja_vehiculo'] = __( 'Vehículo', 'rodieja-contable' );
+		$cols['rodieja_fecha']    = __( 'Date', 'rodieja-contable' );
+		$cols['rodieja_vehiculo'] = __( 'Vehicle', 'rodieja-contable' );
 		return $cols;
 	}
 

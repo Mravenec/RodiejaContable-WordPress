@@ -48,8 +48,8 @@ final class PedidoMetaBoxes {
 	}
 
 	public function add_boxes(): void {
-		add_meta_box( 'rodieja_pedido_audatex', __( 'Pedido · datos', 'rodieja-contable' ), array( $this, 'render_pedido' ), 'rodieja_pedido', 'normal', 'high' );
-		add_meta_box( 'rodieja_pedido_item_box', __( 'Ítem · vínculo', 'rodieja-contable' ), array( $this, 'render_item' ), 'rodieja_pedido_item', 'normal', 'high' );
+		add_meta_box( 'rodieja_pedido_audatex', __( 'Order · datos', 'rodieja-contable' ), array( $this, 'render_pedido' ), 'rodieja_pedido', 'normal', 'high' );
+		add_meta_box( 'rodieja_pedido_item_box', __( 'Item · link', 'rodieja-contable' ), array( $this, 'render_item' ), 'rodieja_pedido_item', 'normal', 'high' );
 	}
 
 	public function render_pedido( \WP_Post $post ): void {
@@ -76,14 +76,14 @@ final class PedidoMetaBoxes {
 		$this->nonce->field( 'rodieja_pedido_item_meta' );
 		$pedido   = (int) get_post_meta( $post->ID, 'rodieja_pedido_id', true );
 		$repuesto = (int) get_post_meta( $post->ID, 'rodieja_repuesto_id', true );
-		$this->select_cpt( 'rodieja_pedido', 'rodieja_pedido_id', $pedido, __( 'Pedido', 'rodieja-contable' ) );
-		$this->select_cpt( 'rodieja_repuesto', 'rodieja_repuesto_id', $repuesto, __( 'Repuesto', 'rodieja-contable' ) );
+		$this->select_cpt( 'rodieja_pedido', 'rodieja_pedido_id', $pedido, __( 'Order', 'rodieja-contable' ) );
+		$this->select_cpt( 'rodieja_repuesto', 'rodieja_repuesto_id', $repuesto, __( 'Part', 'rodieja-contable' ) );
 		foreach ( array(
-			'rodieja_precio_ofrecido' => array( 'number', __( 'Precio ofrecido', 'rodieja-contable' ) ),
-			'rodieja_cantidad'        => array( 'number', __( 'Cantidad', 'rodieja-contable' ) ),
-			'rodieja_descripcion'     => array( 'text', __( 'Descripción', 'rodieja-contable' ) ),
+			'rodieja_precio_ofrecido' => array( 'number', __( 'Price ofrecido', 'rodieja-contable' ) ),
+			'rodieja_cantidad'        => array( 'number', __( 'Quantity', 'rodieja-contable' ) ),
+			'rodieja_descripcion'     => array( 'text', __( 'Description', 'rodieja-contable' ) ),
 			'rodieja_tipo_pieza'      => array( 'text', __( 'Tipo pieza', 'rodieja-contable' ) ),
-			'rodieja_dias_entrega'    => array( 'number', __( 'Días entrega', 'rodieja-contable' ) ),
+			'rodieja_dias_entrega'    => array( 'number', __( 'Delivery days', 'rodieja-contable' ) ),
 		) as $key => $cfg ) {
 			$val = get_post_meta( $post->ID, $key, true );
 			echo '<p><label>' . $this->escaper->html( $cfg[1] ) . '</label><br />';
@@ -127,7 +127,7 @@ final class PedidoMetaBoxes {
 	 * @return array<string, string>
 	 */
 	public function pedido_cols( array $cols ): array {
-		$cols['rodieja_estado'] = __( 'Estado', 'rodieja-contable' );
+		$cols['rodieja_estado'] = __( 'Status', 'rodieja-contable' );
 		$cols['rodieja_total']  = __( 'Total', 'rodieja-contable' );
 		$cols['rodieja_origen'] = __( 'Origen', 'rodieja-contable' );
 		return $cols;

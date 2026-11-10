@@ -29,7 +29,7 @@ final class EmpleadoWpUserMetaBox {
 	public function box(): void {
 		add_meta_box(
 			'rodieja_empleado_user',
-			__( 'Usuario WordPress', 'rodieja-contable' ),
+			__( 'WordPress user', 'rodieja-contable' ),
 			array( $this, 'render' ),
 			'rodieja_empleado',
 			'side',

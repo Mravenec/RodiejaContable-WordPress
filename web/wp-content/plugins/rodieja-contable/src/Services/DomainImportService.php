@@ -26,7 +26,7 @@ final class DomainImportService {
 	public function from_json_string( string $json ): array {
 		$data = json_decode( $json, true );
 		if ( ! is_array( $data ) ) {
-			return array( 'created' => 0, 'updated' => 0, 'errors' => array( __( 'JSON inválido.', 'rodieja-contable' ) ) );
+			return array( 'created' => 0, 'updated' => 0, 'errors' => array( __( 'Invalid JSON.', 'rodieja-contable' ) ) );
 		}
 		$created = 0;
 		$updated = 0;
@@ -36,12 +36,12 @@ final class DomainImportService {
 				continue;
 			}
 			if ( ! is_array( $posts ) ) {
-				$errors[] = sprintf( __( 'Tipo %s: lista inválida.', 'rodieja-contable' ), $type );
+				$errors[] = sprintf( __( 'Type %s: invalid list.', 'rodieja-contable' ), $type );
 				continue;
 			}
 			foreach ( $posts as $i => $row ) {
 				if ( ! is_array( $row ) ) {
-					$errors[] = sprintf( __( '%s fila %d inválida.', 'rodieja-contable' ), $type, $i + 1 );
+					$errors[] = sprintf( __( '%s row %d invalid.', 'rodieja-contable' ), $type, $i + 1 );
 					continue;
 				}
 				$result = $this->upsert( $type, $row );
@@ -66,7 +66,7 @@ final class DomainImportService {
 	private function upsert( string $type, array $row ): array {
 		$title = sanitize_text_field( (string) ( $row['title'] ?? '' ) );
 		if ( '' === $title ) {
-			return array( 'error' => __( 'Título requerido.', 'rodieja-contable' ) );
+			return array( 'error' => __( 'Title required.', 'rodieja-contable' ) );
 		}
 		$status = sanitize_key( (string) ( $row['status'] ?? 'publish' ) );
 		if ( ! in_array( $status, array( 'publish', 'draft', 'pending', 'private' ), true ) ) {

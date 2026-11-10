@@ -32,7 +32,7 @@ final class GalleryMetaBox {
 		foreach ( array( 'rodieja_vehiculo', 'rodieja_repuesto' ) as $type ) {
 			add_meta_box(
 				'rodieja_gallery',
-				__( 'Galería (medios)', 'rodieja-contable' ),
+				__( 'Gallery (media)', 'rodieja-contable' ),
 				array( $this, 'render' ),
 				$type,
 				'side',
@@ -64,7 +64,7 @@ final class GalleryMetaBox {
 		$raw = get_post_meta( $post->ID, 'rodieja_gallery_ids', true );
 		$val = is_array( $raw ) ? implode( ',', array_map( 'intval', $raw ) ) : (string) $raw;
 		echo '<p><input type="text" class="widefat" id="rodieja_gallery_ids" name="rodieja_gallery_ids" value="' . $this->escaper->attr( $val ) . '" placeholder="1,2,3" /></p>';
-		echo '<p><button type="button" class="button rodieja-pick-gallery">' . esc_html__( 'Elegir imágenes', 'rodieja-contable' ) . '</button></p>';
+		echo '<p><button type="button" class="button rodieja-pick-gallery">' . esc_html__( 'Choose images', 'rodieja-contable' ) . '</button></p>';
 		echo '<p class="description">' . esc_html__( 'IDs de adjuntos WP (separados por coma). Imagen destacada sigue siendo la miniatura nativa.', 'rodieja-contable' ) . '</p>';
 	}
 

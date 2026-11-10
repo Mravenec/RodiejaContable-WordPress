@@ -48,7 +48,7 @@ final class RoleRegistrar {
 
 	public function install(): void {
 		$caps = array_fill_keys( $this->post_caps(), true );
-		add_role( self::ROLE_CONTADOR, __( 'Rodieja Contador', 'rodieja-contable' ), $caps );
+		add_role( self::ROLE_CONTADOR, __( 'Rodieja Accountant', 'rodieja-contable' ), $caps );
 
 		$admin = get_role( 'administrator' );
 		if ( $admin instanceof \WP_Role ) {

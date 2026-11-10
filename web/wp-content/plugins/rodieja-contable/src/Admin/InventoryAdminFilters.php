@@ -35,7 +35,7 @@ final class InventoryAdminFilters {
 			)
 		);
 		echo '<select name="rodieja_vehiculo_id">';
-		echo '<option value="0">' . $this->escaper->html( __( 'Todos los vehículos', 'rodieja-contable' ) ) . '</option>';
+		echo '<option value="0">' . $this->escaper->html( __( 'Todos los vehicles', 'rodieja-contable' ) ) . '</option>';
 		foreach ( $vehicles as $v ) {
 			printf(
 				'<option value="%1$d" %2$s>%3$s</option>',

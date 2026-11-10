@@ -19,11 +19,11 @@ final class PedidoImportService {
 	public function from_json_string( string $json ): array {
 		$data = json_decode( $json, true );
 		if ( ! is_array( $data ) ) {
-			return array( 'created' => 0, 'items' => 0, 'errors' => array( __( 'JSON inválido.', 'rodieja-contable' ) ) );
+			return array( 'created' => 0, 'items' => 0, 'errors' => array( __( 'Invalid JSON.', 'rodieja-contable' ) ) );
 		}
 		$pedidos = $data['pedidos'] ?? $data;
 		if ( ! is_array( $pedidos ) ) {
-			return array( 'created' => 0, 'items' => 0, 'errors' => array( __( 'Estructura pedidos ausente.', 'rodieja-contable' ) ) );
+			return array( 'created' => 0, 'items' => 0, 'errors' => array( __( 'Orders structure missing.', 'rodieja-contable' ) ) );
 		}
 		return $this->import_pedidos( $pedidos );
 	}
@@ -34,7 +34,7 @@ final class PedidoImportService {
 	public function from_csv_string( string $csv ): array {
 		$lines = preg_split( '/\r\n|\r|\n/', trim( $csv ) ) ?: array();
 		if ( count( $lines ) < 2 ) {
-			return array( 'created' => 0, 'items' => 0, 'errors' => array( __( 'CSV vacío o sin filas.', 'rodieja-contable' ) ) );
+			return array( 'created' => 0, 'items' => 0, 'errors' => array( __( 'CSV empty or has no rows.', 'rodieja-contable' ) ) );
 		}
 		$header = str_getcsv( (string) array_shift( $lines ) );
 		$header = array_map( static fn( $h ) => sanitize_key( (string) $h ), $header );
@@ -63,10 +63,10 @@ final class PedidoImportService {
 		$errors  = array();
 		foreach ( $pedidos as $i => $row ) {
 			if ( ! is_array( $row ) ) {
-				$errors[] = sprintf( __( 'Fila %d no es objeto.', 'rodieja-contable' ), $i + 1 );
+				$errors[] = sprintf( __( 'Row %d is not an object.', 'rodieja-contable' ), $i + 1 );
 				continue;
 			}
-			$title = sanitize_text_field( (string) ( $row['title'] ?? $row['titulo'] ?? __( 'Pedido importado', 'rodieja-contable' ) ) );
+			$title = sanitize_text_field( (string) ( $row['title'] ?? $row['titulo'] ?? __( 'Imported order', 'rodieja-contable' ) ) );
 			$origen = $this->sanitize_origen( (string) ( $row['origen'] ?? 'manual' ) );
 			$id     = wp_insert_post(
 				array(
@@ -112,7 +112,7 @@ final class PedidoImportService {
 					$item_id = wp_insert_post(
 						array(
 							'post_type'   => 'rodieja_pedido_item',
-							'post_title'  => sanitize_text_field( (string) ( $item['title'] ?? $item['descripcion'] ?? __( 'Ítem', 'rodieja-contable' ) ) ),
+							'post_title'  => sanitize_text_field( (string) ( $item['title'] ?? $item['descripcion'] ?? __( 'Item', 'rodieja-contable' ) ) ),
 							'post_status' => 'publish',
 						),
 						true
@@ -135,7 +135,7 @@ final class PedidoImportService {
 			$this->settings->note_import(
 				sprintf(
 					/* translators: %1$d pedidos, %2$d items */
-					__( 'Import: %1$d pedidos, %2$d ítems.', 'rodieja-contable' ),
+					__( 'Import: %1$d orders, %2$d items.', 'rodieja-contable' ),
 					$created,
 					$items
 				)
