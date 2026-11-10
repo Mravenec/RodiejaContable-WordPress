@@ -1,0 +1,6 @@
+{"at":"2026-11-10T15:38:33.087Z","type":"create","issueId":"APP-28-1","column":"backlog"}
+{"at":"2026-11-10T15:38:36.237Z","type":"claim","issueId":"APP-28-1","agent":"plugin-agent-1"}
+{"at":"2026-11-10T15:39:43.267Z","type":"checklist","issueId":"APP-28-1","item":"1"}
+{"at":"2026-11-10T15:39:46.002Z","type":"evidence","issueId":"APP-28-1","title":"underscore-meta"}
+{"at":"2026-11-10T15:39:46.321Z","type":"move","issueId":"APP-28-1","from":"doing","to":"testing"}
+{"at":"2026-11-10T15:39:46.563Z","type":"checklist","issueId":"APP-28-1","item":"2"}

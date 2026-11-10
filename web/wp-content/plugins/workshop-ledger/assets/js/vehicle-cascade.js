@@ -71,7 +71,7 @@
   modelo.addEventListener('change', onModelo);
   gen.addEventListener('change', onGen);
 
-  // Initial filter if editing
+  // Initial filter: empty Model/Generation until Brand chosen (Read-Only parity).
   if (marca.value && marca.value !== '0') {
     var keepModelo = modelo.value;
     var keepGen = gen.value;
@@ -80,5 +80,8 @@
     fillSelect(gen, gensForModelo(modelo.value), data.i18n.selectGeneration);
     gen.value = keepGen;
     onGen();
+  } else {
+    fillSelect(modelo, [], data.i18n.selectModel);
+    fillSelect(gen, [], data.i18n.selectGeneration);
   }
 })();
