@@ -1,0 +1,13 @@
+{
+  "status": "landed",
+  "started_at": "2026-11-10T16:44:50.812Z",
+  "finished_at": "2026-11-10T16:44:59.286Z",
+  "merge_commit": "a65be74e0ee15930c54a3325944b7c89ee54fb04",
+  "conflicts": [],
+  "smoke_ok": true,
+  "smoke_at": "2026-11-10T16:44:52.232Z",
+  "git": "git push origin main",
+  "note": "Supervisor land note — Epic 37 public-front-workshop-content\n\nSeeded native Home + About pages, static front page, retired Sample Page and Hello world. Header auth link is “Open app”. Read-Only untouched.\n\nYou can confirm it doing the following:\n1. Open https://workshop-ledger.ddev.site/ — Home product copy, not Blog/Hello world.\n2. Nav shows Home / About (and Open app when logged in), not Sample Page filler.\n3. Layer audit on main is green.",
+  "recorded_at": "2026-11-10T16:44:52.299Z",
+  "pushed_at": "2026-11-10T16:44:59.286Z"
+}

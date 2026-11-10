@@ -1,6 +1,6 @@
 # Epic 37 — public-front-workshop-content
 
-**Status:** In progress · Board: `.linear/epics/37-public-front-workshop-content/`
+**Status:** Landed on main · Board: `.linear/epics/37-public-front-workshop-content/`
 
 ## Title
 
@@ -31,3 +31,21 @@ Read-Only untouched. Admin remains the working app; public front is a thin brand
 ## Outcome
 
 (Filled at land.)
+
+
+## Land on main
+
+- Merge commit: `a65be74e0ee15930c54a3325944b7c89ee54fb04`
+- Branch: `feature/37-public-front-workshop-content` → `main`
+
+### Supervisor / Manager (land)
+
+Supervisor land note — Epic 37 public-front-workshop-content
+
+Seeded native Home + About pages, static front page, retired Sample Page and Hello world. Header auth link is “Open app”. Read-Only untouched.
+
+You can confirm it doing the following:
+1. Open https://workshop-ledger.ddev.site/ — Home product copy, not Blog/Hello world.
+2. Nav shows Home / About (and Open app when logged in), not Sample Page filler.
+3. Layer audit on main is green.
+
