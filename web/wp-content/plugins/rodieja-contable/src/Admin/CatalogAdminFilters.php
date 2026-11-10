@@ -36,7 +36,7 @@ final class CatalogAdminFilters {
 			return;
 		}
 		echo '<select name="' . $this->escaper->attr( $taxonomy ) . '" id="' . $this->escaper->attr( $taxonomy ) . '">';
-		echo '<option value="">' . $this->escaper->html( __( 'Todos los estados', 'rodieja-contable' ) ) . '</option>';
+		echo '<option value="">' . $this->escaper->html( __( 'All statuses', 'rodieja-contable' ) ) . '</option>';
 		foreach ( $terms as $term ) {
 			printf(
 				'<option value="%1$s" %2$s>%3$s</option>',
