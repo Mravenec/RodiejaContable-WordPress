@@ -14,6 +14,13 @@
           "ms": 13312,
           "close": "done",
           "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T07:58:59.846Z",
+          "end": "2026-11-10T07:58:59.846Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": "plugin-agent-1"
         }
       ]
     },
@@ -28,8 +35,26 @@
           "ms": 23686,
           "close": "done",
           "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T07:58:59.919Z",
+          "end": "2026-11-10T07:58:59.919Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": "plugin-agent-1"
         }
       ]
+    },
+    "APP-21-3": {
+      "active_ms": 0,
+      "paused": false,
+      "open": {
+        "start": "2026-11-10T08:00:53.127Z",
+        "last": "2026-11-10T08:01:21.605Z",
+        "agent": "plugin-agent-1",
+        "event": "checklist"
+      },
+      "segments": []
     }
   },
   "land": {

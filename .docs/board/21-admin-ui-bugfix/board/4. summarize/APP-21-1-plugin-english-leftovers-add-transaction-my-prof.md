@@ -10,6 +10,7 @@ blocked_by: []
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T07:58:11.010Z"
+summary_html: summaries/21-admin-ui-bugfix-beginner.html
 ---
 ## Objetivo
 
@@ -34,6 +35,8 @@ Add Transaction / My Profile / New province
 
 ## History
 
+- 2026-11-10T07:58:59.852Z epic summary HTML → summaries/21-admin-ui-bugfix-beginner.html
+- 2026-11-10T07:58:59.845Z moved done → summarize
 - 2026-11-10T07:58:24.322Z moved testing → done
 - 2026-11-10T07:58:23.994Z checklist item 2 marked
 - 2026-11-10T07:58:23.913Z moved doing → testing
