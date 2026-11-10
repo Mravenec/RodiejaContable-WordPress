@@ -83,7 +83,7 @@ final class PedidoImportService {
 			++$created;
 			$post_id = (int) $id;
 			update_post_meta( $post_id, 'wl_origen', $origen );
-			update_post_meta( $post_id, 'wl_estado_pedido', sanitize_text_field( (string) ( $row['estado'] ?? $row['estado_pedido'] ?? 'Aguardando Confirmación' ) ) );
+			update_post_meta( $post_id, 'wl_estado_pedido', sanitize_text_field( (string) ( $row['estado'] ?? $row['estado_pedido'] ?? 'Awaiting confirmation' ) ) );
 			update_post_meta( $post_id, 'wl_referencia_ext', sanitize_text_field( (string) ( $row['referencia_ext'] ?? $row['referencia'] ?? '' ) ) );
 			update_post_meta( $post_id, 'wl_numero_pedido', sanitize_text_field( (string) ( $row['numero_pedido'] ?? '' ) ) );
 			update_post_meta( $post_id, 'wl_total_pedido', (float) ( $row['total'] ?? $row['total_pedido'] ?? 0 ) );

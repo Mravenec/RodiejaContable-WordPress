@@ -106,7 +106,7 @@ final class PedidoController {
 			update_post_meta( (int) $id, 'wl_origen', 'manual' );
 		}
 		if ( ! get_post_meta( (int) $id, 'wl_estado_pedido', true ) ) {
-			update_post_meta( (int) $id, 'wl_estado_pedido', 'Aguardando Confirmación' );
+			update_post_meta( (int) $id, 'wl_estado_pedido', 'Awaiting confirmation' );
 		}
 		return new WP_REST_Response( array( 'id' => (int) $id, 'native' => true ), 201 );
 	}

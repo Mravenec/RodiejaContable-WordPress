@@ -103,6 +103,17 @@ final class DomainImportService {
 				if ( ! is_string( $key ) || ! str_starts_with( $key, 'wl_' ) ) {
 					continue;
 				}
+				// Orphan key — vehicle status is taxonomy wl_estado_vehiculo.
+				if ( 'wl_estado' === $key ) {
+					if ( 'wl_vehiculo' === $type && is_scalar( $val ) && '' !== (string) $val ) {
+						$term = sanitize_text_field( (string) $val );
+						if ( ! term_exists( $term, 'wl_estado_vehiculo' ) ) {
+							wp_insert_term( $term, 'wl_estado_vehiculo' );
+						}
+						wp_set_object_terms( (int) $post_id, $term, 'wl_estado_vehiculo', false );
+					}
+					continue;
+				}
 				update_post_meta( (int) $post_id, $key, is_scalar( $val ) ? $val : wp_json_encode( $val ) );
 			}
 		}

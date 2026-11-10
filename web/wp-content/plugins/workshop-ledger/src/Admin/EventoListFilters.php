@@ -73,7 +73,7 @@ final class EventoListFilters {
 	 * @return array<string, string>
 	 */
 	public function columns( array $cols ): array {
-		$cols['wl_origen'] = __( 'Origen', 'workshop-ledger' );
+		$cols['wl_origen'] = __( 'Origin', 'workshop-ledger' );
 		$cols['wl_accion'] = __( 'Action', 'workshop-ledger' );
 		$cols['wl_user']   = __( 'User', 'workshop-ledger' );
 		return $cols;

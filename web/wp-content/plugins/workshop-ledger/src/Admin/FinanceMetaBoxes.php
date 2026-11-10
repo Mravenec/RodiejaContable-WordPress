@@ -56,7 +56,7 @@ final class FinanceMetaBoxes {
 		$qty       = (string) get_post_meta( $post->ID, 'wl_cantidad_repuesto', true );
 		$desc      = (string) get_post_meta( $post->ID, 'wl_descripcion', true );
 
-		echo '<p class="description">' . $this->escaper->html( __( 'Same core fields as Read-Only Nueva Transacción — native CPT meta + taxonomy for income/expense type.', 'workshop-ledger' ) ) . '</p>';
+		echo '<p class="description">' . $this->escaper->html( __( 'Same core fields as Read-Only New Transaction — native CPT meta + taxonomy for income/expense type.', 'workshop-ledger' ) ) . '</p>';
 		echo '<div class="wl-part-form__grid">';
 		echo '<p><label>' . $this->escaper->html( __( 'Amount', 'workshop-ledger' ) ) . '</label><br />';
 		echo '<input type="number" step="0.01" name="wl_monto" id="wl_monto" value="' . $this->escaper->attr( (string) $monto ) . '" class="regular-text" /></p>';
