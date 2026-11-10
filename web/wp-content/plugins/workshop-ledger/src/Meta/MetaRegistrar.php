@@ -35,8 +35,19 @@ final class MetaRegistrar {
 		$this->string_meta( 'wl_vehiculo', 'wl_fecha_ingreso' );
 
 		$this->string_meta( 'wl_repuesto', 'wl_vehiculo_id' );
-		$this->number_meta( 'wl_repuesto', 'wl_precio' );
+		$this->string_meta( 'wl_repuesto', 'wl_modo' ); // con_vehiculo|sin_vehiculo
+		$this->string_meta( 'wl_repuesto', 'wl_generacion_id' );
+		$this->number_meta( 'wl_repuesto', 'wl_precio' ); // legacy alias of sale
+		$this->number_meta( 'wl_repuesto', 'wl_precio_costo' );
+		$this->number_meta( 'wl_repuesto', 'wl_precio_venta' );
 		$this->number_meta( 'wl_repuesto', 'wl_stock' );
+		$this->string_meta( 'wl_repuesto', 'wl_condicion' );
+		$this->string_meta( 'wl_repuesto', 'wl_originalidad' );
+		$this->string_meta( 'wl_repuesto', 'wl_bodega' );
+		$this->string_meta( 'wl_repuesto', 'wl_zona' );
+		$this->string_meta( 'wl_repuesto', 'wl_estante' );
+		$this->string_meta( 'wl_repuesto', 'wl_nivel' );
+		$this->string_meta( 'wl_repuesto', 'wl_posicion' );
 
 		$this->string_meta( 'wl_empleado', 'wl_email' );
 		$this->string_meta( 'wl_empleado', 'wl_telefono' );
