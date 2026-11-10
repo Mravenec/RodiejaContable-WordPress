@@ -37,6 +37,20 @@
           "agent": "plugin-agent-1"
         }
       ]
+    },
+    "APP-3-3": {
+      "active_ms": 12045,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T05:40:59.517Z",
+          "end": "2026-11-10T05:41:11.562Z",
+          "ms": 12045,
+          "close": "done",
+          "agent": "orchestrator-1"
+        }
+      ]
     }
   },
   "land": {

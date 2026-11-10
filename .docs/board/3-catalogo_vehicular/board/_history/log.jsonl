@@ -13,3 +13,9 @@
 {"at":"2026-11-10T05:40:58.975Z","type":"move","issueId":"APP-3-2","from":"doing","to":"testing"}
 {"at":"2026-11-10T05:40:59.055Z","type":"checklist","issueId":"APP-3-2","item":"2"}
 {"at":"2026-11-10T05:40:59.140Z","type":"move","issueId":"APP-3-2","from":"testing","to":"done"}
+{"at":"2026-11-10T05:40:59.517Z","type":"claim","issueId":"APP-3-3","agent":"orchestrator-1"}
+{"at":"2026-11-10T05:41:11.265Z","type":"checklist","issueId":"APP-3-3","item":"1"}
+{"at":"2026-11-10T05:41:11.336Z","type":"evidence","issueId":"APP-3-3","title":"Spring→CPT map"}
+{"at":"2026-11-10T05:41:11.417Z","type":"move","issueId":"APP-3-3","from":"doing","to":"testing"}
+{"at":"2026-11-10T05:41:11.488Z","type":"checklist","issueId":"APP-3-3","item":"2"}
+{"at":"2026-11-10T05:41:11.562Z","type":"move","issueId":"APP-3-3","from":"testing","to":"done"}
