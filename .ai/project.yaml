@@ -20,6 +20,18 @@ services_without_repository:
   - DemoSeedService
   - DomainStatsService
   - FinanceTotalsService
+  - AudatexInsSettingsService
+  - CostaRicaCantonesService
+  - CsvExportService
+  - DomainExportService
+  - DomainImportService
+  - ExecutiveDashboardService
+  - HistorialRecorder
+  - InventoryReportService
+  - MonthlyResumenService
+  - PedidoImportService
+  - ProfitabilityReportService
+  - SalesReportService
 security:
   disallow_file_edit: true
   rest_public_routes_allowlist:

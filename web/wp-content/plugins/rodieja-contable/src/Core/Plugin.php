@@ -16,6 +16,7 @@ use Rodieja\Contable\Admin\CatalogAdminFilters;
 use Rodieja\Contable\Admin\CatalogListColumns;
 use Rodieja\Contable\Admin\CatalogMetaBoxes;
 use Rodieja\Contable\Admin\CriticalStockPage;
+use Rodieja\Contable\Admin\JerarquiaAdminPage;
 use Rodieja\Contable\Admin\FinanceDashboardPage;
 use Rodieja\Contable\Admin\FinanceMetaBoxes;
 use Rodieja\Contable\Admin\InventoryAdminFilters;
@@ -90,6 +91,7 @@ final class Plugin {
 		$this->container->get( InventoryAdminFilters::class )->register();
 		$this->container->get( FinanceMetaBoxes::class )->register();
 		$this->container->get( CriticalStockPage::class )->register();
+		$this->container->get( JerarquiaAdminPage::class )->register();
 		$this->container->get( FinanceDashboardPage::class )->register();
 		$this->container->get( PedidoMetaBoxes::class )->register();
 		$this->container->get( EventoPostTypeRegistrar::class )->register();
