@@ -7,6 +7,8 @@ estimate: 1
 blocked_by: []
 blocks: []
 agent: plugin-agent-1
+http_ok: true
+tests_ok: true
 claimed_at: "2026-11-10T05:16:09.510Z"
 ---
 ## Objetivo
@@ -92,6 +94,7 @@ Result:
 
 ## History
 
+- 2026-11-10T05:18:00.969Z moved testing → done
 - 2026-11-10T05:17:43.376Z checklist item 2 marked
 - 2026-11-10T05:17:43.269Z moved doing → testing
 - 2026-11-10T05:17:42.778Z checklist item 1 marked

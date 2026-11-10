@@ -7,3 +7,9 @@
 {"at":"2026-11-10T05:17:43.164Z","type":"evidence","issueId":"APP-1-1","title":"REST health"}
 {"at":"2026-11-10T05:17:43.270Z","type":"move","issueId":"APP-1-1","from":"doing","to":"testing"}
 {"at":"2026-11-10T05:17:43.377Z","type":"checklist","issueId":"APP-1-1","item":"2"}
+{"at":"2026-11-10T05:18:00.971Z","type":"move","issueId":"APP-1-1","from":"testing","to":"done"}
+{"at":"2026-11-10T05:18:11.619Z","type":"claim","issueId":"APP-1-2","agent":"security-agent-1"}
+{"at":"2026-11-10T05:18:30.444Z","type":"checklist","issueId":"APP-1-2","item":"1"}
+{"at":"2026-11-10T05:18:30.538Z","type":"evidence","issueId":"APP-1-2","title":"Native roles+MU"}
+{"at":"2026-11-10T05:18:30.640Z","type":"move","issueId":"APP-1-2","from":"doing","to":"testing"}
+{"at":"2026-11-10T05:18:30.769Z","type":"checklist","issueId":"APP-1-2","item":"2"}
