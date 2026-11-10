@@ -1,1 +1,6 @@
 {"at":"2026-11-10T16:15:45.457Z","type":"create","issueId":"APP-34-1","column":"backlog"}
+{"at":"2026-11-10T16:21:25.340Z","type":"claim","issueId":"APP-34-1","agent":"plugin-agent-1"}
+{"at":"2026-11-10T16:22:51.036Z","type":"checklist","issueId":"APP-34-1","item":"1"}
+{"at":"2026-11-10T16:22:51.121Z","type":"evidence","issueId":"APP-34-1","title":"tokens"}
+{"at":"2026-11-10T16:22:51.239Z","type":"move","issueId":"APP-34-1","from":"doing","to":"testing"}
+{"at":"2026-11-10T16:22:51.322Z","type":"checklist","issueId":"APP-34-1","item":"2"}

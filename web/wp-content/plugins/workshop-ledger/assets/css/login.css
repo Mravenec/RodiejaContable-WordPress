@@ -1,9 +1,20 @@
+:root {
+	--wl-accent: #1890ff;
+	--wl-accent-deep: #096dd9;
+	--wl-accent-soft: #e6f7ff;
+	--wl-navy: #001529;
+	--wl-navy-glow: #003a8c;
+	--wl-surface: #f0f2f5;
+	--wl-border: #d9d9d9;
+	--wl-radius-lg: 8px;
+}
+
 /**
  * wp-login.php — Read-Only / Ant Pro identity (native CSS).
  */
 
 body.login {
-	background: #f0f2f5;
+	background: var(--wl-surface);
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 	position: relative;
 }
@@ -12,7 +23,7 @@ body.login::before {
 	content: "";
 	position: absolute;
 	inset: 0 0 42% 0;
-	background: linear-gradient(135deg, #001529 0%, #003a8c 55%, #1890ff 120%);
+	background: linear-gradient(135deg, var(--wl-navy) 0%, var(--wl-navy-glow) 55%, var(--wl-accent) 120%);
 	z-index: 0;
 }
 
@@ -37,7 +48,7 @@ body.login #login h1 a {
 }
 
 body.login #login h1 a:hover {
-	color: #e6f7ff;
+	color: var(--wl-accent-soft);
 }
 
 body.login form {
@@ -57,7 +68,7 @@ body.login label {
 body.login input[type="text"],
 body.login input[type="password"] {
 	border-radius: 2px;
-	border-color: #d9d9d9;
+	border-color: var(--wl-border);
 	box-shadow: none;
 	font-size: 14px;
 	padding: 4px 11px;
@@ -66,13 +77,13 @@ body.login input[type="password"] {
 
 body.login input[type="text"]:focus,
 body.login input[type="password"]:focus {
-	border-color: #1890ff;
+	border-color: var(--wl-accent);
 	box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
 }
 
 body.login .button-primary {
-	background: #1890ff !important;
-	border-color: #1890ff !important;
+	background: var(--wl-accent) !important;
+	border-color: var(--wl-accent) !important;
 	border-radius: 2px !important;
 	text-shadow: none !important;
 	box-shadow: none !important;
@@ -86,8 +97,8 @@ body.login .button-primary {
 }
 
 body.login .button-primary:hover {
-	background: #096dd9 !important;
-	border-color: #096dd9 !important;
+	background: var(--wl-accent-deep) !important;
+	border-color: var(--wl-accent-deep) !important;
 }
 
 body.login .forgetmenot {
@@ -110,7 +121,7 @@ body.login #backtoblog a {
 
 body.login #nav a:hover,
 body.login #backtoblog a:hover {
-	color: #1890ff !important;
+	color: var(--wl-accent) !important;
 }
 
 body.login #login_error,

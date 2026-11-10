@@ -4,8 +4,8 @@
 |---|---|
 | Id | 34 |
 | Slug | admin-color-token-fidelity |
-| Status | planned |
-| Progress | **0%** (0/1 in summarize · column + checklist) |
+| Status | in_progress |
+| Progress | **66%** (0/1 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -23,7 +23,7 @@ This folder is the **operational** board (claims, checklist, %). There is no `.a
 
 ### 0. backlog
 
-- `APP-34-1` Tokens/CSS: align remaining admin screens to Read-Only Ant palette (native) _(role:plugin)_
+_empty_
 
 ### 1. doing
 
@@ -31,7 +31,7 @@ _empty_
 
 ### 2. testing
 
-_empty_
+- `APP-34-1` Tokens/CSS: align remaining admin screens to Read-Only Ant palette (native) _(role:plugin)_
 
 ### 3. done
 
