@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace Rodieja\Contable\Core;
 
 use Rodieja\Contable\Admin\AdminMenu;
+use Rodieja\Contable\Controllers\Rest\DomainStatsController;
 use Rodieja\Contable\Controllers\Rest\HealthController;
 use Rodieja\Contable\Meta\MetaRegistrar;
 use Rodieja\Contable\PostTypes\PostTypeRegistrar;
@@ -56,6 +57,7 @@ final class Plugin {
 
 	public function register_rest(): void {
 		$this->container->get( HealthController::class )->register_routes();
+		$this->container->get( DomainStatsController::class )->register_routes();
 	}
 
 	public function load_textdomain(): void {
