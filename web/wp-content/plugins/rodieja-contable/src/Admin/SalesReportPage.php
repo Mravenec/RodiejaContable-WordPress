@@ -34,22 +34,22 @@ final class SalesReportPage {
 		$month = $this->report->summary( gmdate( 'Y-m' ) );
 		?>
 		<div class="wrap">
-			<h1><?php echo $this->escaper->html( __( 'Ventas', 'rodieja-contable' ) ); ?></h1>
+			<h1><?php echo $this->escaper->html( __( 'Sales', 'rodieja-contable' ) ); ?></h1>
 			<table class="widefat striped" style="max-width:560px">
 				<thead><tr><th></th><th><?php echo $this->escaper->html( __( 'Todo', 'rodieja-contable' ) ); ?></th><th><?php echo $this->escaper->html( __( 'Mes actual', 'rodieja-contable' ) ); ?></th></tr></thead>
 				<tbody>
-					<tr><th><?php echo $this->escaper->html( __( 'Pedidos', 'rodieja-contable' ) ); ?></th>
+					<tr><th><?php echo $this->escaper->html( __( 'Orders', 'rodieja-contable' ) ); ?></th>
 						<td><?php echo $this->escaper->html( (string) $all['pedidos'] ); ?></td>
 						<td><?php echo $this->escaper->html( (string) $month['pedidos'] ); ?></td></tr>
-					<tr><th><?php echo $this->escaper->html( __( 'Total pedidos', 'rodieja-contable' ) ); ?></th>
+					<tr><th><?php echo $this->escaper->html( __( 'Total orders', 'rodieja-contable' ) ); ?></th>
 						<td><?php echo $this->escaper->html( number_format_i18n( $all['total_pedidos'], 2 ) ); ?></td>
 						<td><?php echo $this->escaper->html( number_format_i18n( $month['total_pedidos'], 2 ) ); ?></td></tr>
-					<tr><th><?php echo $this->escaper->html( __( 'Ingresos (transacciones)', 'rodieja-contable' ) ); ?></th>
+					<tr><th><?php echo $this->escaper->html( __( 'Income (transactions)', 'rodieja-contable' ) ); ?></th>
 						<td><?php echo $this->escaper->html( number_format_i18n( $all['ingresos'], 2 ) ); ?></td>
 						<td><?php echo $this->escaper->html( number_format_i18n( $month['ingresos'], 2 ) ); ?></td></tr>
 				</tbody>
 			</table>
-			<h2><?php echo $this->escaper->html( __( 'Pedidos por origen (total)', 'rodieja-contable' ) ); ?></h2>
+			<h2><?php echo $this->escaper->html( __( 'Orders por origen (total)', 'rodieja-contable' ) ); ?></h2>
 			<table class="widefat striped" style="max-width:400px">
 				<tbody>
 				<?php foreach ( $all['por_origen'] as $origen => $n ) : ?>

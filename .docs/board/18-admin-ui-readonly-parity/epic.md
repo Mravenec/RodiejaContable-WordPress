@@ -1,4 +1,6 @@
-# Admin UI: máxima fidelidad visual al Read-Only (native CSS/PHP)
+# 18-admin-ui-readonly-parity
+
+Admin UI: maximum visual fidelity to Read-Only (native CSS/PHP)
 
 | Field | Value |
 |---|---|

@@ -4,53 +4,43 @@
 
 ## Title
 
-Pedidos INS/Audatex: import JSON/CSV local + Options (sin API live)
+INS/Audatex orders: local JSON/CSV import + Options (no live API)
 
 ## Why
 
-Traer pedidos Audatex/INS sin sync live: Options de configuración + import local JSON/CSV a CPT/ítems.
+Bring Audatex/INS orders without live sync: Options settings + local JSON/CSV import into CPT/items.
 
 ## What we did
 
-- [x] Options Audatex/INS (sin API live)
-- [x] Import JSON/CSV → pedidos + items
-- [x] Mapa journey Spring sync → import nativo
+- [x] Audatex/INS Options (no live API)
+- [x] JSON/CSV import → orders + items
+- [x] Journey map Spring sync → native import
 
 ## Acceptance
 
-- Given un JSON/CSV válido
-- When se importa en admin
-- Expect CPT pedidos/ítems creados; settings en Options
+- Given valid JSON/CSV
+- When imported in admin
+- Expect CPT orders/items; settings in Options
 
 ## Agent notes (constraints / edge cases)
 
-Explicit non-goal: sync live Audatex. Solo import local.
-
-## Areas touched (unified WordPress tree)
-
-| Area | Touched? | Notes |
-|---|---|---|
-| Plugin Options + import | sí |  |
-| Orchestrator map | sí |  |
+Explicit non-goal: live Audatex sync.
 
 ## Board issues (= tickets)
 
 - APP-14-1 Options settings
-- APP-14-2 import JSON/CSV
-- APP-14-3 map Spring→native
-
-Checklists and evidence live on the board issue files / living HTML — not duplicated here.
+- APP-14-2 JSON/CSV import
+- APP-14-3 Spring→native map
 
 ## How to verify
 
-- `Settings Audatex/INS`
-- `import page con fixture`
+- `Audatex/INS settings`
+- `import page with fixture`
 
 ```bash
 node .linear/scripts/board.mjs progress --epic 14
-# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome
 
-Import local INS/Audatex LANDED (sin live API).
+Local INS/Audatex import LANDED (no live API).

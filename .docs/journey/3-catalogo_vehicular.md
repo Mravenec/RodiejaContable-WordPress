@@ -4,53 +4,43 @@
 
 ## Title
 
-Catálogo vehicular: marca→modelo→gen→vehículo admin
+Vehicle catalog: brand→model→gen→vehicle admin
 
 ## Why
 
-El catálogo Read-Only (marca→modelo→generación→vehículo) debe editarse en wp-admin con meta boxes, columnas y filtros nativos.
+Read-Only catalog (brand→model→generation→vehicle) must be editable in wp-admin with native meta boxes, columns, and filters.
 
 ## What we did
 
-- [x] Meta boxes + columnas de lista para Marca/Modelo/Generación/Vehículo
-- [x] Filtros admin WP_Query por estado_vehiculo
-- [x] Journey map Spring Vehiculos → CPT nativo
+- [x] Meta boxes + list columns for Brand/Model/Generation/Vehicle
+- [x] Admin WP_Query filters by vehicle status
+- [x] Journey map Spring Vehicles → CPT
 
 ## Acceptance
 
-- Given CPT de catálogo
-- When el admin filtra/edita en listas
-- Expect meta y filtros nativos sin UI React
+- Given catalog CPTs
+- When admin filters/edits lists
+- Expect native meta and filters without a React UI
 
 ## Agent notes (constraints / edge cases)
 
-Jerarquía visual tipo árbol llega en epic 17; aquí es CRUD/listas.
-
-## Areas touched (unified WordPress tree)
-
-| Area | Touched? | Notes |
-|---|---|---|
-| Plugin Admin + PostTypes/meta | sí |  |
-| Orchestrator docs | sí |  |
+Visual tree arrives in epic 17; this epic is CRUD/lists.
 
 ## Board issues (= tickets)
 
 - APP-3-1 meta boxes + columns
-- APP-3-2 filtros estado_vehiculo
-- APP-3-3 map Spring→CPT
-
-Checklists and evidence live on the board issue files / living HTML — not duplicated here.
+- APP-3-2 status filters
+- APP-3-3 Spring→CPT map
 
 ## How to verify
 
-- `wp-admin Vehículos / Marcas / Modelos / Generaciones`
-- `filtro estado`
+- `wp-admin Vehicles / Brands / Models / Generations`
+- `status filter`
 
 ```bash
 node .linear/scripts/board.mjs progress --epic 3
-# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome
 
-Catálogo editable nativo LANDED. Árbol “Ver por Generaciones” = epic 17.
+Editable native catalog LANDED. Tree = epic 17.

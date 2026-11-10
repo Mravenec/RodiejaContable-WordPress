@@ -54,7 +54,7 @@ final class AdminMenu {
 		// —— Inicio (dashboard) ——
 		add_menu_page(
 			__( 'Rodieja Contable', 'rodieja-contable' ),
-			__( 'Inicio', 'rodieja-contable' ),
+			__( 'Home', 'rodieja-contable' ),
 			$cap,
 			self::SLUG_INICIO,
 			array( $this, 'render_dashboard' ),
@@ -64,8 +64,8 @@ final class AdminMenu {
 
 		// —— Vehículos ——
 		add_menu_page(
-			__( 'Vehículos', 'rodieja-contable' ),
-			__( 'Vehículos', 'rodieja-contable' ),
+			__( 'Vehicles', 'rodieja-contable' ),
+			__( 'Vehicles', 'rodieja-contable' ),
 			$cap,
 			self::SLUG_VEHICULOS,
 			array( $this, 'redirect_vehiculos' ),
@@ -74,27 +74,27 @@ final class AdminMenu {
 		);
 		add_submenu_page(
 			self::SLUG_VEHICULOS,
-			__( 'Ver por Generaciones', 'rodieja-contable' ),
-			__( 'Ver por Generaciones', 'rodieja-contable' ),
+			__( 'View by Generations', 'rodieja-contable' ),
+			__( 'View by Generations', 'rodieja-contable' ),
 			$cap,
 			JerarquiaAdminPage::SLUG,
 			array( $this->jerarquia, 'render' )
 		);
-		$this->cpt_submenu( self::SLUG_VEHICULOS, __( 'Marcas', 'rodieja-contable' ), 'rodieja_marca' );
-		$this->cpt_submenu( self::SLUG_VEHICULOS, __( 'Modelos', 'rodieja-contable' ), 'rodieja_modelo' );
-		$this->cpt_submenu( self::SLUG_VEHICULOS, __( 'Generaciones', 'rodieja-contable' ), 'rodieja_generacion' );
+		$this->cpt_submenu( self::SLUG_VEHICULOS, __( 'Brands', 'rodieja-contable' ), 'rodieja_marca' );
+		$this->cpt_submenu( self::SLUG_VEHICULOS, __( 'Models', 'rodieja-contable' ), 'rodieja_modelo' );
+		$this->cpt_submenu( self::SLUG_VEHICULOS, __( 'Generations', 'rodieja-contable' ), 'rodieja_generacion' );
 		add_submenu_page(
 			self::SLUG_VEHICULOS,
-			__( 'Nuevo Vehículo', 'rodieja-contable' ),
-			__( 'Nuevo Vehículo', 'rodieja-contable' ),
+			__( 'Add Vehicle', 'rodieja-contable' ),
+			__( 'Add Vehicle', 'rodieja-contable' ),
 			$cap,
 			'post-new.php?post_type=rodieja_vehiculo'
 		);
 
 		// —— Inventario ——
 		add_menu_page(
-			__( 'Inventario', 'rodieja-contable' ),
-			__( 'Inventario', 'rodieja-contable' ),
+			__( 'Inventory', 'rodieja-contable' ),
+			__( 'Inventory', 'rodieja-contable' ),
 			$cap,
 			self::SLUG_INVENTARIO,
 			array( $this, 'redirect_inventario' ),
@@ -103,15 +103,15 @@ final class AdminMenu {
 		);
 		add_submenu_page(
 			self::SLUG_INVENTARIO,
-			__( 'Nuevo Repuesto', 'rodieja-contable' ),
-			__( 'Nuevo Repuesto', 'rodieja-contable' ),
+			__( 'Add Part', 'rodieja-contable' ),
+			__( 'Add Part', 'rodieja-contable' ),
 			$cap,
 			'post-new.php?post_type=rodieja_repuesto'
 		);
 		add_submenu_page(
 			self::SLUG_INVENTARIO,
-			__( 'Stock crítico', 'rodieja-contable' ),
-			__( 'Stock crítico', 'rodieja-contable' ),
+			__( 'Critical stock', 'rodieja-contable' ),
+			__( 'Critical stock', 'rodieja-contable' ),
 			$cap,
 			'rodieja-stock-critico',
 			array( $this->critical_stock, 'render' )
@@ -119,8 +119,8 @@ final class AdminMenu {
 
 		// —— Finanzas ——
 		add_menu_page(
-			__( 'Finanzas', 'rodieja-contable' ),
-			__( 'Finanzas', 'rodieja-contable' ),
+			__( 'Finance', 'rodieja-contable' ),
+			__( 'Finance', 'rodieja-contable' ),
 			$cap,
 			self::SLUG_FINANZAS,
 			array( $this, 'redirect_finanzas' ),
@@ -129,15 +129,15 @@ final class AdminMenu {
 		);
 		add_submenu_page(
 			self::SLUG_FINANZAS,
-			__( 'Nueva Transacción', 'rodieja-contable' ),
-			__( 'Nueva Transacción', 'rodieja-contable' ),
+			__( 'Nueva Transaction', 'rodieja-contable' ),
+			__( 'Nueva Transaction', 'rodieja-contable' ),
 			$cap,
 			'post-new.php?post_type=rodieja_transaccion'
 		);
 		add_submenu_page(
 			self::SLUG_FINANZAS,
-			__( 'Montos', 'rodieja-contable' ),
-			__( 'Montos', 'rodieja-contable' ),
+			__( 'Amounts', 'rodieja-contable' ),
+			__( 'Amounts', 'rodieja-contable' ),
 			$cap,
 			'rodieja-finanzas-dashboard',
 			array( $this->finance_dashboard, 'render' )
@@ -145,8 +145,8 @@ final class AdminMenu {
 
 		// —— Reportes ——
 		add_menu_page(
-			__( 'Reportes', 'rodieja-contable' ),
-			__( 'Reportes', 'rodieja-contable' ),
+			__( 'Reports', 'rodieja-contable' ),
+			__( 'Reports', 'rodieja-contable' ),
 			$cap,
 			self::SLUG_REPORTES,
 			array( $this->reportes_hub, 'render' ),
@@ -155,24 +155,24 @@ final class AdminMenu {
 		);
 		add_submenu_page(
 			self::SLUG_REPORTES,
-			__( 'Ventas Empleados', 'rodieja-contable' ),
-			__( 'Ventas Empleados', 'rodieja-contable' ),
+			__( 'Sales Employees', 'rodieja-contable' ),
+			__( 'Sales Employees', 'rodieja-contable' ),
 			$cap,
 			'rodieja-reporte-ventas',
 			array( $this->report_ventas, 'render' )
 		);
 		add_submenu_page(
 			self::SLUG_REPORTES,
-			__( 'Vehículos', 'rodieja-contable' ),
-			__( 'Vehículos', 'rodieja-contable' ),
+			__( 'Vehicles', 'rodieja-contable' ),
+			__( 'Vehicles', 'rodieja-contable' ),
 			$cap,
 			'rodieja-reporte-finanzas',
 			array( $this->report_finanzas, 'render' )
 		);
 		add_submenu_page(
 			self::SLUG_REPORTES,
-			__( 'Repuestos', 'rodieja-contable' ),
-			__( 'Repuestos', 'rodieja-contable' ),
+			__( 'Parts', 'rodieja-contable' ),
+			__( 'Parts', 'rodieja-contable' ),
 			$cap,
 			'rodieja-reporte-inventario',
 			array( $this->report_inventario, 'render' )
@@ -180,8 +180,8 @@ final class AdminMenu {
 
 		// —— Cotizaciones InPart ——
 		add_menu_page(
-			__( 'Cotizaciones InPart', 'rodieja-contable' ),
-			__( 'Cotizaciones InPart', 'rodieja-contable' ),
+			__( 'InPart Quotes', 'rodieja-contable' ),
+			__( 'InPart Quotes', 'rodieja-contable' ),
 			$cap,
 			self::SLUG_INPART,
 			array( $this, 'redirect_inpart' ),
@@ -190,16 +190,16 @@ final class AdminMenu {
 		);
 		add_submenu_page(
 			self::SLUG_INPART,
-			__( 'INS / Importar', 'rodieja-contable' ),
-			__( 'INS / Importar', 'rodieja-contable' ),
+			__( 'INS / Import', 'rodieja-contable' ),
+			__( 'INS / Import', 'rodieja-contable' ),
 			$cap,
 			'rodieja-inpart-import',
 			array( $this->pedido_import, 'render' )
 		);
 		add_submenu_page(
 			self::SLUG_INPART,
-			__( 'Ventas Empleados INS', 'rodieja-contable' ),
-			__( 'Ventas Empleados INS', 'rodieja-contable' ),
+			__( 'Sales Employees INS', 'rodieja-contable' ),
+			__( 'Sales Employees INS', 'rodieja-contable' ),
 			$cap,
 			'rodieja-ins-ventas',
 			array( $this->report_ventas, 'render' )
@@ -207,8 +207,8 @@ final class AdminMenu {
 
 		// —— Configuración ——
 		add_menu_page(
-			__( 'Configuración', 'rodieja-contable' ),
-			__( 'Configuración', 'rodieja-contable' ),
+			__( 'Settings', 'rodieja-contable' ),
+			__( 'Settings', 'rodieja-contable' ),
 			$cap,
 			self::SLUG_CONFIG,
 			array( $this, 'render_settings' ),
@@ -222,20 +222,20 @@ final class AdminMenu {
 			'read',
 			'profile.php'
 		);
-		$this->cpt_submenu( self::SLUG_CONFIG, __( 'Empleados', 'rodieja-contable' ), 'rodieja_empleado' );
-		$this->cpt_submenu( self::SLUG_CONFIG, __( 'Historial', 'rodieja-contable' ), 'rodieja_evento' );
+		$this->cpt_submenu( self::SLUG_CONFIG, __( 'Employees', 'rodieja-contable' ), 'rodieja_empleado' );
+		$this->cpt_submenu( self::SLUG_CONFIG, __( 'History', 'rodieja-contable' ), 'rodieja_evento' );
 		add_submenu_page(
 			self::SLUG_CONFIG,
-			__( 'Integraciones', 'rodieja-contable' ),
-			__( 'Integraciones', 'rodieja-contable' ),
+			__( 'Integrations', 'rodieja-contable' ),
+			__( 'Integrations', 'rodieja-contable' ),
 			$cap,
 			'rodieja-config-integrations',
 			array( $this->audatex_settings, 'render' )
 		);
 		add_submenu_page(
 			self::SLUG_CONFIG,
-			__( 'Cantones CR', 'rodieja-contable' ),
-			__( 'Cantones CR', 'rodieja-contable' ),
+			__( 'CR cantons', 'rodieja-contable' ),
+			__( 'CR cantons', 'rodieja-contable' ),
 			$cap,
 			'rodieja-config-cantones',
 			array( $this->cantones_settings, 'render' )
@@ -264,13 +264,13 @@ final class AdminMenu {
 	public function relabel_first_items(): void {
 		global $submenu;
 		$map = array(
-			self::SLUG_INICIO     => array( 'label' => __( 'Inicio', 'rodieja-contable' ), 'slug' => null ),
-			self::SLUG_VEHICULOS  => array( 'label' => __( 'Lista de Vehículos', 'rodieja-contable' ), 'slug' => 'edit.php?post_type=rodieja_vehiculo' ),
-			self::SLUG_INVENTARIO => array( 'label' => __( 'Lista de Repuestos', 'rodieja-contable' ), 'slug' => 'edit.php?post_type=rodieja_repuesto' ),
-			self::SLUG_FINANZAS   => array( 'label' => __( 'Transacciones', 'rodieja-contable' ), 'slug' => 'edit.php?post_type=rodieja_transaccion' ),
-			self::SLUG_REPORTES   => array( 'label' => __( 'General', 'rodieja-contable' ), 'slug' => null ),
-			self::SLUG_INPART     => array( 'label' => __( 'Pedidos', 'rodieja-contable' ), 'slug' => 'edit.php?post_type=rodieja_pedido' ),
-			self::SLUG_CONFIG     => array( 'label' => __( 'Ajustes', 'rodieja-contable' ), 'slug' => null ),
+			self::SLUG_INICIO     => array( 'label' => __( 'Home', 'rodieja-contable' ), 'slug' => null ),
+			self::SLUG_VEHICULOS  => array( 'label' => __( 'Vehicle list', 'rodieja-contable' ), 'slug' => 'edit.php?post_type=rodieja_vehiculo' ),
+			self::SLUG_INVENTARIO => array( 'label' => __( 'Parts list', 'rodieja-contable' ), 'slug' => 'edit.php?post_type=rodieja_repuesto' ),
+			self::SLUG_FINANZAS   => array( 'label' => __( 'Transactions', 'rodieja-contable' ), 'slug' => 'edit.php?post_type=rodieja_transaccion' ),
+			self::SLUG_REPORTES   => array( 'label' => __( 'Overview', 'rodieja-contable' ), 'slug' => null ),
+			self::SLUG_INPART     => array( 'label' => __( 'Orders', 'rodieja-contable' ), 'slug' => 'edit.php?post_type=rodieja_pedido' ),
+			self::SLUG_CONFIG     => array( 'label' => __( 'Settings', 'rodieja-contable' ), 'slug' => null ),
 		);
 		foreach ( $map as $parent => $cfg ) {
 			if ( empty( $submenu[ $parent ][0] ) || ! is_array( $submenu[ $parent ][0] ) ) {
@@ -324,50 +324,50 @@ final class AdminMenu {
 		$org    = (string) get_option( 'rodieja_contable_org_name', 'Rodieja Contable' );
 
 		$tiles = array(
-			array( __( 'Vehículos', 'rodieja-contable' ), __( 'Lista y catálogo', 'rodieja-contable' ), 'dashicons-car', admin_url( 'edit.php?post_type=rodieja_vehiculo' ) ),
-			array( __( 'Inventario', 'rodieja-contable' ), __( 'Repuestos y stock', 'rodieja-contable' ), 'dashicons-admin-tools', admin_url( 'edit.php?post_type=rodieja_repuesto' ) ),
-			array( __( 'Finanzas', 'rodieja-contable' ), __( 'Transacciones', 'rodieja-contable' ), 'dashicons-money-alt', admin_url( 'edit.php?post_type=rodieja_transaccion' ) ),
-			array( __( 'Cotizaciones InPart', 'rodieja-contable' ), __( 'Pedidos e INS', 'rodieja-contable' ), 'dashicons-email-alt', admin_url( 'edit.php?post_type=rodieja_pedido' ) ),
-			array( __( 'Reportes', 'rodieja-contable' ), __( 'CSV y resúmenes', 'rodieja-contable' ), 'dashicons-chart-bar', admin_url( 'admin.php?page=' . ReportesAdminPage::SLUG ) ),
-			array( __( 'Configuración', 'rodieja-contable' ), __( 'Perfil y ajustes', 'rodieja-contable' ), 'dashicons-admin-generic', admin_url( 'admin.php?page=rodieja-settings' ) ),
+			array( __( 'Vehicles', 'rodieja-contable' ), __( 'List and catalog', 'rodieja-contable' ), 'dashicons-car', admin_url( 'edit.php?post_type=rodieja_vehiculo' ) ),
+			array( __( 'Inventory', 'rodieja-contable' ), __( 'Parts and stock', 'rodieja-contable' ), 'dashicons-admin-tools', admin_url( 'edit.php?post_type=rodieja_repuesto' ) ),
+			array( __( 'Finance', 'rodieja-contable' ), __( 'Transactions', 'rodieja-contable' ), 'dashicons-money-alt', admin_url( 'edit.php?post_type=rodieja_transaccion' ) ),
+			array( __( 'InPart Quotes', 'rodieja-contable' ), __( 'Orders and INS', 'rodieja-contable' ), 'dashicons-email-alt', admin_url( 'edit.php?post_type=rodieja_pedido' ) ),
+			array( __( 'Reports', 'rodieja-contable' ), __( 'CSV and digests', 'rodieja-contable' ), 'dashicons-chart-bar', admin_url( 'admin.php?page=' . ReportesAdminPage::SLUG ) ),
+			array( __( 'Settings', 'rodieja-contable' ), __( 'Profile and settings', 'rodieja-contable' ), 'dashicons-admin-generic', admin_url( 'admin.php?page=rodieja-settings' ) ),
 		);
 		?>
 		<div class="wrap rodieja-admin-wrap">
 			<div class="rodieja-hero">
 				<p class="rodieja-hero__eyebrow"><?php echo $this->escaper->html( __( 'Rodieja Contable', 'rodieja-contable' ) ); ?></p>
 				<h1><?php echo $this->escaper->html( $org ); ?></h1>
-				<p><?php echo $this->escaper->html( __( 'Inicio — mismo mapa de módulos que Rodieja Contable Read-Only, en WordPress nativo.', 'rodieja-contable' ) ); ?></p>
+				<p><?php echo $this->escaper->html( __( 'Home — same module map as Rodieja Contable Read-Only, on native WordPress.', 'rodieja-contable' ) ); ?></p>
 			</div>
 
-			<h2 class="rodieja-section-title"><?php echo $this->escaper->html( __( 'Indicadores', 'rodieja-contable' ) ); ?></h2>
-			<div class="rodieja-metrics" role="group" aria-label="<?php echo $this->escaper->attr( __( 'Indicadores', 'rodieja-contable' ) ); ?>">
+			<h2 class="rodieja-section-title"><?php echo $this->escaper->html( __( 'Indicators', 'rodieja-contable' ) ); ?></h2>
+			<div class="rodieja-metrics" role="group" aria-label="<?php echo $this->escaper->attr( __( 'Indicators', 'rodieja-contable' ) ); ?>">
 				<div class="rodieja-metric rodieja-metric--accent">
-					<span class="rodieja-metric__label"><?php echo $this->escaper->html( __( 'Vehículos', 'rodieja-contable' ) ); ?></span>
+					<span class="rodieja-metric__label"><?php echo $this->escaper->html( __( 'Vehicles', 'rodieja-contable' ) ); ?></span>
 					<span class="rodieja-metric__value"><?php echo $this->escaper->html( (string) ( $counts['rodieja_vehiculo'] ?? 0 ) ); ?></span>
 				</div>
 				<div class="rodieja-metric">
-					<span class="rodieja-metric__label"><?php echo $this->escaper->html( __( 'Repuestos', 'rodieja-contable' ) ); ?></span>
+					<span class="rodieja-metric__label"><?php echo $this->escaper->html( __( 'Parts', 'rodieja-contable' ) ); ?></span>
 					<span class="rodieja-metric__value"><?php echo $this->escaper->html( (string) ( $counts['rodieja_repuesto'] ?? 0 ) ); ?></span>
 				</div>
 				<div class="rodieja-metric">
-					<span class="rodieja-metric__label"><?php echo $this->escaper->html( __( 'Pedidos', 'rodieja-contable' ) ); ?></span>
+					<span class="rodieja-metric__label"><?php echo $this->escaper->html( __( 'Orders', 'rodieja-contable' ) ); ?></span>
 					<span class="rodieja-metric__value"><?php echo $this->escaper->html( (string) ( $counts['rodieja_pedido'] ?? 0 ) ); ?></span>
 				</div>
 				<div class="rodieja-metric rodieja-metric--ok">
-					<span class="rodieja-metric__label"><?php echo $this->escaper->html( __( 'Balance mes', 'rodieja-contable' ) ); ?></span>
+					<span class="rodieja-metric__label"><?php echo $this->escaper->html( __( 'Month balance', 'rodieja-contable' ) ); ?></span>
 					<span class="rodieja-metric__value"><?php echo $this->escaper->html( number_format_i18n( (float) $snap['finance_month']['balance'], 0 ) ); ?></span>
 				</div>
 				<div class="rodieja-metric">
-					<span class="rodieja-metric__label"><?php echo $this->escaper->html( __( 'Inventario ₡', 'rodieja-contable' ) ); ?></span>
+					<span class="rodieja-metric__label"><?php echo $this->escaper->html( __( 'Inventory ₡', 'rodieja-contable' ) ); ?></span>
 					<span class="rodieja-metric__value"><?php echo $this->escaper->html( number_format_i18n( (float) $snap['inventory']['valor_inventario'], 0 ) ); ?></span>
 				</div>
 				<div class="rodieja-metric">
-					<span class="rodieja-metric__label"><?php echo $this->escaper->html( __( 'Margen est.', 'rodieja-contable' ) ); ?></span>
+					<span class="rodieja-metric__label"><?php echo $this->escaper->html( __( 'Est. margin', 'rodieja-contable' ) ); ?></span>
 					<span class="rodieja-metric__value"><?php echo $this->escaper->html( number_format_i18n( (float) $snap['profitability']['margen_bruto'], 0 ) ); ?></span>
 				</div>
 			</div>
 
-			<h2 class="rodieja-section-title"><?php echo $this->escaper->html( __( 'Módulos', 'rodieja-contable' ) ); ?></h2>
+			<h2 class="rodieja-section-title"><?php echo $this->escaper->html( __( 'Modules', 'rodieja-contable' ) ); ?></h2>
 			<div class="rodieja-nav-grid">
 				<?php foreach ( $tiles as $tile ) : ?>
 					<a class="rodieja-nav-tile" href="<?php echo $this->escaper->url( $tile[3] ); ?>">
@@ -387,30 +387,30 @@ final class AdminMenu {
 		}
 		$org   = get_option( 'rodieja_contable_org_name', 'Rodieja Contable' );
 		$links = array(
-			array( __( 'Integraciones INS/Audatex', 'rodieja-contable' ), admin_url( 'admin.php?page=rodieja-config-integrations' ) ),
-			array( __( 'Cantones CR', 'rodieja-contable' ), admin_url( 'admin.php?page=rodieja-config-cantones' ) ),
+			array( __( 'INS/Audatex integrations', 'rodieja-contable' ), admin_url( 'admin.php?page=rodieja-config-integrations' ) ),
+			array( __( 'CR cantons', 'rodieja-contable' ), admin_url( 'admin.php?page=rodieja-config-cantones' ) ),
 			array( __( 'Tools import/export', 'rodieja-contable' ), admin_url( 'admin.php?page=rodieja-tools' ) ),
-			array( __( 'Roles y capacidades', 'rodieja-contable' ), admin_url( 'admin.php?page=' . RolesDocumentationPage::SLUG ) ),
-			array( __( 'Mi perfil WP', 'rodieja-contable' ), admin_url( 'profile.php' ) ),
+			array( __( 'Roles and capabilities', 'rodieja-contable' ), admin_url( 'admin.php?page=' . RolesDocumentationPage::SLUG ) ),
+			array( __( 'My WP profile', 'rodieja-contable' ), admin_url( 'profile.php' ) ),
 		);
 		?>
 		<div class="wrap rodieja-admin-wrap">
 			<div class="rodieja-page-head">
-				<h1><?php echo $this->escaper->html( __( 'Configuración', 'rodieja-contable' ) ); ?></h1>
-				<p class="rodieja-admin-lede"><?php echo $this->escaper->html( __( 'Ajustes nativos (Options API) — equivalente a Configuración del Read-Only.', 'rodieja-contable' ) ); ?></p>
+				<h1><?php echo $this->escaper->html( __( 'Settings', 'rodieja-contable' ) ); ?></h1>
+				<p class="rodieja-admin-lede"><?php echo $this->escaper->html( __( 'Native settings (Options API) — equivalent to Read-Only Configuration.', 'rodieja-contable' ) ); ?></p>
 			</div>
 			<form method="post" action="options.php" class="rodieja-admin-card">
 				<?php settings_fields( 'rodieja_contable_settings' ); ?>
 				<table class="form-table" role="presentation">
 					<tr>
-						<th scope="row"><label for="rodieja_contable_org_name"><?php echo $this->escaper->html( __( 'Nombre organización', 'rodieja-contable' ) ); ?></label></th>
+						<th scope="row"><label for="rodieja_contable_org_name"><?php echo $this->escaper->html( __( 'Organization name', 'rodieja-contable' ) ); ?></label></th>
 						<td><input type="text" class="regular-text" id="rodieja_contable_org_name" name="rodieja_contable_org_name" value="<?php echo $this->escaper->attr( (string) $org ); ?>" /></td>
 					</tr>
 				</table>
 				<?php submit_button(); ?>
 			</form>
 			<div class="rodieja-admin-card">
-				<h2 class="title"><?php echo $this->escaper->html( __( 'Más opciones', 'rodieja-contable' ) ); ?></h2>
+				<h2 class="title"><?php echo $this->escaper->html( __( 'More options', 'rodieja-contable' ) ); ?></h2>
 				<ul class="rodieja-link-list">
 					<?php foreach ( $links as $link ) : ?>
 						<li><a href="<?php echo $this->escaper->url( $link[1] ); ?>"><?php echo $this->escaper->html( $link[0] ); ?></a></li>

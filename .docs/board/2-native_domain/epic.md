@@ -1,4 +1,6 @@
-# Native domain: seed + CPT admin smoke
+# 2-native_domain
+
+Native domain: seed + CPT admin smoke
 
 | Field | Value |
 |---|---|

@@ -33,14 +33,14 @@ final class RolesDocumentationPage {
 		?>
 		<div class="wrap">
 			<h1><?php echo $this->escaper->html( __( 'Roles Rodieja', 'rodieja-contable' ) ); ?></h1>
-			<p><?php echo $this->escaper->html( __( 'Registro nativo vía RoleRegistrar en activación.', 'rodieja-contable' ) ); ?></p>
+			<p><?php echo $this->escaper->html( __( 'Native registration via RoleRegistrar on activation.', 'rodieja-contable' ) ); ?></p>
 
 			<h2><?php echo $this->escaper->html( __( 'administrator', 'rodieja-contable' ) ); ?></h2>
 			<p>
 				<?php
 				echo $this->escaper->html(
 					$admin && $admin->has_cap( RoleRegistrar::CAP_MANAGE )
-						? __( 'Tiene manage_rodieja_contable (vía activación / maybe_upgrade_caps).', 'rodieja-contable' )
+						? __( 'Has manage_rodieja_contable (via activation / maybe_upgrade_caps).', 'rodieja-contable' )
 						: __( 'Sin manage_rodieja_contable detectado.', 'rodieja-contable' )
 				);
 				?>
@@ -53,7 +53,7 @@ final class RolesDocumentationPage {
 					$contador
 						? sprintf(
 							/* translators: %d: capability count */
-							__( 'Rol presente con %d capacidades CPT + manage_rodieja_contable.', 'rodieja-contable' ),
+							__( 'Role present with %d CPT capabilities + manage_rodieja_contable.', 'rodieja-contable' ),
 							count( $contador->capabilities )
 						)
 						: __( 'Rol no instalado — se crea en register() si falta.', 'rodieja-contable' )
@@ -61,9 +61,9 @@ final class RolesDocumentationPage {
 				?>
 			</p>
 
-			<h3><?php echo $this->escaper->html( __( 'Capacidad central', 'rodieja-contable' ) ); ?></h3>
+			<h3><?php echo $this->escaper->html( __( 'Central capability', 'rodieja-contable' ) ); ?></h3>
 			<code><?php echo $this->escaper->html( RoleRegistrar::CAP_MANAGE ); ?></code>
-			<p class="description"><?php esc_html_e( 'Historial (rodieja_evento), reportes y enlaces de perfil usan esta capacidad.', 'rodieja-contable' ); ?></p>
+			<p class="description"><?php esc_html_e( 'History (rodieja_evento), reportes y enlaces de perfil usan esta capacidad.', 'rodieja-contable' ); ?></p>
 		</div>
 		<?php
 	}

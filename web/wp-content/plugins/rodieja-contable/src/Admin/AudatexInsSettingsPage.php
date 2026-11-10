@@ -40,13 +40,13 @@ final class AudatexInsSettingsPage {
 					'last_import_note' => isset( $_POST['last_import_note'] ) ? (string) wp_unslash( $_POST['last_import_note'] ) : '',
 				)
 			);
-			echo '<div class="notice notice-success"><p>' . $this->escaper->html( __( 'Configuración guardada.', 'rodieja-contable' ) ) . '</p></div>';
+			echo '<div class="notice notice-success"><p>' . $this->escaper->html( __( 'Settings saved.', 'rodieja-contable' ) ) . '</p></div>';
 		}
 		$s = $this->settings->get();
 		?>
 		<div class="wrap">
-			<h1><?php echo $this->escaper->html( __( 'Configuración', 'rodieja-contable' ) ); ?></h1>
-			<p><?php echo $this->escaper->html( __( 'Flags de integración local — no hay sincronización en vivo con Audatex ni INS.', 'rodieja-contable' ) ); ?></p>
+			<h1><?php echo $this->escaper->html( __( 'Settings', 'rodieja-contable' ) ); ?></h1>
+			<p><?php echo $this->escaper->html( __( 'Local integration flags — no live sync with Audatex or INS.', 'rodieja-contable' ) ); ?></p>
 			<form method="post">
 				<?php $this->nonce->field( 'rodieja_audatex_ins_settings' ); ?>
 				<table class="form-table">
@@ -59,15 +59,15 @@ final class AudatexInsSettingsPage {
 						<td><label><input type="checkbox" name="ins_enabled" value="1" <?php checked( $s['ins_enabled'] ); ?> /></label></td>
 					</tr>
 					<tr>
-						<th><?php echo $this->escaper->html( __( 'Última importación', 'rodieja-contable' ) ); ?></th>
+						<th><?php echo $this->escaper->html( __( 'Last import', 'rodieja-contable' ) ); ?></th>
 						<td><?php echo $this->escaper->html( $s['last_import_at'] ?: '—' ); ?></td>
 					</tr>
 					<tr>
-						<th><label for="last_import_note"><?php echo $this->escaper->html( __( 'Nota última importación', 'rodieja-contable' ) ); ?></label></th>
+						<th><label for="last_import_note"><?php echo $this->escaper->html( __( 'Last import note', 'rodieja-contable' ) ); ?></label></th>
 						<td><textarea class="large-text" rows="3" name="last_import_note" id="last_import_note"><?php echo $this->escaper->html( $s['last_import_note'] ); ?></textarea></td>
 					</tr>
 				</table>
-				<?php submit_button( __( 'Guardar', 'rodieja-contable' ) ); ?>
+				<?php submit_button( __( 'Save', 'rodieja-contable' ) ); ?>
 			</form>
 		</div>
 		<?php

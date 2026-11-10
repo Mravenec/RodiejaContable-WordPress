@@ -4,52 +4,43 @@
 
 ## Title
 
-Admin UX: hub, resúmenes, empleado↔WP user
+Admin UX: hub, summaries, employee↔WP user
 
 ## Why
 
-El admin debe sentirse como el hub Rodieja (menús/resúmenes) y enlazar empleados de dominio a usuarios WP (contador).
+Admin must feel like the Rodieja hub (menus/summaries) and link domain employees to WP users (contador).
 
 ## What we did
 
-- [x] Hub Rodieja con links CPT + seed
-- [x] Pantallas resumen inventario/ventas nativas
-- [x] Meta empleado `user_id` ↔ WP user
+- [x] Rodieja hub with CPT links + seed
+- [x] Native inventory/sales summary screens
+- [x] Employee user_id meta ↔ WP user
 
 ## Acceptance
 
-- Given admin Rodieja
-- When abre Inicio/hub
-- Expect navegación a CPT y resúmenes sin SPA
+- Given Rodieja admin
+- When Home/hub opens
+- Expect CPT navigation and summaries without a SPA
 
 ## Agent notes (constraints / edge cases)
 
-Chrome/menús React-shaped; implementación PHP nativa.
-
-## Areas touched (unified WordPress tree)
-
-| Area | Touched? | Notes |
-|---|---|---|
-| Plugin AdminMenu/hub | sí |  |
+React-shaped chrome; PHP native implementation.
 
 ## Board issues (= tickets)
 
 - APP-7-1 hub
-- APP-7-2 resúmenes
-- APP-7-3 empleado↔user
-
-Checklists and evidence live on the board issue files / living HTML — not duplicated here.
+- APP-7-2 summaries
+- APP-7-3 employee↔user
 
 ## How to verify
 
-- `wp-admin menú Inicio / Vehículos / Inventario`
-- `perfil empleado meta`
+- `Home / Vehicles / Inventory menus`
+- `employee meta`
 
 ```bash
 node .linear/scripts/board.mjs progress --epic 7
-# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome
 
-Admin UX hub LANDED. Menú jerárquico epic 17.
+Admin hub LANDED. Hierarchy menu = epic 17.

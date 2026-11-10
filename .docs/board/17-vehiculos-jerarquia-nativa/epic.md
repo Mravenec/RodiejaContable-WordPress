@@ -1,4 +1,6 @@
-# Vehículos: vista jerárquica nativa (marca→modelo→gen→vehículo)
+# 17-vehiculos-jerarquia-nativa
+
+Vehicles: native hierarchy view (brand→model→gen→vehicle)
 
 | Field | Value |
 |---|---|

@@ -54,7 +54,7 @@ final class HistorialRecorder {
 			$accion,
 			$origen_cpt,
 			$origen_id,
-			$title ?: __( '(sin título)', 'rodieja-contable' )
+			$title ?: __( '(no title)', 'rodieja-contable' )
 		);
 
 		self::$writing = true;

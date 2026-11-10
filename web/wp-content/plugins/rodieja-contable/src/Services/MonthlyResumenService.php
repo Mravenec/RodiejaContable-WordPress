@@ -15,7 +15,7 @@ final class MonthlyResumenService {
 		$to      = (string) get_option( 'admin_email' );
 		$subject = sprintf(
 			/* translators: %s: month year */
-			__( 'Rodieja — resumen mensual %s', 'rodieja-contable' ),
+			__( 'Rodieja — monthly digest %s', 'rodieja-contable' ),
 			gmdate( 'Y-m' )
 		);
 		$body    = $this->build_body();
@@ -47,16 +47,16 @@ final class MonthlyResumenService {
 		}
 
 		$lines = array(
-			__( 'Resumen Rodieja Contable (nativo WP)', 'rodieja-contable' ),
+			__( 'Rodieja Contable digest (native WP)', 'rodieja-contable' ),
 			'',
-			sprintf( __( 'Vehículos publicados: %d', 'rodieja-contable' ), $counts['vehiculos'] ),
-			sprintf( __( 'Repuestos publicados: %d', 'rodieja-contable' ), $counts['repuestos'] ),
-			sprintf( __( 'Transacciones publicadas: %d', 'rodieja-contable' ), $counts['transacciones'] ),
-			sprintf( __( 'Pedidos publicados: %d', 'rodieja-contable' ), $counts['pedidos'] ),
-			sprintf( __( 'Eventos historial este mes: %d', 'rodieja-contable' ), $counts['historial_mes'] ),
+			sprintf( __( 'Published vehicles: %d', 'rodieja-contable' ), $counts['vehiculos'] ),
+			sprintf( __( 'Published parts: %d', 'rodieja-contable' ), $counts['repuestos'] ),
+			sprintf( __( 'Published transactions: %d', 'rodieja-contable' ), $counts['transacciones'] ),
+			sprintf( __( 'Published orders: %d', 'rodieja-contable' ), $counts['pedidos'] ),
+			sprintf( __( 'History events this month: %d', 'rodieja-contable' ), $counts['historial_mes'] ),
 			'',
-			sprintf( __( 'Ingresos del mes (transacciones): %s', 'rodieja-contable' ), number_format_i18n( $ingresos, 2 ) ),
-			sprintf( __( 'Egresos del mes (transacciones): %s', 'rodieja-contable' ), number_format_i18n( $egresos, 2 ) ),
+			sprintf( __( 'Month income (transactions): %s', 'rodieja-contable' ), number_format_i18n( $ingresos, 2 ) ),
+			sprintf( __( 'Month expenses (transactions): %s', 'rodieja-contable' ), number_format_i18n( $egresos, 2 ) ),
 		);
 
 		return implode( "\n", $lines );

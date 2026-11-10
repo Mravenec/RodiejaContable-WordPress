@@ -4,34 +4,27 @@
 
 ## Title
 
-Historiales + auditoría nativa (revisions/CPT log)
+History + native audit (revisions/CPT log)
 
 ## Why
 
-Cambios de dominio necesitan historial auditable nativo (CPT evento + hooks), no un log Spring aparte.
+Domain changes need a native auditable history (event CPT + hooks), not a separate Spring log.
 
 ## What we did
 
-- [x] CPT `rodieja_evento_historial` + hooks `save_post`
-- [x] Admin list filtrable por CPT origen
-- [x] Solo caps `manage_rodieja` en historial
+- [x] CPT rodieja_evento_historial + save_post hooks
+- [x] Admin list filterable by source CPT
+- [x] manage_rodieja caps only on history
 
 ## Acceptance
 
-- Given un save en CPT dominio
-- When se revisa Historial
-- Expect evento listado y acceso cap-gated
+- Given a domain CPT save
+- When History is opened
+- Expect a listed event and cap-gated access
 
 ## Agent notes (constraints / edge cases)
 
-Preferir hooks WP; sin tabla audit custom salvo OK humano.
-
-## Areas touched (unified WordPress tree)
-
-| Area | Touched? | Notes |
-|---|---|---|
-| Plugin Historial | sí |  |
-| Security caps | sí |  |
+Prefer WP hooks; no custom audit table without human OK.
 
 ## Board issues (= tickets)
 
@@ -39,18 +32,15 @@ Preferir hooks WP; sin tabla audit custom salvo OK humano.
 - APP-9-2 admin list
 - APP-9-3 caps
 
-Checklists and evidence live on the board issue files / living HTML — not duplicated here.
-
 ## How to verify
 
-- `menú Config/Historial`
-- `usuario sin cap → forbidden`
+- `Config/History`
+- `forbidden without cap`
 
 ```bash
 node .linear/scripts/board.mjs progress --epic 9
-# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome
 
-Historial nativo LANDED.
+Native history LANDED.

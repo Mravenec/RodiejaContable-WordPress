@@ -33,16 +33,16 @@ final class ProfitabilityReportPage {
 		$p = $this->report->summary();
 		?>
 		<div class="wrap">
-			<h1><?php echo $this->escaper->html( __( 'Rentabilidad', 'rodieja-contable' ) ); ?></h1>
-			<p><?php echo $this->escaper->html( __( 'Costos vehiculares vs recuperado + valor de repuestos en stock.', 'rodieja-contable' ) ); ?></p>
+			<h1><?php echo $this->escaper->html( __( 'Profitability', 'rodieja-contable' ) ); ?></h1>
+			<p><?php echo $this->escaper->html( __( 'Vehicle costs vs recovered + parts stock value.', 'rodieja-contable' ) ); ?></p>
 			<table class="widefat striped" style="max-width:520px">
 				<tbody>
 				<?php
 				$rows = array(
-					__( 'Vehículos', 'rodieja-contable' )              => (string) $p['vehiculos'],
-					__( 'Inversión acumulada', 'rodieja-contable' )    => number_format_i18n( $p['inversion'], 2 ),
+					__( 'Vehicles', 'rodieja-contable' )              => (string) $p['vehiculos'],
+					__( 'Cumulative investment', 'rodieja-contable' )    => number_format_i18n( $p['inversion'], 2 ),
 					__( 'Costo recuperado', 'rodieja-contable' )       => number_format_i18n( $p['recuperado'], 2 ),
-					__( 'Valor repuestos (stock)', 'rodieja-contable' ) => number_format_i18n( $p['valor_repuestos_stock'], 2 ),
+					__( 'Parts value (stock)', 'rodieja-contable' ) => number_format_i18n( $p['valor_repuestos_stock'], 2 ),
 					__( 'Margen bruto estimado', 'rodieja-contable' )  => number_format_i18n( $p['margen_bruto'], 2 ),
 				);
 				foreach ( $rows as $label => $val ) :

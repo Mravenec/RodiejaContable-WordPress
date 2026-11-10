@@ -1,4 +1,6 @@
-# Historiales + auditoría nativa (revisions/CPT log)
+# 9-historiales_auditoria
+
+History + native audit (revisions/CPT log)
 
 | Field | Value |
 |---|---|

@@ -1,4 +1,6 @@
-# Admin UX: hub, resúmenes, empleado↔WP user
+# 7-admin_ux
+
+Admin UX: hub, summaries, employee↔WP user
 
 | Field | Value |
 |---|---|

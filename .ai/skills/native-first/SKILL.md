@@ -16,7 +16,7 @@ Can CPT / taxonomies / post meta / Options / Settings / WP_Query / core REST do 
 2. **Native attempt** — which APIs; why insufficient
 3. **Custom plan** — tables? plugin classes? packages?
 4. **Security** — caps, nonces, `$wpdb->prepare`, REST `permission_callback`
-5. **Ask** — “¿Seguimos nativo, custom, o híbrido?”
+5. **Ask** — “Stay native, go custom, or hybrid?”
 
 Do not start custom schema or new Composer runtime deps until the human answers.
 

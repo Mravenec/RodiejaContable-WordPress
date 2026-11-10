@@ -30,8 +30,8 @@ final class GeoLocationMetaBoxes {
 	}
 
 	public function add_boxes(): void {
-		add_meta_box( 'rodieja_geo', __( 'Ubicación', 'rodieja-contable' ), array( $this, 'render' ), 'rodieja_vehiculo', 'side', 'default' );
-		add_meta_box( 'rodieja_geo', __( 'Ubicación', 'rodieja-contable' ), array( $this, 'render' ), 'rodieja_empleado', 'side', 'default' );
+		add_meta_box( 'rodieja_geo', __( 'Location', 'rodieja-contable' ), array( $this, 'render' ), 'rodieja_vehiculo', 'side', 'default' );
+		add_meta_box( 'rodieja_geo', __( 'Location', 'rodieja-contable' ), array( $this, 'render' ), 'rodieja_empleado', 'side', 'default' );
 	}
 
 	public function render( \WP_Post $post ): void {
@@ -43,14 +43,14 @@ final class GeoLocationMetaBoxes {
 		$canton    = (string) get_post_meta( $post->ID, 'rodieja_canton', true );
 		$lat       = (string) get_post_meta( $post->ID, 'rodieja_lat', true );
 		$lng       = (string) get_post_meta( $post->ID, 'rodieja_lng', true );
-		echo '<p><label>' . $this->escaper->html( __( 'Provincia', 'rodieja-contable' ) ) . '</label><br />';
+		echo '<p><label>' . $this->escaper->html( __( 'Province', 'rodieja-contable' ) ) . '</label><br />';
 		echo '<select name="rodieja_provincia" id="rodieja_provincia">';
 		echo '<option value="">—</option>';
 		foreach ( $this->cantones->provincias() as $p ) {
 			printf( '<option value="%1$s" %2$s>%3$s</option>', $this->escaper->attr( $p ), selected( $provincia, $p, false ), $this->escaper->html( $p ) );
 		}
 		echo '</select></p>';
-		echo '<p><label>' . $this->escaper->html( __( 'Cantón', 'rodieja-contable' ) ) . '</label><br />';
+		echo '<p><label>' . $this->escaper->html( __( 'Canton', 'rodieja-contable' ) ) . '</label><br />';
 		echo '<select name="rodieja_canton">';
 		echo '<option value="">—</option>';
 		$cantones = '' !== $provincia ? $this->cantones->cantones_for( $provincia ) : array();

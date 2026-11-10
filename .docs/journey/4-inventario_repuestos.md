@@ -4,52 +4,43 @@
 
 ## Title
 
-Inventario repuestos: stock, partes, crítico
+Parts inventory: stock, parts taxonomy, critical
 
 ## Why
 
-Inventario de repuestos necesita stock/precio, taxonomía de partes, vínculo a vehículo y alerta de stock crítico en admin.
+Parts inventory needs stock/price, parts taxonomy, vehicle link, and a critical-stock admin view.
 
 ## What we did
 
-- [x] Meta UI stock/precio + tax `rodieja_parte`
-- [x] Vínculo repuesto↔vehículo en admin
-- [x] Página admin stock crítico vía WP_Query
+- [x] Stock/price meta UI + rodieja_parte taxonomy
+- [x] Part↔vehicle link in admin
+- [x] Critical stock admin page via WP_Query
 
 ## Acceptance
 
-- Given repuestos con stock bajo
-- When se abre stock crítico
-- Expect listado filtrado nativo
+- Given parts with low stock
+- When critical stock opens
+- Expect a native filtered list
 
 ## Agent notes (constraints / edge cases)
 
-Sin tablas custom de inventario; meta + tax + query.
-
-## Areas touched (unified WordPress tree)
-
-| Area | Touched? | Notes |
-|---|---|---|
-| Plugin | sí | Repuestos CPT/meta/tax + CriticalStockPage |
+No custom inventory tables; meta + tax + query.
 
 ## Board issues (= tickets)
 
-- APP-4-1 stock/precio + tax
-- APP-4-2 vínculo vehículo
-- APP-4-3 stock crítico
-
-Checklists and evidence live on the board issue files / living HTML — not duplicated here.
+- APP-4-1 stock/price + tax
+- APP-4-2 vehicle link
+- APP-4-3 critical stock
 
 ## How to verify
 
 - `edit.php?post_type=rodieja_repuesto`
-- `menú Inventario → Stock crítico`
+- `Inventory → Critical stock`
 
 ```bash
 node .linear/scripts/board.mjs progress --epic 4
-# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome
 
-Inventario nativo + crítico LANDED.
+Native inventory + critical stock LANDED.

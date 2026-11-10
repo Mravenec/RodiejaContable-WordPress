@@ -1,4 +1,6 @@
-# Inventario repuestos: stock, partes, crítico
+# 4-inventario_repuestos
+
+Parts inventory: stock, parts taxonomy, critical
 
 | Field | Value |
 |---|---|

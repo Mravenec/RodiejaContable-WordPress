@@ -1,4 +1,6 @@
-# Reportes nativos: CSV admin + wp_mail resúmenes
+# 10-reportes_export
+
+Native reports: CSV admin + wp_mail digests
 
 | Field | Value |
 |---|---|

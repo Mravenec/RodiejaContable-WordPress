@@ -23,9 +23,9 @@ final class EventoPostTypeRegistrar {
 			DomainPostTypes::EVENTO,
 			array(
 				'labels'           => array(
-					'name'          => __( 'Historial', 'rodieja-contable' ),
+					'name'          => __( 'History', 'rodieja-contable' ),
 					'singular_name' => __( 'Evento', 'rodieja-contable' ),
-					'menu_name'     => __( 'Historial', 'rodieja-contable' ),
+					'menu_name'     => __( 'History', 'rodieja-contable' ),
 				),
 				'public'           => false,
 				'show_ui'          => true,

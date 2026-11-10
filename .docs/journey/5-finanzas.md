@@ -4,54 +4,44 @@
 
 ## Title
 
-Finanzas: transacciones + dashboard WP_Query
+Finance: transactions + WP_Query dashboard
 
 ## Why
 
-Ingresos/egresos deben vivir como CPT/meta con dashboard de montos y REST mutaciones solo para caps correctas (contador/admin).
+Income/expense must live as CPT/meta with a totals dashboard and REST mutations gated by contador/admin caps.
 
 ## What we did
 
-- [x] Transacciones ingreso/egreso + tax + vínculos
-- [x] Dashboard montos WP_Query/meta
-- [x] Caps contador en REST mutaciones (no `__return_true`)
+- [x] Income/expense transactions + tax + links
+- [x] Totals dashboard via WP_Query/meta
+- [x] Contador caps on REST mutations (no __return_true)
 
 ## Acceptance
 
-- Given usuario contador autenticado
-- When consulta dashboard/REST permitido
-- Expect montos coherentes; anónimo 401/403
+- Given authenticated contador
+- When dashboard/allowed REST is used
+- Expect coherent totals; anonymous 401/403
 
 ## Agent notes (constraints / edge cases)
 
-Security ticket obligatorio en mutaciones.
-
-## Areas touched (unified WordPress tree)
-
-| Area | Touched? | Notes |
-|---|---|---|
-| Plugin Finanzas | sí |  |
-| Security REST | sí |  |
+Security ticket required on mutations.
 
 ## Board issues (= tickets)
 
-- APP-5-1 transacciones
-- APP-5-2 dashboard montos
-- APP-5-3 caps REST
-
-Checklists and evidence live on the board issue files / living HTML — not duplicated here.
+- APP-5-1 transactions
+- APP-5-2 dashboard
+- APP-5-3 REST caps
 
 ## How to verify
 
-- `menú Finanzas`
-- `REST mutación anon vs contador`
+- `Finance menu`
+- `REST anon vs contador`
 - `layer-audit`
 
 ```bash
 node .linear/scripts/board.mjs progress --epic 5
-# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome
 
-Finanzas nativas + caps LANDED.
+Native finance + caps LANDED.
