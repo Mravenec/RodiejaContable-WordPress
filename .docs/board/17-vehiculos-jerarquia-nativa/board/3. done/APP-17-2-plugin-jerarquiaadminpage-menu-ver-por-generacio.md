@@ -32,6 +32,7 @@ details.rodieja-hierarchy__marca > marca→modelo→gen→vehículo
 
 ## History
 
+- 2026-11-10T07:17:00.356Z moved testing → done
 - 2026-11-10T07:16:59.937Z checklist item 2 marked
 - 2026-11-10T07:16:59.858Z moved doing → testing
 - 2026-11-10T07:16:59.698Z checklist item 1 marked

@@ -5,7 +5,7 @@
 | Id | 17 |
 | Slug | vehiculos-jerarquia-nativa |
 | Status | in_progress |
-| Progress | **75%** (0/2 in summarize · column + checklist) |
+| Progress | **83%** (0/2 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -31,11 +31,12 @@ _empty_
 
 ### 2. testing
 
-- `APP-17-2` Plugin · JerarquiaAdminPage + menu Ver por Generaciones + CSS _(role:plugin)_
+_empty_
 
 ### 3. done
 
 - `APP-17-1` Plugin · CatalogHierarchyService (WP_Query tree marca→modelo→gen→vehículo) _(role:plugin)_
+- `APP-17-2` Plugin · JerarquiaAdminPage + menu Ver por Generaciones + CSS _(role:plugin)_
 
 ### 4. summarize
 
