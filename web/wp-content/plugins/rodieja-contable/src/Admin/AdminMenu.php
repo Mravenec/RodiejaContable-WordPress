@@ -51,7 +51,7 @@ final class AdminMenu {
 	public function add_menus(): void {
 		$cap = CapabilityGate::MANAGE;
 
-		// —— Inicio (dashboard) ——
+		// —— Home (dashboard) ——
 		add_menu_page(
 			__( 'Rodieja Contable', 'rodieja-contable' ),
 			__( 'Home', 'rodieja-contable' ),
@@ -62,7 +62,7 @@ final class AdminMenu {
 			2
 		);
 
-		// —— Vehículos ——
+		// —— Vehicles ——
 		add_menu_page(
 			__( 'Vehicles', 'rodieja-contable' ),
 			__( 'Vehicles', 'rodieja-contable' ),
@@ -91,7 +91,7 @@ final class AdminMenu {
 			'post-new.php?post_type=rodieja_vehiculo'
 		);
 
-		// —— Inventario ——
+		// —— Inventory ——
 		add_menu_page(
 			__( 'Inventory', 'rodieja-contable' ),
 			__( 'Inventory', 'rodieja-contable' ),
@@ -117,7 +117,7 @@ final class AdminMenu {
 			array( $this->critical_stock, 'render' )
 		);
 
-		// —— Finanzas ——
+		// —— Finance ——
 		add_menu_page(
 			__( 'Finance', 'rodieja-contable' ),
 			__( 'Finance', 'rodieja-contable' ),
@@ -143,7 +143,7 @@ final class AdminMenu {
 			array( $this->finance_dashboard, 'render' )
 		);
 
-		// —— Reportes ——
+		// —— Reports ——
 		add_menu_page(
 			__( 'Reports', 'rodieja-contable' ),
 			__( 'Reports', 'rodieja-contable' ),
@@ -178,7 +178,7 @@ final class AdminMenu {
 			array( $this->report_inventario, 'render' )
 		);
 
-		// —— Cotizaciones InPart ——
+		// —— InPart Quotes ——
 		add_menu_page(
 			__( 'InPart Quotes', 'rodieja-contable' ),
 			__( 'InPart Quotes', 'rodieja-contable' ),
@@ -205,7 +205,7 @@ final class AdminMenu {
 			array( $this->report_ventas, 'render' )
 		);
 
-		// —— Configuración ——
+		// —— Settings ——
 		add_menu_page(
 			__( 'Settings', 'rodieja-contable' ),
 			__( 'Settings', 'rodieja-contable' ),
