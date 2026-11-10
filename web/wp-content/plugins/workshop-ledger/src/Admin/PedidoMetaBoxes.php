@@ -17,20 +17,20 @@ final class PedidoMetaBoxes {
 
 	/** @var array<string, string> */
 	private const PEDIDO_STRING = array(
-		'wl_origen'                   => 'Origen',
-		'wl_estado_pedido'            => 'Estado',
-		'wl_referencia_ext'           => 'Referencia ext',
-		'wl_numero_pedido'            => 'Número pedido',
-		'wl_cotizacion_id'            => 'Cotización ID',
-		'wl_siniestro'                => 'Siniestro',
+		'wl_origen'                   => 'Origin',
+		'wl_estado_pedido'            => 'Order status',
+		'wl_referencia_ext'           => 'External reference',
+		'wl_numero_pedido'            => 'Order number',
+		'wl_cotizacion_id'            => 'Quote ID',
+		'wl_siniestro'                => 'Claim',
 		'wl_wan'                      => 'WAN',
-		'wl_aseguradora'              => 'Aseguradora',
-		'wl_vehiculo_label'           => 'Vehículo (label)',
+		'wl_aseguradora'              => 'Insurer',
+		'wl_vehiculo_label'           => 'Vehicle (label)',
 		'wl_vin'                      => 'VIN',
-		'wl_comision_pagada'          => 'Comisión pagada (0/1)',
-		'wl_fecha_pago_comision'      => 'Fecha pago comisión',
-		'wl_referencia_pago_comision' => 'Ref. pago comisión',
-		'wl_notas'                    => 'Notas',
+		'wl_comision_pagada'          => 'Commission paid (0/1)',
+		'wl_fecha_pago_comision'      => 'Commission paid date',
+		'wl_referencia_pago_comision' => 'Commission payment ref',
+		'wl_notas'                    => 'Notes',
 	);
 
 	public function __construct(
@@ -48,7 +48,7 @@ final class PedidoMetaBoxes {
 	}
 
 	public function add_boxes(): void {
-		add_meta_box( 'wl_pedido_audatex', __( 'Order · datos', 'workshop-ledger' ), array( $this, 'render_pedido' ), 'wl_pedido', 'normal', 'high' );
+		add_meta_box( 'wl_pedido_audatex', __( 'Order · details', 'workshop-ledger' ), array( $this, 'render_pedido' ), 'wl_pedido', 'normal', 'high' );
 		add_meta_box( 'wl_pedido_item_box', __( 'Item · link', 'workshop-ledger' ), array( $this, 'render_item' ), 'wl_pedido_item', 'normal', 'high' );
 	}
 
@@ -62,7 +62,7 @@ final class PedidoMetaBoxes {
 			echo '<p><label>' . $this->escaper->html( __( $label, 'workshop-ledger' ) ) . '</label><br />';
 			echo '<input type="text" class="regular-text" name="' . $this->escaper->attr( $key ) . '" value="' . $this->escaper->attr( $val ) . '" /></p>';
 		}
-		foreach ( array( 'wl_total_pedido' => 'Total', 'wl_comision_calculada' => 'Comisión', 'wl_porcentaje_comision' => '% comisión' ) as $key => $label ) {
+		foreach ( array( 'wl_total_pedido' => 'Total', 'wl_comision_calculada' => 'Commission', 'wl_porcentaje_comision' => 'Commission %' ) as $key => $label ) {
 			$val = get_post_meta( $post->ID, $key, true );
 			echo '<p><label>' . $this->escaper->html( __( $label, 'workshop-ledger' ) ) . '</label><br />';
 			echo '<input type="number" step="0.01" name="' . $this->escaper->attr( $key ) . '" value="' . $this->escaper->attr( (string) $val ) . '" /></p>';
@@ -79,10 +79,10 @@ final class PedidoMetaBoxes {
 		$this->select_cpt( 'wl_pedido', 'wl_pedido_id', $pedido, __( 'Order', 'workshop-ledger' ) );
 		$this->select_cpt( 'wl_repuesto', 'wl_repuesto_id', $repuesto, __( 'Part', 'workshop-ledger' ) );
 		foreach ( array(
-			'wl_precio_ofrecido' => array( 'number', __( 'Price ofrecido', 'workshop-ledger' ) ),
+			'wl_precio_ofrecido' => array( 'number', __( 'Offered price', 'workshop-ledger' ) ),
 			'wl_cantidad'        => array( 'number', __( 'Quantity', 'workshop-ledger' ) ),
 			'wl_descripcion'     => array( 'text', __( 'Description', 'workshop-ledger' ) ),
-			'wl_tipo_pieza'      => array( 'text', __( 'Tipo pieza', 'workshop-ledger' ) ),
+			'wl_tipo_pieza'      => array( 'text', __( 'Part type', 'workshop-ledger' ) ),
 			'wl_dias_entrega'    => array( 'number', __( 'Delivery days', 'workshop-ledger' ) ),
 		) as $key => $cfg ) {
 			$val = get_post_meta( $post->ID, $key, true );
@@ -127,14 +127,14 @@ final class PedidoMetaBoxes {
 	 * @return array<string, string>
 	 */
 	public function pedido_cols( array $cols ): array {
-		$cols['wl_estado'] = __( 'Status', 'workshop-ledger' );
-		$cols['wl_total']  = __( 'Total', 'workshop-ledger' );
-		$cols['wl_origen'] = __( 'Origen', 'workshop-ledger' );
+		$cols['wl_estado_pedido'] = __( 'Status', 'workshop-ledger' );
+		$cols['wl_total']         = __( 'Total', 'workshop-ledger' );
+		$cols['wl_origen']        = __( 'Origin', 'workshop-ledger' );
 		return $cols;
 	}
 
 	public function pedido_col( string $col, int $post_id ): void {
-		if ( 'wl_estado' === $col ) {
+		if ( 'wl_estado_pedido' === $col ) {
 			echo $this->escaper->html( (string) get_post_meta( $post_id, 'wl_estado_pedido', true ) );
 		} elseif ( 'wl_total' === $col ) {
 			echo $this->escaper->html( number_format_i18n( (float) get_post_meta( $post_id, 'wl_total_pedido', true ), 2 ) );

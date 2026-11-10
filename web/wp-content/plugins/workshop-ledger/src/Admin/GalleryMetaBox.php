@@ -65,7 +65,7 @@ final class GalleryMetaBox {
 		$val = is_array( $raw ) ? implode( ',', array_map( 'intval', $raw ) ) : (string) $raw;
 		echo '<p><input type="text" class="widefat" id="wl_gallery_ids" name="wl_gallery_ids" value="' . $this->escaper->attr( $val ) . '" placeholder="1,2,3" /></p>';
 		echo '<p><button type="button" class="button wl-pick-gallery">' . esc_html__( 'Choose images', 'workshop-ledger' ) . '</button></p>';
-		echo '<p class="description">' . esc_html__( 'IDs de adjuntos WP (separados por coma). Imagen destacada sigue siendo la miniatura nativa.', 'workshop-ledger' ) . '</p>';
+		echo '<p class="description">' . esc_html__( 'WordPress attachment IDs (comma-separated). Featured image remains the native thumbnail.', 'workshop-ledger' ) . '</p>';
 	}
 
 	public function save( int $post_id, \WP_Post $post ): void {
