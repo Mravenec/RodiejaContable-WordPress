@@ -5,7 +5,7 @@
 | Id | 25 |
 | Slug | admin-ui-readonly-shell |
 | Status | in_progress |
-| Progress | **33%** (0/2 in summarize · column + checklist) |
+| Progress | **75%** (0/2 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -23,7 +23,7 @@ This folder is the **operational** board (claims, checklist, %). There is no `.a
 
 ### 0. backlog
 
-- `APP-25-2` Plugin · shell INS/Import + Settings stubs (English) _(role:plugin)_
+_empty_
 
 ### 1. doing
 
@@ -31,11 +31,11 @@ _empty_
 
 ### 2. testing
 
-- `APP-25-1` Plugin · hide WP chrome menus + rename Audatex InPart _(role:plugin)_
+- `APP-25-2` Plugin · shell INS/Import + Settings stubs (English) _(role:plugin)_
 
 ### 3. done
 
-_empty_
+- `APP-25-1` Plugin · hide WP chrome menus + rename Audatex InPart _(role:plugin)_
 
 ### 4. summarize
 
