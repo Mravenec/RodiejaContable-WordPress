@@ -1,6 +1,6 @@
 # Epic 21 — admin-ui-bugfix
 
-**Status:** In progress · Board: `.linear/epics/21-admin-ui-bugfix/`
+**Status:** Done · LANDED on `origin/main` · Board: `.linear/epics/21-admin-ui-bugfix/`
 
 ## Title
 

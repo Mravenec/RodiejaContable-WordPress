@@ -11,3 +11,4 @@
 {"at":"2026-11-10T07:58:49.727Z","type":"evidence","issueId":"APP-21-2","title":"columns-tablenav"}
 {"at":"2026-11-10T07:58:49.849Z","type":"move","issueId":"APP-21-2","from":"doing","to":"testing"}
 {"at":"2026-11-10T07:58:49.931Z","type":"checklist","issueId":"APP-21-2","item":"2"}
+{"at":"2026-11-10T07:58:50.274Z","type":"move","issueId":"APP-21-2","from":"testing","to":"done"}

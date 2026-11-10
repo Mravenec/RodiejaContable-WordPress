@@ -34,6 +34,7 @@ Direction + unset date; tablenav flex actions
 
 ## History
 
+- 2026-11-10T07:58:50.272Z moved testing → done
 - 2026-11-10T07:58:49.930Z checklist item 2 marked
 - 2026-11-10T07:58:49.848Z moved doing → testing
 - 2026-11-10T07:58:49.646Z checklist item 1 marked

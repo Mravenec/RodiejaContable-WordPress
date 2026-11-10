@@ -5,7 +5,7 @@
 | Id | 21 |
 | Slug | admin-ui-bugfix |
 | Status | in_progress |
-| Progress | **75%** (0/2 in summarize · column + checklist) |
+| Progress | **83%** (0/2 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -31,11 +31,12 @@ _empty_
 
 ### 2. testing
 
-- `APP-21-2` plugin: Transactions list columns + tablenav bulk/filter polish _(role:plugin)_
+_empty_
 
 ### 3. done
 
 - `APP-21-1` plugin: English leftovers (Add Transaction, My Profile, New province) _(role:plugin)_
+- `APP-21-2` plugin: Transactions list columns + tablenav bulk/filter polish _(role:plugin)_
 
 ### 4. summarize
 
