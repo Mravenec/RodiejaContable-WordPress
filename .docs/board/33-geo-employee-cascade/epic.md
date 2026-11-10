@@ -4,8 +4,8 @@
 |---|---|
 | Id | 33 |
 | Slug | geo-employee-cascade |
-| Status | planned |
-| Progress | **0%** (0/1 in summarize · column + checklist) |
+| Status | in_progress |
+| Progress | **83%** (0/1 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -23,7 +23,7 @@ This folder is the **operational** board (claims, checklist, %). There is no `.a
 
 ### 0. backlog
 
-- `APP-33-1` Geo: province→canton JS cascade; Employee email/phone/role meta box _(role:plugin)_
+_empty_
 
 ### 1. doing
 
@@ -35,7 +35,7 @@ _empty_
 
 ### 3. done
 
-_empty_
+- `APP-33-1` Geo: province→canton JS cascade; Employee email/phone/role meta box _(role:plugin)_
 
 ### 4. summarize
 
