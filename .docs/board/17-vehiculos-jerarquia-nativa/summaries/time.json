@@ -4,15 +4,32 @@
   "finished_at": null,
   "issues": {
     "APP-17-1": {
-      "active_ms": 0,
+      "active_ms": 87854,
       "paused": false,
-      "open": {
-        "start": "2026-11-10T07:14:42.993Z",
-        "last": "2026-11-10T07:15:25.748Z",
-        "agent": "plugin-agent-1",
-        "event": "checklist"
-      },
-      "segments": []
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T07:14:42.993Z",
+          "end": "2026-11-10T07:16:10.847Z",
+          "ms": 87854,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        }
+      ]
+    },
+    "APP-17-2": {
+      "active_ms": 47226,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T07:16:13.133Z",
+          "end": "2026-11-10T07:17:00.359Z",
+          "ms": 47226,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        }
+      ]
     }
   },
   "land": {

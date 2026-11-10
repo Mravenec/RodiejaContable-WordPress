@@ -32,6 +32,7 @@ public function tree(): array { $marcas = $this->posts("rodieja_marca"); }
 
 ## History
 
+- 2026-11-10T07:16:10.845Z moved testing → done
 - 2026-11-10T07:15:25.747Z checklist item 2 marked
 - 2026-11-10T07:15:22.698Z moved doing → testing
 - 2026-11-10T07:15:22.506Z checklist item 1 marked
