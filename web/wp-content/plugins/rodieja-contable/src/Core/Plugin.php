@@ -12,6 +12,7 @@ namespace Rodieja\Contable\Core;
 use Rodieja\Contable\Admin\AdminAssets;
 use Rodieja\Contable\Admin\AdminChrome;
 use Rodieja\Contable\Admin\AdminMenu;
+use Rodieja\Contable\Admin\CptListChrome;
 use Rodieja\Contable\Admin\CatalogAdminFilters;
 use Rodieja\Contable\Admin\CatalogListColumns;
 use Rodieja\Contable\Admin\CatalogMetaBoxes;
@@ -81,6 +82,7 @@ final class Plugin {
 		$this->container->get( MetaRegistrar::class )->register();
 		$this->container->get( AdminAssets::class )->register();
 		$this->container->get( AdminChrome::class )->register();
+		$this->container->get( CptListChrome::class )->register();
 		$this->container->get( HeaderAuthLinks::class )->register();
 		$this->container->get( LoginChrome::class )->register();
 		$this->container->get( AdminMenu::class )->register();

@@ -10,6 +10,7 @@ namespace Rodieja\Contable\Providers;
 use Rodieja\Contable\Admin\AdminAssets;
 use Rodieja\Contable\Admin\AdminChrome;
 use Rodieja\Contable\Admin\AdminMenu;
+use Rodieja\Contable\Admin\CptListChrome;
 use Rodieja\Contable\Admin\CatalogAdminFilters;
 use Rodieja\Contable\Admin\CatalogListColumns;
 use Rodieja\Contable\Admin\CatalogMetaBoxes;
@@ -104,6 +105,13 @@ final class ServiceProvider {
 		$container->set( MetaRegistrar::class, static fn() => new MetaRegistrar() );
 		$container->set( AdminAssets::class, static fn() => new AdminAssets() );
 		$container->set( AdminChrome::class, static fn() => new AdminChrome() );
+		$container->set(
+			CptListChrome::class,
+			static fn( Container $c ) => new CptListChrome(
+				$c->get( OutputEscaper::class ),
+				$c->get( CapabilityGate::class )
+			)
+		);
 		$container->set( HeaderAuthLinks::class, static fn() => new HeaderAuthLinks() );
 		$container->set( LoginChrome::class, static fn() => new LoginChrome() );
 
