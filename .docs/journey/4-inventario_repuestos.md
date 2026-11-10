@@ -1,6 +1,6 @@
 # Epic 4 — inventario_repuestos
 
-**Status:** Planned · Board: `.linear/epics/4-inventario_repuestos/`
+**Status:** Done · LANDED on `origin/main` · Board: `.linear/epics/4-inventario_repuestos/` · Snapshot: `.docs/board/4-inventario_repuestos/`
 
 ## Title
 
@@ -8,56 +8,48 @@ Inventario repuestos: stock, partes, crítico
 
 ## Why
 
-(Describe the problem / opportunity in plain language. Put **all** narrative depth here.)
+Inventario de repuestos necesita stock/precio, taxonomía de partes, vínculo a vehículo y alerta de stock crítico en admin.
 
-## What we will do
+## What we did
 
-- [ ] Clarify acceptance criteria
-- [ ] **Native-first:** prefer CPT/meta/Options/REST/hooks; if custom tables/packages seem needed, propose + get human OK before coding (`.ai/rules/native-first.md`)
-- [ ] Split into **board issues** under `.linear` (those are the only tickets)
-- [ ] Implement via multi-agent board (`doing` only)
-- [ ] Move tickets to `testing`, then verify (harness flags)
-- [ ] Park tickets in `done` until every issue in the epic is done
-- [ ] Then `summarize` (wrap-up column) and `handoff` (git command + Supervisor / Manager into the living HTML)
+- [x] Meta UI stock/precio + tax `rodieja_parte`
+- [x] Vínculo repuesto↔vehículo en admin
+- [x] Página admin stock crítico vía WP_Query
 
 ## Acceptance
 
-- Given …
-- When …
-- Expect …
+- Given repuestos con stock bajo
+- When se abre stock crítico
+- Expect listado filtrado nativo
 
 ## Agent notes (constraints / edge cases)
 
-(Anything agents need that is not a checklist step: constraints, links, non-goals, risks. Keep it here — there is no `.ai/tickets` folder.)
+Sin tablas custom de inventario; meta + tax + query.
 
 ## Areas touched (unified WordPress tree)
 
 | Area | Touched? | Notes |
 |---|---|---|
-| Plugin schema / dbDelta | | Optional mirror `docs/database/canonical_sql/` + `docs/diagrams/database/` |
-| `web/wp-content/plugins/<module>/` | | Contracts→Repos→Services→Controllers |
-| `web/wp-content/mu-plugins/` | | Hardening |
-| `docs/diagrams/plugin/` | | PlantUML twin of plugin `src/` |
+| Plugin | sí | Repuestos CPT/meta/tax + CriticalStockPage |
 
 ## Board issues (= tickets)
 
-Work lives only on the board. Create issues:
+- APP-4-1 stock/precio + tax
+- APP-4-2 vínculo vehículo
+- APP-4-3 stock crítico
 
-```bash
-node .linear/scripts/board.mjs issue create 4 --title "DB · …" --role database
-node .linear/scripts/board.mjs issue create 4 --title "Plugin · …" --role plugin --blocked-by APP-4-1
-node .linear/scripts/board.mjs issue create 4 --title "Security · …" --role security --blocked-by APP-4-2
-```
-
-Each issue Markdown holds its own sequential checklist. Do not copy checklists into this journey.
+Checklists and evidence live on the board issue files / living HTML — not duplicated here.
 
 ## How to verify
 
+- `edit.php?post_type=rodieja_repuesto`
+- `menú Inventario → Stock crítico`
+
 ```bash
 node .linear/scripts/board.mjs progress --epic 4
-# column + checklist %; 100% when all issues are in summarize with checklists complete
+# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome
 
-(Filled when epic reaches 100%.)
+Inventario nativo + crítico LANDED.

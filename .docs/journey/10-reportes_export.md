@@ -1,6 +1,6 @@
 # Epic 10 — reportes_export
 
-**Status:** Planned · Board: `.linear/epics/10-reportes_export/`
+**Status:** Done · LANDED on `origin/main` · Board: `.linear/epics/10-reportes_export/` · Snapshot: `.docs/board/10-reportes_export/`
 
 ## Title
 
@@ -8,56 +8,46 @@ Reportes nativos: CSV admin + wp_mail resúmenes
 
 ## Why
 
-(Describe the problem / opportunity in plain language. Put **all** narrative depth here.)
+Export operativos (vehículos/repuestos/tx) y resumen mensual por correo deben ser nativos (admin-post + nonce + caps).
 
-## What we will do
+## What we did
 
-- [ ] Clarify acceptance criteria
-- [ ] **Native-first:** prefer CPT/meta/Options/REST/hooks; if custom tables/packages seem needed, propose + get human OK before coding (`.ai/rules/native-first.md`)
-- [ ] Split into **board issues** under `.linear` (those are the only tickets)
-- [ ] Implement via multi-agent board (`doing` only)
-- [ ] Move tickets to `testing`, then verify (harness flags)
-- [ ] Park tickets in `done` until every issue in the epic is done
-- [ ] Then `summarize` (wrap-up column) and `handoff` (git command + Supervisor / Manager into the living HTML)
+- [x] Export CSV vía admin-post + nonce
+- [x] Resumen mensual `wp_mail` cap-gated
 
 ## Acceptance
 
-- Given …
-- When …
-- Expect …
+- Given admin con caps
+- When exporta CSV o dispara resumen
+- Expect archivo/correo; sin cap → denegado
 
 ## Agent notes (constraints / edge cases)
 
-(Anything agents need that is not a checklist step: constraints, links, non-goals, risks. Keep it here — there is no `.ai/tickets` folder.)
+No cron externo; WP-Cron/`wp_mail` nativos.
 
 ## Areas touched (unified WordPress tree)
 
 | Area | Touched? | Notes |
 |---|---|---|
-| Plugin schema / dbDelta | | Optional mirror `docs/database/canonical_sql/` + `docs/diagrams/database/` |
-| `web/wp-content/plugins/<module>/` | | Contracts→Repos→Services→Controllers |
-| `web/wp-content/mu-plugins/` | | Hardening |
-| `docs/diagrams/plugin/` | | PlantUML twin of plugin `src/` |
+| Plugin Reportes | sí |  |
 
 ## Board issues (= tickets)
 
-Work lives only on the board. Create issues:
+- APP-10-1 CSV export
+- APP-10-2 wp_mail resumen
 
-```bash
-node .linear/scripts/board.mjs issue create 10 --title "DB · …" --role database
-node .linear/scripts/board.mjs issue create 10 --title "Plugin · …" --role plugin --blocked-by APP-10-1
-node .linear/scripts/board.mjs issue create 10 --title "Security · …" --role security --blocked-by APP-10-2
-```
-
-Each issue Markdown holds its own sequential checklist. Do not copy checklists into this journey.
+Checklists and evidence live on the board issue files / living HTML — not duplicated here.
 
 ## How to verify
 
+- `menú Reportes`
+- `admin-post con nonce`
+
 ```bash
 node .linear/scripts/board.mjs progress --epic 10
-# column + checklist %; 100% when all issues are in summarize with checklists complete
+# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome
 
-(Filled when epic reaches 100%.)
+Reportes/export LANDED.

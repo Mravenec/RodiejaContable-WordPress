@@ -1,6 +1,6 @@
 # Epic 15 — geo_ubicaciones
 
-**Status:** Planned · Board: `.linear/epics/15-geo_ubicaciones/`
+**Status:** Done · LANDED on `origin/main` · Board: `.linear/epics/15-geo_ubicaciones/` · Snapshot: `.docs/board/15-geo_ubicaciones/`
 
 ## Title
 
@@ -8,56 +8,46 @@ Geo nativo: meta ubicación/cantón en vehículo+empleado
 
 ## Why
 
-(Describe the problem / opportunity in plain language. Put **all** narrative depth here.)
+Ubicación CR (provincia/cantón/lat/lng) debe ser meta nativa + Options de cantones, no microservicio geo.
 
-## What we will do
+## What we did
 
-- [ ] Clarify acceptance criteria
-- [ ] **Native-first:** prefer CPT/meta/Options/REST/hooks; if custom tables/packages seem needed, propose + get human OK before coding (`.ai/rules/native-first.md`)
-- [ ] Split into **board issues** under `.linear` (those are the only tickets)
-- [ ] Implement via multi-agent board (`doing` only)
-- [ ] Move tickets to `testing`, then verify (harness flags)
-- [ ] Park tickets in `done` until every issue in the epic is done
-- [ ] Then `summarize` (wrap-up column) and `handoff` (git command + Supervisor / Manager into the living HTML)
+- [x] Meta geo + campos admin en vehículo/empleado
+- [x] Options lista cantones CR
 
 ## Acceptance
 
-- Given …
-- When …
-- Expect …
+- Given vehículo/empleado
+- When se guarda cantón/coords
+- Expect meta persistida y lista cantones desde Options
 
 ## Agent notes (constraints / edge cases)
 
-(Anything agents need that is not a checklist step: constraints, links, non-goals, risks. Keep it here — there is no `.ai/tickets` folder.)
+Lista cantones en Options API; editable sin deploy.
 
 ## Areas touched (unified WordPress tree)
 
 | Area | Touched? | Notes |
 |---|---|---|
-| Plugin schema / dbDelta | | Optional mirror `docs/database/canonical_sql/` + `docs/diagrams/database/` |
-| `web/wp-content/plugins/<module>/` | | Contracts→Repos→Services→Controllers |
-| `web/wp-content/mu-plugins/` | | Hardening |
-| `docs/diagrams/plugin/` | | PlantUML twin of plugin `src/` |
+| Plugin meta geo + CantonesSettings | sí |  |
 
 ## Board issues (= tickets)
 
-Work lives only on the board. Create issues:
+- APP-15-1 meta geo admin
+- APP-15-2 Options cantones
 
-```bash
-node .linear/scripts/board.mjs issue create 15 --title "DB · …" --role database
-node .linear/scripts/board.mjs issue create 15 --title "Plugin · …" --role plugin --blocked-by APP-15-1
-node .linear/scripts/board.mjs issue create 15 --title "Security · …" --role security --blocked-by APP-15-2
-```
-
-Each issue Markdown holds its own sequential checklist. Do not copy checklists into this journey.
+Checklists and evidence live on the board issue files / living HTML — not duplicated here.
 
 ## How to verify
 
+- `metabox geo`
+- `settings cantones`
+
 ```bash
 node .linear/scripts/board.mjs progress --epic 15
-# column + checklist %; 100% when all issues are in summarize with checklists complete
+# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome
 
-(Filled when epic reaches 100%.)
+Geo nativo LANDED.

@@ -1,6 +1,6 @@
 # Epic 14 — pedidos_ins_import
 
-**Status:** Planned · Board: `.linear/epics/14-pedidos_ins_import/`
+**Status:** Done · LANDED on `origin/main` · Board: `.linear/epics/14-pedidos_ins_import/` · Snapshot: `.docs/board/14-pedidos_ins_import/`
 
 ## Title
 
@@ -8,56 +8,49 @@ Pedidos INS/Audatex: import JSON/CSV local + Options (sin API live)
 
 ## Why
 
-(Describe the problem / opportunity in plain language. Put **all** narrative depth here.)
+Traer pedidos Audatex/INS sin sync live: Options de configuración + import local JSON/CSV a CPT/ítems.
 
-## What we will do
+## What we did
 
-- [ ] Clarify acceptance criteria
-- [ ] **Native-first:** prefer CPT/meta/Options/REST/hooks; if custom tables/packages seem needed, propose + get human OK before coding (`.ai/rules/native-first.md`)
-- [ ] Split into **board issues** under `.linear` (those are the only tickets)
-- [ ] Implement via multi-agent board (`doing` only)
-- [ ] Move tickets to `testing`, then verify (harness flags)
-- [ ] Park tickets in `done` until every issue in the epic is done
-- [ ] Then `summarize` (wrap-up column) and `handoff` (git command + Supervisor / Manager into the living HTML)
+- [x] Options Audatex/INS (sin API live)
+- [x] Import JSON/CSV → pedidos + items
+- [x] Mapa journey Spring sync → import nativo
 
 ## Acceptance
 
-- Given …
-- When …
-- Expect …
+- Given un JSON/CSV válido
+- When se importa en admin
+- Expect CPT pedidos/ítems creados; settings en Options
 
 ## Agent notes (constraints / edge cases)
 
-(Anything agents need that is not a checklist step: constraints, links, non-goals, risks. Keep it here — there is no `.ai/tickets` folder.)
+Explicit non-goal: sync live Audatex. Solo import local.
 
 ## Areas touched (unified WordPress tree)
 
 | Area | Touched? | Notes |
 |---|---|---|
-| Plugin schema / dbDelta | | Optional mirror `docs/database/canonical_sql/` + `docs/diagrams/database/` |
-| `web/wp-content/plugins/<module>/` | | Contracts→Repos→Services→Controllers |
-| `web/wp-content/mu-plugins/` | | Hardening |
-| `docs/diagrams/plugin/` | | PlantUML twin of plugin `src/` |
+| Plugin Options + import | sí |  |
+| Orchestrator map | sí |  |
 
 ## Board issues (= tickets)
 
-Work lives only on the board. Create issues:
+- APP-14-1 Options settings
+- APP-14-2 import JSON/CSV
+- APP-14-3 map Spring→native
 
-```bash
-node .linear/scripts/board.mjs issue create 14 --title "DB · …" --role database
-node .linear/scripts/board.mjs issue create 14 --title "Plugin · …" --role plugin --blocked-by APP-14-1
-node .linear/scripts/board.mjs issue create 14 --title "Security · …" --role security --blocked-by APP-14-2
-```
-
-Each issue Markdown holds its own sequential checklist. Do not copy checklists into this journey.
+Checklists and evidence live on the board issue files / living HTML — not duplicated here.
 
 ## How to verify
 
+- `Settings Audatex/INS`
+- `import page con fixture`
+
 ```bash
 node .linear/scripts/board.mjs progress --epic 14
-# column + checklist %; 100% when all issues are in summarize with checklists complete
+# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome
 
-(Filled when epic reaches 100%.)
+Import local INS/Audatex LANDED (sin live API).

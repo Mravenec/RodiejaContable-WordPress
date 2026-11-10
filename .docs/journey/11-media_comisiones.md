@@ -1,6 +1,6 @@
 # Epic 11 — media_comisiones
 
-**Status:** Planned · Board: `.linear/epics/11-media_comisiones/`
+**Status:** Done · LANDED on `origin/main` · Board: `.linear/epics/11-media_comisiones/` · Snapshot: `.docs/board/11-media_comisiones/`
 
 ## Title
 
@@ -8,56 +8,46 @@ Media Library + pagos/comisiones meta en pedidos
 
 ## Why
 
-(Describe the problem / opportunity in plain language. Put **all** narrative depth here.)
+Vehículos/repuestos necesitan media WP; pedidos necesitan meta de comisión/pago visible en admin.
 
-## What we will do
+## What we did
 
-- [ ] Clarify acceptance criteria
-- [ ] **Native-first:** prefer CPT/meta/Options/REST/hooks; if custom tables/packages seem needed, propose + get human OK before coding (`.ai/rules/native-first.md`)
-- [ ] Split into **board issues** under `.linear` (those are the only tickets)
-- [ ] Implement via multi-agent board (`doing` only)
-- [ ] Move tickets to `testing`, then verify (harness flags)
-- [ ] Park tickets in `done` until every issue in the epic is done
-- [ ] Then `summarize` (wrap-up column) and `handoff` (git command + Supervisor / Manager into the living HTML)
+- [x] Featured image / gallery en vehículo y repuesto
+- [x] Meta comisión/pago en pedido + columnas admin
 
 ## Acceptance
 
-- Given …
-- When …
-- Expect …
+- Given un vehículo con imagen
+- When se edita en admin
+- Expect Media Library nativa; pedidos muestran comisión
 
 ## Agent notes (constraints / edge cases)
 
-(Anything agents need that is not a checklist step: constraints, links, non-goals, risks. Keep it here — there is no `.ai/tickets` folder.)
+Usar Media Library core; no CDN custom.
 
 ## Areas touched (unified WordPress tree)
 
 | Area | Touched? | Notes |
 |---|---|---|
-| Plugin schema / dbDelta | | Optional mirror `docs/database/canonical_sql/` + `docs/diagrams/database/` |
-| `web/wp-content/plugins/<module>/` | | Contracts→Repos→Services→Controllers |
-| `web/wp-content/mu-plugins/` | | Hardening |
-| `docs/diagrams/plugin/` | | PlantUML twin of plugin `src/` |
+| Plugin media + meta pedidos | sí |  |
 
 ## Board issues (= tickets)
 
-Work lives only on the board. Create issues:
+- APP-11-1 featured/gallery
+- APP-11-2 comisión/pago meta
 
-```bash
-node .linear/scripts/board.mjs issue create 11 --title "DB · …" --role database
-node .linear/scripts/board.mjs issue create 11 --title "Plugin · …" --role plugin --blocked-by APP-11-1
-node .linear/scripts/board.mjs issue create 11 --title "Security · …" --role security --blocked-by APP-11-2
-```
-
-Each issue Markdown holds its own sequential checklist. Do not copy checklists into this journey.
+Checklists and evidence live on the board issue files / living HTML — not duplicated here.
 
 ## How to verify
 
+- `editor vehículo media`
+- `lista pedidos columnas`
+
 ```bash
 node .linear/scripts/board.mjs progress --epic 11
-# column + checklist %; 100% when all issues are in summarize with checklists complete
+# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome
 
-(Filled when epic reaches 100%.)
+Media + comisiones LANDED.

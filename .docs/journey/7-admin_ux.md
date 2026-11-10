@@ -1,6 +1,6 @@
 # Epic 7 — admin_ux
 
-**Status:** Planned · Board: `.linear/epics/7-admin_ux/`
+**Status:** Done · LANDED on `origin/main` · Board: `.linear/epics/7-admin_ux/` · Snapshot: `.docs/board/7-admin_ux/`
 
 ## Title
 
@@ -8,56 +8,48 @@ Admin UX: hub, resúmenes, empleado↔WP user
 
 ## Why
 
-(Describe the problem / opportunity in plain language. Put **all** narrative depth here.)
+El admin debe sentirse como el hub Rodieja (menús/resúmenes) y enlazar empleados de dominio a usuarios WP (contador).
 
-## What we will do
+## What we did
 
-- [ ] Clarify acceptance criteria
-- [ ] **Native-first:** prefer CPT/meta/Options/REST/hooks; if custom tables/packages seem needed, propose + get human OK before coding (`.ai/rules/native-first.md`)
-- [ ] Split into **board issues** under `.linear` (those are the only tickets)
-- [ ] Implement via multi-agent board (`doing` only)
-- [ ] Move tickets to `testing`, then verify (harness flags)
-- [ ] Park tickets in `done` until every issue in the epic is done
-- [ ] Then `summarize` (wrap-up column) and `handoff` (git command + Supervisor / Manager into the living HTML)
+- [x] Hub Rodieja con links CPT + seed
+- [x] Pantallas resumen inventario/ventas nativas
+- [x] Meta empleado `user_id` ↔ WP user
 
 ## Acceptance
 
-- Given …
-- When …
-- Expect …
+- Given admin Rodieja
+- When abre Inicio/hub
+- Expect navegación a CPT y resúmenes sin SPA
 
 ## Agent notes (constraints / edge cases)
 
-(Anything agents need that is not a checklist step: constraints, links, non-goals, risks. Keep it here — there is no `.ai/tickets` folder.)
+Chrome/menús React-shaped; implementación PHP nativa.
 
 ## Areas touched (unified WordPress tree)
 
 | Area | Touched? | Notes |
 |---|---|---|
-| Plugin schema / dbDelta | | Optional mirror `docs/database/canonical_sql/` + `docs/diagrams/database/` |
-| `web/wp-content/plugins/<module>/` | | Contracts→Repos→Services→Controllers |
-| `web/wp-content/mu-plugins/` | | Hardening |
-| `docs/diagrams/plugin/` | | PlantUML twin of plugin `src/` |
+| Plugin AdminMenu/hub | sí |  |
 
 ## Board issues (= tickets)
 
-Work lives only on the board. Create issues:
+- APP-7-1 hub
+- APP-7-2 resúmenes
+- APP-7-3 empleado↔user
 
-```bash
-node .linear/scripts/board.mjs issue create 7 --title "DB · …" --role database
-node .linear/scripts/board.mjs issue create 7 --title "Plugin · …" --role plugin --blocked-by APP-7-1
-node .linear/scripts/board.mjs issue create 7 --title "Security · …" --role security --blocked-by APP-7-2
-```
-
-Each issue Markdown holds its own sequential checklist. Do not copy checklists into this journey.
+Checklists and evidence live on the board issue files / living HTML — not duplicated here.
 
 ## How to verify
 
+- `wp-admin menú Inicio / Vehículos / Inventario`
+- `perfil empleado meta`
+
 ```bash
 node .linear/scripts/board.mjs progress --epic 7
-# column + checklist %; 100% when all issues are in summarize with checklists complete
+# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome
 
-(Filled when epic reaches 100%.)
+Admin UX hub LANDED. Menú jerárquico epic 17.

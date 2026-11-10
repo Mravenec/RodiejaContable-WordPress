@@ -1,6 +1,6 @@
 # Epic 5 — finanzas
 
-**Status:** Planned · Board: `.linear/epics/5-finanzas/`
+**Status:** Done · LANDED on `origin/main` · Board: `.linear/epics/5-finanzas/` · Snapshot: `.docs/board/5-finanzas/`
 
 ## Title
 
@@ -8,56 +8,50 @@ Finanzas: transacciones + dashboard WP_Query
 
 ## Why
 
-(Describe the problem / opportunity in plain language. Put **all** narrative depth here.)
+Ingresos/egresos deben vivir como CPT/meta con dashboard de montos y REST mutaciones solo para caps correctas (contador/admin).
 
-## What we will do
+## What we did
 
-- [ ] Clarify acceptance criteria
-- [ ] **Native-first:** prefer CPT/meta/Options/REST/hooks; if custom tables/packages seem needed, propose + get human OK before coding (`.ai/rules/native-first.md`)
-- [ ] Split into **board issues** under `.linear` (those are the only tickets)
-- [ ] Implement via multi-agent board (`doing` only)
-- [ ] Move tickets to `testing`, then verify (harness flags)
-- [ ] Park tickets in `done` until every issue in the epic is done
-- [ ] Then `summarize` (wrap-up column) and `handoff` (git command + Supervisor / Manager into the living HTML)
+- [x] Transacciones ingreso/egreso + tax + vínculos
+- [x] Dashboard montos WP_Query/meta
+- [x] Caps contador en REST mutaciones (no `__return_true`)
 
 ## Acceptance
 
-- Given …
-- When …
-- Expect …
+- Given usuario contador autenticado
+- When consulta dashboard/REST permitido
+- Expect montos coherentes; anónimo 401/403
 
 ## Agent notes (constraints / edge cases)
 
-(Anything agents need that is not a checklist step: constraints, links, non-goals, risks. Keep it here — there is no `.ai/tickets` folder.)
+Security ticket obligatorio en mutaciones.
 
 ## Areas touched (unified WordPress tree)
 
 | Area | Touched? | Notes |
 |---|---|---|
-| Plugin schema / dbDelta | | Optional mirror `docs/database/canonical_sql/` + `docs/diagrams/database/` |
-| `web/wp-content/plugins/<module>/` | | Contracts→Repos→Services→Controllers |
-| `web/wp-content/mu-plugins/` | | Hardening |
-| `docs/diagrams/plugin/` | | PlantUML twin of plugin `src/` |
+| Plugin Finanzas | sí |  |
+| Security REST | sí |  |
 
 ## Board issues (= tickets)
 
-Work lives only on the board. Create issues:
+- APP-5-1 transacciones
+- APP-5-2 dashboard montos
+- APP-5-3 caps REST
 
-```bash
-node .linear/scripts/board.mjs issue create 5 --title "DB · …" --role database
-node .linear/scripts/board.mjs issue create 5 --title "Plugin · …" --role plugin --blocked-by APP-5-1
-node .linear/scripts/board.mjs issue create 5 --title "Security · …" --role security --blocked-by APP-5-2
-```
-
-Each issue Markdown holds its own sequential checklist. Do not copy checklists into this journey.
+Checklists and evidence live on the board issue files / living HTML — not duplicated here.
 
 ## How to verify
 
+- `menú Finanzas`
+- `REST mutación anon vs contador`
+- `layer-audit`
+
 ```bash
 node .linear/scripts/board.mjs progress --epic 5
-# column + checklist %; 100% when all issues are in summarize with checklists complete
+# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome
 
-(Filled when epic reaches 100%.)
+Finanzas nativas + caps LANDED.

@@ -1,6 +1,6 @@
 # Epic 2 — native_domain
 
-**Status:** Planned · Board: `.linear/epics/2-native_domain/`
+**Status:** Done · LANDED on `origin/main` · Board: `.linear/epics/2-native_domain/` · Snapshot: `.docs/board/2-native_domain/`
 
 ## Title
 
@@ -8,56 +8,49 @@ Native domain: seed + CPT admin smoke
 
 ## Why
 
-(Describe the problem / opportunity in plain language. Put **all** narrative depth here.)
+Hay que materializar el dominio Rodieja como CPT/meta nativos y poder sembrar datos demo para humo admin/REST, sin tablas Spring.
 
-## What we will do
+## What we did
 
-- [ ] Clarify acceptance criteria
-- [ ] **Native-first:** prefer CPT/meta/Options/REST/hooks; if custom tables/packages seem needed, propose + get human OK before coding (`.ai/rules/native-first.md`)
-- [ ] Split into **board issues** under `.linear` (those are the only tickets)
-- [ ] Implement via multi-agent board (`doing` only)
-- [ ] Move tickets to `testing`, then verify (harness flags)
-- [ ] Park tickets in `done` until every issue in the epic is done
-- [ ] Then `summarize` (wrap-up column) and `handoff` (git command + Supervisor / Manager into the living HTML)
+- [x] Seed demo (vehículos, pedidos, finanzas) vía servicios nativos
+- [x] WP-CLI + REST smoke de counts
+- [x] Confirmación land status en board
 
 ## Acceptance
 
-- Given …
-- When …
-- Expect …
+- Given plugin activo
+- When corre el seed
+- Expect CPT demo visibles en wp-admin y counts REST coherentes
 
 ## Agent notes (constraints / edge cases)
 
-(Anything agents need that is not a checklist step: constraints, links, non-goals, risks. Keep it here — there is no `.ai/tickets` folder.)
+Solo APIs WP (wp_insert_post/meta). Seed idempotente preferible.
 
 ## Areas touched (unified WordPress tree)
 
 | Area | Touched? | Notes |
 |---|---|---|
-| Plugin schema / dbDelta | | Optional mirror `docs/database/canonical_sql/` + `docs/diagrams/database/` |
-| `web/wp-content/plugins/<module>/` | | Contracts→Repos→Services→Controllers |
-| `web/wp-content/mu-plugins/` | | Hardening |
-| `docs/diagrams/plugin/` | | PlantUML twin of plugin `src/` |
+| Plugin | sí | Seed + CPT registration smoke |
+| MU-plugin | — |  |
 
 ## Board issues (= tickets)
 
-Work lives only on the board. Create issues:
+- APP-2-1 ensure demo seed
+- APP-2-2 WP-CLI + REST smoke + land
 
-```bash
-node .linear/scripts/board.mjs issue create 2 --title "DB · …" --role database
-node .linear/scripts/board.mjs issue create 2 --title "Plugin · …" --role plugin --blocked-by APP-2-1
-node .linear/scripts/board.mjs issue create 2 --title "Security · …" --role security --blocked-by APP-2-2
-```
-
-Each issue Markdown holds its own sequential checklist. Do not copy checklists into this journey.
+Checklists and evidence live on the board issue files / living HTML — not duplicated here.
 
 ## How to verify
 
+- `ddev wp rodieja… seed (si existe)`
+- `REST stats/counts`
+- `wp-admin CPT lists`
+
 ```bash
 node .linear/scripts/board.mjs progress --epic 2
-# column + checklist %; 100% when all issues are in summarize with checklists complete
+# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome
 
-(Filled when epic reaches 100%.)
+Dominio sembrado y humo OK; LANDED. Catálogo admin en epic 3.

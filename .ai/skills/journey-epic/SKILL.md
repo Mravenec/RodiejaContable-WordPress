@@ -13,6 +13,8 @@ node .ai/scripts/epic-new.mjs <n> <slug> --title "Short title"
 
 Put all narrative depth in the journey (see `.docs/journey/README.md`). Put work steps only on board issue checklists. No `.ai/tickets/` folder.
 
+**Never leave stubs:** after tickets move / land, Status must be real (In progress → Done), Why/Acceptance/Outcome filled — not “Planned” template text. Every board epic needs a matching journey file.
+
 Keep journey Status in sync; tickets park in **`done`** until the whole epic is done, then **`summarize`**. Epic % is column + checklist and reaches **100%** when all issues are in **`summarize`** with checklists complete. The beginner HTML is a living work log (`summaries/{n}-{slug}-beginner.html`) from the first claim/move; wrap-up uses `handoff` for git + Supervisor / Manager. The board UI row must show **`{n}-{slug}`** (same as this journey file and `.linear/epics/{n}-{slug}/`).
 
 ## Large product briefs

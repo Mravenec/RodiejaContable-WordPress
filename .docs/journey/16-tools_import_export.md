@@ -1,6 +1,6 @@
 # Epic 16 — tools_import_export
 
-**Status:** Planned · Board: `.linear/epics/16-tools_import_export/`
+**Status:** Done · LANDED on `origin/main` · Board: `.linear/epics/16-tools_import_export/` · Snapshot: `.docs/board/16-tools_import_export/`
 
 ## Title
 
@@ -8,56 +8,48 @@ Tools nativos: export/import WP + CSV dominio
 
 ## Why
 
-(Describe the problem / opportunity in plain language. Put **all** narrative depth here.)
+Operaciones de backup/migración de dominio deben vivir en Tools admin (export JSON/CSV + import validado), no en utilidades Spring.
 
-## What we will do
+## What we did
 
-- [ ] Clarify acceptance criteria
-- [ ] **Native-first:** prefer CPT/meta/Options/REST/hooks; if custom tables/packages seem needed, propose + get human OK before coding (`.ai/rules/native-first.md`)
-- [ ] Split into **board issues** under `.linear` (those are the only tickets)
-- [ ] Implement via multi-agent board (`doing` only)
-- [ ] Move tickets to `testing`, then verify (harness flags)
-- [ ] Park tickets in `done` until every issue in the epic is done
-- [ ] Then `summarize` (wrap-up column) and `handoff` (git command + Supervisor / Manager into the living HTML)
+- [x] Tools submenu export all CPT JSON/CSV (nonce)
+- [x] Import JSON con validate + wp_insert_post
+- [x] Mapa DatabaseImportExport → Tools nativos
 
 ## Acceptance
 
-- Given …
-- When …
-- Expect …
+- Given caps manage
+- When exporta e reimporta fixture
+- Expect posts recreados; sin nonce/cap → fail
 
 ## Agent notes (constraints / edge cases)
 
-(Anything agents need that is not a checklist step: constraints, links, non-goals, risks. Keep it here — there is no `.ai/tickets` folder.)
+Nonce + caps obligatorios en cada POST.
 
 ## Areas touched (unified WordPress tree)
 
 | Area | Touched? | Notes |
 |---|---|---|
-| Plugin schema / dbDelta | | Optional mirror `docs/database/canonical_sql/` + `docs/diagrams/database/` |
-| `web/wp-content/plugins/<module>/` | | Contracts→Repos→Services→Controllers |
-| `web/wp-content/mu-plugins/` | | Hardening |
-| `docs/diagrams/plugin/` | | PlantUML twin of plugin `src/` |
+| Plugin ToolsAdminPage | sí |  |
 
 ## Board issues (= tickets)
 
-Work lives only on the board. Create issues:
+- APP-16-1 export
+- APP-16-2 import
+- APP-16-3 map Spring tools
 
-```bash
-node .linear/scripts/board.mjs issue create 16 --title "DB · …" --role database
-node .linear/scripts/board.mjs issue create 16 --title "Plugin · …" --role plugin --blocked-by APP-16-1
-node .linear/scripts/board.mjs issue create 16 --title "Security · …" --role security --blocked-by APP-16-2
-```
-
-Each issue Markdown holds its own sequential checklist. Do not copy checklists into this journey.
+Checklists and evidence live on the board issue files / living HTML — not duplicated here.
 
 ## How to verify
 
+- `Config/Tools export+import`
+- `layer-audit`
+
 ```bash
 node .linear/scripts/board.mjs progress --epic 16
-# column + checklist %; 100% when all issues are in summarize with checklists complete
+# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome
 
-(Filled when epic reaches 100%.)
+Tools import/export LANDED.

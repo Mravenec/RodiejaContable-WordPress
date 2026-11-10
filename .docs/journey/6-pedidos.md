@@ -1,6 +1,6 @@
 # Epic 6 — pedidos
 
-**Status:** Planned · Board: `.linear/epics/6-pedidos/`
+**Status:** Done · LANDED on `origin/main` · Board: `.linear/epics/6-pedidos/` · Snapshot: `.docs/board/6-pedidos/`
 
 ## Title
 
@@ -8,56 +8,48 @@ Pedidos nativos: meta Audatex-shape + items + REST
 
 ## Why
 
-(Describe the problem / opportunity in plain language. Put **all** narrative depth here.)
+Pedidos del flujo Audatex/INS deben modelarse en WP (meta shape + ítems hijo + REST CRUD con permission_callback real).
 
-## What we will do
+## What we did
 
-- [ ] Clarify acceptance criteria
-- [ ] **Native-first:** prefer CPT/meta/Options/REST/hooks; if custom tables/packages seem needed, propose + get human OK before coding (`.ai/rules/native-first.md`)
-- [ ] Split into **board issues** under `.linear` (those are the only tickets)
-- [ ] Implement via multi-agent board (`doing` only)
-- [ ] Move tickets to `testing`, then verify (harness flags)
-- [ ] Park tickets in `done` until every issue in the epic is done
-- [ ] Then `summarize` (wrap-up column) and `handoff` (git command + Supervisor / Manager into the living HTML)
+- [x] Meta pedidos Audatex-shape (cotización/WAN/VIN/…)
+- [x] CPT hijo `rodieja_pedido_item` + admin
+- [x] REST CRUD pedidos con permission_callback + seed
 
 ## Acceptance
 
-- Given …
-- When …
-- Expect …
+- Given pedido con ítems
+- When admin/REST autenticado
+- Expect CRUD cap-gated; anónimo denegado
 
 ## Agent notes (constraints / edge cases)
 
-(Anything agents need that is not a checklist step: constraints, links, non-goals, risks. Keep it here — there is no `.ai/tickets` folder.)
+Import INS live API queda fuera (epic 14 = import local).
 
 ## Areas touched (unified WordPress tree)
 
 | Area | Touched? | Notes |
 |---|---|---|
-| Plugin schema / dbDelta | | Optional mirror `docs/database/canonical_sql/` + `docs/diagrams/database/` |
-| `web/wp-content/plugins/<module>/` | | Contracts→Repos→Services→Controllers |
-| `web/wp-content/mu-plugins/` | | Hardening |
-| `docs/diagrams/plugin/` | | PlantUML twin of plugin `src/` |
+| Plugin Pedidos + REST | sí |  |
 
 ## Board issues (= tickets)
 
-Work lives only on the board. Create issues:
+- APP-6-1 meta Audatex-shape
+- APP-6-2 CPT ítem
+- APP-6-3 REST CRUD
 
-```bash
-node .linear/scripts/board.mjs issue create 6 --title "DB · …" --role database
-node .linear/scripts/board.mjs issue create 6 --title "Plugin · …" --role plugin --blocked-by APP-6-1
-node .linear/scripts/board.mjs issue create 6 --title "Security · …" --role security --blocked-by APP-6-2
-```
-
-Each issue Markdown holds its own sequential checklist. Do not copy checklists into this journey.
+Checklists and evidence live on the board issue files / living HTML — not duplicated here.
 
 ## How to verify
 
+- `edit.php?post_type=rodieja_pedido`
+- `REST pedidos 401 anon`
+
 ```bash
 node .linear/scripts/board.mjs progress --epic 6
-# column + checklist %; 100% when all issues are in summarize with checklists complete
+# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome
 
-(Filled when epic reaches 100%.)
+Pedidos nativos LANDED.

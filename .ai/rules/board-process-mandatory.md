@@ -11,7 +11,7 @@ Same **discipline** as `HarnessMariaDB-SpringBootJOOQ-ReactJS`. This is a **prod
 
 - Feature / fix / UI / meta work **only on `main`** with no epic/ticket.
 - Skip `claim` → `worktree-add` → checklist/evidence → `testing` → `worktree-finish`.
-- Leave `.docs/journey/{n}-{slug}.md` as “Planned” stubs after work lands.
+- Leave `.docs/journey/{n}-{slug}.md` as “Planned” stubs after work lands (or omit the journey file for a board epic).
 - Skip `.docs/board/{n}-{slug}/` snapshots.
 - Fake LANDED without `worktree-land-finish` → `origin/main`.
 
