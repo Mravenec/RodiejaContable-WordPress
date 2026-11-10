@@ -79,6 +79,7 @@ final class Plugin {
 	public function boot(): void {
 		BrandMigrate::maybe_run();
 		OrphanEstadoMigrate::maybe_run();
+		PublicSiteSeed::maybe_run();
 		$this->container->get( RoleRegistrar::class )->register();
 		$this->container->get( PostTypeRegistrar::class )->register();
 		$this->container->get( TaxonomyRegistrar::class )->register();

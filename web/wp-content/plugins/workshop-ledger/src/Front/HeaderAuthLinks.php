@@ -58,7 +58,7 @@ final class HeaderAuthLinks {
 			$parts     = array(
 				$this->item(
 					$admin_url,
-					__( 'WorkshopLedger', 'workshop-ledger' )
+					__( 'Open app', 'workshop-ledger' )
 				),
 				$this->item(
 					wp_logout_url( home_url( '/' ) ),
