@@ -1,0 +1,7 @@
+{"at":"2026-11-10T08:12:33.347Z","type":"create","issueId":"APP-23-1","column":"backlog"}
+{"at":"2026-11-10T08:12:33.425Z","type":"create","issueId":"APP-23-2","column":"backlog"}
+{"at":"2026-11-10T08:12:33.511Z","type":"claim","issueId":"APP-23-1","agent":"plugin-agent-1"}
+{"at":"2026-11-10T08:13:16.650Z","type":"checklist","issueId":"APP-23-1","item":"1"}
+{"at":"2026-11-10T08:13:16.731Z","type":"evidence","issueId":"APP-23-1","title":"admin-list-css"}
+{"at":"2026-11-10T08:13:16.847Z","type":"move","issueId":"APP-23-1","from":"doing","to":"testing"}
+{"at":"2026-11-10T08:13:16.924Z","type":"checklist","issueId":"APP-23-1","item":"2"}

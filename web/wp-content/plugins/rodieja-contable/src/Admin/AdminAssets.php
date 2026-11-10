@@ -30,17 +30,20 @@ final class AdminAssets {
 	}
 
 	/**
-	 * CPT list screens (edit.php) for Ant Table–like chrome.
+	 * CPT / taxonomy list screens for Ant Table–like chrome (all rodieja_*).
 	 */
 	private function is_rodieja_list_screen(): bool {
 		$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
 		if ( ! ( $screen instanceof \WP_Screen ) ) {
 			return false;
 		}
-		if ( 'edit' !== $screen->base ) {
-			return false;
+		if ( 'edit' === $screen->base ) {
+			return is_string( $screen->post_type ) && str_starts_with( $screen->post_type, 'rodieja_' );
 		}
-		return is_string( $screen->post_type ) && str_starts_with( $screen->post_type, 'rodieja_' );
+		if ( 'edit-tags' === $screen->base || 'term' === $screen->base ) {
+			return is_string( $screen->taxonomy ) && str_starts_with( $screen->taxonomy, 'rodieja_' );
+		}
+		return false;
 	}
 
 	public function enqueue_admin( string $hook ): void {
@@ -64,6 +67,15 @@ final class AdminAssets {
 			RODIEJA_PLUGIN_URL . 'assets/css/admin-shell.css',
 			array( 'rodieja-contable-admin' ),
 			$ver_shell
+		);
+
+		$list_css = RODIEJA_PLUGIN_DIR . 'assets/css/admin-list.css';
+		$ver_list = is_readable( $list_css ) ? (string) filemtime( $list_css ) : RODIEJA_PLUGIN_VERSION;
+		wp_enqueue_style(
+			'rodieja-contable-admin-list',
+			RODIEJA_PLUGIN_URL . 'assets/css/admin-list.css',
+			array( 'rodieja-contable-admin-shell' ),
+			$ver_list
 		);
 
 		$menu_js = RODIEJA_PLUGIN_DIR . 'assets/js/admin-menu-collapse.js';
