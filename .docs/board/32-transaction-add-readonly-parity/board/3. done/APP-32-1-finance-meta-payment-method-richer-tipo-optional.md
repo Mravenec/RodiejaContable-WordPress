@@ -3,6 +3,8 @@ id: APP-32-1
 title: "Finance meta: payment method, richer tipo, optional part link, amount helpers"
 role: plugin
 epic: 32
+http_ok: true
+tests_ok: true
 estimate: 1
 blocked_by: []
 blocks: []
@@ -32,6 +34,7 @@ FinanceMetaBoxes: payment method, transfer type, part link, supplier, descriptio
 
 ## History
 
+- 2026-11-10T16:16:41.738Z moved testing → done
 - 2026-11-10T16:16:31.274Z checklist item 2 marked
 - 2026-11-10T16:16:31.197Z moved doing → testing
 - 2026-11-10T16:16:30.905Z checklist item 1 marked
