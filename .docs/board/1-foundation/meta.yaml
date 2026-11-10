@@ -2,8 +2,8 @@ id: 1
 slug: foundation
 title: "Foundation: WP + plugin scaffold + roles"
 color: "#b45309"
-status: in_progress
+status: completed
 created_at: "2026-11-10T05:12:45.577Z"
-updated_at: "2026-11-10T05:18:43.713Z"
+updated_at: "2026-11-10T05:19:55.391Z"
 summary_html: summaries/1-foundation-beginner.html
-summary_updated_at: "2026-11-10T05:18:43.719Z"
+summary_updated_at: "2026-11-10T05:19:55.455Z"

@@ -1,0 +1,7 @@
+{
+  "status": "landed",
+  "merge_commit": "0b697807c56e5459450822ff13cd21b7a04573cc",
+  "smoke_ok": true,
+  "landed_at": "2026-11-10T05:24:12.000Z",
+  "note": "Local land on main — DDEV https://rodieja-wp.ddev.site"
+}

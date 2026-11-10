@@ -1,0 +1,9 @@
+id: 10
+slug: reportes_export
+title: "Reportes nativos: CSV admin + wp_mail resúmenes"
+color: "#b45309"
+status: planned
+created_at: "2026-11-10T05:37:58.516Z"
+updated_at: "2026-11-10T05:37:59.374Z"
+summary_html: summaries/10-reportes-export-beginner.html
+summary_updated_at: "2026-11-10T05:37:59.381Z"

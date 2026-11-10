@@ -12,3 +12,6 @@
 {"at":"2026-11-10T05:23:36.411Z","type":"move","issueId":"APP-2-2","from":"doing","to":"testing"}
 {"at":"2026-11-10T05:23:36.484Z","type":"checklist","issueId":"APP-2-2","item":"2"}
 {"at":"2026-11-10T05:23:36.559Z","type":"move","issueId":"APP-2-2","from":"testing","to":"done"}
+{"at":"2026-11-10T05:23:42.778Z","type":"move","issueId":"APP-2-1","from":"done","to":"summarize","summary_html":"summaries/2-native-domain-beginner.html"}
+{"at":"2026-11-10T05:23:42.845Z","type":"move","issueId":"APP-2-2","from":"done","to":"summarize","summary_html":"summaries/2-native-domain-beginner.html"}
+{"at":"2026-11-10T05:23:42.967Z","type":"handoff","git":"cd .worktrees/2-native_domain/_epic && git push -u origin feature/2-native_domain"}

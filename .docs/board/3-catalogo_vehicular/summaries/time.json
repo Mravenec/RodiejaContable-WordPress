@@ -1,0 +1,63 @@
+{
+  "idle_ms": 180000,
+  "started_at": "2026-11-10T05:35:49.957Z",
+  "finished_at": null,
+  "issues": {
+    "APP-3-1": {
+      "active_ms": 306,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T05:35:49.957Z",
+          "end": "2026-11-10T05:35:49.957Z",
+          "ms": 0,
+          "close": "idle",
+          "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T05:40:32.662Z",
+          "end": "2026-11-10T05:40:32.968Z",
+          "ms": 306,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        }
+      ]
+    },
+    "APP-3-2": {
+      "active_ms": 23472,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T05:40:35.668Z",
+          "end": "2026-11-10T05:40:59.140Z",
+          "ms": 23472,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        }
+      ]
+    },
+    "APP-3-3": {
+      "active_ms": 12045,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T05:40:59.517Z",
+          "end": "2026-11-10T05:41:11.562Z",
+          "ms": 12045,
+          "close": "done",
+          "agent": "orchestrator-1"
+        }
+      ]
+    }
+  },
+  "land": {
+    "started_at": null,
+    "finished_at": null,
+    "paused": false,
+    "open": null,
+    "segments": []
+  }
+}
