@@ -1,6 +1,6 @@
 # Epic 30 — meta-nonce-unique
 
-**Status:** Planned · Board: `.linear/epics/30-meta-nonce-unique/`
+**Status:** Landed on main · Board: `.linear/epics/30-meta-nonce-unique/`
 
 ## Title
 
@@ -61,3 +61,14 @@ node .linear/scripts/board.mjs progress --epic 30
 ## Outcome
 
 (Filled when epic reaches 100%.)
+
+
+## Land on main
+
+- Merge commit: `f52cf6e426b9329aa3f527c849ccbf74e32fa311`
+- Branch: `feature/30-meta-nonce-unique` → `main`
+
+### Supervisor / Manager (land)
+
+Supervisor: Epic 30 LANDED. Unique nonce fields per meta box. layer-audit green.
+

@@ -1,0 +1,13 @@
+{
+  "status": "landed",
+  "started_at": "2026-11-10T16:11:45.866Z",
+  "finished_at": "2026-11-10T16:11:49.516Z",
+  "merge_commit": "f52cf6e426b9329aa3f527c849ccbf74e32fa311",
+  "conflicts": [],
+  "smoke_ok": true,
+  "smoke_at": "2026-11-10T16:11:47.159Z",
+  "git": "git push origin main",
+  "note": "Supervisor: Epic 30 LANDED. Unique nonce fields per meta box. layer-audit green.",
+  "recorded_at": "2026-11-10T16:11:47.224Z",
+  "pushed_at": "2026-11-10T16:11:49.516Z"
+}
