@@ -1,0 +1,8 @@
+{"at":"2026-11-10T15:58:04.103Z","type":"create","issueId":"APP-29-1","column":"backlog"}
+{"at":"2026-11-10T15:58:04.325Z","type":"claim","issueId":"APP-29-1","agent":"plugin-agent-1"}
+{"at":"2026-11-10T15:59:31.760Z","type":"checklist","issueId":"APP-29-1","item":"1"}
+{"at":"2026-11-10T15:59:31.905Z","type":"evidence","issueId":"APP-29-1","title":"hierarchy-expand"}
+{"at":"2026-11-10T15:59:32.085Z","type":"move","issueId":"APP-29-1","from":"doing","to":"testing"}
+{"at":"2026-11-10T15:59:32.195Z","type":"checklist","issueId":"APP-29-1","item":"2"}
+{"at":"2026-11-10T15:59:32.715Z","type":"handoff","git":"cd .worktrees/29-hierarchy-vehicle-expand/_epic && git push -u origin feature/29-hierarchy-vehicle-expand"}
+{"at":"2026-11-10T15:59:41.447Z","type":"move","issueId":"APP-29-1","from":"testing","to":"done"}
