@@ -11,3 +11,4 @@
 {"at":"2026-11-10T15:32:17.949Z","type":"evidence","issueId":"APP-27-2","title":"vehicle-cascade"}
 {"at":"2026-11-10T15:32:18.070Z","type":"move","issueId":"APP-27-2","from":"doing","to":"testing"}
 {"at":"2026-11-10T15:32:18.174Z","type":"checklist","issueId":"APP-27-2","item":"2"}
+{"at":"2026-11-10T15:32:18.593Z","type":"move","issueId":"APP-27-2","from":"testing","to":"done"}

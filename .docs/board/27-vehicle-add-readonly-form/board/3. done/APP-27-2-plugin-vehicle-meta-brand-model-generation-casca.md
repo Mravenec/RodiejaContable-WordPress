@@ -35,6 +35,7 @@ CatalogMetaBoxes Brand→Model→Generation + enums + vehicle-cascade.js
 
 ## History
 
+- 2026-11-10T15:32:18.591Z moved testing → done
 - 2026-11-10T15:32:18.173Z checklist item 2 marked
 - 2026-11-10T15:32:18.069Z moved doing → testing
 - 2026-11-10T15:32:17.859Z checklist item 1 marked
