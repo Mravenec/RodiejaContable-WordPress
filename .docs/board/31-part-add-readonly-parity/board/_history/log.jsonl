@@ -5,3 +5,9 @@
 {"at":"2026-11-10T16:13:16.993Z","type":"evidence","issueId":"APP-31-1","title":"part-modes-cascade"}
 {"at":"2026-11-10T16:13:17.119Z","type":"move","issueId":"APP-31-1","from":"doing","to":"testing"}
 {"at":"2026-11-10T16:13:17.196Z","type":"checklist","issueId":"APP-31-1","item":"2"}
+{"at":"2026-11-10T16:13:17.656Z","type":"move","issueId":"APP-31-1","from":"testing","to":"done"}
+{"at":"2026-11-10T16:13:17.847Z","type":"claim","issueId":"APP-31-2","agent":"plugin-agent-1"}
+{"at":"2026-11-10T16:13:35.946Z","type":"checklist","issueId":"APP-31-2","item":"1"}
+{"at":"2026-11-10T16:13:36.035Z","type":"evidence","issueId":"APP-31-2","title":"part-prices-location"}
+{"at":"2026-11-10T16:13:36.157Z","type":"move","issueId":"APP-31-2","from":"doing","to":"testing"}
+{"at":"2026-11-10T16:13:36.235Z","type":"checklist","issueId":"APP-31-2","item":"2"}

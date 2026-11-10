@@ -34,6 +34,7 @@ InventoryMetaBoxes: con/sin vehicle + Brand→Model→Generation + part-cascade.
 
 ## History
 
+- 2026-11-10T16:13:17.655Z moved testing → done
 - 2026-11-10T16:13:17.195Z checklist item 2 marked
 - 2026-11-10T16:13:17.117Z moved doing → testing
 - 2026-11-10T16:13:16.868Z checklist item 1 marked

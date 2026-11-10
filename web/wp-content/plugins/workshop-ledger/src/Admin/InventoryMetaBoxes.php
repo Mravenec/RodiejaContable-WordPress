@@ -219,9 +219,11 @@ final class InventoryMetaBoxes {
 	 * @return array<string, string>
 	 */
 	public function columns( array $cols ): array {
-		$cols['wl_vehiculo'] = __( 'Vehicle', 'workshop-ledger' );
-		$cols['wl_precio']   = __( 'Sale price', 'workshop-ledger' );
-		$cols['wl_stock']    = __( 'Stock', 'workshop-ledger' );
+		$cols['wl_vehiculo']     = __( 'Vehicle', 'workshop-ledger' );
+		$cols['wl_precio_costo'] = __( 'Cost', 'workshop-ledger' );
+		$cols['wl_precio']       = __( 'Sale price', 'workshop-ledger' );
+		$cols['wl_stock']        = __( 'Stock', 'workshop-ledger' );
+		$cols['wl_condicion']    = __( 'Condition', 'workshop-ledger' );
 		return $cols;
 	}
 
@@ -229,6 +231,8 @@ final class InventoryMetaBoxes {
 		if ( 'wl_vehiculo' === $col ) {
 			$id = (int) get_post_meta( $post_id, 'wl_vehiculo_id', true );
 			echo $id ? $this->escaper->html( get_the_title( $id ) ) : '—';
+		} elseif ( 'wl_precio_costo' === $col ) {
+			echo $this->escaper->html( number_format_i18n( (float) get_post_meta( $post_id, 'wl_precio_costo', true ), 2 ) );
 		} elseif ( 'wl_precio' === $col ) {
 			$venta = get_post_meta( $post_id, 'wl_precio_venta', true );
 			if ( '' === $venta || null === $venta ) {
@@ -237,6 +241,8 @@ final class InventoryMetaBoxes {
 			echo $this->escaper->html( number_format_i18n( (float) $venta, 2 ) );
 		} elseif ( 'wl_stock' === $col ) {
 			echo $this->escaper->html( (string) (int) get_post_meta( $post_id, 'wl_stock', true ) );
+		} elseif ( 'wl_condicion' === $col ) {
+			echo $this->escaper->html( (string) get_post_meta( $post_id, 'wl_condicion', true ) ?: '—' );
 		}
 	}
 

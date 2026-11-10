@@ -5,7 +5,7 @@
 | Id | 31 |
 | Slug | part-add-readonly-parity |
 | Status | in_progress |
-| Progress | **33%** (0/2 in summarize · column + checklist) |
+| Progress | **75%** (0/2 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -23,7 +23,7 @@ This folder is the **operational** board (claims, checklist, %). There is no `.a
 
 ### 0. backlog
 
-- `APP-31-2` Part meta: cost/sale price, condition, optional location fields + English UI _(role:plugin)_
+_empty_
 
 ### 1. doing
 
@@ -31,11 +31,11 @@ _empty_
 
 ### 2. testing
 
-- `APP-31-1` Inventory meta: con/sin vehicle modes + Brand→Model→Generation when sin vehicle _(role:plugin)_
+- `APP-31-2` Part meta: cost/sale price, condition, optional location fields + English UI _(role:plugin)_
 
 ### 3. done
 
-_empty_
+- `APP-31-1` Inventory meta: con/sin vehicle modes + Brand→Model→Generation when sin vehicle _(role:plugin)_
 
 ### 4. summarize
 
