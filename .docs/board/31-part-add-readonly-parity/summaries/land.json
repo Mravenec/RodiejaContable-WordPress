@@ -1,0 +1,13 @@
+{
+  "status": "landed",
+  "started_at": "2026-11-10T16:15:18.096Z",
+  "finished_at": "2026-11-10T16:15:22.237Z",
+  "merge_commit": "a43fee9af5147855f8d2b4a31c449192aa3cb523",
+  "conflicts": [],
+  "smoke_ok": true,
+  "smoke_at": "2026-11-10T16:15:19.210Z",
+  "git": "git push origin main",
+  "note": "Supervisor: Epic 31 LANDED. Add Part Read-Only parity native (modes, cascade, cost/sale, condition, location). Read-Only untouched. layer-audit green.",
+  "recorded_at": "2026-11-10T16:15:19.272Z",
+  "pushed_at": "2026-11-10T16:15:22.237Z"
+}
