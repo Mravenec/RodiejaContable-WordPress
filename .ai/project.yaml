@@ -19,6 +19,7 @@ services_without_repository:
   - HealthService
   - DemoSeedService
   - DomainStatsService
+  - FinanceTotalsService
 security:
   disallow_file_edit: true
   rest_public_routes_allowlist:

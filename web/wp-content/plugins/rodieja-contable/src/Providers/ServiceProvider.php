@@ -12,9 +12,12 @@ use Rodieja\Contable\Admin\CatalogAdminFilters;
 use Rodieja\Contable\Admin\CatalogListColumns;
 use Rodieja\Contable\Admin\CatalogMetaBoxes;
 use Rodieja\Contable\Admin\CriticalStockPage;
+use Rodieja\Contable\Admin\FinanceDashboardPage;
+use Rodieja\Contable\Admin\FinanceMetaBoxes;
 use Rodieja\Contable\Admin\InventoryAdminFilters;
 use Rodieja\Contable\Admin\InventoryMetaBoxes;
 use Rodieja\Contable\Controllers\Rest\DomainStatsController;
+use Rodieja\Contable\Controllers\Rest\FinanceController;
 use Rodieja\Contable\Controllers\Rest\HealthController;
 use Rodieja\Contable\Core\Container;
 use Rodieja\Contable\Meta\MetaRegistrar;
@@ -27,6 +30,7 @@ use Rodieja\Contable\Security\RequestSanitizer;
 use Rodieja\Contable\Security\SecurityHeaders;
 use Rodieja\Contable\Services\DemoSeedService;
 use Rodieja\Contable\Services\DomainStatsService;
+use Rodieja\Contable\Services\FinanceTotalsService;
 use Rodieja\Contable\Services\HealthService;
 use Rodieja\Contable\Taxonomies\TaxonomyRegistrar;
 
@@ -41,6 +45,7 @@ final class ServiceProvider {
 		$container->set( HealthService::class, static fn() => new HealthService() );
 		$container->set( DemoSeedService::class, static fn() => new DemoSeedService() );
 		$container->set( DomainStatsService::class, static fn() => new DomainStatsService() );
+		$container->set( FinanceTotalsService::class, static fn() => new FinanceTotalsService() );
 		$container->set( RoleRegistrar::class, static fn() => new RoleRegistrar() );
 		$container->set( PostTypeRegistrar::class, static fn() => new PostTypeRegistrar() );
 		$container->set( TaxonomyRegistrar::class, static fn() => new TaxonomyRegistrar() );
@@ -52,6 +57,13 @@ final class ServiceProvider {
 		$container->set(
 			DomainStatsController::class,
 			static fn( Container $c ) => new DomainStatsController( $c->get( DomainStatsService::class ) )
+		);
+		$container->set(
+			FinanceController::class,
+			static fn( Container $c ) => new FinanceController(
+				$c->get( FinanceTotalsService::class ),
+				$c->get( CapabilityGate::class )
+			)
 		);
 		$container->set(
 			AdminMenu::class,
@@ -96,6 +108,22 @@ final class ServiceProvider {
 			static fn( Container $c ) => new CriticalStockPage(
 				$c->get( OutputEscaper::class ),
 				$c->get( CapabilityGate::class )
+			)
+		);
+		$container->set(
+			FinanceMetaBoxes::class,
+			static fn( Container $c ) => new FinanceMetaBoxes(
+				$c->get( NonceGuard::class ),
+				$c->get( OutputEscaper::class ),
+				$c->get( CapabilityGate::class )
+			)
+		);
+		$container->set(
+			FinanceDashboardPage::class,
+			static fn( Container $c ) => new FinanceDashboardPage(
+				$c->get( OutputEscaper::class ),
+				$c->get( CapabilityGate::class ),
+				$c->get( FinanceTotalsService::class )
 			)
 		);
 	}

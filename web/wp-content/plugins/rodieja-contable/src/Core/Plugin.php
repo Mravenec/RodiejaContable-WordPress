@@ -14,9 +14,12 @@ use Rodieja\Contable\Admin\CatalogAdminFilters;
 use Rodieja\Contable\Admin\CatalogListColumns;
 use Rodieja\Contable\Admin\CatalogMetaBoxes;
 use Rodieja\Contable\Admin\CriticalStockPage;
+use Rodieja\Contable\Admin\FinanceDashboardPage;
+use Rodieja\Contable\Admin\FinanceMetaBoxes;
 use Rodieja\Contable\Admin\InventoryAdminFilters;
 use Rodieja\Contable\Admin\InventoryMetaBoxes;
 use Rodieja\Contable\Controllers\Rest\DomainStatsController;
+use Rodieja\Contable\Controllers\Rest\FinanceController;
 use Rodieja\Contable\Controllers\Rest\HealthController;
 use Rodieja\Contable\Meta\MetaRegistrar;
 use Rodieja\Contable\PostTypes\PostTypeRegistrar;
@@ -57,6 +60,8 @@ final class Plugin {
 		$this->container->get( InventoryMetaBoxes::class )->register();
 		$this->container->get( InventoryAdminFilters::class )->register();
 		$this->container->get( CriticalStockPage::class )->register();
+		$this->container->get( FinanceMetaBoxes::class )->register();
+		$this->container->get( FinanceDashboardPage::class )->register();
 		$this->container->get( SecurityHeaders::class )->register();
 
 		add_action( 'rest_api_init', array( $this, 'register_rest' ) );
@@ -70,6 +75,7 @@ final class Plugin {
 	public function register_rest(): void {
 		$this->container->get( HealthController::class )->register_routes();
 		$this->container->get( DomainStatsController::class )->register_routes();
+		$this->container->get( FinanceController::class )->register_routes();
 	}
 
 	public function load_textdomain(): void {
