@@ -66,7 +66,13 @@ final class MetaRegistrar {
 		$this->string_meta( 'wl_transaccion', 'wl_fecha' );
 		$this->string_meta( 'wl_transaccion', 'wl_vehiculo_id' );
 		$this->string_meta( 'wl_transaccion', 'wl_empleado_id' );
+		$this->string_meta( 'wl_transaccion', 'wl_repuesto_id' );
+		$this->number_meta( 'wl_transaccion', 'wl_cantidad_repuesto' );
 		$this->string_meta( 'wl_transaccion', 'wl_sentido' ); // ingreso|egreso
+		$this->string_meta( 'wl_transaccion', 'wl_metodo_pago' );
+		$this->string_meta( 'wl_transaccion', 'wl_tipo_transferencia' );
+		$this->string_meta( 'wl_transaccion', 'wl_proveedor' );
+		$this->string_meta( 'wl_transaccion', 'wl_descripcion' );
 
 		$this->register_pedido_meta();
 		$this->register_pedido_item_meta();
