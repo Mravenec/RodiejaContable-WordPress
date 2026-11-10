@@ -34,6 +34,7 @@ BrandMigrate v2: _rodieja_* → wl_*; cascade empty init until Brand
 
 ## History
 
+- 2026-11-10T15:39:47.707Z moved testing → done
 - 2026-11-10T15:39:46.553Z checklist item 2 marked
 - 2026-11-10T15:39:46.318Z moved doing → testing
 - 2026-11-10T15:39:43.264Z checklist item 1 marked
