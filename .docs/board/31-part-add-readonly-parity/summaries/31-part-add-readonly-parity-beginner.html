@@ -142,16 +142,16 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
   </div>
   <h1>Add Part: Read-Only field/cascade parity (native WP)</h1>
   <p>This page is a study guide for the epic. Tickets must show <strong>this work’s</strong> compact code, commands, and results — not the same glossary copied from every other summary. Dark windows are artifacts to study.</p>
-  <p class="small" style="opacity:.85;">Slug <code>part-add-readonly-parity</code> · 0/2 in summarize · Generated 2026-11-10T16:13:17.201Z · active work <strong>1m 15s</strong> (elapsed 1m 15s)</p>
+  <p class="small" style="opacity:.85;">Slug <code>part-add-readonly-parity</code> · 0/2 in summarize · Generated 2026-11-10T16:13:36.655Z · active work <strong>1m 34s</strong> (elapsed 1m 35s)</p>
 </header>
 
 <div class="card ok" id="time">
   <strong>Active work time</strong>
   <p>Counted only while the board sees work. Waiting for a Run / Approve click, overnight, or parked-in-done time is not included.</p>
   <ul>
-    <li>Active (calendar of working windows): <strong>1m 15s</strong></li>
-    <li>Agent effort (sum of tickets): <strong>1m 15s</strong></li>
-    <li>Elapsed wall (first work → last event): <strong>1m 15s</strong></li>
+    <li>Active (calendar of working windows): <strong>1m 34s</strong></li>
+    <li>Agent effort (sum of tickets): <strong>1m 34s</strong></li>
+    <li>Elapsed wall (first work → last event): <strong>1m 35s</strong></li>
   </ul>
   <p class="small">Started 2026-11-10T16:12:01.554Z · idle gap 3 min</p>
 </div>
@@ -178,8 +178,8 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
     <a href="#time">Active time</a>
     <a href="#log">Epic work log</a>
     <a href="#tickets">Tickets (sections)</a>
-    <a href="#APP-31-2">APP-31-2 — Part meta: cost/sale price, condition, optional location fields + English UI <span class="small">(backlog)</span></a>
-<a href="#APP-31-1">APP-31-1 — Inventory meta: con/sin vehicle modes + Brand→Model→Generation when sin vehicle <span class="small">(testing)</span></a>
+    <a href="#APP-31-1">APP-31-1 — Inventory meta: con/sin vehicle modes + Brand→Model→Generation when sin vehicle <span class="small">(done)</span></a>
+<a href="#APP-31-2">APP-31-2 — Part meta: cost/sale price, condition, optional location fields + English UI <span class="small">(done)</span></a>
     <a href="#handoff">Git command + Supervisor / Manager</a>
     <a href="#faq">FAQ for beginners</a>
     <a href="#file">Where this file lives</a>
@@ -230,6 +230,13 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 <li class=""><code>2026-11-10T16:13:16.993Z</code> evidence APP-31-1</li>
 <li class=""><code>2026-11-10T16:13:17.119Z</code> APP-31-1 doing → testing</li>
 <li class=""><code>2026-11-10T16:13:17.196Z</code> checklist APP-31-1</li>
+<li class=""><code>2026-11-10T16:13:17.656Z</code> APP-31-1 testing → done</li>
+<li class=""><code>2026-11-10T16:13:17.847Z</code> APP-31-2 claimed by plugin-agent-1</li>
+<li class=""><code>2026-11-10T16:13:35.946Z</code> checklist APP-31-2</li>
+<li class=""><code>2026-11-10T16:13:36.035Z</code> evidence APP-31-2</li>
+<li class=""><code>2026-11-10T16:13:36.157Z</code> APP-31-2 doing → testing</li>
+<li class=""><code>2026-11-10T16:13:36.235Z</code> checklist APP-31-2</li>
+<li class=""><code>2026-11-10T16:13:36.652Z</code> APP-31-2 testing → done</li>
   </ul>
 </div>
 
@@ -238,65 +245,9 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 <h2 id="tickets">Tickets (sections)</h2>
 <p class="small">Every ticket in this epic — not only those already in <code>summarize</code>.</p>
 
-<section class="ticket" id="APP-31-2">
-  <h2>APP-31-2 — Part meta: cost/sale price, condition, optional location fields + English UI</h2>
-  <p><span class="pill" style="background:var(--copper600)">column:backlog</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span></p>
-  <p class="small">Work folder (required after claim): <code>.worktrees/31-part-add-readonly-parity/APP-31-2</code> · ticket branch <code>ticket/31-part-add-readonly-parity/APP-31-2</code> · ships on <code>feature/31-part-add-readonly-parity</code> after integrate (one push).</p>
-
-  <h3>Goal</h3>
-  <div class="card ok">
-    <p>Part meta: cost/sale price, condition, optional location fields + English UI</p>
-    <p class="small">Checklist progress: <strong>0/2</strong>.</p>
-  </div>
-
-  <h3>Role</h3>
-  <div class="card note">
-    <p>Owns web/wp-content/plugins/&lt;module&gt;/.</p>
-  </div>
-
-  <h3>Checklist</h3>
-  <div class="card">
-    <ul class="checklist">
-<li class="pending"><strong>Step 1.</strong> Implement <span class="pill">pending</span></li>
-<li class="pending"><strong>Step 2.</strong> Verify locally (in testing — after `move testing`) <span class="pill">pending</span></li>
-    </ul>
-  </div>
-
-  <h3>What was built (this ticket)</h3>
-  <div class="card warn">
-  <p><strong>No layer evidence yet.</strong> This ticket has board history but no compact code/command/result windows. A beginner cannot see what changed; a senior cannot audit the layer. After each checklist item record evidence:</p>
-  <pre><code>node scripts/board.mjs evidence APP-31-2 --title "…" --path "file" --lang sql --code-file … --command "…" --result-file …</code></pre>
-  <p class="small">Expected windows for role <code>plugin</code>:</p><ul><li>Contract</li>
-<li>Repository ($wpdb)</li>
-<li>Service</li>
-<li>REST/Admin controller</li>
-<li>DI provider</li>
-<li>HTTP result</li></ul>
-</div>
-
-  <h3>Board history</h3>
-  <div class="card">
-    <p class="small">Forward moves, checklist marks, and returns (for example testing → doing when verification fails) all stay here. This is not a substitute for the code windows above.</p>
-    <ul>
-<li class=""><code>2026-11-10T16:08:26.296Z created → backlog</code></li>
-    </ul>
-  </div>
-
-  <h3>How you can verify this ticket</h3>
-  <div class="card step">
-    <ul>
-<li>Contracts → Repository → Service → Controller order inside the plugin.</li>
-<li>health 200; protected routes 401 anonymous; authenticated 2xx.</li>
-    </ul>
-    <span class="filepath">copy-paste</span><pre><code>ddev wp plugin activate harness-plugin</code></pre>
-<span class="filepath">copy-paste</span><pre><code>curl -sk https://harness-wp.ddev.site/wp-json/harness/v1/health</code></pre>
-<span class="filepath">copy-paste</span><pre><code>ddev composer install</code></pre>
-  </div>
-</section>
-
 <section class="ticket" id="APP-31-1">
   <h2>APP-31-1 — Inventory meta: con/sin vehicle modes + Brand→Model→Generation when sin vehicle</h2>
-  <p><span class="pill" style="background:var(--copper600)">column:testing</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span> · agent <code>plugin-agent-1</code> · active <strong>1m 15s</strong></p>
+  <p><span class="pill" style="background:var(--copper600)">column:done</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span> · agent <code>plugin-agent-1</code> · active <strong>1m 16s</strong></p>
   <p class="small">Work folder (required after claim): <code>.worktrees/31-part-add-readonly-parity/APP-31-1</code> · ticket branch <code>ticket/31-part-add-readonly-parity/APP-31-1</code> · ships on <code>feature/31-part-add-readonly-parity</code> after integrate (one push).</p>
 
   <h3>Goal</h3>
@@ -335,11 +286,74 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
   <div class="card">
     <p class="small">Forward moves, checklist marks, and returns (for example testing → doing when verification fails) all stay here. This is not a substitute for the code windows above.</p>
     <ul>
+<li class=""><code>2026-11-10T16:13:17.655Z moved testing → done</code></li>
 <li class=""><code>2026-11-10T16:13:17.195Z checklist item 2 marked</code></li>
 <li class=""><code>2026-11-10T16:13:17.117Z moved doing → testing</code></li>
 <li class=""><code>2026-11-10T16:13:16.868Z checklist item 1 marked</code></li>
 <li class=""><code>2026-11-10T16:12:01.552Z claimed by plugin-agent-1 → doing</code></li>
 <li class=""><code>2026-11-10T16:08:26.221Z created → backlog</code></li>
+    </ul>
+  </div>
+
+  <h3>How you can verify this ticket</h3>
+  <div class="card step">
+    <ul>
+<li>Contracts → Repository → Service → Controller order inside the plugin.</li>
+<li>health 200; protected routes 401 anonymous; authenticated 2xx.</li>
+    </ul>
+    <span class="filepath">copy-paste</span><pre><code>ddev wp plugin activate harness-plugin</code></pre>
+<span class="filepath">copy-paste</span><pre><code>curl -sk https://harness-wp.ddev.site/wp-json/harness/v1/health</code></pre>
+<span class="filepath">copy-paste</span><pre><code>ddev composer install</code></pre>
+  </div>
+</section>
+
+<section class="ticket" id="APP-31-2">
+  <h2>APP-31-2 — Part meta: cost/sale price, condition, optional location fields + English UI</h2>
+  <p><span class="pill" style="background:var(--copper600)">column:done</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span> · agent <code>plugin-agent-1</code> · active <strong>18s</strong></p>
+  <p class="small">Work folder (required after claim): <code>.worktrees/31-part-add-readonly-parity/APP-31-2</code> · ticket branch <code>ticket/31-part-add-readonly-parity/APP-31-2</code> · ships on <code>feature/31-part-add-readonly-parity</code> after integrate (one push).</p>
+
+  <h3>Goal</h3>
+  <div class="card ok">
+    <p>Part meta: cost/sale price, condition, optional location fields + English UI</p>
+    <p class="small">Checklist progress: <strong>2/2</strong>.</p>
+  </div>
+
+  <h3>Role</h3>
+  <div class="card note">
+    <p>Owns web/wp-content/plugins/&lt;module&gt;/.</p>
+  </div>
+
+  <h3>Checklist</h3>
+  <div class="card">
+    <ul class="checklist">
+<li class=""><strong>Step 1.</strong> Implement</li>
+<li class=""><strong>Step 2.</strong> Verify locally (in testing — after `move testing`)</li>
+    </ul>
+  </div>
+
+  <h3>What was built (this ticket)</h3>
+  <div class="card ok beginner">
+  <p class="small">Windows this role should include:</p><ul><li>Contract</li>
+<li>Repository ($wpdb)</li>
+<li>Service</li>
+<li>REST/Admin controller</li>
+<li>DI provider</li>
+<li>HTTP result</li></ul>
+  <p>Layer artifacts for the living HTML (code, commands, results). Compact windows — not the whole file. After each checklist item: `evidence &lt;id&gt; --title …`.</p>
+<p>### part-prices-location</p>
+<span class="filepath">php</span><pre><code>Cost/sale/condition/location meta + list columns; sale defaults to cost×1.5</code></pre>
+</div>
+
+  <h3>Board history</h3>
+  <div class="card">
+    <p class="small">Forward moves, checklist marks, and returns (for example testing → doing when verification fails) all stay here. This is not a substitute for the code windows above.</p>
+    <ul>
+<li class=""><code>2026-11-10T16:13:36.650Z moved testing → done</code></li>
+<li class=""><code>2026-11-10T16:13:36.234Z checklist item 2 marked</code></li>
+<li class=""><code>2026-11-10T16:13:36.156Z moved doing → testing</code></li>
+<li class=""><code>2026-11-10T16:13:35.945Z checklist item 1 marked</code></li>
+<li class=""><code>2026-11-10T16:13:17.845Z claimed by plugin-agent-1 → doing</code></li>
+<li class=""><code>2026-11-10T16:08:26.296Z created → backlog</code></li>
     </ul>
   </div>
 
