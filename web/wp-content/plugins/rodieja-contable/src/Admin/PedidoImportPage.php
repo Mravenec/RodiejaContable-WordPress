@@ -1,6 +1,6 @@
 <?php
 /**
- * Cotizaciones InPart · importar pedidos JSON/CSV.
+ * Audatex InPart · local JSON/CSV order import (native wp_insert_post + meta).
  *
  * @package Rodieja\Contable
  */
@@ -26,7 +26,7 @@ final class PedidoImportPage {
 	) {}
 
 	public function register(): void {
-		// Rendered via AdminMenu · Cotizaciones InPart.
+		// Rendered via AdminMenu · Audatex InPart.
 	}
 
 	public function render(): void {
@@ -41,25 +41,66 @@ final class PedidoImportPage {
 				$notice = (string) $result['message'];
 			}
 		}
+
+		$sample = wp_json_encode(
+			array(
+				'pedidos' => array(
+					array(
+						'title'  => 'Order 1',
+						'origen' => 'audatex',
+						'total'  => 1200,
+						'items'  => array(
+							array(
+								'descripcion'     => 'Bumper',
+								'cantidad'        => 1,
+								'precio_ofrecido' => 450,
+							),
+						),
+					),
+				),
+			),
+			JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES
+		);
 		?>
-		<div class="wrap">
-			<h1><?php echo $this->escaper->html( __( 'InPart Quotes', 'rodieja-contable' ) ); ?></h1>
-			<p><?php echo $this->escaper->html( __( 'Upload local JSON or CSV to create orders and items (wp_insert_post + meta). No live API.', 'rodieja-contable' ) ); ?></p>
+		<div class="wrap rodieja-admin-wrap">
+			<div class="rodieja-page-header">
+				<div class="rodieja-page-header__main">
+					<p class="rodieja-page-header__crumbs">
+						<a href="<?php echo esc_url( admin_url( 'admin.php?page=rodieja-contable' ) ); ?>"><?php echo $this->escaper->html( __( 'Home', 'rodieja-contable' ) ); ?></a>
+						· <a href="<?php echo esc_url( admin_url( 'edit.php?post_type=rodieja_pedido' ) ); ?>"><?php echo $this->escaper->html( __( 'Audatex InPart', 'rodieja-contable' ) ); ?></a>
+						· <?php echo $this->escaper->html( __( 'INS / Import', 'rodieja-contable' ) ); ?>
+					</p>
+					<h1><?php echo $this->escaper->html( __( 'INS / Import', 'rodieja-contable' ) ); ?></h1>
+					<p class="rodieja-page-header__lede"><?php echo $this->escaper->html( __( 'Upload local JSON or CSV to create orders and line items — native wp_insert_post + meta. No live Audatex API.', 'rodieja-contable' ) ); ?></p>
+				</div>
+				<div class="rodieja-page-header__actions">
+					<a class="button" href="<?php echo esc_url( admin_url( 'edit.php?post_type=rodieja_pedido' ) ); ?>"><?php echo $this->escaper->html( __( 'View orders', 'rodieja-contable' ) ); ?></a>
+				</div>
+			</div>
+
 			<?php if ( '' !== $notice ) : ?>
-				<div class="notice notice-info"><p><?php echo $this->escaper->html( $notice ); ?></p></div>
+				<div class="notice notice-info is-dismissible"><p><?php echo $this->escaper->html( $notice ); ?></p></div>
 			<?php endif; ?>
-			<form method="post" enctype="multipart/form-data">
-				<?php $this->nonce->field( 'rodieja_pedido_import' ); ?>
-				<table class="form-table">
-					<tr>
-						<th><label for="rodieja_import_file"><?php echo $this->escaper->html( __( 'Archivo', 'rodieja-contable' ) ); ?></label></th>
-						<td><input type="file" name="rodieja_import_file" id="rodieja_import_file" accept=".json,.csv,application/json,text/csv" required /></td>
-					</tr>
-				</table>
-				<?php submit_button( __( 'Import', 'rodieja-contable' ) ); ?>
-			</form>
-			<h2><?php echo $this->escaper->html( __( 'Formato JSON (ejemplo)', 'rodieja-contable' ) ); ?></h2>
-			<pre style="max-width:640px;background:#f6f7f7;padding:12px;">{"pedidos":[{"title":"Pedido 1","origen":"audatex","total":1200,"items":[{"descripcion":"Parachoques","cantidad":1,"precio_ofrecido":450}]}]}</pre>
+
+			<div class="rodieja-shell-grid">
+				<div class="rodieja-shell-panel">
+					<h2 class="rodieja-shell-panel__title"><?php echo $this->escaper->html( __( 'Upload file', 'rodieja-contable' ) ); ?></h2>
+					<p class="rodieja-shell-panel__hint"><?php echo $this->escaper->html( __( 'Accepts .json or .csv · max 2 MB · nonce protected.', 'rodieja-contable' ) ); ?></p>
+					<form method="post" enctype="multipart/form-data">
+						<?php $this->nonce->field( 'rodieja_pedido_import' ); ?>
+						<p>
+							<label class="screen-reader-text" for="rodieja_import_file"><?php echo $this->escaper->html( __( 'File', 'rodieja-contable' ) ); ?></label>
+							<input type="file" name="rodieja_import_file" id="rodieja_import_file" accept=".json,.csv,application/json,text/csv" required />
+						</p>
+						<?php submit_button( __( 'Import', 'rodieja-contable' ), 'primary', 'submit', false ); ?>
+					</form>
+				</div>
+				<div class="rodieja-shell-panel">
+					<h2 class="rodieja-shell-panel__title"><?php echo $this->escaper->html( __( 'JSON sample', 'rodieja-contable' ) ); ?></h2>
+					<p class="rodieja-shell-panel__hint"><?php echo $this->escaper->html( __( 'Shape expected by the importer (pretty-printed for operators).', 'rodieja-contable' ) ); ?></p>
+					<pre class="rodieja-code-sample"><?php echo esc_html( is_string( $sample ) ? $sample : '{}' ); ?></pre>
+				</div>
+			</div>
 		</div>
 		<?php
 	}
@@ -69,11 +110,11 @@ final class PedidoImportPage {
 	 */
 	private function handle_upload(): array {
 		if ( empty( $_FILES['rodieja_import_file']['tmp_name'] ) ) {
-			return array( 'message' => __( 'Archivo requerido.', 'rodieja-contable' ) );
+			return array( 'message' => __( 'File required.', 'rodieja-contable' ) );
 		}
 		$file = $_FILES['rodieja_import_file'];
 		if ( ! is_array( $file ) || UPLOAD_ERR_OK !== (int) ( $file['error'] ?? UPLOAD_ERR_NO_FILE ) ) {
-			return array( 'message' => __( 'Error al subir el archivo.', 'rodieja-contable' ) );
+			return array( 'message' => __( 'Upload failed.', 'rodieja-contable' ) );
 		}
 		$size = (int) ( $file['size'] ?? 0 );
 		if ( $size <= 0 || $size > self::MAX_BYTES ) {

@@ -1,6 +1,6 @@
 <?php
 /**
- * Documents native roles: administrator + rodieja_contador.
+ * Documents native roles: administrator + rodieja_contador (Read-Only Config → Roles).
  *
  * @package Rodieja\Contable
  */
@@ -20,7 +20,7 @@ final class RolesDocumentationPage {
 	public function __construct( private OutputEscaper $escaper ) {}
 
 	public function register(): void {
-		// Rendered via AdminMenu.
+		// Rendered via AdminMenu · Settings.
 	}
 
 	public function render(): void {
@@ -31,39 +31,55 @@ final class RolesDocumentationPage {
 		$contador = get_role( RoleRegistrar::ROLE_CONTADOR );
 		$admin    = get_role( 'administrator' );
 		?>
-		<div class="wrap">
-			<h1><?php echo $this->escaper->html( __( 'Roles Rodieja', 'rodieja-contable' ) ); ?></h1>
-			<p><?php echo $this->escaper->html( __( 'Native registration via RoleRegistrar on activation.', 'rodieja-contable' ) ); ?></p>
+		<div class="wrap rodieja-admin-wrap">
+			<div class="rodieja-page-header">
+				<div class="rodieja-page-header__main">
+					<p class="rodieja-page-header__crumbs">
+						<a href="<?php echo esc_url( admin_url( 'admin.php?page=rodieja-contable' ) ); ?>"><?php echo $this->escaper->html( __( 'Home', 'rodieja-contable' ) ); ?></a>
+						· <a href="<?php echo esc_url( admin_url( 'admin.php?page=rodieja-settings' ) ); ?>"><?php echo $this->escaper->html( __( 'Settings', 'rodieja-contable' ) ); ?></a>
+						· <?php echo $this->escaper->html( __( 'Roles', 'rodieja-contable' ) ); ?>
+					</p>
+					<h1><?php echo $this->escaper->html( __( 'Roles', 'rodieja-contable' ) ); ?></h1>
+					<p class="rodieja-page-header__lede"><?php echo $this->escaper->html( __( 'Native WP roles via RoleRegistrar — assign users under Users (Read-Only Config → Roles parity).', 'rodieja-contable' ) ); ?></p>
+				</div>
+				<div class="rodieja-page-header__actions">
+					<a class="button button-primary" href="<?php echo esc_url( admin_url( 'users.php' ) ); ?>"><?php echo $this->escaper->html( __( 'Manage users', 'rodieja-contable' ) ); ?></a>
+				</div>
+			</div>
 
-			<h2><?php echo $this->escaper->html( __( 'administrator', 'rodieja-contable' ) ); ?></h2>
-			<p>
-				<?php
-				echo $this->escaper->html(
-					$admin && $admin->has_cap( RoleRegistrar::CAP_MANAGE )
-						? __( 'Has manage_rodieja_contable (via activation / maybe_upgrade_caps).', 'rodieja-contable' )
-						: __( 'Sin manage_rodieja_contable detectado.', 'rodieja-contable' )
-				);
-				?>
-			</p>
-
-			<h2><?php echo $this->escaper->html( RoleRegistrar::ROLE_CONTADOR ); ?></h2>
-			<p>
-				<?php
-				echo $this->escaper->html(
-					$contador
-						? sprintf(
-							/* translators: %d: capability count */
-							__( 'Role present with %d CPT capabilities + manage_rodieja_contable.', 'rodieja-contable' ),
-							count( $contador->capabilities )
-						)
-						: __( 'Rol no instalado — se crea en register() si falta.', 'rodieja-contable' )
-				);
-				?>
-			</p>
-
-			<h3><?php echo $this->escaper->html( __( 'Central capability', 'rodieja-contable' ) ); ?></h3>
-			<code><?php echo $this->escaper->html( RoleRegistrar::CAP_MANAGE ); ?></code>
-			<p class="description"><?php esc_html_e( 'History (rodieja_evento), reportes y enlaces de perfil usan esta capacidad.', 'rodieja-contable' ); ?></p>
+			<div class="rodieja-shell-grid">
+				<div class="rodieja-shell-panel">
+					<h2 class="rodieja-shell-panel__title"><?php echo $this->escaper->html( __( 'administrator', 'rodieja-contable' ) ); ?></h2>
+					<p class="rodieja-shell-panel__hint">
+						<?php
+						echo $this->escaper->html(
+							$admin && $admin->has_cap( RoleRegistrar::CAP_MANAGE )
+								? __( 'Has manage_rodieja_contable (activation / maybe_upgrade_caps).', 'rodieja-contable' )
+								: __( 'manage_rodieja_contable not detected on administrator.', 'rodieja-contable' )
+						);
+						?>
+					</p>
+				</div>
+				<div class="rodieja-shell-panel">
+					<h2 class="rodieja-shell-panel__title"><code><?php echo $this->escaper->html( RoleRegistrar::ROLE_CONTADOR ); ?></code></h2>
+					<p class="rodieja-shell-panel__hint">
+						<?php
+						echo $this->escaper->html(
+							$contador
+								? sprintf(
+									/* translators: %d: capability count */
+									__( 'Role present with %d CPT capabilities + manage_rodieja_contable.', 'rodieja-contable' ),
+									count( $contador->capabilities )
+								)
+								: __( 'Role missing — created on register() if absent.', 'rodieja-contable' )
+						);
+						?>
+					</p>
+					<p><strong><?php echo $this->escaper->html( __( 'Central capability', 'rodieja-contable' ) ); ?></strong></p>
+					<code><?php echo $this->escaper->html( RoleRegistrar::CAP_MANAGE ); ?></code>
+					<p class="description"><?php echo $this->escaper->html( __( 'History, reports, and profile links use this capability.', 'rodieja-contable' ) ); ?></p>
+				</div>
+			</div>
 		</div>
 		<?php
 	}
