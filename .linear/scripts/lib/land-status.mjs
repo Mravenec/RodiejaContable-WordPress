@@ -88,20 +88,12 @@ export function readLandStatus(epicDir) {
       remoteHeadsHas(host, "main") &&
       gitOk(["merge-base", "--is-ancestor", `origin/${br}`, "origin/main"], host);
 
-    const mergeOnMain =
-      Boolean(base.merge_commit) &&
-      remoteHeadsHas(host, "main") &&
-      gitOk(
-        ["merge-base", "--is-ancestor", String(base.merge_commit), "origin/main"],
-        host
-      );
-
-    if (onMain || (fileStatus === "landed" && mergeOnMain)) {
+    if (onMain) {
       return {
         status: "landed",
         merge_commit: base.merge_commit,
         smoke_ok: base.smoke_ok ?? true,
-        inferred: fileStatus !== "landed" || Boolean(onMain && !mergeOnMain),
+        inferred: fileStatus !== "landed",
       };
     }
 
