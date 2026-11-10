@@ -11,3 +11,4 @@
 {"at":"2026-11-10T14:12:44.824Z","type":"evidence","issueId":"APP-25-2","title":"shell-stubs"}
 {"at":"2026-11-10T14:12:44.936Z","type":"move","issueId":"APP-25-2","from":"doing","to":"testing"}
 {"at":"2026-11-10T14:12:45.011Z","type":"checklist","issueId":"APP-25-2","item":"2"}
+{"at":"2026-11-10T14:12:45.378Z","type":"move","issueId":"APP-25-2","from":"testing","to":"done"}

@@ -35,6 +35,7 @@ PedidoImport+Tools+Roles+Audatex+Cantones page-header shells; pretty JSON sample
 
 ## History
 
+- 2026-11-10T14:12:45.377Z moved testing → done
 - 2026-11-10T14:12:45.010Z checklist item 2 marked
 - 2026-11-10T14:12:44.935Z moved doing → testing
 - 2026-11-10T14:12:44.752Z checklist item 1 marked
