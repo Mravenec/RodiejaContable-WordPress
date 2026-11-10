@@ -5,7 +5,7 @@
 | Id | 21 |
 | Slug | admin-ui-bugfix |
 | Status | completed |
-| Progress | **88%** (2/3 in summarize · column + checklist) |
+| Progress | **94%** (2/3 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -31,11 +31,11 @@ _empty_
 
 ### 2. testing
 
-- `APP-21-3` plugin: Fix sticky admin submenu flyouts (all modules) _(role:plugin)_
+_empty_
 
 ### 3. done
 
-_empty_
+- `APP-21-3` plugin: Fix sticky admin submenu flyouts (all modules) _(role:plugin)_
 
 ### 4. summarize
 

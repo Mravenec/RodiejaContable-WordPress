@@ -34,6 +34,7 @@ remove left:160px; current submenu left:auto inline
 
 ## History
 
+- 2026-11-10T08:01:21.944Z moved testing → done
 - 2026-11-10T08:01:21.603Z checklist item 2 marked
 - 2026-11-10T08:01:21.525Z moved doing → testing
 - 2026-11-10T08:01:21.266Z checklist item 1 marked

@@ -46,15 +46,18 @@
       ]
     },
     "APP-21-3": {
-      "active_ms": 0,
+      "active_ms": 28818,
       "paused": false,
-      "open": {
-        "start": "2026-11-10T08:00:53.127Z",
-        "last": "2026-11-10T08:01:21.605Z",
-        "agent": "plugin-agent-1",
-        "event": "checklist"
-      },
-      "segments": []
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T08:00:53.127Z",
+          "end": "2026-11-10T08:01:21.945Z",
+          "ms": 28818,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        }
+      ]
     }
   },
   "land": {

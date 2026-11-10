@@ -21,3 +21,4 @@
 {"at":"2026-11-10T08:01:21.400Z","type":"evidence","issueId":"APP-21-3","title":"submenu-css"}
 {"at":"2026-11-10T08:01:21.527Z","type":"move","issueId":"APP-21-3","from":"doing","to":"testing"}
 {"at":"2026-11-10T08:01:21.604Z","type":"checklist","issueId":"APP-21-3","item":"2"}
+{"at":"2026-11-10T08:01:21.945Z","type":"move","issueId":"APP-21-3","from":"testing","to":"done"}
