@@ -18,12 +18,13 @@ final class PostTypeRegistrar {
 	}
 
 	public function register_types(): void {
-		$nest = array( 'show_in_menu' => self::MENU_PARENT );
+		// Menus are owned by AdminMenu (React-shaped top-levels) — hide CPT auto-menus.
+		$hidden = array( 'show_in_menu' => false );
 
 		$this->cpt(
 			'rodieja_marca',
 			array_merge(
-				$nest,
+				$hidden,
 				array(
 					'label'  => __( 'Marcas', 'rodieja-contable' ),
 					'labels' => $this->labels( __( 'Marca', 'rodieja-contable' ), __( 'Marcas', 'rodieja-contable' ) ),
@@ -33,7 +34,7 @@ final class PostTypeRegistrar {
 		$this->cpt(
 			'rodieja_modelo',
 			array_merge(
-				$nest,
+				$hidden,
 				array(
 					'label'  => __( 'Modelos', 'rodieja-contable' ),
 					'labels' => $this->labels( __( 'Modelo', 'rodieja-contable' ), __( 'Modelos', 'rodieja-contable' ) ),
@@ -43,7 +44,7 @@ final class PostTypeRegistrar {
 		$this->cpt(
 			'rodieja_generacion',
 			array_merge(
-				$nest,
+				$hidden,
 				array(
 					'label'  => __( 'Generaciones', 'rodieja-contable' ),
 					'labels' => $this->labels( __( 'Generación', 'rodieja-contable' ), __( 'Generaciones', 'rodieja-contable' ) ),
@@ -53,7 +54,7 @@ final class PostTypeRegistrar {
 		$this->cpt(
 			'rodieja_vehiculo',
 			array_merge(
-				$nest,
+				$hidden,
 				array(
 					'label'    => __( 'Vehículos', 'rodieja-contable' ),
 					'labels'   => $this->labels( __( 'Vehículo', 'rodieja-contable' ), __( 'Vehículos', 'rodieja-contable' ) ),
@@ -64,7 +65,7 @@ final class PostTypeRegistrar {
 		$this->cpt(
 			'rodieja_repuesto',
 			array_merge(
-				$nest,
+				$hidden,
 				array(
 					'label'  => __( 'Repuestos', 'rodieja-contable' ),
 					'labels' => $this->labels( __( 'Repuesto', 'rodieja-contable' ), __( 'Repuestos', 'rodieja-contable' ) ),
@@ -74,18 +75,17 @@ final class PostTypeRegistrar {
 		$this->cpt(
 			'rodieja_empleado',
 			array_merge(
-				$nest,
+				$hidden,
 				array(
-					'label'        => __( 'Empleados', 'rodieja-contable' ),
-					'labels'       => $this->labels( __( 'Empleado', 'rodieja-contable' ), __( 'Empleados', 'rodieja-contable' ) ),
-					'show_in_menu' => false,
+					'label'  => __( 'Empleados', 'rodieja-contable' ),
+					'labels' => $this->labels( __( 'Empleado', 'rodieja-contable' ), __( 'Empleados', 'rodieja-contable' ) ),
 				)
 			)
 		);
 		$this->cpt(
 			'rodieja_transaccion',
 			array_merge(
-				$nest,
+				$hidden,
 				array(
 					'label'  => __( 'Transacciones', 'rodieja-contable' ),
 					'labels' => $this->labels( __( 'Transacción', 'rodieja-contable' ), __( 'Transacciones', 'rodieja-contable' ) ),
@@ -95,7 +95,7 @@ final class PostTypeRegistrar {
 		$this->cpt(
 			'rodieja_pedido',
 			array_merge(
-				$nest,
+				$hidden,
 				array(
 					'label'  => __( 'Pedidos', 'rodieja-contable' ),
 					'labels' => $this->labels( __( 'Pedido', 'rodieja-contable' ), __( 'Pedidos', 'rodieja-contable' ) ),
@@ -105,11 +105,10 @@ final class PostTypeRegistrar {
 		$this->cpt(
 			'rodieja_pedido_item',
 			array_merge(
-				$nest,
+				$hidden,
 				array(
-					'label'        => __( 'Ítems de pedido', 'rodieja-contable' ),
-					'labels'       => $this->labels( __( 'Ítem de pedido', 'rodieja-contable' ), __( 'Ítems de pedido', 'rodieja-contable' ) ),
-					'show_in_menu' => false,
+					'label'  => __( 'Ítems de pedido', 'rodieja-contable' ),
+					'labels' => $this->labels( __( 'Ítem de pedido', 'rodieja-contable' ), __( 'Ítems de pedido', 'rodieja-contable' ) ),
 				)
 			)
 		);
@@ -122,7 +121,7 @@ final class PostTypeRegistrar {
 		$defaults = array(
 			'public'           => false,
 			'show_ui'          => true,
-			'show_in_menu'     => self::MENU_PARENT,
+			'show_in_menu'     => false,
 			'show_in_rest'     => true,
 			'rest_base'        => $type,
 			'has_archive'      => false,

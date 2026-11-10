@@ -24,26 +24,33 @@ final class AdminChrome {
 			return;
 		}
 
-		// Blog chrome unused by Contable — keep Pages/Media/Users/Settings.
 		remove_menu_page( 'edit-comments.php' );
 		remove_menu_page( 'edit.php' );
 	}
 
 	/**
+	 * React Read-Only order: Inicio → Vehículos → Inventario → Finanzas → Reportes → InPart → Config.
+	 *
 	 * @param string[] $menu_order
 	 * @return string[]
 	 */
 	public function reorder( array $menu_order ): array {
 		$preferred = array(
-			'index.php',
-			'rodieja-contable',
+			AdminMenu::SLUG_INICIO,
+			AdminMenu::SLUG_VEHICULOS,
+			AdminMenu::SLUG_INVENTARIO,
+			AdminMenu::SLUG_FINANZAS,
+			AdminMenu::SLUG_REPORTES,
+			AdminMenu::SLUG_INPART,
+			AdminMenu::SLUG_CONFIG,
 			'upload.php',
 			'edit.php?post_type=page',
 			'users.php',
 			'tools.php',
 			'options-general.php',
+			'index.php',
 		);
-		$rest      = array_values( array_diff( $menu_order, $preferred ) );
+		$rest = array_values( array_diff( $menu_order, $preferred ) );
 		return array_values( array_unique( array_merge( $preferred, $rest ) ) );
 	}
 }

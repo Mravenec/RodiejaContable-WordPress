@@ -29,7 +29,7 @@ final class EventoPostTypeRegistrar {
 				),
 				'public'           => false,
 				'show_ui'          => true,
-				'show_in_menu'     => 'rodieja-contable',
+				'show_in_menu'     => false,
 				'show_in_rest'     => true,
 				'rest_base'        => DomainPostTypes::EVENTO,
 				'has_archive'      => false,
