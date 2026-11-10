@@ -35,6 +35,7 @@ workshop-ledger plugin; WorkshopLedger ns; wl_* CPT keys; manage_workshop_ledger
 
 ## History
 
+- 2026-11-10T15:18:36.693Z moved testing → done
 - 2026-11-10T15:18:36.282Z checklist item 2 marked
 - 2026-11-10T15:18:36.204Z moved doing → testing
 - 2026-11-10T15:18:36.001Z checklist item 1 marked
