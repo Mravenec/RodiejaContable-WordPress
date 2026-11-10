@@ -5,7 +5,7 @@
 | Id | 27 |
 | Slug | vehicle-add-readonly-form |
 | Status | in_progress |
-| Progress | **33%** (0/2 in summarize · column + checklist) |
+| Progress | **83%** (0/2 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -23,7 +23,7 @@ This folder is the **operational** board (claims, checklist, %). There is no `.a
 
 ### 0. backlog
 
-- `APP-27-2` Plugin · vehicle meta: Brand→Model→Generation cascade + enums _(role:plugin)_
+_empty_
 
 ### 1. doing
 
@@ -31,11 +31,12 @@ _empty_
 
 ### 2. testing
 
-- `APP-27-1` Plugin · disable Gutenberg on domain CPTs; classic vehicle edit _(role:plugin)_
+_empty_
 
 ### 3. done
 
-_empty_
+- `APP-27-1` Plugin · disable Gutenberg on domain CPTs; classic vehicle edit _(role:plugin)_
+- `APP-27-2` Plugin · vehicle meta: Brand→Model→Generation cascade + enums _(role:plugin)_
 
 ### 4. summarize
 

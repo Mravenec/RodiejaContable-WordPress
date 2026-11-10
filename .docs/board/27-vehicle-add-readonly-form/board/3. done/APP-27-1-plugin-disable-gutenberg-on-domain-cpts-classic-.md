@@ -34,6 +34,7 @@ ClassicEditorForce + vehicle supports title/thumbnail only
 
 ## History
 
+- 2026-11-10T15:31:07.275Z moved testing → done
 - 2026-11-10T15:31:06.818Z checklist item 2 marked
 - 2026-11-10T15:31:06.739Z moved doing → testing
 - 2026-11-10T15:31:06.526Z checklist item 1 marked
