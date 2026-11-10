@@ -8,8 +8,8 @@
 
 # Track custom plugin + MU-plugin; ignore stock WP plugins/themes noise
 /web/wp-content/plugins/*
-!/web/wp-content/plugins/harness-plugin/
-!/web/wp-content/plugins/harness-plugin/**
+!/web/wp-content/plugins/rodieja-contable/
+!/web/wp-content/plugins/rodieja-contable/**
 /web/wp-content/mu-plugins/*
 !/web/wp-content/mu-plugins/harness-hardening.php
 /web/wp-content/themes/*
@@ -50,3 +50,5 @@ coverage/
 
 # Ticket worktrees (local only; never commit)
 .worktrees/
+
+.ddev/traefik/
