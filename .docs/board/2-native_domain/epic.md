@@ -5,7 +5,7 @@
 | Id | 2 |
 | Slug | native_domain |
 | Status | in_progress |
-| Progress | **83%** (0/2 in summarize · column + checklist) |
+| Progress | **100%** (2/2 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,10 +35,10 @@ _empty_
 
 ### 3. done
 
-- `APP-2-1` Plugin · ensure demo seed vehicles pedidos finance _(role:plugin)_
-- `APP-2-2` Plugin · WP-CLI + REST smoke counts + land status _(role:plugin)_
+_empty_
 
 ### 4. summarize
 
-_empty_
+- `APP-2-1` Plugin · ensure demo seed vehicles pedidos finance _(role:plugin)_
+- `APP-2-2` Plugin · WP-CLI + REST smoke counts + land status _(role:plugin)_
 

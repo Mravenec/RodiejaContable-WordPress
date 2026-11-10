@@ -1,0 +1,9 @@
+{"at":"2026-11-10T05:35:43.854Z","type":"create","issueId":"APP-3-1","column":"backlog"}
+{"at":"2026-11-10T05:35:43.927Z","type":"create","issueId":"APP-3-2","column":"backlog"}
+{"at":"2026-11-10T05:35:44.005Z","type":"create","issueId":"APP-3-3","column":"backlog"}
+{"at":"2026-11-10T05:35:49.957Z","type":"claim","issueId":"APP-3-1","agent":"plugin-agent-1"}
+{"at":"2026-11-10T05:40:32.661Z","type":"checklist","issueId":"APP-3-1","item":"1"}
+{"at":"2026-11-10T05:40:32.736Z","type":"evidence","issueId":"APP-3-1","title":"CatalogMetaBoxes native"}
+{"at":"2026-11-10T05:40:32.818Z","type":"move","issueId":"APP-3-1","from":"doing","to":"testing"}
+{"at":"2026-11-10T05:40:32.891Z","type":"checklist","issueId":"APP-3-1","item":"2"}
+{"at":"2026-11-10T05:40:32.968Z","type":"move","issueId":"APP-3-1","from":"testing","to":"done"}

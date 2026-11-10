@@ -5,7 +5,7 @@
 | Id | 1 |
 | Slug | foundation |
 | Status | in_progress |
-| Progress | **83%** (0/3 in summarize · column + checklist) |
+| Progress | **100%** (3/3 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,11 +35,11 @@ _empty_
 
 ### 3. done
 
-- `APP-1-1` Plugin · scaffold DI + health REST _(role:plugin)_
-- `APP-1-2` Security · roles caps + MU hardening verify _(role:security)_
-- `APP-1-3` Docs · journey + native map in AGENTS _(role:orchestrator)_
+_empty_
 
 ### 4. summarize
 
-_empty_
+- `APP-1-1` Plugin · scaffold DI + health REST _(role:plugin)_
+- `APP-1-2` Security · roles caps + MU hardening verify _(role:security)_
+- `APP-1-3` Docs · journey + native map in AGENTS _(role:orchestrator)_
 

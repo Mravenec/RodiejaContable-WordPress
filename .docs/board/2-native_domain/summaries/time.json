@@ -1,7 +1,7 @@
 {
   "idle_ms": 180000,
   "started_at": "2026-11-10T05:20:11.295Z",
-  "finished_at": null,
+  "finished_at": "2026-11-10T05:23:42.968Z",
   "issues": {
     "APP-2-1": {
       "active_ms": 190300,
@@ -13,6 +13,13 @@
           "end": "2026-11-10T05:23:21.595Z",
           "ms": 190300,
           "close": "done",
+          "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T05:23:42.772Z",
+          "end": "2026-11-10T05:23:42.772Z",
+          "ms": 0,
+          "close": "summarize",
           "agent": "plugin-agent-1"
         }
       ]
@@ -27,6 +34,13 @@
           "end": "2026-11-10T05:23:36.559Z",
           "ms": 2833,
           "close": "done",
+          "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T05:23:42.839Z",
+          "end": "2026-11-10T05:23:42.839Z",
+          "ms": 0,
+          "close": "summarize",
           "agent": "plugin-agent-1"
         }
       ]

@@ -8,6 +8,8 @@ declare(strict_types=1);
 namespace Rodieja\Contable\Providers;
 
 use Rodieja\Contable\Admin\AdminMenu;
+use Rodieja\Contable\Admin\CatalogListColumns;
+use Rodieja\Contable\Admin\CatalogMetaBoxes;
 use Rodieja\Contable\Controllers\Rest\DomainStatsController;
 use Rodieja\Contable\Controllers\Rest\HealthController;
 use Rodieja\Contable\Core\Container;
@@ -56,6 +58,18 @@ final class ServiceProvider {
 				$c->get( DomainStatsService::class ),
 				$c->get( CapabilityGate::class )
 			)
+		);
+		$container->set(
+			CatalogMetaBoxes::class,
+			static fn( Container $c ) => new CatalogMetaBoxes(
+				$c->get( NonceGuard::class ),
+				$c->get( OutputEscaper::class ),
+				$c->get( CapabilityGate::class )
+			)
+		);
+		$container->set(
+			CatalogListColumns::class,
+			static fn( Container $c ) => new CatalogListColumns( $c->get( OutputEscaper::class ) )
 		);
 	}
 }
