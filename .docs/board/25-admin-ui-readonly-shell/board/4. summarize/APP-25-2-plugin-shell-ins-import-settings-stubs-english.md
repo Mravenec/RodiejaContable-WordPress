@@ -11,6 +11,7 @@ blocked_by:
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T14:11:05.952Z"
+summary_html: summaries/25-admin-ui-readonly-shell-beginner.html
 ---
 ## Objetivo
 
@@ -35,6 +36,8 @@ PedidoImport+Tools+Roles+Audatex+Cantones page-header shells; pretty JSON sample
 
 ## History
 
+- 2026-11-10T16:41:02.670Z epic summary HTML → summaries/25-admin-ui-readonly-shell-beginner.html
+- 2026-11-10T16:41:02.661Z moved done → summarize
 - 2026-11-10T14:12:45.377Z moved testing → done
 - 2026-11-10T14:12:45.010Z checklist item 2 marked
 - 2026-11-10T14:12:44.935Z moved doing → testing

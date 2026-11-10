@@ -10,6 +10,7 @@ blocked_by: []
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T15:58:04.323Z"
+summary_html: summaries/29-hierarchy-vehicle-expand-beginner.html
 ---
 ## Objetivo
 
@@ -34,6 +35,8 @@ Vehicle details: costs status parts txs via nested details
 
 ## History
 
+- 2026-11-10T16:41:03.327Z epic summary HTML → summaries/29-hierarchy-vehicle-expand-beginner.html
+- 2026-11-10T16:41:03.319Z moved done → summarize
 - 2026-11-10T15:59:41.445Z moved testing → done
 - 2026-11-10T15:59:32.194Z checklist item 2 marked
 - 2026-11-10T15:59:32.083Z moved doing → testing

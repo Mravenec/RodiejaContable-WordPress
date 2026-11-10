@@ -26,3 +26,7 @@
 {"at":"2026-11-10T15:20:11.240Z","type":"move","issueId":"APP-26-4","from":"doing","to":"testing"}
 {"at":"2026-11-10T15:20:11.319Z","type":"checklist","issueId":"APP-26-4","item":"2"}
 {"at":"2026-11-10T15:20:11.706Z","type":"move","issueId":"APP-26-4","from":"testing","to":"done"}
+{"at":"2026-11-10T16:41:02.747Z","type":"move","issueId":"APP-26-1","from":"done","to":"summarize","summary_html":"summaries/26-workshop-ledger-rebrand-beginner.html"}
+{"at":"2026-11-10T16:41:02.829Z","type":"move","issueId":"APP-26-2","from":"done","to":"summarize","summary_html":"summaries/26-workshop-ledger-rebrand-beginner.html"}
+{"at":"2026-11-10T16:41:02.913Z","type":"move","issueId":"APP-26-3","from":"done","to":"summarize","summary_html":"summaries/26-workshop-ledger-rebrand-beginner.html"}
+{"at":"2026-11-10T16:41:02.999Z","type":"move","issueId":"APP-26-4","from":"done","to":"summarize","summary_html":"summaries/26-workshop-ledger-rebrand-beginner.html"}

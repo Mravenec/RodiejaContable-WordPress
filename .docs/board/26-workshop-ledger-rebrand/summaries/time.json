@@ -14,6 +14,13 @@
           "ms": 47063,
           "close": "done",
           "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T16:41:02.739Z",
+          "end": "2026-11-10T16:41:02.739Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": "plugin-agent-1"
         }
       ]
     },
@@ -27,6 +34,13 @@
           "end": "2026-11-10T15:18:36.695Z",
           "ms": 73379,
           "close": "done",
+          "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T16:41:02.821Z",
+          "end": "2026-11-10T16:41:02.821Z",
+          "ms": 0,
+          "close": "summarize",
           "agent": "plugin-agent-1"
         }
       ]
@@ -42,6 +56,13 @@
           "ms": 68088,
           "close": "done",
           "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T16:41:02.905Z",
+          "end": "2026-11-10T16:41:02.905Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": "plugin-agent-1"
         }
       ]
     },
@@ -55,6 +76,13 @@
           "end": "2026-11-10T15:20:11.706Z",
           "ms": 12430,
           "close": "done",
+          "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T16:41:02.990Z",
+          "end": "2026-11-10T16:41:02.990Z",
+          "ms": 0,
+          "close": "summarize",
           "agent": "plugin-agent-1"
         }
       ]

@@ -5,7 +5,7 @@
 | Id | 25 |
 | Slug | admin-ui-readonly-shell |
 | Status | in_progress |
-| Progress | **83%** (0/2 in summarize · column + checklist) |
+| Progress | **100%** (2/2 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,10 +35,10 @@ _empty_
 
 ### 3. done
 
-- `APP-25-1` Plugin · hide WP chrome menus + rename Audatex InPart _(role:plugin)_
-- `APP-25-2` Plugin · shell INS/Import + Settings stubs (English) _(role:plugin)_
+_empty_
 
 ### 4. summarize
 
-_empty_
+- `APP-25-1` Plugin · hide WP chrome menus + rename Audatex InPart _(role:plugin)_
+- `APP-25-2` Plugin · shell INS/Import + Settings stubs (English) _(role:plugin)_
 

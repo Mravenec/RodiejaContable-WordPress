@@ -11,6 +11,7 @@ blocked_by:
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T15:18:43.875Z"
+summary_html: summaries/26-workshop-ledger-rebrand-beginner.html
 ---
 ## Objetivo
 
@@ -35,6 +36,8 @@ BrandMigrate CPT/meta/options/caps + active_plugins; gitignore workshop-ledger
 
 ## History
 
+- 2026-11-10T16:41:02.912Z epic summary HTML → summaries/26-workshop-ledger-rebrand-beginner.html
+- 2026-11-10T16:41:02.904Z moved done → summarize
 - 2026-11-10T15:19:51.962Z moved testing → done
 - 2026-11-10T15:19:51.558Z checklist item 2 marked
 - 2026-11-10T15:19:51.482Z moved doing → testing

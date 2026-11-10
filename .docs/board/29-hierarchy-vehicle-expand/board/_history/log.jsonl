@@ -6,3 +6,4 @@
 {"at":"2026-11-10T15:59:32.195Z","type":"checklist","issueId":"APP-29-1","item":"2"}
 {"at":"2026-11-10T15:59:32.715Z","type":"handoff","git":"cd .worktrees/29-hierarchy-vehicle-expand/_epic && git push -u origin feature/29-hierarchy-vehicle-expand"}
 {"at":"2026-11-10T15:59:41.447Z","type":"move","issueId":"APP-29-1","from":"testing","to":"done"}
+{"at":"2026-11-10T16:41:03.327Z","type":"move","issueId":"APP-29-1","from":"done","to":"summarize","summary_html":"summaries/29-hierarchy-vehicle-expand-beginner.html"}

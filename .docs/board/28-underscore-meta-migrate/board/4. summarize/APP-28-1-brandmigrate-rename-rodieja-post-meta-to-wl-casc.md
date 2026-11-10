@@ -10,6 +10,7 @@ blocked_by: []
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T15:38:36.234Z"
+summary_html: summaries/28-underscore-meta-migrate-beginner.html
 ---
 ## Objetivo
 
@@ -34,6 +35,8 @@ BrandMigrate v2: _rodieja_* → wl_*; cascade empty init until Brand
 
 ## History
 
+- 2026-11-10T16:41:03.251Z epic summary HTML → summaries/28-underscore-meta-migrate-beginner.html
+- 2026-11-10T16:41:03.243Z moved done → summarize
 - 2026-11-10T15:39:47.707Z moved testing → done
 - 2026-11-10T15:39:46.553Z checklist item 2 marked
 - 2026-11-10T15:39:46.318Z moved doing → testing

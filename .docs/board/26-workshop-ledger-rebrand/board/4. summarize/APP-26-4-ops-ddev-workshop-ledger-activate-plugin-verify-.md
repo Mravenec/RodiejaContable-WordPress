@@ -11,6 +11,7 @@ blocked_by:
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T15:19:59.272Z"
+summary_html: summaries/26-workshop-ledger-rebrand-beginner.html
 ---
 ## Objetivo
 
@@ -35,6 +36,8 @@ ddev name workshop-ledger; composer_root workshop-ledger; login docs admin@works
 
 ## History
 
+- 2026-11-10T16:41:02.998Z epic summary HTML → summaries/26-workshop-ledger-rebrand-beginner.html
+- 2026-11-10T16:41:02.989Z moved done → summarize
 - 2026-11-10T15:20:11.705Z moved testing → done
 - 2026-11-10T15:20:11.318Z checklist item 2 marked
 - 2026-11-10T15:20:11.239Z moved doing → testing

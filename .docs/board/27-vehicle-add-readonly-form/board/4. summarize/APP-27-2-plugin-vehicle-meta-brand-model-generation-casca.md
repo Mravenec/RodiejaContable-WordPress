@@ -11,6 +11,7 @@ blocked_by:
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T15:31:10.341Z"
+summary_html: summaries/27-vehicle-add-readonly-form-beginner.html
 ---
 ## Objetivo
 
@@ -35,6 +36,8 @@ CatalogMetaBoxes Brand→Model→Generation + enums + vehicle-cascade.js
 
 ## History
 
+- 2026-11-10T16:41:03.168Z epic summary HTML → summaries/27-vehicle-add-readonly-form-beginner.html
+- 2026-11-10T16:41:03.158Z moved done → summarize
 - 2026-11-10T15:32:18.591Z moved testing → done
 - 2026-11-10T15:32:18.173Z checklist item 2 marked
 - 2026-11-10T15:32:18.069Z moved doing → testing

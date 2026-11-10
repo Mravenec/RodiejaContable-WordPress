@@ -10,6 +10,7 @@ blocked_by: []
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T15:16:26.400Z"
+summary_html: summaries/26-workshop-ledger-rebrand-beginner.html
 ---
 ## Objetivo
 
@@ -34,6 +35,8 @@ project.yaml workshop-ledger; project-commands admin@workshop.com; RENAME-MAP; R
 
 ## History
 
+- 2026-11-10T16:41:02.746Z epic summary HTML → summaries/26-workshop-ledger-rebrand-beginner.html
+- 2026-11-10T16:41:02.738Z moved done → summarize
 - 2026-11-10T15:17:13.464Z moved testing → done
 - 2026-11-10T15:17:13.030Z checklist item 2 marked
 - 2026-11-10T15:17:12.936Z moved doing → testing

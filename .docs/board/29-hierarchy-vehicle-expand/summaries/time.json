@@ -21,6 +21,13 @@
           "ms": 0,
           "close": "done",
           "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T16:41:03.320Z",
+          "end": "2026-11-10T16:41:03.320Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": "plugin-agent-1"
         }
       ]
     }

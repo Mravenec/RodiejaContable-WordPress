@@ -5,7 +5,7 @@
 | Id | 27 |
 | Slug | vehicle-add-readonly-form |
 | Status | in_progress |
-| Progress | **83%** (0/2 in summarize · column + checklist) |
+| Progress | **100%** (2/2 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,10 +35,10 @@ _empty_
 
 ### 3. done
 
-- `APP-27-1` Plugin · disable Gutenberg on domain CPTs; classic vehicle edit _(role:plugin)_
-- `APP-27-2` Plugin · vehicle meta: Brand→Model→Generation cascade + enums _(role:plugin)_
+_empty_
 
 ### 4. summarize
 
-_empty_
+- `APP-27-1` Plugin · disable Gutenberg on domain CPTs; classic vehicle edit _(role:plugin)_
+- `APP-27-2` Plugin · vehicle meta: Brand→Model→Generation cascade + enums _(role:plugin)_
 

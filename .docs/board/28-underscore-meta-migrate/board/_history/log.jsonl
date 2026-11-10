@@ -5,3 +5,4 @@
 {"at":"2026-11-10T15:39:46.321Z","type":"move","issueId":"APP-28-1","from":"doing","to":"testing"}
 {"at":"2026-11-10T15:39:46.563Z","type":"checklist","issueId":"APP-28-1","item":"2"}
 {"at":"2026-11-10T15:39:47.711Z","type":"move","issueId":"APP-28-1","from":"testing","to":"done"}
+{"at":"2026-11-10T16:41:03.252Z","type":"move","issueId":"APP-28-1","from":"done","to":"summarize","summary_html":"summaries/28-underscore-meta-migrate-beginner.html"}

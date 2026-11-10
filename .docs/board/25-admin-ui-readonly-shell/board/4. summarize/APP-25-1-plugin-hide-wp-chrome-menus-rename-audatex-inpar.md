@@ -10,6 +10,7 @@ blocked_by: []
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T14:10:25.027Z"
+summary_html: summaries/25-admin-ui-readonly-shell-beginner.html
 ---
 ## Objetivo
 
@@ -34,6 +35,8 @@ remove_menu_page Appearance/Plugins/Tools/WP Settings/Dashboard/Pages; Audatex I
 
 ## History
 
+- 2026-11-10T16:41:02.590Z epic summary HTML → summaries/25-admin-ui-readonly-shell-beginner.html
+- 2026-11-10T16:41:02.582Z moved done → summarize
 - 2026-11-10T14:11:00.955Z moved testing → done
 - 2026-11-10T14:11:00.586Z checklist item 2 marked
 - 2026-11-10T14:11:00.515Z moved doing → testing
