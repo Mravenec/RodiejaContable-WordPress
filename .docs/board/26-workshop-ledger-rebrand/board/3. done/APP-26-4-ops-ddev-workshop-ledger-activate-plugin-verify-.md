@@ -35,6 +35,7 @@ ddev name workshop-ledger; composer_root workshop-ledger; login docs admin@works
 
 ## History
 
+- 2026-11-10T15:20:11.705Z moved testing → done
 - 2026-11-10T15:20:11.318Z checklist item 2 marked
 - 2026-11-10T15:20:11.239Z moved doing → testing
 - 2026-11-10T15:20:11.006Z checklist item 1 marked
