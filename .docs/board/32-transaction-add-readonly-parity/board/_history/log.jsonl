@@ -1,0 +1,6 @@
+{"at":"2026-11-10T16:15:45.199Z","type":"create","issueId":"APP-32-1","column":"backlog"}
+{"at":"2026-11-10T16:15:51.485Z","type":"claim","issueId":"APP-32-1","agent":"plugin-agent-1"}
+{"at":"2026-11-10T16:16:30.906Z","type":"checklist","issueId":"APP-32-1","item":"1"}
+{"at":"2026-11-10T16:16:30.988Z","type":"evidence","issueId":"APP-32-1","title":"finance-fields"}
+{"at":"2026-11-10T16:16:31.199Z","type":"move","issueId":"APP-32-1","from":"doing","to":"testing"}
+{"at":"2026-11-10T16:16:31.275Z","type":"checklist","issueId":"APP-32-1","item":"2"}

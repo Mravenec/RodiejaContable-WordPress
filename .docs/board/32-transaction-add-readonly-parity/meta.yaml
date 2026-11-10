@@ -1,0 +1,9 @@
+id: 32
+slug: transaction-add-readonly-parity
+title: "Add Transaction: Read-Only finance fields (native WP)"
+color: "#b45309"
+status: in_progress
+created_at: "2026-11-10T16:15:44.581Z"
+updated_at: "2026-11-10T16:16:31.277Z"
+summary_html: summaries/32-transaction-add-readonly-parity-beginner.html
+summary_updated_at: "2026-11-10T16:16:31.284Z"
