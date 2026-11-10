@@ -29,6 +29,7 @@ final class RoleRegistrar {
 			'rodieja_transaccion',
 			'rodieja_pedido',
 			'rodieja_pedido_item',
+			'rodieja_evento',
 		);
 		$caps  = array( self::CAP_MANAGE, 'read' );
 		foreach ( $types as $type ) {
