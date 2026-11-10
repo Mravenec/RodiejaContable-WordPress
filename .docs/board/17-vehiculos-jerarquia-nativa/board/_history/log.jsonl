@@ -1,0 +1,7 @@
+{"at":"2026-11-10T07:14:40.203Z","type":"create","issueId":"APP-17-1","column":"backlog"}
+{"at":"2026-11-10T07:14:40.283Z","type":"create","issueId":"APP-17-2","column":"backlog"}
+{"at":"2026-11-10T07:14:42.993Z","type":"claim","issueId":"APP-17-1","agent":"plugin-agent-1"}
+{"at":"2026-11-10T07:15:22.507Z","type":"checklist","issueId":"APP-17-1","item":"1"}
+{"at":"2026-11-10T07:15:22.598Z","type":"evidence","issueId":"APP-17-1","title":"CatalogHierarchyRepository"}
+{"at":"2026-11-10T07:15:22.700Z","type":"move","issueId":"APP-17-1","from":"doing","to":"testing"}
+{"at":"2026-11-10T07:15:25.748Z","type":"checklist","issueId":"APP-17-1","item":"2"}

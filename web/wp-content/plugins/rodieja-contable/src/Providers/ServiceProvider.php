@@ -39,6 +39,9 @@ use Rodieja\Contable\Cron\ResumenCronRegistrar;
 use Rodieja\Contable\Meta\EventoMetaRegistrar;
 use Rodieja\Contable\PostTypes\CatalogThumbnailSupport;
 use Rodieja\Contable\PostTypes\EventoPostTypeRegistrar;
+use Rodieja\Contable\Contracts\CatalogHierarchyRepositoryInterface;
+use Rodieja\Contable\Repositories\CatalogHierarchyRepository;
+use Rodieja\Contable\Services\CatalogHierarchyService;
 use Rodieja\Contable\Services\CsvExportService;
 use Rodieja\Contable\Services\HistorialRecorder;
 use Rodieja\Contable\Services\MonthlyResumenService;
@@ -83,6 +86,16 @@ final class ServiceProvider {
 		$container->set( HealthService::class, static fn() => new HealthService() );
 		$container->set( FinanceTotalsService::class, static fn() => new FinanceTotalsService() );
 		$container->set( DomainStatsService::class, static fn() => new DomainStatsService() );
+		$container->set(
+			CatalogHierarchyRepositoryInterface::class,
+			static fn() => new CatalogHierarchyRepository()
+		);
+		$container->set(
+			CatalogHierarchyService::class,
+			static fn( Container $c ) => new CatalogHierarchyService(
+				$c->get( CatalogHierarchyRepositoryInterface::class )
+			)
+		);
 		$container->set( DemoSeedService::class, static fn() => new DemoSeedService() );
 		$container->set( RoleRegistrar::class, static fn() => new RoleRegistrar() );
 		$container->set( PostTypeRegistrar::class, static fn() => new PostTypeRegistrar() );
