@@ -4,15 +4,60 @@
   "finished_at": null,
   "issues": {
     "APP-6-1": {
-      "active_ms": 0,
+      "active_ms": 672,
       "paused": false,
-      "open": {
-        "start": "2026-11-10T05:45:05.385Z",
-        "last": "2026-11-10T05:45:05.385Z",
-        "agent": "plugin-agent-1",
-        "event": "claim"
-      },
-      "segments": []
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T05:45:05.385Z",
+          "end": "2026-11-10T05:45:05.385Z",
+          "ms": 0,
+          "close": "idle",
+          "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T06:19:29.370Z",
+          "end": "2026-11-10T06:19:29.746Z",
+          "ms": 376,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T06:19:57.933Z",
+          "end": "2026-11-10T06:19:58.229Z",
+          "ms": 296,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        }
+      ]
+    },
+    "APP-6-2": {
+      "active_ms": 448,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T06:19:56.744Z",
+          "end": "2026-11-10T06:19:57.192Z",
+          "ms": 448,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        }
+      ]
+    },
+    "APP-6-3": {
+      "active_ms": 443,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T06:19:57.273Z",
+          "end": "2026-11-10T06:19:57.716Z",
+          "ms": 443,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        }
+      ]
     }
   },
   "land": {

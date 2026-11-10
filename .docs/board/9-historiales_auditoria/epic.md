@@ -4,8 +4,8 @@
 |---|---|
 | Id | 9 |
 | Slug | historiales_auditoria |
-| Status | planned |
-| Progress | **0%** (0/3 in summarize · column + checklist) |
+| Status | in_progress |
+| Progress | **83%** (0/3 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -23,9 +23,7 @@ This folder is the **operational** board (claims, checklist, %). There is no `.a
 
 ### 0. backlog
 
-- `APP-9-1` Plugin · CPT rodieja_evento_historial + hooks save_post _(role:plugin)_
-- `APP-9-2` Plugin · admin list filtrable por CPT origen _(role:plugin)_
-- `APP-9-3` Security · solo caps manage_rodieja en historial _(role:security)_
+_empty_
 
 ### 1. doing
 
@@ -37,7 +35,9 @@ _empty_
 
 ### 3. done
 
-_empty_
+- `APP-9-1` Plugin · CPT rodieja_evento_historial + hooks save_post _(role:plugin)_
+- `APP-9-2` Plugin · admin list filtrable por CPT origen _(role:plugin)_
+- `APP-9-3` Security · solo caps manage_rodieja en historial _(role:security)_
 
 ### 4. summarize
 

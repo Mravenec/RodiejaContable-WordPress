@@ -4,8 +4,8 @@
 |---|---|
 | Id | 14 |
 | Slug | pedidos_ins_import |
-| Status | planned |
-| Progress | **0%** (0/3 in summarize · column + checklist) |
+| Status | in_progress |
+| Progress | **83%** (0/3 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -23,9 +23,7 @@ This folder is the **operational** board (claims, checklist, %). There is no `.a
 
 ### 0. backlog
 
-- `APP-14-1` Plugin · Options Audatex/INS settings (no live sync) _(role:plugin)_
-- `APP-14-2` Plugin · import JSON/CSV pedidos a CPT + items _(role:plugin)_
-- `APP-14-3` Orchestrator · journey map Spring sync→native import _(role:orchestrator)_
+_empty_
 
 ### 1. doing
 
@@ -37,7 +35,9 @@ _empty_
 
 ### 3. done
 
-_empty_
+- `APP-14-1` Plugin · Options Audatex/INS settings (no live sync) _(role:plugin)_
+- `APP-14-2` Plugin · import JSON/CSV pedidos a CPT + items _(role:plugin)_
+- `APP-14-3` Orchestrator · journey map Spring sync→native import _(role:orchestrator)_
 
 ### 4. summarize
 

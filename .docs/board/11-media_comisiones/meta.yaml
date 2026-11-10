@@ -2,8 +2,8 @@ id: 11
 slug: media_comisiones
 title: Media Library + pagos/comisiones meta en pedidos
 color: "#b45309"
-status: planned
+status: in_progress
 created_at: "2026-11-10T05:37:58.634Z"
-updated_at: "2026-11-10T05:37:59.517Z"
+updated_at: "2026-11-10T06:19:50.210Z"
 summary_html: summaries/11-media-comisiones-beginner.html
-summary_updated_at: "2026-11-10T05:37:59.524Z"
+summary_updated_at: "2026-11-10T06:19:50.214Z"

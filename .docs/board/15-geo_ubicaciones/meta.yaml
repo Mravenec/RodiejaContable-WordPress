@@ -2,8 +2,8 @@ id: 15
 slug: geo_ubicaciones
 title: "Geo nativo: meta ubicación/cantón en vehículo+empleado"
 color: "#b45309"
-status: planned
+status: in_progress
 created_at: "2026-11-10T05:39:28.830Z"
-updated_at: "2026-11-10T05:39:29.098Z"
+updated_at: "2026-11-10T06:19:54.930Z"
 summary_html: summaries/15-geo-ubicaciones-beginner.html
-summary_updated_at: "2026-11-10T05:39:29.104Z"
+summary_updated_at: "2026-11-10T06:19:54.934Z"

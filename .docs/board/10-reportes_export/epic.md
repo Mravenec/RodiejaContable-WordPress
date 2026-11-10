@@ -4,8 +4,8 @@
 |---|---|
 | Id | 10 |
 | Slug | reportes_export |
-| Status | planned |
-| Progress | **0%** (0/2 in summarize · column + checklist) |
+| Status | in_progress |
+| Progress | **83%** (0/2 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -23,8 +23,7 @@ This folder is the **operational** board (claims, checklist, %). There is no `.a
 
 ### 0. backlog
 
-- `APP-10-1` Plugin · export CSV vehículos/repuestos/tx via admin-post+nonce _(role:plugin)_
-- `APP-10-2` Plugin · resumen mensual wp_mail (cap-gated) _(role:plugin)_
+_empty_
 
 ### 1. doing
 
@@ -36,7 +35,8 @@ _empty_
 
 ### 3. done
 
-_empty_
+- `APP-10-1` Plugin · export CSV vehículos/repuestos/tx via admin-post+nonce _(role:plugin)_
+- `APP-10-2` Plugin · resumen mensual wp_mail (cap-gated) _(role:plugin)_
 
 ### 4. summarize
 

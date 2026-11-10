@@ -2,8 +2,8 @@ id: 16
 slug: tools_import_export
 title: "Tools nativos: export/import WP + CSV dominio"
 color: "#b45309"
-status: planned
+status: in_progress
 created_at: "2026-11-10T05:39:28.946Z"
-updated_at: "2026-11-10T05:39:29.319Z"
+updated_at: "2026-11-10T06:19:56.665Z"
 summary_html: summaries/16-tools-import-export-beginner.html
-summary_updated_at: "2026-11-10T05:39:29.326Z"
+summary_updated_at: "2026-11-10T06:19:56.671Z"

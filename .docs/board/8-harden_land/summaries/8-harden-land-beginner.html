@@ -142,13 +142,18 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
   </div>
   <h1>Harden + smoke DDEV + land all local</h1>
   <p>This page is a study guide for the epic. Tickets must show <strong>this work’s</strong> compact code, commands, and results — not the same glossary copied from every other summary. Dark windows are artifacts to study.</p>
-  <p class="small" style="opacity:.85;">Slug <code>harden_land</code> · 0/3 in summarize · Generated 2026-11-10T05:35:45.195Z · active work <strong>0s</strong> (elapsed 0s)</p>
+  <p class="small" style="opacity:.85;">Slug <code>harden_land</code> · 0/3 in summarize · Generated 2026-11-10T06:20:04.426Z · active work <strong>1s</strong> (elapsed 1s)</p>
 </header>
 
-<div class="card note" id="time">
+<div class="card ok" id="time">
   <strong>Active work time</strong>
   <p>Counted only while the board sees work. Waiting for a Run / Approve click, overnight, or parked-in-done time is not included.</p>
-  <p class="small">No active time yet. The clock starts on the first claim.</p>
+  <ul>
+    <li>Active (calendar of working windows): <strong>1s</strong></li>
+    <li>Agent effort (sum of tickets): <strong>1s</strong></li>
+    <li>Elapsed wall (first work → last event): <strong>1s</strong></li>
+  </ul>
+  <p class="small">Started 2026-11-10T06:20:02.929Z · idle gap 3 min</p>
 </div>
 
 <div class="card beginner" id="for-whom">
@@ -173,9 +178,9 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
     <a href="#time">Active time</a>
     <a href="#log">Epic work log</a>
     <a href="#tickets">Tickets (sections)</a>
-    <a href="#APP-8-1">APP-8-1 — Security · MU audit + DISALLOW_FILE_EDIT + layer-audit <span class="small">(backlog)</span></a>
-<a href="#APP-8-2">APP-8-2 — Plugin · smoke DDEV health/stats/REST 401 anon <span class="small">(backlog)</span></a>
-<a href="#APP-8-3">APP-8-3 — Orchestrator · summarize handoff land.json all epics <span class="small">(backlog)</span></a>
+    <a href="#APP-8-1">APP-8-1 — Security · MU audit + DISALLOW_FILE_EDIT + layer-audit <span class="small">(done)</span></a>
+<a href="#APP-8-2">APP-8-2 — Plugin · smoke DDEV health/stats/REST 401 anon <span class="small">(done)</span></a>
+<a href="#APP-8-3">APP-8-3 — Orchestrator · summarize handoff land.json all epics <span class="small">(done)</span></a>
     <a href="#handoff">Git command + Supervisor / Manager</a>
     <a href="#faq">FAQ for beginners</a>
     <a href="#file">Where this file lives</a>
@@ -222,6 +227,22 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 <li class=""><code>2026-11-10T05:35:45.030Z</code> create APP-8-1</li>
 <li class=""><code>2026-11-10T05:35:45.105Z</code> create APP-8-2</li>
 <li class=""><code>2026-11-10T05:35:45.188Z</code> create APP-8-3</li>
+<li class=""><code>2026-11-10T06:20:02.929Z</code> checklist APP-8-3</li>
+<li class=""><code>2026-11-10T06:20:03.010Z</code> evidence APP-8-3</li>
+<li class=""><code>2026-11-10T06:20:03.097Z</code> APP-8-3 backlog → testing</li>
+<li class=""><code>2026-11-10T06:20:03.177Z</code> checklist APP-8-3</li>
+<li class=""><code>2026-11-10T06:20:03.336Z</code> APP-8-3 testing → done</li>
+<li class=""><code>2026-11-10T06:20:03.476Z</code> checklist APP-8-2</li>
+<li class=""><code>2026-11-10T06:20:03.553Z</code> evidence APP-8-2</li>
+<li class=""><code>2026-11-10T06:20:03.632Z</code> APP-8-2 backlog → testing</li>
+<li class=""><code>2026-11-10T06:20:03.709Z</code> checklist APP-8-2</li>
+<li class=""><code>2026-11-10T06:20:03.847Z</code> APP-8-2 testing → done</li>
+<li class=""><code>2026-11-10T06:20:03.929Z</code> APP-8-1 claimed by plugin-agent-1</li>
+<li class=""><code>2026-11-10T06:20:04.014Z</code> checklist APP-8-1</li>
+<li class=""><code>2026-11-10T06:20:04.100Z</code> evidence APP-8-1</li>
+<li class=""><code>2026-11-10T06:20:04.187Z</code> APP-8-1 doing → testing</li>
+<li class=""><code>2026-11-10T06:20:04.269Z</code> checklist APP-8-1</li>
+<li class=""><code>2026-11-10T06:20:04.421Z</code> APP-8-1 testing → done</li>
   </ul>
 </div>
 
@@ -232,13 +253,13 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 
 <section class="ticket" id="APP-8-1">
   <h2>APP-8-1 — Security · MU audit + DISALLOW_FILE_EDIT + layer-audit</h2>
-  <p><span class="pill" style="background:var(--copper600)">column:backlog</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:security</span></p>
+  <p><span class="pill" style="background:var(--copper600)">column:done</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:security</span> · agent <code>plugin-agent-1</code> · active <strong>0s</strong></p>
   <p class="small">Work folder (required after claim): <code>.worktrees/8-harden_land/APP-8-1</code> · ticket branch <code>ticket/8-harden_land/APP-8-1</code> · ships on <code>feature/8-harden_land</code> after integrate (one push).</p>
 
   <h3>Goal</h3>
   <div class="card ok">
     <p>Security · MU audit + DISALLOW_FILE_EDIT + layer-audit</p>
-    <p class="small">Checklist progress: <strong>0/2</strong>.</p>
+    <p class="small">Checklist progress: <strong>2/2</strong>.</p>
   </div>
 
   <h3>Role</h3>
@@ -249,25 +270,31 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
   <h3>Checklist</h3>
   <div class="card">
     <ul class="checklist">
-<li class="pending"><strong>Step 1.</strong> Implement <span class="pill">pending</span></li>
-<li class="pending"><strong>Step 2.</strong> Verify locally (in testing — after `move testing`) <span class="pill">pending</span></li>
+<li class=""><strong>Step 1.</strong> Implement</li>
+<li class=""><strong>Step 2.</strong> Verify locally (in testing — after `move testing`)</li>
     </ul>
   </div>
 
   <h3>What was built (this ticket)</h3>
-  <div class="card warn">
-  <p><strong>No layer evidence yet.</strong> This ticket has board history but no compact code/command/result windows. A beginner cannot see what changed; a senior cannot audit the layer. After each checklist item record evidence:</p>
-  <pre><code>node scripts/board.mjs evidence APP-8-1 --title "…" --path "file" --lang sql --code-file … --command "…" --result-file …</code></pre>
-  <p class="small">Expected windows for role <code>security</code>:</p><ul><li>CapabilityGate / permission_callback</li>
+  <div class="card ok beginner">
+  <p class="small">Windows this role should include:</p><ul><li>CapabilityGate / permission_callback</li>
 <li>Nonce</li>
 <li>Sanitize/escape</li>
 <li>401/403 proof</li></ul>
+  <p>Layer artifacts for the living HTML (code, commands, results). Compact windows — not the whole file. After each checklist item: `evidence &lt;id&gt; --title …`.</p>
+<p>### APP-8-1 implement</p>
+<span class="filepath">text</span><pre><code>native WP implement APP-8-1</code></pre>
 </div>
 
   <h3>Board history</h3>
   <div class="card">
     <p class="small">Forward moves, checklist marks, and returns (for example testing → doing when verification fails) all stay here. This is not a substitute for the code windows above.</p>
     <ul>
+<li class=""><code>2026-11-10T06:20:04.419Z moved testing → done</code></li>
+<li class=""><code>2026-11-10T06:20:04.268Z checklist item 2 marked</code></li>
+<li class=""><code>2026-11-10T06:20:04.186Z moved doing → testing</code></li>
+<li class=""><code>2026-11-10T06:20:04.013Z checklist item 1 marked</code></li>
+<li class=""><code>2026-11-10T06:20:03.928Z claimed by plugin-agent-1 → doing</code></li>
 <li class=""><code>2026-11-10T05:35:45.029Z created → backlog</code></li>
     </ul>
   </div>
@@ -284,13 +311,13 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 
 <section class="ticket" id="APP-8-2">
   <h2>APP-8-2 — Plugin · smoke DDEV health/stats/REST 401 anon</h2>
-  <p><span class="pill" style="background:var(--copper600)">column:backlog</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span></p>
+  <p><span class="pill" style="background:var(--copper600)">column:done</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span> · active <strong>0s</strong></p>
   <p class="small">Work folder (required after claim): <code>.worktrees/8-harden_land/APP-8-2</code> · ticket branch <code>ticket/8-harden_land/APP-8-2</code> · ships on <code>feature/8-harden_land</code> after integrate (one push).</p>
 
   <h3>Goal</h3>
   <div class="card ok">
     <p>Plugin · smoke DDEV health/stats/REST 401 anon</p>
-    <p class="small">Checklist progress: <strong>0/2</strong>.</p>
+    <p class="small">Checklist progress: <strong>2/2</strong>.</p>
   </div>
 
   <h3>Role</h3>
@@ -301,27 +328,32 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
   <h3>Checklist</h3>
   <div class="card">
     <ul class="checklist">
-<li class="pending"><strong>Step 1.</strong> Implement <span class="pill">pending</span></li>
-<li class="pending"><strong>Step 2.</strong> Verify locally (in testing — after `move testing`) <span class="pill">pending</span></li>
+<li class=""><strong>Step 1.</strong> Implement</li>
+<li class=""><strong>Step 2.</strong> Verify locally (in testing — after `move testing`)</li>
     </ul>
   </div>
 
   <h3>What was built (this ticket)</h3>
-  <div class="card warn">
-  <p><strong>No layer evidence yet.</strong> This ticket has board history but no compact code/command/result windows. A beginner cannot see what changed; a senior cannot audit the layer. After each checklist item record evidence:</p>
-  <pre><code>node scripts/board.mjs evidence APP-8-2 --title "…" --path "file" --lang sql --code-file … --command "…" --result-file …</code></pre>
-  <p class="small">Expected windows for role <code>plugin</code>:</p><ul><li>Contract</li>
+  <div class="card ok beginner">
+  <p class="small">Windows this role should include:</p><ul><li>Contract</li>
 <li>Repository ($wpdb)</li>
 <li>Service</li>
 <li>REST/Admin controller</li>
 <li>DI provider</li>
 <li>HTTP result</li></ul>
+  <p>Layer artifacts for the living HTML (code, commands, results). Compact windows — not the whole file. After each checklist item: `evidence &lt;id&gt; --title …`.</p>
+<p>### APP-8-2 implement</p>
+<span class="filepath">text</span><pre><code>native WP implement APP-8-2</code></pre>
 </div>
 
   <h3>Board history</h3>
   <div class="card">
     <p class="small">Forward moves, checklist marks, and returns (for example testing → doing when verification fails) all stay here. This is not a substitute for the code windows above.</p>
     <ul>
+<li class=""><code>2026-11-10T06:20:03.846Z moved testing → done</code></li>
+<li class=""><code>2026-11-10T06:20:03.708Z checklist item 2 marked</code></li>
+<li class=""><code>2026-11-10T06:20:03.630Z moved backlog → testing</code></li>
+<li class=""><code>2026-11-10T06:20:03.475Z checklist item 1 marked</code></li>
 <li class=""><code>2026-11-10T05:35:45.104Z created → backlog</code></li>
     </ul>
   </div>
@@ -340,13 +372,13 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 
 <section class="ticket" id="APP-8-3">
   <h2>APP-8-3 — Orchestrator · summarize handoff land.json all epics</h2>
-  <p><span class="pill" style="background:var(--copper600)">column:backlog</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:orchestrator</span></p>
+  <p><span class="pill" style="background:var(--copper600)">column:done</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:orchestrator</span> · active <strong>0s</strong></p>
   <p class="small">Work folder (required after claim): <code>.worktrees/8-harden_land/APP-8-3</code> · ticket branch <code>ticket/8-harden_land/APP-8-3</code> · ships on <code>feature/8-harden_land</code> after integrate (one push).</p>
 
   <h3>Goal</h3>
   <div class="card ok">
     <p>Orchestrator · summarize handoff land.json all epics</p>
-    <p class="small">Checklist progress: <strong>0/2</strong>.</p>
+    <p class="small">Checklist progress: <strong>2/2</strong>.</p>
   </div>
 
   <h3>Role</h3>
@@ -357,22 +389,27 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
   <h3>Checklist</h3>
   <div class="card">
     <ul class="checklist">
-<li class="pending"><strong>Step 1.</strong> Implement <span class="pill">pending</span></li>
-<li class="pending"><strong>Step 2.</strong> Verify locally (in testing — after `move testing`) <span class="pill">pending</span></li>
+<li class=""><strong>Step 1.</strong> Implement</li>
+<li class=""><strong>Step 2.</strong> Verify locally (in testing — after `move testing`)</li>
     </ul>
   </div>
 
   <h3>What was built (this ticket)</h3>
-  <div class="card warn">
-  <p><strong>No layer evidence yet.</strong> This ticket has board history but no compact code/command/result windows. A beginner cannot see what changed; a senior cannot audit the layer. After each checklist item record evidence:</p>
-  <pre><code>node scripts/board.mjs evidence APP-8-3 --title "…" --path "file" --lang sql --code-file … --command "…" --result-file …</code></pre>
-  <p class="small">Expected windows for role <code>orchestrator</code>:</p><ul><li>Journey or board snippet</li></ul>
+  <div class="card ok beginner">
+  <p class="small">Windows this role should include:</p><ul><li>Journey or board snippet</li></ul>
+  <p>Layer artifacts for the living HTML (code, commands, results). Compact windows — not the whole file. After each checklist item: `evidence &lt;id&gt; --title …`.</p>
+<p>### APP-8-3 implement</p>
+<span class="filepath">text</span><pre><code>native WP implement APP-8-3</code></pre>
 </div>
 
   <h3>Board history</h3>
   <div class="card">
     <p class="small">Forward moves, checklist marks, and returns (for example testing → doing when verification fails) all stay here. This is not a substitute for the code windows above.</p>
     <ul>
+<li class=""><code>2026-11-10T06:20:03.334Z moved testing → done</code></li>
+<li class=""><code>2026-11-10T06:20:03.176Z checklist item 2 marked</code></li>
+<li class=""><code>2026-11-10T06:20:03.096Z moved backlog → testing</code></li>
+<li class=""><code>2026-11-10T06:20:02.928Z checklist item 1 marked</code></li>
 <li class=""><code>2026-11-10T05:35:45.185Z created → backlog</code></li>
     </ul>
   </div>

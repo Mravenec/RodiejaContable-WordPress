@@ -4,8 +4,8 @@
 |---|---|
 | Id | 7 |
 | Slug | admin_ux |
-| Status | planned |
-| Progress | **0%** (0/3 in summarize · column + checklist) |
+| Status | in_progress |
+| Progress | **83%** (0/3 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -23,9 +23,7 @@ This folder is the **operational** board (claims, checklist, %). There is no `.a
 
 ### 0. backlog
 
-- `APP-7-1` Plugin · hub Rodieja links CPT + seed _(role:plugin)_
-- `APP-7-2` Plugin · pantallas resumen inventario/ventas nativas _(role:plugin)_
-- `APP-7-3` Plugin · empleado meta user_id ↔ WP user contador _(role:plugin)_
+_empty_
 
 ### 1. doing
 
@@ -37,7 +35,9 @@ _empty_
 
 ### 3. done
 
-_empty_
+- `APP-7-1` Plugin · hub Rodieja links CPT + seed _(role:plugin)_
+- `APP-7-2` Plugin · pantallas resumen inventario/ventas nativas _(role:plugin)_
+- `APP-7-3` Plugin · empleado meta user_id ↔ WP user contador _(role:plugin)_
 
 ### 4. summarize
 

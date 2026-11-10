@@ -2,8 +2,8 @@ id: 13
 slug: vistas_ejecutivas
 title: Vistas ejecutivas WP_Query (inventario, ventas, rentabilidad)
 color: "#b45309"
-status: planned
+status: in_progress
 created_at: "2026-11-10T05:37:58.870Z"
-updated_at: "2026-11-10T05:37:59.812Z"
+updated_at: "2026-11-10T06:19:52.261Z"
 summary_html: summaries/13-vistas-ejecutivas-beginner.html
-summary_updated_at: "2026-11-10T05:37:59.818Z"
+summary_updated_at: "2026-11-10T06:19:52.268Z"

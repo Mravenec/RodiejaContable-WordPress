@@ -1,2 +1,13 @@
 {"at":"2026-11-10T05:37:59.591Z","type":"create","issueId":"APP-12-1","column":"backlog"}
 {"at":"2026-11-10T05:37:59.663Z","type":"create","issueId":"APP-12-2","column":"backlog"}
+{"at":"2026-11-10T06:19:50.338Z","type":"checklist","issueId":"APP-12-2","item":"1"}
+{"at":"2026-11-10T06:19:50.413Z","type":"evidence","issueId":"APP-12-2","title":"APP-12-2 implement"}
+{"at":"2026-11-10T06:19:50.488Z","type":"move","issueId":"APP-12-2","from":"backlog","to":"testing"}
+{"at":"2026-11-10T06:19:50.565Z","type":"checklist","issueId":"APP-12-2","item":"2"}
+{"at":"2026-11-10T06:19:50.702Z","type":"move","issueId":"APP-12-2","from":"testing","to":"done"}
+{"at":"2026-11-10T06:19:50.780Z","type":"claim","issueId":"APP-12-1","agent":"plugin-agent-1"}
+{"at":"2026-11-10T06:19:50.853Z","type":"checklist","issueId":"APP-12-1","item":"1"}
+{"at":"2026-11-10T06:19:50.929Z","type":"evidence","issueId":"APP-12-1","title":"APP-12-1 implement"}
+{"at":"2026-11-10T06:19:51.010Z","type":"move","issueId":"APP-12-1","from":"doing","to":"testing"}
+{"at":"2026-11-10T06:19:51.085Z","type":"checklist","issueId":"APP-12-1","item":"2"}
+{"at":"2026-11-10T06:19:51.223Z","type":"move","issueId":"APP-12-1","from":"testing","to":"done"}

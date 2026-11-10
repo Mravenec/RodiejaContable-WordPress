@@ -4,8 +4,8 @@
 |---|---|
 | Id | 6 |
 | Slug | pedidos |
-| Status | planned |
-| Progress | **5%** (0/3 in summarize · column + checklist) |
+| Status | in_progress |
+| Progress | **83%** (0/3 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -23,12 +23,11 @@ This folder is the **operational** board (claims, checklist, %). There is no `.a
 
 ### 0. backlog
 
-- `APP-6-2` Plugin · CPT hijo rodieja_pedido_item + admin _(role:plugin)_
-- `APP-6-3` Plugin · REST CRUD pedidos permission_callback + seed _(role:plugin)_
+_empty_
 
 ### 1. doing
 
-- `APP-6-1` Plugin · meta pedidos Audatex-shape (cotización/WAN/VIN/…) _(role:plugin)_
+_empty_
 
 ### 2. testing
 
@@ -36,7 +35,9 @@ _empty_
 
 ### 3. done
 
-_empty_
+- `APP-6-1` Plugin · meta pedidos Audatex-shape (cotización/WAN/VIN/…) _(role:plugin)_
+- `APP-6-2` Plugin · CPT hijo rodieja_pedido_item + admin _(role:plugin)_
+- `APP-6-3` Plugin · REST CRUD pedidos permission_callback + seed _(role:plugin)_
 
 ### 4. summarize
 

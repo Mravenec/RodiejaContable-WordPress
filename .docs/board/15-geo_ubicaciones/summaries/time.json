@@ -1,0 +1,42 @@
+{
+  "idle_ms": 180000,
+  "started_at": "2026-11-10T06:19:53.926Z",
+  "finished_at": null,
+  "issues": {
+    "APP-15-1": {
+      "active_ms": 444,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T06:19:53.926Z",
+          "end": "2026-11-10T06:19:54.370Z",
+          "ms": 444,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        }
+      ]
+    },
+    "APP-15-2": {
+      "active_ms": 478,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T06:19:54.448Z",
+          "end": "2026-11-10T06:19:54.926Z",
+          "ms": 478,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        }
+      ]
+    }
+  },
+  "land": {
+    "started_at": null,
+    "finished_at": null,
+    "paused": false,
+    "open": null,
+    "segments": []
+  }
+}

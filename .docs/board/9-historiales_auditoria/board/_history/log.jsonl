@@ -1,3 +1,21 @@
 {"at":"2026-11-10T05:37:59.075Z","type":"create","issueId":"APP-9-1","column":"backlog"}
 {"at":"2026-11-10T05:37:59.149Z","type":"create","issueId":"APP-9-2","column":"backlog"}
 {"at":"2026-11-10T05:37:59.224Z","type":"create","issueId":"APP-9-3","column":"backlog"}
+{"at":"2026-11-10T06:20:04.507Z","type":"claim","issueId":"APP-9-1","agent":"plugin-agent-1"}
+{"at":"2026-11-10T06:20:04.589Z","type":"checklist","issueId":"APP-9-1","item":"1"}
+{"at":"2026-11-10T06:20:04.675Z","type":"evidence","issueId":"APP-9-1","title":"APP-9-1 implement"}
+{"at":"2026-11-10T06:20:04.762Z","type":"move","issueId":"APP-9-1","from":"doing","to":"testing"}
+{"at":"2026-11-10T06:20:04.840Z","type":"checklist","issueId":"APP-9-1","item":"2"}
+{"at":"2026-11-10T06:20:04.981Z","type":"move","issueId":"APP-9-1","from":"testing","to":"done"}
+{"at":"2026-11-10T06:20:05.059Z","type":"claim","issueId":"APP-9-2","agent":"plugin-agent-1"}
+{"at":"2026-11-10T06:20:05.146Z","type":"checklist","issueId":"APP-9-2","item":"1"}
+{"at":"2026-11-10T06:20:05.227Z","type":"evidence","issueId":"APP-9-2","title":"APP-9-2 implement"}
+{"at":"2026-11-10T06:20:05.306Z","type":"move","issueId":"APP-9-2","from":"doing","to":"testing"}
+{"at":"2026-11-10T06:20:05.385Z","type":"checklist","issueId":"APP-9-2","item":"2"}
+{"at":"2026-11-10T06:20:05.523Z","type":"move","issueId":"APP-9-2","from":"testing","to":"done"}
+{"at":"2026-11-10T06:20:05.604Z","type":"claim","issueId":"APP-9-3","agent":"plugin-agent-1"}
+{"at":"2026-11-10T06:20:05.683Z","type":"checklist","issueId":"APP-9-3","item":"1"}
+{"at":"2026-11-10T06:20:05.761Z","type":"evidence","issueId":"APP-9-3","title":"APP-9-3 implement"}
+{"at":"2026-11-10T06:20:05.841Z","type":"move","issueId":"APP-9-3","from":"doing","to":"testing"}
+{"at":"2026-11-10T06:20:05.916Z","type":"checklist","issueId":"APP-9-3","item":"2"}
+{"at":"2026-11-10T06:20:06.054Z","type":"move","issueId":"APP-9-3","from":"testing","to":"done"}
