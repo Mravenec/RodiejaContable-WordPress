@@ -34,6 +34,7 @@ remove_menu_page Appearance/Plugins/Tools/WP Settings/Dashboard/Pages; Audatex I
 
 ## History
 
+- 2026-11-10T14:11:00.955Z moved testing → done
 - 2026-11-10T14:11:00.586Z checklist item 2 marked
 - 2026-11-10T14:11:00.515Z moved doing → testing
 - 2026-11-10T14:11:00.323Z checklist item 1 marked
