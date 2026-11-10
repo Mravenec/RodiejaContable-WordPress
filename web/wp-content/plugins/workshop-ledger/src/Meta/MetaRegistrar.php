@@ -31,6 +31,7 @@ final class MetaRegistrar {
 		$this->string_meta( 'wl_vehiculo', 'wl_traccion' );
 		$this->string_meta( 'wl_vehiculo', 'wl_transmision' );
 		$this->string_meta( 'wl_vehiculo', 'wl_combustible' );
+		$this->string_meta( 'wl_vehiculo', 'wl_cilindraje' );
 		$this->string_meta( 'wl_vehiculo', 'wl_fecha_ingreso' );
 
 		$this->string_meta( 'wl_repuesto', 'wl_vehiculo_id' );

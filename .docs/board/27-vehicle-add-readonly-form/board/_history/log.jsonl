@@ -5,3 +5,9 @@
 {"at":"2026-11-10T15:31:06.611Z","type":"evidence","issueId":"APP-27-1","title":"classic-editor"}
 {"at":"2026-11-10T15:31:06.740Z","type":"move","issueId":"APP-27-1","from":"doing","to":"testing"}
 {"at":"2026-11-10T15:31:06.819Z","type":"checklist","issueId":"APP-27-1","item":"2"}
+{"at":"2026-11-10T15:31:07.277Z","type":"move","issueId":"APP-27-1","from":"testing","to":"done"}
+{"at":"2026-11-10T15:31:10.342Z","type":"claim","issueId":"APP-27-2","agent":"plugin-agent-1"}
+{"at":"2026-11-10T15:32:17.862Z","type":"checklist","issueId":"APP-27-2","item":"1"}
+{"at":"2026-11-10T15:32:17.949Z","type":"evidence","issueId":"APP-27-2","title":"vehicle-cascade"}
+{"at":"2026-11-10T15:32:18.070Z","type":"move","issueId":"APP-27-2","from":"doing","to":"testing"}
+{"at":"2026-11-10T15:32:18.174Z","type":"checklist","issueId":"APP-27-2","item":"2"}
