@@ -1,0 +1,322 @@
+/**
+ * Rodieja Contable — Figma / Ant Pro CPT list shell (all rodieja_* edit.php).
+ * Native WP_List_Table markup only. Includes mobile breakpoints.
+ */
+
+/* —— Page canvas —— */
+body.rodieja-cpt-list #wpbody-content {
+	padding-bottom: 56px;
+}
+
+body.rodieja-cpt-list #wpbody-content > .wrap {
+	max-width: 1280px;
+	margin-top: 12px;
+	background: transparent;
+}
+
+/* —— Title row ≈ Ant PageHeader —— */
+body.rodieja-cpt-list .wrap > .wp-heading-inline {
+	display: inline-block;
+	font-size: 22px !important;
+	font-weight: 600 !important;
+	letter-spacing: -0.02em;
+	color: rgba(0, 0, 0, 0.88) !important;
+	margin: 0 12px 0 0 !important;
+	padding: 0 !important;
+	line-height: 1.35 !important;
+}
+
+body.rodieja-cpt-list .wrap > .page-title-action {
+	display: inline-flex !important;
+	align-items: center;
+	justify-content: center;
+	min-height: 32px;
+	padding: 0 16px !important;
+	margin: 0 0 0 4px !important;
+	border-radius: 6px !important;
+	font-size: 14px !important;
+	font-weight: 500 !important;
+	vertical-align: middle;
+	top: -2px !important;
+}
+
+body.rodieja-cpt-list .wrap > .wp-header-end {
+	margin: 12px 0 0;
+	border: 0;
+	visibility: hidden;
+	height: 0;
+}
+
+/* —— Status tabs ≈ Ant Tabs —— */
+body.rodieja-cpt-list .subsubsub {
+	float: none;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 4px;
+	width: 100%;
+	box-sizing: border-box;
+	margin: 16px 0 0 !important;
+	padding: 8px 12px !important;
+	list-style: none;
+	background: #fff;
+	border: 1px solid #f0f0f0;
+	border-bottom: 0;
+	border-radius: 8px 8px 0 0;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+body.rodieja-cpt-list .subsubsub li {
+	margin: 0;
+	padding: 0;
+	color: transparent;
+}
+
+body.rodieja-cpt-list .subsubsub li::after,
+body.rodieja-cpt-list .subsubsub a .count {
+	color: rgba(0, 0, 0, 0.45);
+}
+
+body.rodieja-cpt-list .subsubsub a {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	padding: 4px 12px;
+	border-radius: 6px;
+	color: rgba(0, 0, 0, 0.65);
+	font-size: 13px;
+	font-weight: 500;
+	text-decoration: none;
+	line-height: 22px;
+}
+
+body.rodieja-cpt-list .subsubsub a:hover {
+	color: #1890ff;
+	background: rgba(24, 144, 255, 0.06);
+}
+
+body.rodieja-cpt-list .subsubsub a.current {
+	color: #1890ff;
+	background: rgba(24, 144, 255, 0.1);
+	font-weight: 600;
+}
+
+body.rodieja-cpt-list .subsubsub a .count {
+	font-weight: 400;
+}
+
+/* —— Toolbar card (search + bulk + filters) —— */
+body.rodieja-cpt-list #posts-filter {
+	margin: 0;
+}
+
+body.rodieja-cpt-list .search-box {
+	float: none;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin: 0 !important;
+	padding: 10px 12px 0 !important;
+	background: #fff;
+	border-left: 1px solid #f0f0f0;
+	border-right: 1px solid #f0f0f0;
+	box-sizing: border-box;
+}
+
+body.rodieja-cpt-list .search-box input[type="search"],
+body.rodieja-cpt-list .search-box input[type="text"] {
+	min-height: 32px;
+	width: min(280px, 100%);
+	border-radius: 6px !important;
+	border-color: #d9d9d9 !important;
+	padding: 4px 11px;
+	box-shadow: none !important;
+}
+
+body.rodieja-cpt-list .search-box .button {
+	min-height: 32px;
+	border-radius: 6px !important;
+}
+
+body.rodieja-cpt-list .tablenav.top {
+	float: none;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 12px;
+	height: auto !important;
+	margin: 0 !important;
+	padding: 10px 12px !important;
+	background: #fff;
+	border: 1px solid #f0f0f0;
+	border-bottom: 0;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+body.rodieja-cpt-list .subsubsub + .search-box,
+body.rodieja-cpt-list .subsubsub + form#posts-filter .search-box {
+	border-radius: 0;
+}
+
+body.rodieja-cpt-list .tablenav.top .alignleft.actions {
+	float: none;
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin: 0;
+	padding: 0;
+}
+
+body.rodieja-cpt-list .tablenav.top .tablenav-pages {
+	float: none;
+	margin-left: auto;
+	padding: 0;
+}
+
+body.rodieja-cpt-list .tablenav select,
+body.rodieja-cpt-list .tablenav .button {
+	min-height: 32px;
+	border-radius: 6px !important;
+}
+
+body.rodieja-cpt-list .tablenav.bottom {
+	margin: 0;
+	padding: 10px 4px;
+	height: auto;
+}
+
+/* —— Ant Table —— */
+body.rodieja-cpt-list .wp-list-table {
+	margin: 0 !important;
+	border: 1px solid #f0f0f0 !important;
+	border-radius: 0 0 8px 8px !important;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03) !important;
+	overflow: hidden;
+	background: #fff;
+}
+
+body.rodieja-cpt-list .wp-list-table thead th,
+body.rodieja-cpt-list .wp-list-table thead td,
+body.rodieja-cpt-list .wp-list-table tfoot th,
+body.rodieja-cpt-list .wp-list-table tfoot td {
+	background: #fafafa !important;
+	font-size: 13px;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.88);
+	border-bottom: 1px solid #f0f0f0 !important;
+	padding: 12px 14px !important;
+}
+
+body.rodieja-cpt-list .wp-list-table tbody td {
+	padding: 12px 14px !important;
+	font-size: 14px;
+	border-bottom: 1px solid #f0f0f0 !important;
+	vertical-align: middle;
+}
+
+body.rodieja-cpt-list .wp-list-table tbody tr:last-child td {
+	border-bottom: 0 !important;
+}
+
+body.rodieja-cpt-list .wp-list-table tbody tr:hover td {
+	background: #e6f7ff !important;
+}
+
+body.rodieja-cpt-list .wp-list-table .row-title {
+	font-weight: 500;
+	color: rgba(0, 0, 0, 0.88);
+}
+
+body.rodieja-cpt-list .wp-list-table .row-actions {
+	font-size: 12px;
+	left: 0;
+}
+
+body.rodieja-cpt-list .wp-list-table .row-actions a {
+	color: #1890ff;
+}
+
+body.rodieja-cpt-list .wp-list-table .check-column {
+	width: 40px;
+	padding-left: 14px !important;
+}
+
+/* When there is no subsubsub, still round the top of the toolbar/table stack */
+body.rodieja-cpt-list form#posts-filter > .tablenav.top:first-child {
+	border-radius: 8px 8px 0 0;
+	border-top: 1px solid #f0f0f0;
+}
+
+/* —— Mobile / narrow admin —— */
+@media screen and (max-width: 960px) {
+	body.rodieja-cpt-list #wpbody-content > .wrap {
+		max-width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	body.rodieja-cpt-list .tablenav.top {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	body.rodieja-cpt-list .tablenav.top .alignleft.actions,
+	body.rodieja-cpt-list .search-box {
+		width: 100%;
+	}
+
+	body.rodieja-cpt-list .tablenav.top .tablenav-pages {
+		margin-left: 0;
+		width: 100%;
+		text-align: left;
+	}
+
+	body.rodieja-cpt-list .search-box input[type="search"],
+	body.rodieja-cpt-list .search-box input[type="text"] {
+		width: 100%;
+		flex: 1 1 auto;
+	}
+}
+
+@media screen and (max-width: 782px) {
+	body.rodieja-cpt-list .wrap > .wp-heading-inline {
+		font-size: 20px !important;
+		display: block;
+		margin-bottom: 8px !important;
+	}
+
+	body.rodieja-cpt-list .wrap > .page-title-action {
+		display: inline-flex !important;
+		margin: 0 0 8px !important;
+		top: 0 !important;
+	}
+
+	body.rodieja-cpt-list .subsubsub {
+		border-radius: 8px 8px 0 0;
+		padding: 6px 8px !important;
+	}
+
+	body.rodieja-cpt-list .subsubsub a {
+		padding: 6px 10px;
+	}
+
+	/* Keep native table usable: horizontal scroll instead of crushed columns */
+	body.rodieja-cpt-list #posts-filter {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	body.rodieja-cpt-list .wp-list-table {
+		min-width: 640px;
+	}
+
+	body.rodieja-cpt-list .tablenav select,
+	body.rodieja-cpt-list .tablenav .button,
+	body.rodieja-cpt-list .search-box .button {
+		min-height: 36px;
+		font-size: 14px;
+	}
+}
