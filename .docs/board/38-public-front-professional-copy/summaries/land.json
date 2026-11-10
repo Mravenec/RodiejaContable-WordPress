@@ -1,0 +1,13 @@
+{
+  "status": "landed",
+  "started_at": "2026-11-10T16:50:52.483Z",
+  "finished_at": "2026-11-10T16:50:56.122Z",
+  "merge_commit": "25bb07001e0426afb91bab4a8284818c9f60d2f4",
+  "conflicts": [],
+  "smoke_ok": true,
+  "smoke_at": "2026-11-10T16:50:53.745Z",
+  "git": "git push origin main",
+  "note": "Supervisor land note — Epic 38 public-front-professional-copy\n\nPublic Home/About now use professional Workshop Ledger product copy (no Read-Only mentions). Body CTAs removed; header Login is enough. Modern wl-front-panel layout on --wl-* tokens.\n\nYou can confirm it doing the following:\n1. Hard-refresh https://workshop-ledger.ddev.site/ — lead headline + module cards, no Sign in button in body.\n2. Open /about/ — product story without Read-Only/Spring wording.\n3. Header still shows Login / Open app.",
+  "recorded_at": "2026-11-10T16:50:53.814Z",
+  "pushed_at": "2026-11-10T16:50:56.122Z"
+}

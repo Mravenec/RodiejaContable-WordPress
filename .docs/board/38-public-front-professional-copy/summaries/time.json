@@ -19,10 +19,18 @@
     }
   },
   "land": {
-    "started_at": null,
-    "finished_at": null,
+    "started_at": "2026-11-10T16:50:52.495Z",
+    "finished_at": "2026-11-10T16:50:56.123Z",
     "paused": false,
     "open": null,
-    "segments": []
+    "segments": [
+      {
+        "start": "2026-11-10T16:50:52.495Z",
+        "end": "2026-11-10T16:50:56.123Z",
+        "ms": 3628,
+        "close": "land-finish",
+        "agent": "land-agent"
+      }
+    ]
   }
 }
