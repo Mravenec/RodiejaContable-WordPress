@@ -142,16 +142,16 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
   </div>
   <h1>Hierarchy: expand vehicle shows costs status parts like Read-Only</h1>
   <p>This page is a study guide for the epic. Tickets must show <strong>this work’s</strong> compact code, commands, and results — not the same glossary copied from every other summary. Dark windows are artifacts to study.</p>
-  <p class="small" style="opacity:.85;">Slug <code>hierarchy-vehicle-expand</code> · 0/1 in summarize · Generated 2026-11-10T15:59:32.203Z · active work <strong>1m 27s</strong> (elapsed 1m 27s)</p>
+  <p class="small" style="opacity:.85;">Slug <code>hierarchy-vehicle-expand</code> · 0/1 in summarize · Generated 2026-11-10T15:59:41.452Z · active work <strong>1m 28s</strong> (elapsed 1m 37s)</p>
 </header>
 
 <div class="card ok" id="time">
   <strong>Active work time</strong>
   <p>Counted only while the board sees work. Waiting for a Run / Approve click, overnight, or parked-in-done time is not included.</p>
   <ul>
-    <li>Active (calendar of working windows): <strong>1m 27s</strong></li>
-    <li>Agent effort (sum of tickets): <strong>1m 27s</strong></li>
-    <li>Elapsed wall (first work → last event): <strong>1m 27s</strong></li>
+    <li>Active (calendar of working windows): <strong>1m 28s</strong></li>
+    <li>Agent effort (sum of tickets): <strong>1m 28s</strong></li>
+    <li>Elapsed wall (first work → last event): <strong>1m 37s</strong></li>
   </ul>
   <p class="small">Started 2026-11-10T15:58:04.326Z · idle gap 3 min</p>
 </div>
@@ -178,7 +178,7 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
     <a href="#time">Active time</a>
     <a href="#log">Epic work log</a>
     <a href="#tickets">Tickets (sections)</a>
-    <a href="#APP-29-1">APP-29-1 — Native hierarchy vehicle expand: status costs parts transactions like Read-Only <span class="small">(testing)</span></a>
+    <a href="#APP-29-1">APP-29-1 — Native hierarchy vehicle expand: status costs parts transactions like Read-Only <span class="small">(done)</span></a>
     <a href="#handoff">Git command + Supervisor / Manager</a>
     <a href="#faq">FAQ for beginners</a>
     <a href="#file">Where this file lives</a>
@@ -228,6 +228,8 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 <li class=""><code>2026-11-10T15:59:31.905Z</code> evidence APP-29-1</li>
 <li class=""><code>2026-11-10T15:59:32.085Z</code> APP-29-1 doing → testing</li>
 <li class=""><code>2026-11-10T15:59:32.195Z</code> checklist APP-29-1</li>
+<li class=""><code>2026-11-10T15:59:32.715Z</code> Supervisor / Manager note recorded</li>
+<li class=""><code>2026-11-10T15:59:41.447Z</code> APP-29-1 testing → done</li>
   </ul>
 </div>
 
@@ -238,7 +240,7 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 
 <section class="ticket" id="APP-29-1">
   <h2>APP-29-1 — Native hierarchy vehicle expand: status costs parts transactions like Read-Only</h2>
-  <p><span class="pill" style="background:var(--copper600)">column:testing</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span> · agent <code>plugin-agent-1</code> · active <strong>1m 27s</strong></p>
+  <p><span class="pill" style="background:var(--copper600)">column:done</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span> · agent <code>plugin-agent-1</code> · active <strong>1m 28s</strong></p>
   <p class="small">Work folder (required after claim): <code>.worktrees/29-hierarchy-vehicle-expand/APP-29-1</code> · ticket branch <code>ticket/29-hierarchy-vehicle-expand/APP-29-1</code> · ships on <code>feature/29-hierarchy-vehicle-expand</code> after integrate (one push).</p>
 
   <h3>Goal</h3>
@@ -277,6 +279,7 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
   <div class="card">
     <p class="small">Forward moves, checklist marks, and returns (for example testing → doing when verification fails) all stay here. This is not a substitute for the code windows above.</p>
     <ul>
+<li class=""><code>2026-11-10T15:59:41.445Z moved testing → done</code></li>
 <li class=""><code>2026-11-10T15:59:32.194Z checklist item 2 marked</code></li>
 <li class=""><code>2026-11-10T15:59:32.083Z moved doing → testing</code></li>
 <li class=""><code>2026-11-10T15:59:31.757Z checklist item 1 marked</code></li>
@@ -299,12 +302,13 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 
 <h2 id="handoff">Git command + Supervisor / Manager</h2>
 <p class="small">Recorded on the board at wrap-up so the SUMMARIZE column tracks the same git line and note the agent proposed.</p>
-<div class="card warn">
-  <p>The Supervisor / Manager note is not on the board yet. When every ticket is in <code>summarize</code>, record it so this page can track the epic:</p>
-  <pre><code>node scripts/board.mjs handoff 29 --git &quot;cd .worktrees/29-hierarchy-vehicle-expand/_epic &amp;&amp; git push -u origin feature/29-hierarchy-vehicle-expand&quot; --note-file summaries/handoff-note.txt</code></pre>
-  <p class="small">Until then, the suggested git line is:</p>
-  <pre><code>cd .worktrees/29-hierarchy-vehicle-expand/_epic &amp;&amp; git push -u origin feature/29-hierarchy-vehicle-expand</code></pre>
+<div class="card ok" id="handoff-body">
+  <strong>Supervisor / Manager</strong>
+  <p>Supervisor: Epic 29 — View by Generations expands each vehicle (native details) with investment, costs, linked parts and transactions. layer-audit green.</p>
 </div>
+<span class="filepath">copy-paste git (proposed — human runs it)</span>
+<pre><code>cd .worktrees/29-hierarchy-vehicle-expand/_epic &amp;&amp; git push -u origin feature/29-hierarchy-vehicle-expand</code></pre>
+<p class="small">Recorded 2026-11-10T15:59:32.713Z</p>
 
 <h2 id="faq">FAQ for beginners</h2>
 <div class="card">

@@ -34,6 +34,7 @@ Vehicle details: costs status parts txs via nested details
 
 ## History
 
+- 2026-11-10T15:59:41.445Z moved testing → done
 - 2026-11-10T15:59:32.194Z checklist item 2 marked
 - 2026-11-10T15:59:32.083Z moved doing → testing
 - 2026-11-10T15:59:31.757Z checklist item 1 marked
