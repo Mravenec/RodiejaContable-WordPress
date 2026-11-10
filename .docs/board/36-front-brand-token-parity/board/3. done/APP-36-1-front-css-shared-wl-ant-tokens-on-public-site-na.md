@@ -34,6 +34,7 @@ body.workshop-ledger-front { background: var(--wl-surface); } header { navy→ac
 
 ## History
 
+- 2026-11-10T16:36:33.046Z moved testing → done
 - 2026-11-10T16:36:32.558Z checklist item 2 marked
 - 2026-11-10T16:36:32.469Z moved doing → testing
 - 2026-11-10T16:36:32.189Z checklist item 1 marked
