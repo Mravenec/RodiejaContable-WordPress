@@ -1,6 +1,6 @@
 # Epic 28 — underscore-meta-migrate
 
-**Status:** Planned · Board: `.linear/epics/28-underscore-meta-migrate/`
+**Status:** Landed on main · Board: `.linear/epics/28-underscore-meta-migrate/`
 
 ## Title
 
@@ -61,3 +61,14 @@ node .linear/scripts/board.mjs progress --epic 28
 ## Outcome
 
 (Filled when epic reaches 100%.)
+
+
+## Land on main
+
+- Merge commit: `e1c848506f27b1e4576120ba7392145ad7695ed9`
+- Branch: `feature/28-underscore-meta-migrate` → `main`
+
+### Supervisor / Manager (land)
+
+Supervisor: Epic 28 LANDED. BrandMigrate v2 maps _rodieja_* → wl_*. Add Vehicle cascade Brand→Model→Generation verified (Toyota→Corolla→12th Gen). layer-audit green.
+

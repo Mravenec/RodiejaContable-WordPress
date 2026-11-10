@@ -1,0 +1,13 @@
+{
+  "status": "landed",
+  "started_at": "2026-11-10T15:42:47.442Z",
+  "finished_at": "2026-11-10T15:42:58.177Z",
+  "merge_commit": "e1c848506f27b1e4576120ba7392145ad7695ed9",
+  "conflicts": [],
+  "smoke_ok": true,
+  "smoke_at": "2026-11-10T15:42:54.140Z",
+  "git": "git push origin main",
+  "note": "Supervisor: Epic 28 LANDED. BrandMigrate v2 maps _rodieja_* → wl_*. Add Vehicle cascade Brand→Model→Generation verified (Toyota→Corolla→12th Gen). layer-audit green.",
+  "recorded_at": "2026-11-10T15:42:54.266Z",
+  "pushed_at": "2026-11-10T15:42:58.177Z"
+}
