@@ -1,4 +1,4 @@
-# Day-zero commands — Harness MariaDB WordPress PHP Custom Plugins
+# Day-zero — unified WordPress harness
 
 # === PRIVATE BOARD + WORKTREES ===
 node .linear/scripts/board.mjs epics
@@ -8,23 +8,22 @@ node .linear/scripts/board.mjs next --role plugin --epic 1
 # node .ai/scripts/worktree-add.mjs APP-1-1
 # node .ai/scripts/worktree-finish.mjs APP-1-1 --agent plugin-agent-1
 # node .ai/scripts/worktree-integrate.mjs 1
-# node .ai/scripts/worktree-push.mjs 1
 node .ai/scripts/layer-audit.mjs
 node .linear/scripts/api.mjs
 npm run ui --prefix .linear/ui
 # http://127.0.0.1:47382
 
-# === DDEV / WORDPRESS ===
+# === DDEV / WORDPRESS (one site under web/) ===
 ddev start
-ddev wp core download --force
-ddev wp core install --url="https://harness-wp.ddev.site" --title="Harness WP" --admin_user="admin" --admin_password="ChangeMe-Now-Please!" --admin_email="admin@example.com" --skip-email
+ddev wp plugin list
 ddev wp plugin activate harness-plugin
 ddev wp rewrite flush
-curl -s https://harness-wp.ddev.site/wp-json/harness/v1/health
+curl -sk https://harness-wp.ddev.site/wp-json/harness/v1/health
 ddev launch
 
-# Composer (composer_root = 1.plugin/harness-plugin)
+# Composer root = the custom plugin
 ddev composer install
 
-# DB shell
+# DB
 ddev mysql
+ddev wp db query "SHOW TABLES LIKE '%harness%'"

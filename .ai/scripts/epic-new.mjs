@@ -66,6 +66,7 @@ ${title}
 ## What we will do
 
 - [ ] Clarify acceptance criteria
+- [ ] **Native-first:** prefer CPT/meta/Options/REST/hooks; if custom tables/packages seem needed, propose + get human OK before coding (\`.ai/rules/native-first.md\`)
 - [ ] Split into **board issues** under \`.linear\` (those are the only tickets)
 - [ ] Implement via multi-agent board (\`doing\` only)
 - [ ] Move tickets to \`testing\`, then verify (harness flags)
@@ -82,14 +83,14 @@ ${title}
 
 (Anything agents need that is not a checklist step: constraints, links, non-goals, risks. Keep it here — there is no \`.ai/tickets\` folder.)
 
-## Layers touched
+## Areas touched (unified WordPress tree)
 
-| Layer | Touched? | Notes |
+| Area | Touched? | Notes |
 |---|---|---|
-| \`0.database\` | | SQL; DBML twin in \`3.diagrams/0.database/dbdiagram/\` |
-| \`0.security\` | | MU-plugin / hardening verify |
-| \`1.plugin\` | | Native WP plugin layers; PlantUML in \`3.diagrams/1.plugin/\` |
-| \`3.diagrams\` | | Visuals only — do not duplicate under 0/1 |
+| Plugin schema / dbDelta | | Optional mirror \`docs/database/canonical_sql/\` + \`docs/diagrams/database/\` |
+| \`web/wp-content/plugins/<module>/\` | | Contracts→Repos→Services→Controllers |
+| \`web/wp-content/mu-plugins/\` | | Hardening |
+| \`docs/diagrams/plugin/\` | | PlantUML twin of plugin \`src/\` |
 
 ## Board issues (= tickets)
 

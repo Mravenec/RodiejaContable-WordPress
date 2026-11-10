@@ -1,93 +1,72 @@
-# Agent Guide — MariaDB · WordPress · Custom Plugins
+# Agent Guide — WordPress (unified) · MariaDB · Custom Plugins
 
-Neutral harness. Day zero = WordPress + empty-domain plugin scaffold + **private.board** + worktrees. **Native WordPress only.**
+Neutral harness on a **realistic WordPress project tree** (like guilford/porton/tandon shape: one CMS docroot + harness control plane). **Not** a Spring-style `0.`/`1.`/`2.` multi-app split.
 
-Board of record: **`.linear/`** (private.board — files only, no cloud API).
+**Native WordPress first (day-zero law).** Use core APIs before inventing custom tables/packages. Architecture (DI, SOLID) lives **inside** the plugin **when a plugin is justified** — see `.ai/rules/native-first.md`.
 
-## Stack
+Board: **`.linear/`** (private.board). Claude: **[CLAUDE.md](./CLAUDE.md)** · `.claude/skills/`.
 
-| Layer | Path | Tech |
-|---|---|---|
-| Database | `0.database/` + DDEV MariaDB | `dbDelta` / `$wpdb` / canonical SQL |
-| Hardening | `0.security/mu-plugins/` | Always-on MU-plugin |
-| Plugin | `1.plugin/<module_name>/` | PHP 8.2+ OOP · Composer PSR-4 · constructor DI |
-| WordPress | `web/` | Core via `ddev wp` (do not commit full core) |
-| Diagrams | `3.diagrams/` | dbdiagram · PlantUML |
-| Board | `.linear/` | private.board CLI + optional UI |
-| Worktrees | `.worktrees/` | one ticket = one folder (via `.ai/scripts/worktree-*.mjs`) |
+## Project shape (day zero)
+
+```
+.git / .ddev / .ai / .claude / .cursor / .linear / .docs
+web/                                 ← WordPress docroot
+  wp-content/
+    plugins/harness-plugin/          ← custom plugin (OOP DI SOLID)
+    mu-plugins/harness-hardening.php ← always-on hardening
+docs/database/ · docs/diagrams/      ← optional mirrors (not separate apps)
+```
+
+| Path | Role |
+|---|---|
+| `web/` | WordPress core + content (core mostly gitignored) |
+| `web/wp-content/plugins/<module>/` | Product code — Contracts → Repos → Services → Controllers |
+| `web/wp-content/mu-plugins/` | Hardening MU-plugin |
+| `docs/` | SQL/DBML/PlantUML twins for humans/agents |
+| `.linear/` · `.ai/` | Board + worktrees + layer audit |
 
 ## Roles
 
-| Role | Scope | Testing gate |
+| Role | Touches | Gate |
 |---|---|---|
-| `database` | `0.database/` | Schema + DBML · `tests_ok` |
-| `plugin` | `1.plugin/` | Layers → REST/admin smoke · `http_ok` / `tests_ok` |
-| `security` | `0.security/` + plugin Security | Hardening verify · `tests_ok` |
-| `orchestrator` | `.linear` + docs | create epic/issues · `next` · hygiene — no product features |
+| `database` | plugin `dbDelta` + optional `docs/database` | `tests_ok` |
+| `plugin` | `web/wp-content/plugins/<module>/` | `http_ok` / `tests_ok` |
+| `security` | MU-plugin + `src/Security/` | `tests_ok` |
+| `orchestrator` | `.linear` / journey / worktrees | hygiene only |
 
-## Non-negotiable: native only
+## Native-first gate
 
-**Allowed:** hooks/filters, REST API, `$wpdb`, `dbDelta`, Options API, Capabilities, Nonces, sanitize/escape APIs, WP-CLI, Composer autoload, PHPUnit, WPCS.
+1. **Default:** CPT, taxonomies, meta, Options/Settings, `WP_Query`, core REST, caps, nonces, hooks, WP-Cron, Media, WP-CLI.
+2. **If native seems insufficient:** propose native gap + custom plan → **ask the human** → only then implement custom (`dbDelta`, bespoke repos, etc.).
+3. **Never silent custom.** Record the human decision on the ticket.
+4. **Always forbidden:** Laravel/Illuminate, Doctrine/Eloquent, Spring-style `0/1/2` apps, REST `__return_true` on mutations.
 
-**Forbidden:** Laravel/Illuminate, Symfony as app framework, Doctrine/Eloquent, React/Vite SPA as primary UI on day zero, eval/unserialize of user input, raw SQL concatenation, REST `permission_callback` => `__return_true` on write routes.
+**Allowed tooling:** Composer PSR-4, PHPUnit, WPCS, `$wpdb->prepare` when native object APIs are not enough (after the gate above).
 
-## Layer order (never invert)
+## Inside the plugin (layer order)
 
 ```
-GATE_SQL / dbDelta
+dbDelta / schema
   → Contracts
   → Repositories ($wpdb prepared)
   → Services
   → Controllers (REST / Admin)
   → Security on every entrypoint
-  → ddev wp / curl REST smoke   ← GATE_HTTP
+  → GATE_HTTP (curl / ddev wp)
 ```
 
 ## Board + worktrees
 
 ```bash
-# Empty board
 node .linear/scripts/board.mjs epics
-
-# New epic = journey + board
-node .ai/scripts/epic-new.mjs 1 my-feature --title "My first feature"
-
-node .linear/scripts/board.mjs next --role plugin --epic 1
+node .ai/scripts/epic-new.mjs 1 my-feature --title "…"
 node .linear/scripts/board.mjs claim APP-1-1 --agent plugin-agent-1
-
-# REQUIRED after every claim — isolate code
-node .ai/scripts/worktree-add.mjs APP-1-1
-
-# implement in doing → move testing → verify flags → worktree-finish
-node .linear/scripts/board.mjs move APP-1-1 testing --agent plugin-agent-1
-node .ai/scripts/worktree-finish.mjs APP-1-1 --agent plugin-agent-1
-
-# when every ticket in the epic is done:
-node .ai/scripts/worktree-integrate.mjs 1
-node .linear/scripts/board.mjs move APP-1-1 summarize --agent plugin-agent-1
-node .linear/scripts/board.mjs handoff 1 --git "…" --note-file summaries/handoff-note.txt
-node .ai/scripts/worktree-push.mjs 1
-```
-
-Optional UI: `node .linear/scripts/api.mjs` + `npm run ui --prefix .linear/ui` → http://127.0.0.1:47382
-
-## Security checklist (every ticket)
-
-1. Validate + sanitize input at the edge.
-2. Escape all output for context.
-3. Capability check **and** nonce (admin/AJAX) before state changes.
-4. REST: real `permission_callback`; schema `args` with sanitize/validate.
-5. SQL: `$wpdb->prepare` / CRUD helpers only; use `$wpdb->prefix`.
-6. `node .ai/scripts/layer-audit.mjs` must stay green.
-
-## Commands
-
-```bash
-ddev start
-ddev composer install
-ddev wp plugin activate harness-plugin
-curl -s https://harness-wp.ddev.site/wp-json/harness/v1/health
+node .ai/scripts/worktree-add.mjs APP-1-1   # required after every claim
 node .ai/scripts/layer-audit.mjs
 ```
 
-Module folder: `harness-plugin` (`.ai/project.yaml`). Rename only with an explicit human decision.
+## Security (every ticket)
+
+Sanitize early · escape late · validate always · caps + nonces · prepared SQL · real REST `permission_callback`.
+
+Module: `harness-plugin` (`.ai/project.yaml` → `plugin_path`).

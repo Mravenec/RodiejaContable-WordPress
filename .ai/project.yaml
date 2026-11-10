@@ -1,8 +1,16 @@
 harness: mariadb-wordpress-php-plugins
+# Custom plugin folder under web/wp-content/plugins/
 module_name: harness-plugin
 php_version: "8.3"
 wordpress_requires: "6.4"
 native_only: true
+# Prefer core WP APIs first; custom (tables, extra packages, bespoke CRUD) only after propose + human OK.
+native_first: true
+custom_requires_human_ok: true
+layout: unified-wordpress
+docroot: web
+plugin_path: web/wp-content/plugins/harness-plugin
+mu_plugin_path: web/wp-content/mu-plugins/harness-hardening.php
 forbidden_packages:
   - illuminate/*
   - laravel/*

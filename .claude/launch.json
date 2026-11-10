@@ -1,0 +1,22 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ddev-describe",
+      "runtimeExecutable": "ddev",
+      "runtimeArgs": ["describe"]
+    },
+    {
+      "name": "board-api",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [".linear/scripts/api.mjs"],
+      "port": 47381
+    },
+    {
+      "name": "board-ui",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "ui", "--prefix", ".linear/ui"],
+      "port": 47382
+    }
+  ]
+}

@@ -1,12 +1,14 @@
 ---
-description: WordPress harness — native APIs and security defaults
+description: Unified WordPress harness — realistic tree, native APIs, board/worktrees
 alwaysApply: true
 ---
 
 # Harness WP rules
 
-- Stack is DDEV + WordPress + MariaDB + custom plugin in `1.plugin/harness-plugin`.
-- Native only: hooks, REST, `$wpdb`, capabilities, nonces, sanitize/escape.
-- No Laravel/Illuminate/Doctrine/Eloquent.
-- Mutating REST routes must not use `__return_true` as `permission_callback`.
-- Prefer constructor DI via `Core\Container` and `Providers\ServiceProvider`.
+- This is **one WordPress project** under `web/` (like a real DDEV WP site). Do **not** create Spring-style `0.database` / `1.plugin` / `2.frontend` app folders.
+- Custom code: `web/wp-content/plugins/<module>/` with Contracts → Repositories → Services → Controllers + Security + constructor DI.
+- Hardening: `web/wp-content/mu-plugins/`.
+- Optional docs only: `docs/database/`, `docs/diagrams/`.
+- Board: `.linear/`. After every `claim`: `node .ai/scripts/worktree-add.mjs <ID>`.
+- **Native-first (day zero):** CPT/meta/Options/Settings/`WP_Query`/core REST/caps/nonces/hooks before custom tables or bespoke CRUD. If custom seems needed → propose + ask human → record OK on the ticket (`.ai/rules/native-first.md`).
+- No Laravel/Doctrine. Mutating REST must not use `__return_true`. Keep `node .ai/scripts/layer-audit.mjs` green.

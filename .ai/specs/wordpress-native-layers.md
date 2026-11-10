@@ -1,23 +1,29 @@
-# WordPress native layers (layer audit)
+# WordPress native layers (unified project)
 
-Enforced by `node .ai/scripts/layer-audit.mjs` and by `worktree-finish` / `worktree-integrate` / `worktree-land-smoke`.
+Enforced by `node .ai/scripts/layer-audit.mjs` against  
+`web/wp-content/plugins/<module_name>/` (see `plugin_path` in `.ai/project.yaml`).
 
-## Required order
+## Project layout
+
+One WordPress docroot. Custom architecture lives **only** in the plugin (and MU-plugins for hardening). `docs/` holds optional SQL/diagram mirrors.
+
+## Required order (inside plugin)
 
 ```
 Contracts → Repositories ($wpdb) → Services → Controllers (REST/Admin)
-+ Security (caps, nonces, sanitize, escape) on every entrypoint
++ Security on every entrypoint
 ```
 
 ## Allowlist
 
-`services_without_repository` in `.ai/project.yaml` — services that intentionally touch no table (e.g. `HealthService`). Every entry needs a one-line reason in this file or the ticket.
+`services_without_repository` in `.ai/project.yaml`:
 
-- `HealthService` — read-only status payload; no persistence.
+- `HealthService` — read-only status; no persistence.
 
 ## Forbidden
 
-- Laravel / Illuminate / Doctrine / Eloquent / Symfony Framework Bundle as app deps
-- Concrete `*Repository` injection when an interface exists (prefer DIP)
-- Mutating REST routes with `permission_callback` => `__return_true`
-- Missing `ABSPATH` / `WP_UNINSTALL_PLUGIN` guards on bootstrap files
+- Laravel / Illuminate / Doctrine / Eloquent / Symfony Framework Bundle
+- Concrete `*Repository` injection when an interface exists
+- Mutating REST with `permission_callback` => `__return_true`
+- Missing `ABSPATH` / `WP_UNINSTALL_PLUGIN` guards
+- Recreating segmented `0.`/`1.`/`2.` app folders for “layers”

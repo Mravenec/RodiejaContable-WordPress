@@ -11,17 +11,14 @@ database:
     version: "11.8"
 use_dns_when_possible: true
 composer_version: "2"
-composer_root: 1.plugin/harness-plugin
+composer_root: web/wp-content/plugins/harness-plugin
 upload_dirs:
     - wp-content/uploads
 web_environment: []
 corepack_enable: false
 hooks:
     post-start:
-        - exec: "mkdir -p /var/www/html/web/wp-content/plugins /var/www/html/web/wp-content/mu-plugins"
-        - exec: "ln -sfn /var/www/html/1.plugin/harness-plugin /var/www/html/web/wp-content/plugins/harness-plugin"
-        - exec: "ln -sfn /var/www/html/0.security/mu-plugins/harness-hardening.php /var/www/html/web/wp-content/mu-plugins/harness-hardening.php"
-        - exec: "test -f /var/www/html/1.plugin/harness-plugin/vendor/autoload.php || (cd /var/www/html/1.plugin/harness-plugin && composer install --no-interaction)"
+        - exec: "test -f /var/www/html/web/wp-content/plugins/harness-plugin/vendor/autoload.php || (cd /var/www/html/web/wp-content/plugins/harness-plugin && composer install --no-interaction)"
 
 # Key features of DDEV's config.yaml:
 

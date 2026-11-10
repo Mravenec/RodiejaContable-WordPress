@@ -1,16 +1,14 @@
 /**
- * Layer audit — WordPress native plugin tree.
+ * Layer audit — unified WordPress project (plugin inside wp-content).
  * Spec: .ai/specs/wordpress-native-layers.md
  *
- * Checks under 1.plugin/<module_name>/:
- *   forbidden-package       composer.json requires Laravel/Illuminate/Doctrine/etc.
- *   service-without-repository   XxxService does not reference an *Repository / Interface (unless allowlisted)
- *   repository-without-wpdb      XxxRepository does not mention $wpdb / wpdb
- *   concrete-repository-injection  constructor typed with concrete *Repository instead of *Interface
- *   rest-public-mutation    register_rest_route CREATABLE/DELETABLE/EDITABLE with __return_true
- *   missing-abspath-guard   bootstrap/uninstall PHP missing ABSPATH / WP_UNINSTALL_PLUGIN guard
- *
- * Day zero without module folder → ok: true.
+ * Checks under web/wp-content/plugins/<module_name>/:
+ *   forbidden-package
+ *   service-without-repository
+ *   repository-without-wpdb
+ *   concrete-repository-injection
+ *   rest-public-mutation
+ *   missing-abspath-guard
  */
 import fs from "fs";
 import path from "path";
@@ -25,11 +23,15 @@ const FORBIDDEN = [
 
 /**
  * @param {string} root
- * @returns {{ moduleName: string|null, servicesWithoutRepository: string[] }}
+ * @returns {{ moduleName: string|null, pluginPath: string|null, servicesWithoutRepository: string[] }}
  */
 export function readProject(root) {
   const file = path.join(root, ".ai", "project.yaml");
-  const out = { moduleName: null, servicesWithoutRepository: ["HealthService"] };
+  const out = {
+    moduleName: null,
+    pluginPath: null,
+    servicesWithoutRepository: ["HealthService"],
+  };
   if (!fs.existsSync(file)) return out;
   const lines = fs.readFileSync(file, "utf8").split(/\r?\n/);
   let list = null;
@@ -39,9 +41,11 @@ export function readProject(root) {
     const key = line.match(/^([A-Za-z_]+):\s*(.*)$/);
     if (key) {
       list = null;
-      const value = key[2].trim();
+      const value = key[2].trim().replace(/^["']|["']$/g, "");
       if (key[1] === "module_name") {
-        out.moduleName = !value || value === "null" || value === "~" ? null : value.replace(/^["']|["']$/g, "");
+        out.moduleName = !value || value === "null" || value === "~" ? null : value;
+      } else if (key[1] === "plugin_path") {
+        out.pluginPath = !value || value === "null" || value === "~" ? null : value;
       } else if (key[1] === "services_without_repository") {
         if (value.startsWith("[")) {
           out.servicesWithoutRepository = value
@@ -75,23 +79,36 @@ function walk(dir, out = []) {
   return out;
 }
 
+function resolvePluginRoot(root, project) {
+  if (project.pluginPath) {
+    return path.join(root, project.pluginPath);
+  }
+  if (project.moduleName) {
+    return path.join(root, "web", "wp-content", "plugins", project.moduleName);
+  }
+  return null;
+}
+
 /**
  * @param {string} root
- * @returns {{ ok: boolean, violations: Array<{code:string,file:string,detail:string}>, skipped?: string }}
  */
 export function runLayerAudit(root) {
-  const { moduleName, servicesWithoutRepository } = readProject(root);
+  const project = readProject(root);
   const violations = [];
   const add = (code, file, detail) =>
     violations.push({ code, file: path.relative(root, file).replace(/\\/g, "/"), detail });
 
-  if (!moduleName) {
+  if (!project.moduleName) {
     return { ok: true, violations: [], skipped: "module_name is null (day zero)" };
   }
 
-  const pluginRoot = path.join(root, "1.plugin", moduleName);
-  if (!fs.existsSync(pluginRoot)) {
-    return { ok: true, violations: [], skipped: `missing 1.plugin/${moduleName}` };
+  const pluginRoot = resolvePluginRoot(root, project);
+  if (!pluginRoot || !fs.existsSync(pluginRoot)) {
+    return {
+      ok: true,
+      violations: [],
+      skipped: `missing plugin at ${project.pluginPath || "web/wp-content/plugins/" + project.moduleName}`,
+    };
   }
 
   const composer = path.join(pluginRoot, "composer.json");
@@ -102,9 +119,8 @@ export function runLayerAudit(root) {
     }
   }
 
-  const allow = new Set(servicesWithoutRepository);
-  const servicesDir = path.join(pluginRoot, "src", "Services");
-  for (const file of walk(servicesDir).filter((f) => f.endsWith(".php"))) {
+  const allow = new Set(project.servicesWithoutRepository);
+  for (const file of walk(path.join(pluginRoot, "src", "Services")).filter((f) => f.endsWith(".php"))) {
     const name = path.basename(file, ".php");
     if (allow.has(name)) continue;
     const code = fs.readFileSync(file, "utf8");
@@ -112,13 +128,12 @@ export function runLayerAudit(root) {
       add(
         "service-without-repository",
         file,
-        `${name} does not reference a Repository/Interface (add to services_without_repository with a reason if intentional)`
+        `${name} does not reference a Repository/Interface (allowlist in project.yaml if intentional)`
       );
     }
   }
 
-  const reposDir = path.join(pluginRoot, "src", "Repositories");
-  for (const file of walk(reposDir).filter((f) => f.endsWith(".php"))) {
+  for (const file of walk(path.join(pluginRoot, "src", "Repositories")).filter((f) => f.endsWith(".php"))) {
     const name = path.basename(file, ".php");
     const code = fs.readFileSync(file, "utf8");
     if (!/\$wpdb|\bwpdb\b|\\\\wpdb/.test(code)) {
@@ -128,57 +143,19 @@ export function runLayerAudit(root) {
 
   for (const file of walk(path.join(pluginRoot, "src")).filter((f) => f.endsWith(".php"))) {
     const code = fs.readFileSync(file, "utf8");
-    if (
-      /function\s+__construct\s*\([^)]*\b([A-Z][A-Za-z0-9_]*Repository)\b\s+\$/.test(code) &&
-      !/Interface\b/.test(RegExp.lastMatch || "")
-    ) {
-      const m = code.match(
-        /function\s+__construct\s*\([^)]*\b([A-Z][A-Za-z0-9_]*Repository)\b\s+\$/
-      );
-      if (m && !m[1].endsWith("Interface")) {
-        add(
-          "concrete-repository-injection",
-          file,
-          `Constructor injects concrete ${m[1]}; prefer ${m[1]}Interface (DIP)`
-        );
-      }
-    }
-  }
-
-  for (const file of walk(path.join(pluginRoot, "src", "Controllers")).filter((f) =>
-    f.endsWith(".php")
-  )) {
-    const code = fs.readFileSync(file, "utf8");
-    const mutating =
-      /WP_REST_Server::(?:CREATABLE|EDITABLE|DELETABLE)/.test(code) ||
-      /['"](?:POST|PUT|PATCH|DELETE)['"]/.test(code);
-    if (mutating && /permission_callback['"]?\s*=>\s*['"]__return_true['"]/.test(code)) {
+    const m = code.match(
+      /function\s+__construct\s*\([^)]*\b([A-Z][A-Za-z0-9_]*Repository)\b\s+\$/
+    );
+    if (m && !m[1].endsWith("Interface")) {
       add(
-        "rest-public-mutation",
+        "concrete-repository-injection",
         file,
-        "Mutating REST route uses permission_callback __return_true"
-      );
-    }
-    if (mutating && /permission_callback['"]?\s*=>\s*['"]__return_true['"]/.test(code.replace(/\s+/g, " "))) {
-      // already added
-    } else if (
-      mutating &&
-      /'permission_callback'\s*=>\s*'__return_true'|"permission_callback"\s*=>\s*"__return_true"|permission_callback'\s*=>\s*__return_true/.test(
-        code
-      )
-    ) {
-      add(
-        "rest-public-mutation",
-        file,
-        "Mutating REST route uses permission_callback __return_true"
+        `Constructor injects concrete ${m[1]}; prefer ${m[1]}Interface (DIP)`
       );
     }
   }
 
-  // Broader scan for __return_true next to CREATABLE blocks
-  for (const file of walk(path.join(pluginRoot, "src", "Controllers")).filter((f) =>
-    f.endsWith(".php")
-  )) {
+  for (const file of walk(path.join(pluginRoot, "src", "Controllers")).filter((f) => f.endsWith(".php"))) {
     const code = fs.readFileSync(file, "utf8");
     const chunks = code.split(/register_rest_route\s*\(/).slice(1);
     for (const chunk of chunks) {
@@ -190,16 +167,12 @@ export function runLayerAudit(root) {
         head
       );
       if (isMut && isPublic) {
-        add(
-          "rest-public-mutation",
-          file,
-          "Mutating register_rest_route uses __return_true"
-        );
+        add("rest-public-mutation", file, "Mutating register_rest_route uses __return_true");
       }
     }
   }
 
-  const boot = path.join(pluginRoot, `${moduleName}.php`);
+  const boot = path.join(pluginRoot, `${project.moduleName}.php`);
   if (fs.existsSync(boot)) {
     const code = fs.readFileSync(boot, "utf8");
     if (!/defined\s*\(\s*['"]ABSPATH['"]\s*\)/.test(code)) {
@@ -214,7 +187,6 @@ export function runLayerAudit(root) {
     }
   }
 
-  // Dedupe
   const seen = new Set();
   const uniq = [];
   for (const v of violations) {
