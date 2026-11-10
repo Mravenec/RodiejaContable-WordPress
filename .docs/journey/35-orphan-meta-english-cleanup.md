@@ -1,6 +1,6 @@
 # Epic 35 — orphan-meta-english-cleanup
 
-**Status:** Planned · Board: `.linear/epics/35-orphan-meta-english-cleanup/`
+**Status:** Landed on main · Board: `.linear/epics/35-orphan-meta-english-cleanup/`
 
 ## Title
 
@@ -61,3 +61,21 @@ node .linear/scripts/board.mjs progress --epic 35
 ## Outcome
 
 (Filled when epic reaches 100%.)
+
+
+## Land on main
+
+- Merge commit: `(unknown)`
+- Branch: `feature/35-orphan-meta-english-cleanup` → `main`
+
+### Supervisor / Manager (land)
+
+Supervisor land note — Epic 35 orphan-meta-english-cleanup
+
+Migrated orphan wl_estado meta to taxonomy wl_estado_vehiculo (then deleted), blocked reintroduction via domain import, and English-only gallery/pedido leftovers. Read-Only untouched.
+
+You can confirm it doing the following:
+1. ddev exec wp --path=web db query "SELECT COUNT(*) FROM wp_postmeta WHERE meta_key='wl_estado';" → 0 after boot.
+2. Vehicle status still appears via taxonomy wl_estado_vehiculo on edit screen.
+3. Gallery help text and Order meta labels are English; layer audit green.
+

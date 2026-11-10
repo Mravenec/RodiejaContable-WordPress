@@ -1,0 +1,16 @@
+{
+  "status": "landed",
+  "started_at": "2026-11-10T16:29:49.589Z",
+  "finished_at": "2026-11-10T16:29:54.051Z",
+  "merge_commit": null,
+  "conflicts": [
+    ".docs/board/33-geo-employee-cascade/summaries/time.json",
+    ".docs/board/34-admin-color-token-fidelity/summaries/time.json"
+  ],
+  "smoke_ok": true,
+  "smoke_at": "2026-11-10T16:29:51.818Z",
+  "git": "git push origin main",
+  "note": "Supervisor land note — Epic 35 orphan-meta-english-cleanup\n\nMigrated orphan wl_estado meta to taxonomy wl_estado_vehiculo (then deleted), blocked reintroduction via domain import, and English-only gallery/pedido leftovers. Read-Only untouched.\n\nYou can confirm it doing the following:\n1. ddev exec wp --path=web db query \"SELECT COUNT(*) FROM wp_postmeta WHERE meta_key='wl_estado';\" → 0 after boot.\n2. Vehicle status still appears via taxonomy wl_estado_vehiculo on edit screen.\n3. Gallery help text and Order meta labels are English; layer audit green.",
+  "recorded_at": "2026-11-10T16:29:51.884Z",
+  "pushed_at": "2026-11-10T16:29:54.051Z"
+}
