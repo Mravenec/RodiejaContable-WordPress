@@ -6,3 +6,5 @@
 {"at":"2026-11-10T19:04:02.721Z","type":"evidence","issueId":"APP-40-1","title":"front smoke"}
 {"at":"2026-11-10T19:04:02.817Z","type":"checklist","issueId":"APP-40-1","item":"2"}
 {"at":"2026-11-10T19:04:03.503Z","type":"move","issueId":"APP-40-1","from":"testing","to":"done"}
+{"at":"2026-11-10T19:04:12.837Z","type":"move","issueId":"APP-40-1","from":"done","to":"summarize","summary_html":"summaries/40-public-front-own-design-beginner.html"}
+{"at":"2026-11-10T19:04:12.992Z","type":"handoff","git":"cd .worktrees/40-public-front-own-design/_epic && git push -u origin feature/40-public-front-own-design"}

@@ -138,11 +138,11 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
     <span class="badge">Epic 40</span>
     <span class="badge">40-public-front-own-design</span>
     <span class="badge">MariaDB · WordPress (unified) · Custom Plugins</span>
-    <span class="badge">living summary</span>
+    <span class="badge">summarize · handoff recorded</span>
   </div>
   <h1>Public front: a distinctive Workshop Ledger landing, not a generic card</h1>
   <p>This page is a study guide for the epic. Tickets must show <strong>this work’s</strong> compact code, commands, and results — not the same glossary copied from every other summary. Dark windows are artifacts to study.</p>
-  <p class="small" style="opacity:.85;">Slug <code>public-front-own-design</code> · 0/1 in summarize · Generated 2026-11-10T19:04:03.507Z · active work <strong>1m</strong> (elapsed 1m)</p>
+  <p class="small" style="opacity:.85;">Slug <code>public-front-own-design</code> · 1/1 in summarize · Generated 2026-11-10T19:04:12.996Z · active work <strong>1m</strong> (elapsed 1m 10s)</p>
 </header>
 
 <div class="card ok" id="time">
@@ -151,9 +151,9 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
   <ul>
     <li>Active (calendar of working windows): <strong>1m</strong></li>
     <li>Agent effort (sum of tickets): <strong>1m</strong></li>
-    <li>Elapsed wall (first work → last event): <strong>1m</strong></li>
+    <li>Elapsed wall (first work → last event / handoff): <strong>1m 10s</strong></li>
   </ul>
-  <p class="small">Started 2026-11-10T19:03:02.627Z · idle gap 3 min</p>
+  <p class="small">Started 2026-11-10T19:03:02.627Z · finished 2026-11-10T19:04:12.992Z · idle gap 3 min</p>
 </div>
 
 <div class="card beginner" id="for-whom">
@@ -178,7 +178,7 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
     <a href="#time">Active time</a>
     <a href="#log">Epic work log</a>
     <a href="#tickets">Tickets (sections)</a>
-    <a href="#APP-40-1">APP-40-1 — Plugin: public landing composition (hero, story, modules) in seed + front.css <span class="small">(done)</span></a>
+    <a href="#APP-40-1">APP-40-1 — Plugin: public landing composition (hero, story, modules) in seed + front.css <span class="small">(summarize)</span></a>
     <a href="#handoff">Git command + Supervisor / Manager</a>
     <a href="#faq">FAQ for beginners</a>
     <a href="#file">Where this file lives</a>
@@ -230,6 +230,8 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 <li class=""><code>2026-11-10T19:04:02.721Z</code> evidence APP-40-1</li>
 <li class=""><code>2026-11-10T19:04:02.817Z</code> checklist APP-40-1</li>
 <li class=""><code>2026-11-10T19:04:03.503Z</code> APP-40-1 testing → done</li>
+<li class=""><code>2026-11-10T19:04:12.837Z</code> APP-40-1 done → summarize</li>
+<li class=""><code>2026-11-10T19:04:12.992Z</code> Supervisor / Manager note recorded</li>
   </ul>
 </div>
 
@@ -240,7 +242,7 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 
 <section class="ticket" id="APP-40-1">
   <h2>APP-40-1 — Plugin: public landing composition (hero, story, modules) in seed + front.css</h2>
-  <p><span class="pill" style="background:var(--copper600)">column:done</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span> · agent <code>plugin-agent-1</code> · active <strong>1m</strong></p>
+  <p><span class="pill">summarize</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span> · agent <code>plugin-agent-1</code> · active <strong>1m</strong></p>
   <p class="small">Work folder (required after claim): <code>.worktrees/40-public-front-own-design/APP-40-1</code> · ticket branch <code>ticket/40-public-front-own-design/APP-40-1</code> · ships on <code>feature/40-public-front-own-design</code> after integrate (one push).</p>
 
   <h3>Goal</h3>
@@ -281,6 +283,8 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
   <div class="card">
     <p class="small">Forward moves, checklist marks, and returns (for example testing → doing when verification fails) all stay here. This is not a substitute for the code windows above.</p>
     <ul>
+<li class=""><code>2026-11-10T19:04:12.836Z epic summary HTML → summaries/40-public-front-own-design-beginner.html</code></li>
+<li class=""><code>2026-11-10T19:04:12.828Z moved done → summarize</code></li>
 <li class=""><code>2026-11-10T19:04:03.501Z moved testing → done</code></li>
 <li class=""><code>2026-11-10T19:04:02.816Z checklist item 2 marked</code></li>
 <li class=""><code>2026-11-10T19:04:02.626Z moved doing → testing</code></li>
@@ -304,12 +308,13 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 
 <h2 id="handoff">Git command + Supervisor / Manager</h2>
 <p class="small">Recorded on the board at wrap-up so the SUMMARIZE column tracks the same git line and note the agent proposed.</p>
-<div class="card warn">
-  <p>The Supervisor / Manager note is not on the board yet. When every ticket is in <code>summarize</code>, record it so this page can track the epic:</p>
-  <pre><code>node scripts/board.mjs handoff 40 --git &quot;cd .worktrees/40-public-front-own-design/_epic &amp;&amp; git push -u origin feature/40-public-front-own-design&quot; --note-file summaries/handoff-note.txt</code></pre>
-  <p class="small">Until then, the suggested git line is:</p>
-  <pre><code>cd .worktrees/40-public-front-own-design/_epic &amp;&amp; git push -u origin feature/40-public-front-own-design</code></pre>
+<div class="card ok" id="handoff-body">
+  <strong>Supervisor / Manager</strong>
+  <p>Public home is a landing: hero, short story, four numbered modules. No form in the page body. Login stays in the header. Admin chrome is unchanged.</p>
 </div>
+<span class="filepath">copy-paste git (proposed — human runs it)</span>
+<pre><code>cd .worktrees/40-public-front-own-design/_epic &amp;&amp; git push -u origin feature/40-public-front-own-design</code></pre>
+<p class="small">Recorded 2026-11-10T19:04:12.991Z</p>
 
 <h2 id="faq">FAQ for beginners</h2>
 <div class="card">
@@ -328,5 +333,18 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 </div>
 
 </div>
+
+<section id="land-main" class="card ok">
+  <h2>Land on main</h2>
+  <p><strong>Status:</strong> landed · merge <code>e11f7a23a3455391251f0ebd35461d163d2a8601</code></p>
+  <p><strong>Git:</strong></p>
+  <pre><code>git push origin main</code></pre>
+  <h3>Supervisor / Manager (land)</h3>
+  <div id="land-handoff-body">
+    <p>Public home now opens with a hero and a short story, then four numbered modules. No form on the page. Login stays in the header. Admin chrome is unchanged.</p>
+  </div>
+  <p class="small">Recorded 2026-11-10T19:05:12.693Z</p>
+</section>
+
 </body>
 </html>

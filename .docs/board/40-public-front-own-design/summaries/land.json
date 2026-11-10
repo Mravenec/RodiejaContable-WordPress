@@ -1,0 +1,13 @@
+{
+  "status": "landed",
+  "started_at": "2026-11-10T19:04:52.294Z",
+  "finished_at": "2026-11-10T19:05:12.691Z",
+  "merge_commit": "e11f7a23a3455391251f0ebd35461d163d2a8601",
+  "conflicts": [],
+  "smoke_ok": true,
+  "smoke_at": "2026-11-10T19:05:10.204Z",
+  "git": "git push origin main",
+  "note": "Public home now opens with a hero and a short story, then four numbered modules. No form on the page. Login stays in the header. Admin chrome is unchanged.",
+  "recorded_at": "2026-11-10T19:05:10.315Z",
+  "pushed_at": "2026-11-10T19:05:12.691Z"
+}

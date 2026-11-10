@@ -1,0 +1,1 @@
+Public home is a landing: hero, short story, four numbered modules. No form in the page body. Login stays in the header. Admin chrome is unchanged.

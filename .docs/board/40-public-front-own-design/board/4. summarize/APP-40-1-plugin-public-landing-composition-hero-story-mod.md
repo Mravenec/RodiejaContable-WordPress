@@ -9,6 +9,7 @@ blocked_by: []
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T19:03:02.625Z"
+summary_html: summaries/40-public-front-own-design-beginner.html
 ---
 ## Objetivo
 
@@ -39,6 +40,8 @@ GET / contains wl-landing, wl-hero, wl-story, and "There is no form".
 
 ## History
 
+- 2026-11-10T19:04:12.836Z epic summary HTML → summaries/40-public-front-own-design-beginner.html
+- 2026-11-10T19:04:12.828Z moved done → summarize
 - 2026-11-10T19:04:03.501Z moved testing → done
 - 2026-11-10T19:04:02.816Z checklist item 2 marked
 - 2026-11-10T19:04:02.626Z moved doing → testing

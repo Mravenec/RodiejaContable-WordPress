@@ -1,0 +1,1 @@
+Public home now opens with a hero and a short story, then four numbered modules. No form on the page. Login stays in the header. Admin chrome is unchanged.

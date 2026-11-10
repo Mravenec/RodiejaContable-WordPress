@@ -1,6 +1,6 @@
 # Epic 40 — public-front-own-design
 
-**Status:** In progress · Board: `.linear/epics/40-public-front-own-design/` · Snapshot: `.docs/board/40-public-front-own-design/`
+**Status:** Landed on main · Board: `.linear/epics/40-public-front-own-design/`
 
 ## Why
 
@@ -24,3 +24,14 @@ The public home is readable and on-brand, but it is one generic card on the Ant 
 1. Hard-refresh https://workshop-ledger.ddev.site/
 2. Hero, short story, and four modules are visible before the header Login note
 3. /about/ uses the same composition
+
+
+## Land on main
+
+- Merge commit: `e11f7a23a3455391251f0ebd35461d163d2a8601`
+- Branch: `feature/40-public-front-own-design` → `main`
+
+### Supervisor / Manager (land)
+
+Public home now opens with a hero and a short story, then four numbered modules. No form on the page. Login stays in the header. Admin chrome is unchanged.
+
