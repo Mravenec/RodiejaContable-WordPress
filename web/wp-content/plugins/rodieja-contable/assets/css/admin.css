@@ -31,9 +31,11 @@ body.rodieja-contable-admin #adminmenuwrap {
 }
 
 body.rodieja-contable-admin #adminmenu,
-body.rodieja-contable-admin #adminmenu .wp-submenu,
 body.rodieja-contable-admin #adminmenu .wp-submenu-head {
 	background: var(--rdj-navy) !important;
+}
+
+body.rodieja-contable-admin #adminmenu {
 	width: 100%;
 }
 
@@ -85,11 +87,24 @@ body.rodieja-contable-admin #adminmenu .wp-submenu li.current a:hover {
 	background: transparent !important;
 }
 
+/* Colors only — never force left/width on all .wp-submenu (that sticks flyouts open). */
 body.rodieja-contable-admin #adminmenu .wp-submenu {
 	background: var(--rdj-navy-mid) !important;
-	left: 160px;
 	border: 0 !important;
+	box-shadow: none;
+}
+
+/* Flyout shadow only while WP marks opensub / hover (core owns left + display). */
+body.rodieja-contable-admin #adminmenu li.opensub > .wp-submenu,
+body.rodieja-contable-admin #adminmenu li.menu-top:hover:not(.wp-has-current-submenu) > .wp-submenu {
 	box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Current section stays inline under the parent (native WP accordion). */
+body.rodieja-contable-admin #adminmenu li.wp-has-current-submenu > .wp-submenu {
+	left: auto !important;
+	position: relative !important;
+	box-shadow: none;
 }
 
 body.rodieja-contable-admin #collapse-menu {
@@ -729,7 +744,7 @@ body.rodieja-cpt-list .tablenav.top {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	gap: 8px;
+	gap: 8px 12px;
 	padding: 12px 16px;
 	margin: 0 0 0;
 	background: var(--rdj-card);
@@ -738,6 +753,27 @@ body.rodieja-cpt-list .tablenav.top {
 	border-radius: var(--rdj-radius-lg) var(--rdj-radius-lg) 0 0;
 	box-shadow: none;
 	height: auto;
+}
+
+/* Keep bulk + date filters on one clean row (WP floats break under flex). */
+body.rodieja-cpt-list .tablenav.top .alignleft.actions {
+	float: none;
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin: 0;
+	padding: 0;
+}
+
+body.rodieja-cpt-list .tablenav.top .bulkactions select,
+body.rodieja-cpt-list .tablenav.top .actions select {
+	margin: 0;
+}
+
+body.rodieja-cpt-list .tablenav.top .tablenav-pages {
+	float: none;
+	margin-left: auto;
 }
 
 body.rodieja-cpt-list .wp-list-table {

@@ -129,8 +129,8 @@ final class AdminMenu {
 		);
 		add_submenu_page(
 			self::SLUG_FINANZAS,
-			__( 'Nueva Transaction', 'rodieja-contable' ),
-			__( 'Nueva Transaction', 'rodieja-contable' ),
+			__( 'Add Transaction', 'rodieja-contable' ),
+			__( 'Add Transaction', 'rodieja-contable' ),
 			$cap,
 			'post-new.php?post_type=rodieja_transaccion'
 		);
@@ -217,8 +217,8 @@ final class AdminMenu {
 		);
 		add_submenu_page(
 			self::SLUG_CONFIG,
-			__( 'Mi Perfil', 'rodieja-contable' ),
-			__( 'Mi Perfil', 'rodieja-contable' ),
+			__( 'My Profile', 'rodieja-contable' ),
+			__( 'My Profile', 'rodieja-contable' ),
 			'read',
 			'profile.php'
 		);

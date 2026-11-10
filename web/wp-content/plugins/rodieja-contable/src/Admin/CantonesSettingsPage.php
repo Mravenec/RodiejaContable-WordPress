@@ -62,7 +62,7 @@ final class CantonesSettingsPage {
 						</tr>
 					<?php endforeach; ?>
 						<tr>
-							<td><input type="text" class="regular-text" name="provincia[]" value="" placeholder="<?php echo $this->escaper->attr( __( 'Nueva province', 'rodieja-contable' ) ); ?>" /></td>
+							<td><input type="text" class="regular-text" name="provincia[]" value="" placeholder="<?php echo $this->escaper->attr( __( 'New province', 'rodieja-contable' ) ); ?>" /></td>
 							<td><input type="text" class="regular-text" name="canton[]" value="" placeholder="<?php echo $this->escaper->attr( __( 'Nuevo canton', 'rodieja-contable' ) ); ?>" /></td>
 						</tr>
 					</tbody>
