@@ -1,0 +1,847 @@
+/**
+ * Workshop Ledger — wp-admin chrome maximally faithful to Read-Only (Ant Pro).
+ * Native CSS only. Palette: #001529 sider · #1890ff primary · #f0f2f5 canvas.
+ */
+
+:root {
+	--wl-ink: #0b1220;
+	--wl-ink-soft: #595959;
+	--wl-accent: #1890ff;
+	--wl-accent-deep: #096dd9;
+	--wl-accent-soft: #e6f7ff;
+	--wl-navy: #001529;
+	--wl-navy-mid: #000c17;
+	--wl-sider-hover: #0a2138;
+	--wl-surface: #f0f2f5;
+	--wl-card: #ffffff;
+	--wl-line: #f0f0f0;
+	--wl-line-strong: #e8e8e8;
+	--wl-ok: #52c41a;
+	--wl-warn: #faad14;
+	--wl-radius: 2px;
+	--wl-radius-lg: 8px;
+	--wl-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+	--wl-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* —— Ant Layout.Sider equivalent: full WP admin menu —— */
+body.workshop-ledger-admin #adminmenuback,
+body.workshop-ledger-admin #adminmenuwrap {
+	background: var(--wl-navy) !important;
+}
+
+body.workshop-ledger-admin #adminmenu,
+body.workshop-ledger-admin #adminmenu .wp-submenu-head {
+	background: var(--wl-navy) !important;
+}
+
+body.workshop-ledger-admin #adminmenu {
+	width: 100%;
+}
+
+body.workshop-ledger-admin #adminmenu a {
+	color: rgba(255, 255, 255, 0.65) !important;
+	font-family: var(--wl-font);
+	font-size: 14px;
+}
+
+body.workshop-ledger-admin #adminmenu .wp-menu-image:before,
+body.workshop-ledger-admin #adminmenu div.wp-menu-image:before {
+	color: rgba(255, 255, 255, 0.65) !important;
+}
+
+body.workshop-ledger-admin #adminmenu li.menu-top:hover,
+body.workshop-ledger-admin #adminmenu li.opensub > a.menu-top,
+body.workshop-ledger-admin #adminmenu li > a.menu-top:focus {
+	background: var(--wl-sider-hover) !important;
+	color: #fff !important;
+}
+
+body.workshop-ledger-admin #adminmenu li.menu-top:hover .wp-menu-image:before,
+body.workshop-ledger-admin #adminmenu li.opensub .wp-menu-image:before {
+	color: #fff !important;
+}
+
+body.workshop-ledger-admin #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,
+body.workshop-ledger-admin #adminmenu li.current a.menu-top,
+body.workshop-ledger-admin #adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head,
+body.workshop-ledger-admin #adminmenu .wp-menu-arrow,
+body.workshop-ledger-admin #adminmenu .wp-menu-arrow div,
+body.workshop-ledger-admin #adminmenu li.current a.wp-has-current-submenu .wp-menu-image:before,
+body.workshop-ledger-admin #adminmenu li.wp-has-current-submenu a.menu-top .wp-menu-image:before {
+	background: var(--wl-accent) !important;
+	color: #fff !important;
+}
+
+body.workshop-ledger-admin #adminmenu .wp-submenu a {
+	color: rgba(255, 255, 255, 0.65) !important;
+	font-size: 13px;
+	padding: 8px 12px 8px 14px !important;
+}
+
+body.workshop-ledger-admin #adminmenu .wp-submenu a:hover,
+body.workshop-ledger-admin #adminmenu .wp-submenu a:focus,
+body.workshop-ledger-admin #adminmenu .wp-submenu li.current a,
+body.workshop-ledger-admin #adminmenu .wp-submenu li.current a:hover {
+	color: #fff !important;
+	background: transparent !important;
+}
+
+/* Colors only — never force left/width on all .wp-submenu (that sticks flyouts open). */
+body.workshop-ledger-admin #adminmenu .wp-submenu {
+	background: var(--wl-navy-mid) !important;
+	border: 0 !important;
+	box-shadow: none;
+}
+
+/* Flyout shadow only while WP marks opensub / hover (core owns left + display). */
+body.workshop-ledger-admin #adminmenu li.opensub > .wp-submenu,
+body.workshop-ledger-admin #adminmenu li.menu-top:hover:not(.wp-has-current-submenu) > .wp-submenu {
+	box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Current section stays inline under the parent (native WP accordion). */
+body.workshop-ledger-admin #adminmenu li.wp-has-current-submenu > .wp-submenu {
+	left: auto !important;
+	position: relative !important;
+	box-shadow: none;
+}
+
+/* User toggle: second click on current top-level collapses the section. */
+body.workshop-ledger-admin #adminmenu li.wp-has-current-submenu.wl-submenu-collapsed > .wp-submenu {
+	display: none !important;
+}
+
+body.workshop-ledger-admin #collapse-menu {
+	color: rgba(255, 255, 255, 0.45) !important;
+}
+
+body.workshop-ledger-admin #collapse-button .collapse-button-icon:after,
+body.workshop-ledger-admin #collapse-button .collapse-button-label {
+	color: rgba(255, 255, 255, 0.45) !important;
+}
+
+/* WorkshopLedger top-level emphasis (Read-Only module labels) */
+#adminmenu li[id^="toplevel_page_wl-"] > a,
+#adminmenu li.menu-top[class*="toplevel_page_wl-"] > a {
+	font-weight: 600;
+	letter-spacing: 0.01em;
+}
+
+/* —— Admin bar: dark strip like Ant Header (dark) —— */
+body.workshop-ledger-admin #wpadminbar {
+	background: var(--wl-navy) !important;
+	box-shadow: none;
+}
+
+body.workshop-ledger-admin #wpadminbar .ab-item,
+body.workshop-ledger-admin #wpadminbar a.ab-item,
+body.workshop-ledger-admin #wpadminbar > #wp-toolbar span.ab-label,
+body.workshop-ledger-admin #wpadminbar > #wp-toolbar span.noticon {
+	color: rgba(255, 255, 255, 0.85) !important;
+}
+
+body.workshop-ledger-admin #wpadminbar .ab-top-menu > li:hover > .ab-item,
+body.workshop-ledger-admin #wpadminbar .ab-top-menu > li.hover > .ab-item,
+body.workshop-ledger-admin #wpadminbar .ab-top-menu > li > .ab-item:focus {
+	background: var(--wl-sider-hover) !important;
+	color: #fff !important;
+}
+
+body.workshop-ledger-admin #wpadminbar .ab-submenu {
+	background: var(--wl-navy-mid) !important;
+}
+
+/* —— Content canvas (Ant Layout.Content) —— */
+body.workshop-ledger-admin #wpcontent,
+body.workshop-ledger-admin #wpfooter {
+	background: var(--wl-surface);
+	font-family: var(--wl-font);
+}
+
+body.workshop-ledger-admin #wpbody-content {
+	padding-bottom: 48px;
+}
+
+body.workshop-ledger-admin #wpbody-content > .wrap {
+	margin-top: 20px;
+}
+
+.wrap.wl-admin-wrap {
+	max-width: 1200px;
+	margin-right: auto;
+}
+
+.wrap.wl-admin-wrap > h1,
+.wl-page-head > h1 {
+	border: 0;
+	padding: 0;
+	margin: 8px 0 6px;
+	font-size: 20px;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.85);
+	letter-spacing: -0.01em;
+	font-family: var(--wl-font);
+}
+
+.wl-page-head {
+	margin-bottom: 16px;
+}
+
+.wl-admin-lede {
+	color: var(--wl-ink-soft);
+	font-size: 14px;
+	margin: 0 0 20px;
+	max-width: 56ch;
+	line-height: 1.57;
+}
+
+/* —— Dashboard hero (Read-Only Inicio) —— */
+.wl-hero {
+	background: var(--wl-navy);
+	background-image: linear-gradient(135deg, #001529 0%, #003a8c 70%, #1890ff 140%);
+	color: #fff;
+	border-radius: var(--wl-radius-lg);
+	padding: 32px 32px 28px;
+	margin: 0 0 24px;
+	box-shadow: var(--wl-shadow);
+	position: relative;
+	overflow: hidden;
+}
+
+.wl-hero::after {
+	content: "";
+	position: absolute;
+	inset: auto -48px -72px auto;
+	width: 240px;
+	height: 240px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.06);
+	pointer-events: none;
+}
+
+.wl-hero__eyebrow {
+	margin: 0 0 8px !important;
+	font-size: 12px !important;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	opacity: 0.65;
+	color: #fff !important;
+}
+
+.wl-hero h1 {
+	margin: 0 0 8px !important;
+	color: #fff !important;
+	font-size: 28px !important;
+	font-weight: 600 !important;
+	line-height: 1.25 !important;
+	font-family: var(--wl-font) !important;
+}
+
+.wl-hero p {
+	margin: 0;
+	opacity: 0.85;
+	font-size: 14px;
+	max-width: 52ch;
+	line-height: 1.57;
+}
+
+/* —— Statistic cards (Ant Statistic) —— */
+.wl-metrics {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+	gap: 16px;
+	margin: 0 0 24px;
+}
+
+.wl-metric {
+	background: var(--wl-card);
+	border: 1px solid var(--wl-line-strong);
+	border-radius: var(--wl-radius-lg);
+	padding: 20px 20px 16px;
+	box-shadow: var(--wl-shadow);
+}
+
+.wl-metric__label {
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.45);
+	margin-bottom: 8px;
+	text-transform: none;
+	letter-spacing: 0;
+}
+
+.wl-metric__value {
+	display: block;
+	font-size: 24px;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.85);
+	letter-spacing: -0.02em;
+	line-height: 1.2;
+	font-variant-numeric: tabular-nums;
+}
+
+.wl-metric--accent .wl-metric__value {
+	color: var(--wl-accent);
+}
+
+.wl-metric--ok .wl-metric__value {
+	color: var(--wl-ok);
+}
+
+/* —— Quick nav tiles —— */
+.wl-section-title {
+	margin: 0 0 12px;
+	font-size: 16px;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.85);
+}
+
+.wl-nav-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 16px;
+	margin: 0 0 24px;
+}
+
+.wl-nav-tile {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	background: var(--wl-card);
+	border: 1px solid var(--wl-line-strong);
+	border-radius: var(--wl-radius-lg);
+	padding: 20px;
+	text-decoration: none !important;
+	color: rgba(0, 0, 0, 0.85) !important;
+	box-shadow: var(--wl-shadow);
+	transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.wl-nav-tile:hover {
+	border-color: var(--wl-accent);
+	box-shadow: 0 4px 12px rgba(24, 144, 255, 0.12);
+}
+
+.wl-nav-tile .dashicons {
+	width: 28px;
+	height: 28px;
+	font-size: 28px;
+	color: var(--wl-accent);
+}
+
+.wl-nav-tile__title {
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.wl-nav-tile__hint {
+	font-size: 12px;
+	color: rgba(0, 0, 0, 0.45);
+	line-height: 1.5;
+}
+
+/* —— Cards / panels —— */
+.wl-admin-card {
+	background: var(--wl-card);
+	border: 1px solid var(--wl-line-strong);
+	border-radius: var(--wl-radius-lg);
+	padding: 24px;
+	margin: 0 0 16px;
+	box-shadow: var(--wl-shadow);
+}
+
+.wl-admin-card > .title,
+.wl-admin-card > h2 {
+	margin: 0 0 16px;
+	font-size: 16px;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.85);
+}
+
+.wl-admin-card .widefat {
+	border: 0;
+	box-shadow: none;
+}
+
+.wl-admin-card .widefat th,
+.wl-admin-card .widefat td {
+	padding: 12px 8px;
+	border-bottom: 1px solid var(--wl-line);
+}
+
+.wl-link-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.wl-link-list li {
+	margin: 0;
+	border-bottom: 1px solid var(--wl-line);
+}
+
+.wl-link-list li:last-child {
+	border-bottom: 0;
+}
+
+.wl-link-list a {
+	display: block;
+	padding: 12px 4px;
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.85);
+	font-weight: 500;
+	transition: color 0.15s;
+}
+
+.wl-link-list a:hover {
+	color: var(--wl-accent);
+}
+
+/* —— CPT list / edit (Ant Table + Form) —— */
+body.workshop-ledger-admin .wrap > h1.wp-heading-inline,
+body.workshop-ledger-admin .wrap > h1 {
+	font-weight: 600;
+	font-size: 20px;
+	letter-spacing: -0.01em;
+	color: rgba(0, 0, 0, 0.85);
+	font-family: var(--wl-font);
+}
+
+body.workshop-ledger-admin .wp-list-table {
+	border-radius: var(--wl-radius-lg);
+	overflow: hidden;
+	border: 1px solid var(--wl-line-strong) !important;
+	box-shadow: var(--wl-shadow);
+	background: var(--wl-card);
+	border-spacing: 0;
+}
+
+body.workshop-ledger-admin .wp-list-table thead th,
+body.workshop-ledger-admin .wp-list-table thead td {
+	background: #fafafa !important;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.85);
+	border-bottom: 1px solid var(--wl-line-strong) !important;
+	padding: 12px 10px;
+}
+
+body.workshop-ledger-admin .wp-list-table tbody td {
+	padding: 12px 10px;
+	border-bottom: 1px solid var(--wl-line) !important;
+	color: rgba(0, 0, 0, 0.85);
+}
+
+body.workshop-ledger-admin .wp-list-table tbody tr:hover td {
+	background: var(--wl-accent-soft) !important;
+}
+
+body.workshop-ledger-admin .wp-list-table .row-actions {
+	color: rgba(0, 0, 0, 0.45);
+}
+
+body.workshop-ledger-admin .wp-list-table .row-actions a {
+	color: var(--wl-accent);
+}
+
+body.workshop-ledger-admin .page-title-action {
+	border-radius: var(--wl-radius) !important;
+	background: var(--wl-accent) !important;
+	border-color: var(--wl-accent) !important;
+	color: #fff !important;
+	font-weight: 500 !important;
+	padding: 4px 15px !important;
+	line-height: 1.5715 !important;
+	top: -3px;
+	box-shadow: none !important;
+	text-shadow: none !important;
+}
+
+body.workshop-ledger-admin .page-title-action:hover {
+	background: var(--wl-accent-deep) !important;
+	border-color: var(--wl-accent-deep) !important;
+	color: #fff !important;
+}
+
+body.workshop-ledger-admin .button-primary {
+	background: var(--wl-accent) !important;
+	border-color: var(--wl-accent) !important;
+	border-radius: var(--wl-radius);
+	box-shadow: none !important;
+	text-shadow: none !important;
+	font-weight: 500;
+	height: 32px;
+	line-height: 30px;
+	padding: 0 15px;
+}
+
+body.workshop-ledger-admin .button-primary:hover,
+body.workshop-ledger-admin .button-primary:focus {
+	background: var(--wl-accent-deep) !important;
+	border-color: var(--wl-accent-deep) !important;
+}
+
+body.workshop-ledger-admin .button:not(.button-primary):not(.page-title-action) {
+	border-radius: var(--wl-radius);
+	border-color: #d9d9d9;
+	color: rgba(0, 0, 0, 0.85);
+	background: #fff;
+	box-shadow: none;
+	height: 32px;
+	line-height: 30px;
+}
+
+body.workshop-ledger-admin .button:not(.button-primary):hover {
+	color: var(--wl-accent);
+	border-color: var(--wl-accent);
+}
+
+body.workshop-ledger-admin #poststuff .postbox {
+	border-radius: var(--wl-radius-lg);
+	border-color: var(--wl-line-strong);
+	box-shadow: var(--wl-shadow);
+	background: var(--wl-card);
+}
+
+body.workshop-ledger-admin #poststuff .postbox .postbox-header {
+	border-bottom: 1px solid var(--wl-line);
+}
+
+body.workshop-ledger-admin #poststuff .postbox .postbox-header h2,
+body.workshop-ledger-admin #poststuff .postbox .hndle {
+	font-weight: 600;
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.85);
+	letter-spacing: 0;
+}
+
+body.workshop-ledger-admin .subsubsub {
+	margin: 8px 0 16px;
+	font-size: 14px;
+}
+
+body.workshop-ledger-admin .subsubsub a {
+	color: rgba(0, 0, 0, 0.65);
+}
+
+body.workshop-ledger-admin .subsubsub a.current {
+	color: var(--wl-accent);
+	font-weight: 600;
+}
+
+body.workshop-ledger-admin .tablenav {
+	height: auto;
+	margin: 12px 0;
+}
+
+body.workshop-ledger-admin .tablenav .button {
+	border-radius: var(--wl-radius);
+}
+
+body.workshop-ledger-admin .search-box input[type="search"],
+body.workshop-ledger-admin input[type="text"],
+body.workshop-ledger-admin input[type="search"],
+body.workshop-ledger-admin input[type="number"],
+body.workshop-ledger-admin select,
+body.workshop-ledger-admin textarea {
+	border-radius: var(--wl-radius);
+	border-color: #d9d9d9;
+	box-shadow: none;
+	font-family: var(--wl-font);
+}
+
+body.workshop-ledger-admin .search-box input[type="search"]:focus,
+body.workshop-ledger-admin input[type="text"]:focus,
+body.workshop-ledger-admin select:focus,
+body.workshop-ledger-admin textarea:focus {
+	border-color: var(--wl-accent);
+	box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+	outline: 0;
+}
+
+body.workshop-ledger-admin .notice {
+	border-radius: var(--wl-radius-lg);
+	box-shadow: var(--wl-shadow);
+}
+
+body.workshop-ledger-admin .notice-success {
+	border-left-color: var(--wl-ok);
+}
+
+body.workshop-ledger-admin .notice-warning {
+	border-left-color: var(--wl-warn);
+}
+
+/* Filters bar (CPT admin) */
+body.workshop-ledger-admin .tablenav.top .actions {
+	padding: 4px 0;
+}
+
+body.workshop-ledger-admin .view-switch {
+	margin-right: 8px;
+}
+
+/* —— Hierarchy tree (Ver por Generaciones ≈ Ant Tree / Collapse) —— */
+.wl-hierarchy {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.wl-hierarchy details {
+	background: var(--wl-card);
+	border: 1px solid var(--wl-line-strong);
+	border-radius: var(--wl-radius-lg);
+	box-shadow: var(--wl-shadow);
+	padding: 0;
+}
+
+.wl-hierarchy__modelo,
+.wl-hierarchy__gen {
+	margin: 4px 12px 8px;
+	box-shadow: none;
+	border-color: var(--wl-line);
+	background: #fafafa;
+}
+
+.wl-hierarchy__gen {
+	background: #fff;
+}
+
+.wl-hierarchy summary {
+	cursor: pointer;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	padding: 12px 16px;
+	font-weight: 600;
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.85);
+	font-family: var(--wl-font);
+}
+
+.wl-hierarchy summary::-webkit-details-marker {
+	display: none;
+}
+
+.wl-hierarchy summary::before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 6px solid rgba(0, 0, 0, 0.45);
+	margin-right: 4px;
+	transition: transform 0.15s;
+}
+
+.wl-hierarchy details[open] > summary::before {
+	transform: rotate(90deg);
+}
+
+.wl-hierarchy summary .dashicons {
+	color: var(--wl-accent);
+	width: 18px;
+	height: 18px;
+	font-size: 18px;
+}
+
+.wl-hierarchy__count,
+.wl-hierarchy__years {
+	font-size: 12px;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.45);
+	background: var(--wl-surface);
+	border-radius: 10px;
+	padding: 0 8px;
+	line-height: 20px;
+}
+
+.wl-hierarchy__edit {
+	margin-left: auto;
+	font-size: 13px;
+	font-weight: 500;
+	text-decoration: none;
+	color: var(--wl-accent) !important;
+}
+
+.wl-hierarchy__edit:hover {
+	color: var(--wl-accent-deep) !important;
+}
+
+.wl-hierarchy__vehiculos {
+	list-style: none;
+	margin: 0 12px 12px;
+	padding: 0;
+	border-top: 1px solid var(--wl-line);
+	background: #fff;
+	border-radius: 0 0 var(--wl-radius) var(--wl-radius);
+}
+
+.wl-hierarchy__vehiculos li {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 12px;
+	border-bottom: 1px solid var(--wl-line);
+	font-size: 14px;
+}
+
+.wl-hierarchy__vehiculos li:last-child {
+	border-bottom: 0;
+}
+
+.wl-hierarchy__vehiculos li:hover {
+	background: var(--wl-accent-soft);
+}
+
+.wl-hierarchy__vehiculos a {
+	font-weight: 500;
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.85);
+}
+
+.wl-hierarchy__vehiculos a:hover {
+	color: var(--wl-accent);
+}
+
+.wl-hierarchy__empty {
+	margin: 0 16px 12px;
+	color: rgba(0, 0, 0, 0.45);
+	font-size: 13px;
+}
+
+/* Toolbar strip above hierarchy */
+.wl-toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 12px;
+	margin: 0 0 16px;
+	padding: 12px 16px;
+	background: var(--wl-card);
+	border: 1px solid var(--wl-line-strong);
+	border-radius: var(--wl-radius-lg);
+	box-shadow: var(--wl-shadow);
+}
+
+.wl-toolbar__hint {
+	margin: 0;
+	font-size: 13px;
+	color: rgba(0, 0, 0, 0.45);
+}
+
+/* —— CPT list shell (edit.php) — Ant Table toolbar —— */
+body.wl-cpt-list .wrap {
+	background: transparent;
+}
+
+body.wl-cpt-list .wp-header-end {
+	margin: 0;
+}
+
+body.wl-cpt-list .tablenav.top {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 12px;
+	padding: 12px 16px;
+	margin: 0 0 0;
+	background: var(--wl-card);
+	border: 1px solid var(--wl-line-strong);
+	border-bottom: 0;
+	border-radius: var(--wl-radius-lg) var(--wl-radius-lg) 0 0;
+	box-shadow: none;
+	height: auto;
+}
+
+/* Keep bulk + date filters on one clean row (WP floats break under flex). */
+body.wl-cpt-list .tablenav.top .alignleft.actions {
+	float: none;
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin: 0;
+	padding: 0;
+}
+
+body.wl-cpt-list .tablenav.top .bulkactions select,
+body.wl-cpt-list .tablenav.top .actions select {
+	margin: 0;
+}
+
+body.wl-cpt-list .tablenav.top .tablenav-pages {
+	float: none;
+	margin-left: auto;
+}
+
+body.wl-cpt-list .wp-list-table {
+	border-top-left-radius: 0 !important;
+	border-top-right-radius: 0 !important;
+	margin-top: 0;
+}
+
+body.wl-cpt-list .tablenav.bottom {
+	padding: 8px 4px;
+	height: auto;
+}
+
+body.wl-cpt-list .tablenav select {
+	min-height: 32px;
+	border-radius: var(--wl-radius);
+	border-color: #d9d9d9;
+}
+
+body.wl-cpt-list .search-box {
+	margin: 0;
+	padding: 0;
+}
+
+body.wl-cpt-list .search-box input[type="search"] {
+	min-height: 32px;
+	width: 220px;
+}
+
+body.wl-cpt-list .subsubsub {
+	background: var(--wl-card);
+	border: 1px solid var(--wl-line-strong);
+	border-bottom: 0;
+	border-radius: var(--wl-radius-lg) var(--wl-radius-lg) 0 0;
+	padding: 10px 16px 0;
+	margin: 0 0 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+body.wl-cpt-list .subsubsub + .tablenav.top {
+	border-radius: 0;
+}
+
+body.wl-cpt-list .subsubsub + .tablenav.top + .wp-list-table,
+body.wl-cpt-list .tablenav.top + .wp-list-table {
+	border-radius: 0 0 var(--wl-radius-lg) var(--wl-radius-lg) !important;
+}
+
+body.wl-cpt-list .check-column input {
+	margin-top: 2px;
+}
+
+body.wl-cpt-list .column-title .row-title,
+body.wl-cpt-list .row-title {
+	font-weight: 500;
+	color: rgba(0, 0, 0, 0.85);
+}
+
+body.wl-cpt-list .striped > tbody > :nth-child(odd) {
+	background: #fff;
+}
+
+body.wl-cpt-list .striped > tbody > :nth-child(even) {
+	background: #fafafa;
+}

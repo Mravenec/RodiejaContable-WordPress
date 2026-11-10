@@ -13,3 +13,9 @@
 {"at":"2026-11-10T15:18:36.086Z","type":"evidence","issueId":"APP-26-2","title":"plugin-rename"}
 {"at":"2026-11-10T15:18:36.206Z","type":"move","issueId":"APP-26-2","from":"doing","to":"testing"}
 {"at":"2026-11-10T15:18:36.283Z","type":"checklist","issueId":"APP-26-2","item":"2"}
+{"at":"2026-11-10T15:18:36.695Z","type":"move","issueId":"APP-26-2","from":"testing","to":"done"}
+{"at":"2026-11-10T15:18:43.877Z","type":"claim","issueId":"APP-26-3","agent":"plugin-agent-1"}
+{"at":"2026-11-10T15:19:51.278Z","type":"checklist","issueId":"APP-26-3","item":"1"}
+{"at":"2026-11-10T15:19:51.359Z","type":"evidence","issueId":"APP-26-3","title":"brand-migrate"}
+{"at":"2026-11-10T15:19:51.483Z","type":"move","issueId":"APP-26-3","from":"doing","to":"testing"}
+{"at":"2026-11-10T15:19:51.559Z","type":"checklist","issueId":"APP-26-3","item":"2"}
