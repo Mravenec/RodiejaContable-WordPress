@@ -5,7 +5,7 @@
 | Id | 40 |
 | Slug | public-front-own-design |
 | Status | in_progress |
-| Progress | **66%** (0/1 in summarize · column + checklist) |
+| Progress | **83%** (0/1 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -31,11 +31,11 @@ _empty_
 
 ### 2. testing
 
-- `APP-40-1` Plugin: public landing composition (hero, story, modules) in seed + front.css _(role:plugin)_
+_empty_
 
 ### 3. done
 
-_empty_
+- `APP-40-1` Plugin: public landing composition (hero, story, modules) in seed + front.css _(role:plugin)_
 
 ### 4. summarize
 
