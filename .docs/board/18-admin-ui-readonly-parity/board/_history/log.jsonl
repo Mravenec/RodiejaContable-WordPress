@@ -18,3 +18,4 @@
 {"at":"2026-11-10T07:34:58.819Z","type":"evidence","issueId":"APP-18-3","title":"inicio-jerarquia"}
 {"at":"2026-11-10T07:34:59.000Z","type":"move","issueId":"APP-18-3","from":"doing","to":"testing"}
 {"at":"2026-11-10T07:34:59.081Z","type":"checklist","issueId":"APP-18-3","item":"2"}
+{"at":"2026-11-10T07:34:59.490Z","type":"move","issueId":"APP-18-3","from":"testing","to":"done"}

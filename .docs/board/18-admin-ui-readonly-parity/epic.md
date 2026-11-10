@@ -5,7 +5,7 @@
 | Id | 18 |
 | Slug | admin-ui-readonly-parity |
 | Status | in_progress |
-| Progress | **77%** (0/3 in summarize · column + checklist) |
+| Progress | **83%** (0/3 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -31,12 +31,13 @@ _empty_
 
 ### 2. testing
 
-- `APP-18-3` Plugin · pulir Inicio + Ver por Generaciones parity _(role:plugin)_
+_empty_
 
 ### 3. done
 
 - `APP-18-1` Plugin · chrome CSS menú/canvas/login idéntico Read-Only _(role:plugin)_
 - `APP-18-2` Plugin · list tables CPT Rodieja look Read-Only _(role:plugin)_
+- `APP-18-3` Plugin · pulir Inicio + Ver por Generaciones parity _(role:plugin)_
 
 ### 4. summarize
 

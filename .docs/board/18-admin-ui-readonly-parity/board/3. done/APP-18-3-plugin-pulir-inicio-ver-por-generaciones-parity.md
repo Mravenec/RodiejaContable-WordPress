@@ -35,6 +35,7 @@ rodieja-section-title + hierarchy toolbar
 
 ## History
 
+- 2026-11-10T07:34:59.488Z moved testing → done
 - 2026-11-10T07:34:59.079Z checklist item 2 marked
 - 2026-11-10T07:34:58.999Z moved doing → testing
 - 2026-11-10T07:34:58.722Z checklist item 1 marked
