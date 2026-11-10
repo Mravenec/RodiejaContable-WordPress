@@ -1,4 +1,4 @@
-# CLAUDE / Cursor agents — Rodieja Contable (WordPress)
+# CLAUDE / Cursor agents — Workshop Ledger (WordPress)
 
 Follow **[AGENTS.md](./AGENTS.md)**.
 
@@ -7,6 +7,8 @@ Follow **[AGENTS.md](./AGENTS.md)**.
 **Never** ship product changes only on `main` without a ticket + worktree. Keep journeys and `.docs/board` snapshots current.
 
 **Native-first** + plugin layers: Contracts → Repositories → Services → Controllers + Security. `layer-audit.mjs` must stay green.
+
+Product brand: **Workshop Ledger** (see `docs/RENAME-MAP.md`). Never edit Read-Only React/Java unless explicitly asked.
 
 Harmony: `.ai/` canonical · `.cursor/` · `.claude/` · `AGENTS.md` · `CLAUDE.md`.
 

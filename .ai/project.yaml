@@ -1,5 +1,5 @@
 harness: mariadb-wordpress-php-plugins
-module_name: rodieja-contable
+module_name: workshop-ledger
 php_version: "8.3"
 wordpress_requires: "6.4"
 native_only: true
@@ -7,9 +7,9 @@ native_first: true
 custom_requires_human_ok: true
 layout: unified-wordpress
 docroot: web
-plugin_path: web/wp-content/plugins/rodieja-contable
+plugin_path: web/wp-content/plugins/workshop-ledger
 mu_plugin_path: web/wp-content/mu-plugins/harness-hardening.php
-product: RodiejaContable
+product: WorkshopLedger
 forbidden_packages:
   - illuminate/*
   - laravel/*
@@ -35,5 +35,5 @@ services_without_repository:
 security:
   disallow_file_edit: true
   rest_public_routes_allowlist:
-    - rodieja/v1/health
+    - workshop-ledger/v1/health
   require_capability_on_mutations: true
