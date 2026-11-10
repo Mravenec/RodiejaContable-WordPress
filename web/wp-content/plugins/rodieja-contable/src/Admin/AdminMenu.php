@@ -178,10 +178,10 @@ final class AdminMenu {
 			array( $this->report_inventario, 'render' )
 		);
 
-		// —— InPart Quotes ——
+		// —— Audatex InPart (Read-Only sider label) ——
 		add_menu_page(
-			__( 'InPart Quotes', 'rodieja-contable' ),
-			__( 'InPart Quotes', 'rodieja-contable' ),
+			__( 'Audatex InPart', 'rodieja-contable' ),
+			__( 'Audatex InPart', 'rodieja-contable' ),
 			$cap,
 			self::SLUG_INPART,
 			array( $this, 'redirect_inpart' ),
@@ -327,7 +327,7 @@ final class AdminMenu {
 			array( __( 'Vehicles', 'rodieja-contable' ), __( 'List and catalog', 'rodieja-contable' ), 'dashicons-car', admin_url( 'edit.php?post_type=rodieja_vehiculo' ) ),
 			array( __( 'Inventory', 'rodieja-contable' ), __( 'Parts and stock', 'rodieja-contable' ), 'dashicons-admin-tools', admin_url( 'edit.php?post_type=rodieja_repuesto' ) ),
 			array( __( 'Finance', 'rodieja-contable' ), __( 'Transactions', 'rodieja-contable' ), 'dashicons-money-alt', admin_url( 'edit.php?post_type=rodieja_transaccion' ) ),
-			array( __( 'InPart Quotes', 'rodieja-contable' ), __( 'Orders and INS', 'rodieja-contable' ), 'dashicons-email-alt', admin_url( 'edit.php?post_type=rodieja_pedido' ) ),
+			array( __( 'Audatex InPart', 'rodieja-contable' ), __( 'Orders and INS import', 'rodieja-contable' ), 'dashicons-email-alt', admin_url( 'edit.php?post_type=rodieja_pedido' ) ),
 			array( __( 'Reports', 'rodieja-contable' ), __( 'CSV and digests', 'rodieja-contable' ), 'dashicons-chart-bar', admin_url( 'admin.php?page=' . ReportesAdminPage::SLUG ) ),
 			array( __( 'Settings', 'rodieja-contable' ), __( 'Profile and settings', 'rodieja-contable' ), 'dashicons-admin-generic', admin_url( 'admin.php?page=rodieja-settings' ) ),
 		);

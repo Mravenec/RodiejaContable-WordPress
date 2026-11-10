@@ -1,0 +1,7 @@
+{"at":"2026-11-10T14:10:20.431Z","type":"create","issueId":"APP-25-1","column":"backlog"}
+{"at":"2026-11-10T14:10:20.507Z","type":"create","issueId":"APP-25-2","column":"backlog"}
+{"at":"2026-11-10T14:10:25.028Z","type":"claim","issueId":"APP-25-1","agent":"plugin-agent-1"}
+{"at":"2026-11-10T14:11:00.324Z","type":"checklist","issueId":"APP-25-1","item":"1"}
+{"at":"2026-11-10T14:11:00.400Z","type":"evidence","issueId":"APP-25-1","title":"menu-chrome"}
+{"at":"2026-11-10T14:11:00.516Z","type":"move","issueId":"APP-25-1","from":"doing","to":"testing"}
+{"at":"2026-11-10T14:11:00.587Z","type":"checklist","issueId":"APP-25-1","item":"2"}
