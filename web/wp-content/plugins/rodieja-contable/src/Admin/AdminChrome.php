@@ -1,6 +1,7 @@
 <?php
 /**
  * Soften core WP admin menus for Rodieja operators (native remove_menu_page).
+ * Mirrors Read-Only sider: product modules first; keep Media + Users.
  *
  * @package Rodieja\Contable
  */
@@ -24,12 +25,21 @@ final class AdminChrome {
 			return;
 		}
 
-		remove_menu_page( 'edit-comments.php' );
-		remove_menu_page( 'edit.php' );
+		// Hide WP chrome Read-Only never shows (still native — not removed from disk).
+		remove_menu_page( 'index.php' );           // WP Dashboard (Rodieja Home replaces it)
+		remove_menu_page( 'edit.php' );            // Posts
+		remove_menu_page( 'edit-comments.php' );   // Comments
+		remove_menu_page( 'edit.php?post_type=page' ); // Pages
+		remove_menu_page( 'themes.php' );          // Appearance
+		remove_menu_page( 'plugins.php' );         // Plugins
+		remove_menu_page( 'tools.php' );           // WP Tools (Settings → Tools is ours)
+		remove_menu_page( 'options-general.php' ); // WP Settings (Rodieja Settings replaces it)
+
+		// Keep: Media (upload.php), Users (users.php) — roles assignment is native Users.
 	}
 
 	/**
-	 * React Read-Only order: Inicio → Vehículos → Inventario → Finanzas → Reportes → InPart → Config.
+	 * Read-Only sider order: Home → Vehicles → Inventory → Finance → Audatex InPart → Reports → Settings.
 	 *
 	 * @param string[] $menu_order
 	 * @return string[]
@@ -40,15 +50,11 @@ final class AdminChrome {
 			AdminMenu::SLUG_VEHICULOS,
 			AdminMenu::SLUG_INVENTARIO,
 			AdminMenu::SLUG_FINANZAS,
-			AdminMenu::SLUG_REPORTES,
 			AdminMenu::SLUG_INPART,
+			AdminMenu::SLUG_REPORTES,
 			AdminMenu::SLUG_CONFIG,
 			'upload.php',
-			'edit.php?post_type=page',
 			'users.php',
-			'tools.php',
-			'options-general.php',
-			'index.php',
 		);
 		$rest = array_values( array_diff( $menu_order, $preferred ) );
 		return array_values( array_unique( array_merge( $preferred, $rest ) ) );

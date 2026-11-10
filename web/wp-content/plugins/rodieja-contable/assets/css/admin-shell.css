@@ -260,6 +260,20 @@ body.rodieja-contable-admin .rodieja-admin-wrap {
 	color: rgba(0, 0, 0, 0.45);
 }
 
+.rodieja-code-sample {
+	margin: 0;
+	padding: 14px 16px;
+	max-width: 100%;
+	overflow: auto;
+	background: #fafafa;
+	border: 1px solid var(--rdj-line-strong, #f0f0f0);
+	border-radius: 8px;
+	font-size: 12px;
+	line-height: 1.5;
+	white-space: pre;
+	color: rgba(0, 0, 0, 0.75);
+}
+
 /* —— Hierarchy toolbar elevation —— */
 .rodieja-toolbar {
 	border-radius: 12px !important;
