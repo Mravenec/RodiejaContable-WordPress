@@ -8,6 +8,7 @@ declare(strict_types=1);
 namespace Rodieja\Contable\Providers;
 
 use Rodieja\Contable\Admin\AdminAssets;
+use Rodieja\Contable\Admin\AdminChrome;
 use Rodieja\Contable\Admin\AdminMenu;
 use Rodieja\Contable\Admin\CatalogAdminFilters;
 use Rodieja\Contable\Admin\CatalogListColumns;
@@ -47,6 +48,7 @@ use Rodieja\Contable\Controllers\Rest\HealthController;
 use Rodieja\Contable\Controllers\Rest\PedidoController;
 use Rodieja\Contable\Core\Container;
 use Rodieja\Contable\Front\HeaderAuthLinks;
+use Rodieja\Contable\Front\LoginChrome;
 use Rodieja\Contable\Meta\MetaRegistrar;
 use Rodieja\Contable\PostTypes\PostTypeRegistrar;
 use Rodieja\Contable\Roles\RoleRegistrar;
@@ -87,7 +89,9 @@ final class ServiceProvider {
 		$container->set( TaxonomyRegistrar::class, static fn() => new TaxonomyRegistrar() );
 		$container->set( MetaRegistrar::class, static fn() => new MetaRegistrar() );
 		$container->set( AdminAssets::class, static fn() => new AdminAssets() );
+		$container->set( AdminChrome::class, static fn() => new AdminChrome() );
 		$container->set( HeaderAuthLinks::class, static fn() => new HeaderAuthLinks() );
+		$container->set( LoginChrome::class, static fn() => new LoginChrome() );
 
 		$container->set(
 			HealthController::class,

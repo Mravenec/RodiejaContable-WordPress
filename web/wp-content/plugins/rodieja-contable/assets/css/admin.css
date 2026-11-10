@@ -1,56 +1,267 @@
 /**
- * Rodieja Contable — React-adjacent admin chrome (wp-admin only).
+ * Rodieja Contable — modern native wp-admin chrome.
+ * Palette aligned with React app (#001529 / #1890ff / #f0f2f5).
  */
-body.rodieja-contable-admin #adminmenu li.toplevel_page_rodieja-contable > a {
-	background: #001529;
-	color: #fff;
+
+:root {
+	--rdj-ink: #0b1220;
+	--rdj-ink-soft: #334155;
+	--rdj-accent: #1890ff;
+	--rdj-accent-deep: #096dd9;
+	--rdj-navy: #001529;
+	--rdj-surface: #f0f2f5;
+	--rdj-card: #ffffff;
+	--rdj-line: #e8edf3;
+	--rdj-ok: #0d9488;
+	--rdj-warn: #d97706;
+	--rdj-radius: 12px;
+	--rdj-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px rgba(15, 23, 42, 0.06);
 }
 
-body.rodieja-contable-admin #adminmenu li.toplevel_page_rodieja-contable.wp-has-current-submenu > a,
-body.rodieja-contable-admin #adminmenu li.toplevel_page_rodieja-contable.current > a {
-	background: #1890ff;
-	color: #fff;
+/* —— Sidebar: Rodieja top-level —— */
+#adminmenu li.toplevel_page_rodieja-contable > a {
+	background: var(--rdj-navy) !important;
+	color: #fff !important;
+	font-weight: 600;
+	letter-spacing: 0.01em;
 }
 
-body.rodieja-contable-admin #adminmenu li.toplevel_page_rodieja-contable .wp-submenu {
-	background: #001529;
+#adminmenu li.toplevel_page_rodieja-contable.wp-has-current-submenu > a,
+#adminmenu li.toplevel_page_rodieja-contable.current > a,
+#adminmenu li.toplevel_page_rodieja-contable:hover > a {
+	background: var(--rdj-accent) !important;
+	color: #fff !important;
 }
 
-body.rodieja-contable-admin #adminmenu li.toplevel_page_rodieja-contable .wp-submenu a {
-	color: rgba(255, 255, 255, 0.85);
+#adminmenu li.toplevel_page_rodieja-contable .wp-submenu {
+	background: var(--rdj-navy) !important;
+	border-radius: 0 0 8px 0;
 }
 
-body.rodieja-contable-admin #adminmenu li.toplevel_page_rodieja-contable .wp-submenu a:hover,
-body.rodieja-contable-admin #adminmenu li.toplevel_page_rodieja-contable .wp-submenu .current a {
-	color: #1890ff;
+#adminmenu li.toplevel_page_rodieja-contable .wp-submenu a {
+	color: rgba(255, 255, 255, 0.78) !important;
+	padding: 8px 12px 8px 14px !important;
 }
 
+#adminmenu li.toplevel_page_rodieja-contable .wp-submenu a:hover,
+#adminmenu li.toplevel_page_rodieja-contable .wp-submenu .current a {
+	color: #fff !important;
+	background: rgba(24, 144, 255, 0.22) !important;
+}
+
+#adminmenu a[href*="rodieja-menu-sep"] {
+	pointer-events: none !important;
+	font-size: 10px !important;
+	font-weight: 700 !important;
+	text-transform: uppercase !important;
+	letter-spacing: 0.08em !important;
+	color: rgba(255, 255, 255, 0.38) !important;
+	padding-top: 14px !important;
+	padding-bottom: 2px !important;
+	margin-top: 4px;
+	border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* —— Content canvas —— */
 body.rodieja-contable-admin #wpcontent,
 body.rodieja-contable-admin #wpfooter {
-	background: #f0f2f5;
+	background: var(--rdj-surface);
 }
 
-body.rodieja-contable-admin .wrap.rodieja-admin-wrap > h1 {
-	border-left: 4px solid #1890ff;
-	padding-left: 12px;
-	margin-bottom: 1em;
+body.rodieja-contable-admin #wpbody-content {
+	padding-bottom: 48px;
 }
 
-body.rodieja-contable-admin .rodieja-admin-card {
-	background: #fff;
-	border: 1px solid #d9d9d9;
-	border-radius: 4px;
-	padding: 16px 20px;
-	margin: 16px 0;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+.wrap.rodieja-admin-wrap {
+	max-width: 1120px;
 }
 
-body.rodieja-contable-admin #adminmenu a[href*="rodieja-menu-sep"] {
+.wrap.rodieja-admin-wrap > h1 {
+	border: 0;
+	padding: 0;
+	margin: 8px 0 6px;
+	font-size: 1.75rem;
+	font-weight: 700;
+	color: var(--rdj-ink);
+	letter-spacing: -0.02em;
+}
+
+.rodieja-admin-lede {
+	color: var(--rdj-ink-soft);
+	font-size: 14px;
+	margin: 0 0 20px;
+	max-width: 52ch;
+}
+
+/* Hero band */
+.rodieja-hero {
+	background: linear-gradient(135deg, var(--rdj-navy) 0%, #0c2a4a 55%, var(--rdj-accent-deep) 100%);
+	color: #fff;
+	border-radius: var(--rdj-radius);
+	padding: 28px 28px 24px;
+	margin: 0 0 22px;
+	box-shadow: var(--rdj-shadow);
+	position: relative;
+	overflow: hidden;
+}
+
+.rodieja-hero::after {
+	content: "";
+	position: absolute;
+	inset: auto -40px -60px auto;
+	width: 220px;
+	height: 220px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.08);
 	pointer-events: none;
+}
+
+.rodieja-hero h1 {
+	margin: 0 0 6px !important;
+	color: #fff !important;
+	font-size: 1.65rem !important;
+	font-weight: 700 !important;
+}
+
+.rodieja-hero p {
+	margin: 0;
+	opacity: 0.85;
+	font-size: 14px;
+	max-width: 48ch;
+}
+
+/* Metric tiles */
+.rodieja-metrics {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+	gap: 12px;
+	margin: 0 0 22px;
+}
+
+.rodieja-metric {
+	background: var(--rdj-card);
+	border: 1px solid var(--rdj-line);
+	border-radius: var(--rdj-radius);
+	padding: 16px 18px;
+	box-shadow: var(--rdj-shadow);
+}
+
+.rodieja-metric__label {
+	display: block;
 	font-size: 11px;
-	font-weight: 600;
+	font-weight: 700;
 	text-transform: uppercase;
-	letter-spacing: 0.04em;
-	color: rgba(255, 255, 255, 0.45) !important;
-	padding-top: 12px;
+	letter-spacing: 0.06em;
+	color: #64748b;
+	margin-bottom: 6px;
+}
+
+.rodieja-metric__value {
+	display: block;
+	font-size: 1.55rem;
+	font-weight: 700;
+	color: var(--rdj-ink);
+	letter-spacing: -0.03em;
+	line-height: 1.1;
+}
+
+.rodieja-metric--accent .rodieja-metric__value {
+	color: var(--rdj-accent-deep);
+}
+
+.rodieja-metric--ok .rodieja-metric__value {
+	color: var(--rdj-ok);
+}
+
+/* Quick nav grid */
+.rodieja-nav-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+	gap: 12px;
+	margin: 0 0 22px;
+}
+
+.rodieja-nav-tile {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	background: var(--rdj-card);
+	border: 1px solid var(--rdj-line);
+	border-radius: var(--rdj-radius);
+	padding: 16px 18px;
+	text-decoration: none !important;
+	color: var(--rdj-ink) !important;
+	box-shadow: var(--rdj-shadow);
+	transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.rodieja-nav-tile:hover {
+	border-color: var(--rdj-accent);
+	transform: translateY(-1px);
+	box-shadow: 0 4px 16px rgba(24, 144, 255, 0.15);
+}
+
+.rodieja-nav-tile .dashicons {
+	width: 28px;
+	height: 28px;
+	font-size: 28px;
+	color: var(--rdj-accent);
+}
+
+.rodieja-nav-tile__title {
+	font-weight: 650;
+	font-size: 14px;
+}
+
+.rodieja-nav-tile__hint {
+	font-size: 12px;
+	color: #64748b;
+	line-height: 1.35;
+}
+
+/* Cards / tables on Rodieja screens */
+.rodieja-admin-card {
+	background: var(--rdj-card);
+	border: 1px solid var(--rdj-line);
+	border-radius: var(--rdj-radius);
+	padding: 20px 22px;
+	margin: 0 0 16px;
+	box-shadow: var(--rdj-shadow);
+}
+
+.rodieja-admin-card > .title,
+.rodieja-admin-card > h2 {
+	margin: 0 0 14px;
+	font-size: 1rem;
+	font-weight: 700;
+	color: var(--rdj-ink);
+}
+
+.rodieja-admin-card .widefat {
+	border: 0;
+	box-shadow: none;
+}
+
+.rodieja-admin-card .widefat th,
+.rodieja-admin-card .widefat td {
+	padding: 10px 8px;
+}
+
+/* CPT list polish when under Rodieja */
+body.rodieja-contable-admin .wp-list-table {
+	border-radius: 8px;
+	overflow: hidden;
+	border-color: var(--rdj-line);
+}
+
+body.rodieja-contable-admin .page-title-action {
+	border-radius: 8px !important;
+	background: var(--rdj-accent) !important;
+	border-color: var(--rdj-accent) !important;
+	color: #fff !important;
+}
+
+body.rodieja-contable-admin .page-title-action:hover {
+	background: var(--rdj-accent-deep) !important;
+	border-color: var(--rdj-accent-deep) !important;
 }

@@ -3,7 +3,7 @@
  * Plugin Name:       Rodieja Contable
  * Plugin URI:        https://rodieja-wp.ddev.site
  * Description:       Rodieja Contable — native WordPress (CPT/taxonomies/meta/roles/REST admin).
- * Version:           0.1.0
+ * Version:           0.2.0
  * Requires at least: 6.4
  * Requires PHP:      8.2
  * Author:            Rodieja
@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'RODIEJA_PLUGIN_VERSION', '0.1.0' );
+define( 'RODIEJA_PLUGIN_VERSION', '0.2.0' );
 define( 'RODIEJA_PLUGIN_FILE', __FILE__ );
 define( 'RODIEJA_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'RODIEJA_PLUGIN_URL', plugin_dir_url( __FILE__ ) );

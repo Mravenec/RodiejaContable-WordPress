@@ -1,0 +1,20 @@
+/**
+ * Front header auth link — native navigation item.
+ */
+
+.wp-block-navigation .rodieja-auth-link a {
+	font-weight: 650;
+	letter-spacing: 0.01em;
+}
+
+.wp-block-navigation .rodieja-auth-link a:hover {
+	color: #1890ff;
+}
+
+@media (min-width: 782px) {
+	.wp-block-navigation .rodieja-auth-link {
+		margin-left: 0.35rem;
+		padding-left: 0.65rem;
+		border-left: 1px solid rgba(15, 23, 42, 0.12);
+	}
+}

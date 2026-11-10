@@ -38,13 +38,33 @@ final class ReportesAdminPage {
 		$sent = isset( $_GET['rodieja_resumen_sent'] ) && '1' === $_GET['rodieja_resumen_sent'];
 		$base = admin_url( 'admin-post.php' );
 		?>
-		<div class="wrap">
-			<h1><?php echo $this->escaper->html( __( 'Reportes Rodieja', 'rodieja-contable' ) ); ?></h1>
+		<div class="wrap rodieja-admin-wrap">
+			<h1><?php echo $this->escaper->html( __( 'Reportes', 'rodieja-contable' ) ); ?></h1>
+			<p class="rodieja-admin-lede"><?php echo $this->escaper->html( __( 'Vistas ejecutivas, CSV y correo — todo nativo (WP_Query / admin-post / wp_mail).', 'rodieja-contable' ) ); ?></p>
 			<?php if ( $sent ) : ?>
 				<div class="notice notice-success"><p><?php esc_html_e( 'Resumen enviado al correo del administrador.', 'rodieja-contable' ); ?></p></div>
 			<?php endif; ?>
 
-			<h2><?php echo $this->escaper->html( __( 'Exportar CSV', 'rodieja-contable' ) ); ?></h2>
+			<div class="rodieja-nav-grid" style="margin-bottom:20px">
+				<a class="rodieja-nav-tile" href="<?php echo esc_url( admin_url( 'admin.php?page=rodieja-reporte-ventas' ) ); ?>">
+					<span class="dashicons dashicons-groups" aria-hidden="true"></span>
+					<span class="rodieja-nav-tile__title"><?php echo $this->escaper->html( __( 'Ventas', 'rodieja-contable' ) ); ?></span>
+					<span class="rodieja-nav-tile__hint"><?php echo $this->escaper->html( __( 'Pedidos y montos', 'rodieja-contable' ) ); ?></span>
+				</a>
+				<a class="rodieja-nav-tile" href="<?php echo esc_url( admin_url( 'admin.php?page=rodieja-reporte-inventario' ) ); ?>">
+					<span class="dashicons dashicons-products" aria-hidden="true"></span>
+					<span class="rodieja-nav-tile__title"><?php echo $this->escaper->html( __( 'Inventario', 'rodieja-contable' ) ); ?></span>
+					<span class="rodieja-nav-tile__hint"><?php echo $this->escaper->html( __( 'Stock y valor', 'rodieja-contable' ) ); ?></span>
+				</a>
+				<a class="rodieja-nav-tile" href="<?php echo esc_url( admin_url( 'admin.php?page=rodieja-reporte-finanzas' ) ); ?>">
+					<span class="dashicons dashicons-chart-area" aria-hidden="true"></span>
+					<span class="rodieja-nav-tile__title"><?php echo $this->escaper->html( __( 'Rentabilidad', 'rodieja-contable' ) ); ?></span>
+					<span class="rodieja-nav-tile__hint"><?php echo $this->escaper->html( __( 'Margen estimado', 'rodieja-contable' ) ); ?></span>
+				</a>
+			</div>
+
+			<div class="rodieja-admin-card">
+			<h2 class="title"><?php echo $this->escaper->html( __( 'Exportar CSV', 'rodieja-contable' ) ); ?></h2>
 			<p><?php echo $this->escaper->html( __( 'Descargas vía admin-post.php con nonce y capacidad manage_rodieja_contable.', 'rodieja-contable' ) ); ?></p>
 			<ul>
 				<?php foreach ( array( 'vehiculos', 'repuestos', 'transacciones' ) as $export ) : ?>
@@ -55,17 +75,19 @@ final class ReportesAdminPage {
 					</li>
 				<?php endforeach; ?>
 			</ul>
+			</div>
 
-			<h2><?php echo $this->escaper->html( __( 'Resumen mensual (correo)', 'rodieja-contable' ) ); ?></h2>
+			<div class="rodieja-admin-card">
+			<h2 class="title"><?php echo $this->escaper->html( __( 'Resumen mensual (correo)', 'rodieja-contable' ) ); ?></h2>
 			<p><?php echo $this->escaper->html( __( 'También programado semanalmente vía WP-Cron.', 'rodieja-contable' ) ); ?></p>
 			<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
 				<input type="hidden" name="action" value="<?php echo esc_attr( self::MAIL_ACTION ); ?>" />
 				<?php $this->nonce->field( self::MAIL_ACTION ); ?>
 				<?php submit_button( __( 'Enviar resumen ahora', 'rodieja-contable' ) ); ?>
 			</form>
-
 			<h3><?php echo $this->escaper->html( __( 'Vista previa', 'rodieja-contable' ) ); ?></h3>
-			<pre style="background:#fff;padding:1em;border:1px solid #ccd0d4;max-width:640px;white-space:pre-wrap"><?php echo esc_html( $this->resumen->build_body() ); ?></pre>
+			<pre style="background:#f8fafc;padding:1em;border:1px solid #e8edf3;border-radius:8px;max-width:640px;white-space:pre-wrap"><?php echo esc_html( $this->resumen->build_body() ); ?></pre>
+			</div>
 		</div>
 		<?php
 	}
