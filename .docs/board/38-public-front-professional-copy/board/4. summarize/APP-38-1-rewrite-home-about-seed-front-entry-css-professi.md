@@ -34,6 +34,7 @@ OPTION_FLAG=v2; wl-front-panel; no Read-Only; header Login only
 
 ## History
 
+- 2026-11-10T17:16:22.553Z moved done → summarize (land hygiene — LANDED requires 100%)
 - 2026-11-10T16:50:03.007Z moved testing → done
 - 2026-11-10T16:50:02.491Z checklist item 2 marked
 - 2026-11-10T16:50:02.406Z moved doing → testing

@@ -22,7 +22,8 @@ body.login {
 body.login::before {
 	content: "";
 	position: absolute;
-	inset: 0 0 42% 0;
+	inset: 0 0 auto 0;
+	height: min(260px, 36vh);
 	background: linear-gradient(135deg, var(--wl-navy) 0%, var(--wl-navy-glow) 55%, var(--wl-accent) 120%);
 	z-index: 0;
 }
@@ -113,15 +114,28 @@ body.login #backtoblog {
 	margin: 16px 0 0;
 }
 
+/* Links sit on the light surface below the navy band — keep high contrast. */
 body.login #nav a,
-body.login #backtoblog a {
-	color: rgba(0, 0, 0, 0.65) !important;
+body.login #backtoblog a,
+body.login .privacy-policy-page-link a {
+	color: var(--wl-navy) !important;
 	font-size: 14px;
+	font-weight: 500;
 }
 
 body.login #nav a:hover,
-body.login #backtoblog a:hover {
-	color: var(--wl-accent) !important;
+body.login #backtoblog a:hover,
+body.login .privacy-policy-page-link a:hover {
+	color: var(--wl-accent-deep) !important;
+}
+
+body.login .language-switcher label {
+	color: rgba(0, 0, 0, 0.85);
+}
+
+body.login .language-switcher select {
+	color: rgba(0, 0, 0, 0.85);
+	border-color: var(--wl-border);
 }
 
 body.login #login_error,

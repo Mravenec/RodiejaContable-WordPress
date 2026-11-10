@@ -50,11 +50,13 @@ final class LoginChrome {
 	}
 
 	public function enqueue(): void {
+		$path = WL_PLUGIN_DIR . 'assets/css/login.css';
+		$ver  = is_readable( $path ) ? (string) filemtime( $path ) : WL_PLUGIN_VERSION;
 		wp_enqueue_style(
 			'workshop-ledger-login',
 			WL_PLUGIN_URL . 'assets/css/login.css',
 			array(),
-			WL_PLUGIN_VERSION
+			$ver
 		);
 	}
 

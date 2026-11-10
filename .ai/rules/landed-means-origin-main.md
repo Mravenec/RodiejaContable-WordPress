@@ -23,6 +23,7 @@ The board UI badge **LANDED** is a **GitHub fact**, not a local convenience labe
 - Checking out plugin files onto local `main` and skipping `worktree-push` + land-main pipeline
 - Setting LANDED while `origin/main` still lacks the epic merge (non-fast-forward / auth failure = **not** landed)
 - Leaving tickets in `done` / `backlog` so the UI shows **LANDED + 83%** (or 0%) — promote to `summarize` before snap
+- Restoring a LANDED snapshot that still parks tickets in `done` without running land hygiene (`board.mjs restore` auto-hygiene + `board.mjs land-hygiene all`)
 
 ## Correct pipeline (do not shortcut)
 

@@ -45,6 +45,7 @@ import {
 import { stringifyYaml } from "./lib/yaml-lite.mjs";
 import { writeEpicSummary, writeHandoffFile, defaultEpicGitCommand, readHandoff } from "./lib/summarize.mjs";
 import { snapshotEpicToDocs, restoreEpicFromDocs, listBoardSnapshots } from "./lib/board-snapshot.mjs";
+import { ensureEpicTicketsSummarized } from "./lib/board-land-hygiene.mjs";
 import { findTicketWorktreeDir } from "./lib/worktree-paths.mjs";
 import { isDirty } from "./lib/worktree-git.mjs";
 import {
@@ -142,6 +143,7 @@ function usage() {
   node scripts/board.mjs refresh-epic <n|slug>
   node scripts/board.mjs snapshot [n|slug]
   node scripts/board.mjs restore <n|slug>
+  node scripts/board.mjs land-hygiene [all|n|slug]
 `);
 }
 
@@ -1260,6 +1262,26 @@ function cmdSnapshot(config, argv) {
   console.log(JSON.stringify({ snapshots: out, host }, null, 2));
 }
 
+function readLandStatus(epicPath) {
+  const landPath = path.join(epicPath, "summaries", "land.json");
+  if (!fs.existsSync(landPath)) return null;
+  try {
+    return JSON.parse(fs.readFileSync(landPath, "utf8"))?.status ?? null;
+  } catch {
+    return null;
+  }
+}
+
+/** After restore of a LANDED epic, promote done→summarize and re-snap so UI cannot stay at 83%. */
+function hygieneIfLanded(config, epicPath, host) {
+  if (readLandStatus(epicPath) !== "landed") return null;
+  const hygiene = ensureEpicTicketsSummarized(config, epicPath);
+  if (hygiene.ok) {
+    snapshotEpicToDocs(epicPath, host);
+  }
+  return hygiene;
+}
+
 function cmdRestore(config, argv) {
   const ref = argv[1];
   if (!ref) throw new Error("Usage: restore <n|slug>");
@@ -1278,7 +1300,33 @@ function cmdRestore(config, argv) {
   }
   const result = restoreEpicFromDocs(host, epicKey, ROOT);
   if (!result.ok) throw new Error(result.reason);
-  console.log(JSON.stringify({ restored: true, ...result }, null, 2));
+  const hygiene = hygieneIfLanded(config, result.dest, host);
+  console.log(JSON.stringify({ restored: true, ...result, hygiene }, null, 2));
+}
+
+/** Repair LANDED epics stuck below 100% (tickets parked in done). */
+function cmdLandHygiene(config, argv) {
+  const ref = argv[1] || "all";
+  const host = hostRootFromLinear();
+  const keys =
+    ref === "all"
+      ? fs
+          .readdirSync(path.join(ROOT, "epics"), { withFileTypes: true })
+          .filter((d) => d.isDirectory() && /^\d+-/.test(d.name))
+          .map((d) => d.name)
+      : [findEpic(ref).path].map((p) => path.basename(p));
+
+  const out = [];
+  for (const epicKey of keys) {
+    const epicPath = path.join(ROOT, "epics", epicKey);
+    if (readLandStatus(epicPath) !== "landed") continue;
+    const hygiene = ensureEpicTicketsSummarized(config, epicPath);
+    if (hygiene.ok || hygiene.promoted?.length) {
+      snapshotEpicToDocs(epicPath, host);
+    }
+    out.push({ epicKey, ...hygiene });
+  }
+  console.log(JSON.stringify({ landHygiene: out }, null, 2));
 }
 
 async function main() {
@@ -1316,6 +1364,7 @@ async function main() {
     else if (cmd === "refresh-epic") await cmdRefreshEpic(config, argv);
     else if (cmd === "snapshot") cmdSnapshot(config, argv);
     else if (cmd === "restore") cmdRestore(config, argv);
+    else if (cmd === "land-hygiene") cmdLandHygiene(config, argv);
     else {
       usage();
       process.exitCode = 1;
