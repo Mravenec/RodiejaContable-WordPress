@@ -1,4 +1,6 @@
-# Vistas ejecutivas WP_Query (inventario, ventas, rentabilidad)
+# 13-vistas_ejecutivas
+
+Executive views WP_Query (inventory, sales, profitability)
 
 | Field | Value |
 |---|---|

@@ -1,6 +1,6 @@
 id: 3
 slug: catalogo_vehicular
-title: "Catálogo vehicular: marca→modelo→gen→vehículo admin"
+title: "Vehicle catalog: brand→model→gen→vehicle admin"
 color: "#b45309"
 status: completed
 created_at: "2026-11-10T05:35:43.174Z"

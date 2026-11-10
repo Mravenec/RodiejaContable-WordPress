@@ -4,50 +4,41 @@
 
 ## Title
 
-Vistas ejecutivas WP_Query (inventario, ventas, rentabilidad)
+Executive views WP_Query (inventory, sales, profitability)
 
 ## Why
 
-Dirección necesita vistas inventario/ventas/rentabilidad y un dashboard ejecutivo con counts/montos nativos.
+Leadership needs inventory/sales/profitability views and an executive dashboard with native counts/amounts.
 
 ## What we did
 
-- [x] Admin pages vistas inventario/ventas/rentabilidad
-- [x] Dashboard ejecutivo counts + montos (WP_Query/meta)
+- [x] Admin pages for inventory/sales/profitability
+- [x] Executive dashboard counts + amounts
 
 ## Acceptance
 
-- Given datos seed
-- When abre vistas ejecutivas
-- Expect números coherentes sin BI externo
+- Given seed data
+- When executive views open
+- Expect coherent numbers without external BI
 
 ## Agent notes (constraints / edge cases)
 
-Solo WP_Query/meta aggregations en PHP.
-
-## Areas touched (unified WordPress tree)
-
-| Area | Touched? | Notes |
-|---|---|---|
-| Plugin report pages + ExecutiveDashboard | sí |  |
+WP_Query/meta aggregations in PHP only.
 
 ## Board issues (= tickets)
 
-- APP-13-1 vistas admin
-- APP-13-2 dashboard ejecutivo
-
-Checklists and evidence live on the board issue files / living HTML — not duplicated here.
+- APP-13-1 admin views
+- APP-13-2 executive dashboard
 
 ## How to verify
 
-- `menú Reportes / vistas`
-- `Inicio dashboard counts`
+- `Reports views`
+- `Home dashboard counts`
 
 ```bash
 node .linear/scripts/board.mjs progress --epic 13
-# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome
 
-Vistas ejecutivas LANDED.
+Executive views LANDED.

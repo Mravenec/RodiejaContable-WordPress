@@ -1,4 +1,6 @@
-# Auth/Profile WP nativo: users, caps, profile meta
+# 12-auth_profile_wp
+
+Native Auth/Profile: users, caps, profile meta
 
 | Field | Value |
 |---|---|

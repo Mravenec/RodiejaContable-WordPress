@@ -1,6 +1,6 @@
 id: 17
 slug: vehiculos-jerarquia-nativa
-title: "Vehículos: vista jerárquica nativa (marca→modelo→gen→vehículo)"
+title: "Vehicles: native hierarchy view (brand→model→gen→vehicle)"
 color: "#b45309"
 status: completed
 created_at: "2026-11-10T07:14:36.975Z"

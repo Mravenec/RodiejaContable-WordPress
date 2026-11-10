@@ -4,50 +4,46 @@
 
 ## Title
 
-Admin UI: máxima fidelidad visual al Read-Only (native CSS/PHP)
+Admin UI: maximum visual fidelity to Read-Only (native CSS/PHP)
 
 ## Why
 
-Rodieja Contable Read-Only (React/Ant) define la IA y cromática del negocio. En WP había que parecer **lo más idéntico posible** sin clonar el SPA: sider navy, canvas `#f0f2f5`, tablas Ant-like, Inicio y Ver por Generaciones.
+Read-Only (React/Ant) defines the IA and palette. WP needed to look as identical as possible without cloning the SPA: navy sider, #f0f2f5 canvas, Ant-like tables, Home and hierarchy.
 
 ## What we did
 
-- [x] Chrome CSS: `#adminmenu` / admin bar navy, canvas surface, login Ant header
-- [x] CPT list tables: toolbar + hover + filtros (`rodieja-cpt-list`)
-- [x] Inicio: hero + Indicadores + Módulos; Jerarquía: toolbar + árbol
-- [x] Board → feature push → land `origin/main`
+- [x] Chrome CSS: admin menu/bar navy, canvas, Ant login
+- [x] CPT list tables: toolbar + hover (rodieja-cpt-list)
+- [x] Home: hero + Indicators + Modules; hierarchy toolbar + tree
+- [x] Board → feature push → land origin/main
 
 ## Acceptance
 
-- Given admin Rodieja en wp-admin / login
-- When abre Inicio, listas CPT, Ver por Generaciones, login
-- Expect look muy cercano al Read-Only (Ant Pro palette/IA)
-- Sin React SPA; caps/DI/`layer-audit` OK
+- Given Rodieja admin / login
+- When opening Home, CPT lists, View by Generations, login
+- Expect look very close to Read-Only
+- No React SPA; caps/DI/layer-audit OK
 
-## Agent notes
+## Agent notes (constraints / edge cases)
 
-No SPA. CSS scoped a `body.rodieja-contable-admin` / `rodieja-cpt-list`. Paleta `#001529` / `#1890ff` / `#f0f2f5`.
+No SPA. CSS scoped to rodieja-contable-admin / rodieja-cpt-list. Never edit Read-Only.
 
-## Areas touched
-
-| Area | Touched? | Notes |
-|---|---|---|
-| `assets/css/admin.css` / `login.css` | sí | |
-| `AdminAssets.php` | sí | body class list |
-| `AdminMenu.php` / `JerarquiaAdminPage.php` | sí | markup |
-
-## Board issues
+## Board issues (= tickets)
 
 - APP-18-1 chrome CSS
 - APP-18-2 CPT lists
-- APP-18-3 Inicio + jerarquía
+- APP-18-3 Home + hierarchy
 
 ## How to verify
 
-- wp-admin Inicio / Vehículos / Ver por Generaciones
-- wp-login.php
-- `node .ai/scripts/layer-audit.mjs`
+- `Home / Vehicles / View by Generations`
+- `wp-login.php`
+- `layer-audit`
+
+```bash
+node .linear/scripts/board.mjs progress --epic 18
+```
 
 ## Outcome
 
-UI nativa con máxima fidelidad al Read-Only (chrome + listas + Inicio/jerarquía) en `origin/main`. Epic 18 completed 100%.
+Native UI max-fidelity to Read-Only on origin/main.

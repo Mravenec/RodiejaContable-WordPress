@@ -4,6 +4,8 @@ Product on the **unified WordPress harness**. **Native-first** (`.ai/rules/nativ
 
 **Process parity with** `HarnessMariaDB-SpringBootJOOQ-ReactJS`: always `.linear` + worktrees + `.docs/journey` + `.docs/board` + land. Stack is WordPress — see `.ai/rules/board-process-mandatory.md`.
 
+**English only** (`.ai/rules/english-only.md`): journeys, board, commits, handoffs, and plugin UI strings — even if the human writes Spanish. **Never edit Rodieja Contable Read-Only** unless the human explicitly targets that repo.
+
 Board of record: **`.linear/`**. Journeys: **`.docs/journey/`**. Snapshots: **`.docs/board/`**.
 
 ## Layout

@@ -1,6 +1,6 @@
 id: 14
 slug: pedidos_ins_import
-title: "Pedidos INS/Audatex: import JSON/CSV local + Options (sin API live)"
+title: "INS/Audatex orders: local JSON/CSV import + Options (no live API)"
 color: "#b45309"
 status: completed
 created_at: "2026-11-10T05:37:58.991Z"

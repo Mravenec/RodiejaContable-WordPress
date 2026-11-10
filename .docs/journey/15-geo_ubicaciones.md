@@ -4,50 +4,41 @@
 
 ## Title
 
-Geo nativo: meta ubicación/cantón en vehículo+empleado
+Native geo: location/canton meta on vehicle+employee
 
 ## Why
 
-Ubicación CR (provincia/cantón/lat/lng) debe ser meta nativa + Options de cantones, no microservicio geo.
+Costa Rica location (province/canton/lat/lng) must be native meta + Options canton list — not a geo microservice.
 
 ## What we did
 
-- [x] Meta geo + campos admin en vehículo/empleado
-- [x] Options lista cantones CR
+- [x] Geo meta + admin fields on vehicle/employee
+- [x] Options list of CR cantons
 
 ## Acceptance
 
-- Given vehículo/empleado
-- When se guarda cantón/coords
-- Expect meta persistida y lista cantones desde Options
+- Given vehicle/employee
+- When saving canton/coords
+- Expect persisted meta and Options-backed canton list
 
 ## Agent notes (constraints / edge cases)
 
-Lista cantones en Options API; editable sin deploy.
-
-## Areas touched (unified WordPress tree)
-
-| Area | Touched? | Notes |
-|---|---|---|
-| Plugin meta geo + CantonesSettings | sí |  |
+Cantons editable via Options without deploy.
 
 ## Board issues (= tickets)
 
-- APP-15-1 meta geo admin
-- APP-15-2 Options cantones
-
-Checklists and evidence live on the board issue files / living HTML — not duplicated here.
+- APP-15-1 geo meta admin
+- APP-15-2 cantons Options
 
 ## How to verify
 
-- `metabox geo`
-- `settings cantones`
+- `geo metabox`
+- `cantons settings`
 
 ```bash
 node .linear/scripts/board.mjs progress --epic 15
-# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome
 
-Geo nativo LANDED.
+Native geo LANDED.

@@ -4,52 +4,43 @@
 
 ## Title
 
-Pedidos nativos: meta Audatex-shape + items + REST
+Orders native: Audatex-shaped meta + items + REST
 
 ## Why
 
-Pedidos del flujo Audatex/INS deben modelarse en WP (meta shape + ítems hijo + REST CRUD con permission_callback real).
+Audatex/INS-shaped orders need WP modeling (meta + child items + REST CRUD with real permission_callback).
 
 ## What we did
 
-- [x] Meta pedidos Audatex-shape (cotización/WAN/VIN/…)
-- [x] CPT hijo `rodieja_pedido_item` + admin
-- [x] REST CRUD pedidos con permission_callback + seed
+- [x] Audatex-shaped order meta
+- [x] Child CPT rodieja_pedido_item + admin
+- [x] REST CRUD with permission_callback + seed
 
 ## Acceptance
 
-- Given pedido con ítems
-- When admin/REST autenticado
-- Expect CRUD cap-gated; anónimo denegado
+- Given an order with items
+- When admin/authenticated REST runs
+- Expect cap-gated CRUD; anonymous denied
 
 ## Agent notes (constraints / edge cases)
 
-Import INS live API queda fuera (epic 14 = import local).
-
-## Areas touched (unified WordPress tree)
-
-| Area | Touched? | Notes |
-|---|---|---|
-| Plugin Pedidos + REST | sí |  |
+Live Audatex API out of scope (epic 14 = local import).
 
 ## Board issues (= tickets)
 
-- APP-6-1 meta Audatex-shape
-- APP-6-2 CPT ítem
+- APP-6-1 Audatex meta
+- APP-6-2 item CPT
 - APP-6-3 REST CRUD
-
-Checklists and evidence live on the board issue files / living HTML — not duplicated here.
 
 ## How to verify
 
 - `edit.php?post_type=rodieja_pedido`
-- `REST pedidos 401 anon`
+- `REST orders 401 anon`
 
 ```bash
 node .linear/scripts/board.mjs progress --epic 6
-# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome
 
-Pedidos nativos LANDED.
+Native orders LANDED.

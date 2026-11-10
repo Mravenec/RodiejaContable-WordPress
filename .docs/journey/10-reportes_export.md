@@ -4,50 +4,41 @@
 
 ## Title
 
-Reportes nativos: CSV admin + wp_mail resúmenes
+Native reports: CSV admin + wp_mail digests
 
 ## Why
 
-Export operativos (vehículos/repuestos/tx) y resumen mensual por correo deben ser nativos (admin-post + nonce + caps).
+Operational exports (vehicles/parts/tx) and monthly email digests must be native (admin-post + nonce + caps).
 
 ## What we did
 
-- [x] Export CSV vía admin-post + nonce
-- [x] Resumen mensual `wp_mail` cap-gated
+- [x] CSV export via admin-post + nonce
+- [x] Monthly wp_mail digest cap-gated
 
 ## Acceptance
 
-- Given admin con caps
-- When exporta CSV o dispara resumen
-- Expect archivo/correo; sin cap → denegado
+- Given admin with caps
+- When exporting CSV or sending digest
+- Expect file/mail; without cap → denied
 
 ## Agent notes (constraints / edge cases)
 
-No cron externo; WP-Cron/`wp_mail` nativos.
-
-## Areas touched (unified WordPress tree)
-
-| Area | Touched? | Notes |
-|---|---|---|
-| Plugin Reportes | sí |  |
+No external cron; WP-Cron/wp_mail.
 
 ## Board issues (= tickets)
 
 - APP-10-1 CSV export
-- APP-10-2 wp_mail resumen
-
-Checklists and evidence live on the board issue files / living HTML — not duplicated here.
+- APP-10-2 wp_mail digest
 
 ## How to verify
 
-- `menú Reportes`
-- `admin-post con nonce`
+- `Reports menu`
+- `admin-post with nonce`
 
 ```bash
 node .linear/scripts/board.mjs progress --epic 10
-# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome
 
-Reportes/export LANDED.
+Reports/export LANDED.

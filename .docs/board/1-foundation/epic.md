@@ -1,4 +1,6 @@
-# Foundation: WP + plugin scaffold + roles
+# 1-foundation
+
+Foundation: WP + plugin scaffold + roles
 
 | Field | Value |
 |---|---|

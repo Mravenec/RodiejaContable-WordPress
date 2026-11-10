@@ -1,0 +1,7 @@
+{"at":"2026-11-10T07:40:13.824Z","type":"create","issueId":"APP-19-1","column":"backlog"}
+{"at":"2026-11-10T07:40:13.908Z","type":"create","issueId":"APP-19-2","column":"backlog"}
+{"at":"2026-11-10T07:40:13.996Z","type":"claim","issueId":"APP-19-1","agent":"orchestrator-1"}
+{"at":"2026-11-10T07:41:25.786Z","type":"checklist","issueId":"APP-19-1","item":"1"}
+{"at":"2026-11-10T07:41:25.867Z","type":"evidence","issueId":"APP-19-1","title":"english-journeys"}
+{"at":"2026-11-10T07:41:25.978Z","type":"move","issueId":"APP-19-1","from":"doing","to":"testing"}
+{"at":"2026-11-10T07:41:26.056Z","type":"checklist","issueId":"APP-19-1","item":"2"}

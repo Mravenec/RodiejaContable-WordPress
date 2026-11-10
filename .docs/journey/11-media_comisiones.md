@@ -4,50 +4,41 @@
 
 ## Title
 
-Media Library + pagos/comisiones meta en pedidos
+Media Library + payment/commission meta on orders
 
 ## Why
 
-Vehículos/repuestos necesitan media WP; pedidos necesitan meta de comisión/pago visible en admin.
+Vehicles/parts need WP media; orders need commission/payment meta visible in admin.
 
 ## What we did
 
-- [x] Featured image / gallery en vehículo y repuesto
-- [x] Meta comisión/pago en pedido + columnas admin
+- [x] Featured image/gallery on vehicle and part
+- [x] Commission/payment meta on order + admin columns
 
 ## Acceptance
 
-- Given un vehículo con imagen
-- When se edita en admin
-- Expect Media Library nativa; pedidos muestran comisión
+- Given a vehicle with image
+- When edited in admin
+- Expect Media Library; orders show commission
 
 ## Agent notes (constraints / edge cases)
 
-Usar Media Library core; no CDN custom.
-
-## Areas touched (unified WordPress tree)
-
-| Area | Touched? | Notes |
-|---|---|---|
-| Plugin media + meta pedidos | sí |  |
+Core Media Library; no custom CDN.
 
 ## Board issues (= tickets)
 
 - APP-11-1 featured/gallery
-- APP-11-2 comisión/pago meta
-
-Checklists and evidence live on the board issue files / living HTML — not duplicated here.
+- APP-11-2 commission meta
 
 ## How to verify
 
-- `editor vehículo media`
-- `lista pedidos columnas`
+- `vehicle editor media`
+- `order list columns`
 
 ```bash
 node .linear/scripts/board.mjs progress --epic 11
-# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome
 
-Media + comisiones LANDED.
+Media + commissions LANDED.

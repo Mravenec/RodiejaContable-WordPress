@@ -4,41 +4,33 @@
 
 ## Title
 
-Tools nativos: export/import WP + CSV dominio
+Native Tools: WP domain export/import + CSV
 
 ## Why
 
-Operaciones de backup/migración de dominio deben vivir en Tools admin (export JSON/CSV + import validado), no en utilidades Spring.
+Domain backup/migration must live in admin Tools (JSON/CSV export + validated import), not Spring utilities.
 
 ## What we did
 
 - [x] Tools submenu export all CPT JSON/CSV (nonce)
-- [x] Import JSON con validate + wp_insert_post
-- [x] Mapa DatabaseImportExport → Tools nativos
+- [x] JSON import with validate + wp_insert_post
+- [x] Map DatabaseImportExport → native Tools
 
 ## Acceptance
 
-- Given caps manage
-- When exporta e reimporta fixture
-- Expect posts recreados; sin nonce/cap → fail
+- Given manage caps
+- When exporting and re-importing a fixture
+- Expect recreated posts; without nonce/cap → fail
 
 ## Agent notes (constraints / edge cases)
 
-Nonce + caps obligatorios en cada POST.
-
-## Areas touched (unified WordPress tree)
-
-| Area | Touched? | Notes |
-|---|---|---|
-| Plugin ToolsAdminPage | sí |  |
+Nonce + caps required on every POST.
 
 ## Board issues (= tickets)
 
 - APP-16-1 export
 - APP-16-2 import
-- APP-16-3 map Spring tools
-
-Checklists and evidence live on the board issue files / living HTML — not duplicated here.
+- APP-16-3 Spring tools map
 
 ## How to verify
 
@@ -47,7 +39,6 @@ Checklists and evidence live on the board issue files / living HTML — not dupl
 
 ```bash
 node .linear/scripts/board.mjs progress --epic 16
-# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome

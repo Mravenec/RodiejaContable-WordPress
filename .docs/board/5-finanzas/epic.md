@@ -1,4 +1,6 @@
-# Finanzas: transacciones + dashboard WP_Query
+# 5-finanzas
+
+Finance: transactions + WP_Query dashboard
 
 | Field | Value |
 |---|---|

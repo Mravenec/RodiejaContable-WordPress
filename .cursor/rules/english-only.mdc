@@ -1,0 +1,12 @@
+---
+description: English-only for all agent surfaces and UI copy; human may speak Spanish
+alwaysApply: true
+---
+
+# English only
+
+Always English — chat, journeys, board, commits, plugin UI strings — even if the human writes Spanish.
+
+Translate Spanish/Spanglish when found. Do not edit Rodieja Contable Read-Only unless the human explicitly targets that repo.
+
+Canonical: `.ai/rules/english-only.md`

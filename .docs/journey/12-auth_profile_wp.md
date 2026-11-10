@@ -4,50 +4,40 @@
 
 ## Title
 
-Auth/Profile WP nativo: users, caps, profile meta
+Native Auth/Profile: users, caps, profile meta
 
 ## Why
 
-Identidad = usuarios WP. Empleado de dominio debe enlazarse al user y la matriz contador vs admin debe verificarse.
+Identity = WP users. Domain employees link to users; contador vs admin matrix must be verified.
 
 ## What we did
 
-- [x] Profile fields + link empleado↔user_id
-- [x] Matriz roles/caps contador vs admin verificada
+- [x] Profile fields + employee↔user_id link
+- [x] Contador vs admin roles/caps matrix verified
 
 ## Acceptance
 
-- Given usuario contador
-- Expect acceso acotado vs administrador Rodieja
+- Given contador user
+- Expect scoped access vs Rodieja administrator
 
 ## Agent notes (constraints / edge cases)
 
-No auth framework externo; users + caps WP.
-
-## Areas touched (unified WordPress tree)
-
-| Area | Touched? | Notes |
-|---|---|---|
-| Plugin profile | sí |  |
-| Security roles | sí |  |
+No external auth framework.
 
 ## Board issues (= tickets)
 
 - APP-12-1 profile + link
 - APP-12-2 caps matrix
 
-Checklists and evidence live on the board issue files / living HTML — not duplicated here.
-
 ## How to verify
 
-- `perfil WP`
-- `prueba caps contador vs admin`
+- `WP profile`
+- `contador vs admin caps`
 
 ```bash
 node .linear/scripts/board.mjs progress --epic 12
-# expect 100% (all issues in summarize, checklists complete)
 ```
 
 ## Outcome
 
-Auth/profile nativo LANDED.
+Native auth/profile LANDED.
