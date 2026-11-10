@@ -1,1 +1,6 @@
 {"at":"2026-11-10T16:15:45.328Z","type":"create","issueId":"APP-33-1","column":"backlog"}
+{"at":"2026-11-10T16:19:58.693Z","type":"claim","issueId":"APP-33-1","agent":"plugin-agent-1"}
+{"at":"2026-11-10T16:20:33.984Z","type":"checklist","issueId":"APP-33-1","item":"1"}
+{"at":"2026-11-10T16:20:34.095Z","type":"evidence","issueId":"APP-33-1","title":"work"}
+{"at":"2026-11-10T16:20:34.357Z","type":"move","issueId":"APP-33-1","from":"doing","to":"testing"}
+{"at":"2026-11-10T16:20:34.441Z","type":"checklist","issueId":"APP-33-1","item":"2"}

@@ -6,8 +6,8 @@ epic: 33
 estimate: 1
 blocked_by: []
 blocks: []
-agent: null
-claimed_at: null
+agent: plugin-agent-1
+claimed_at: "2026-11-10T16:19:58.691Z"
 ---
 ## Objetivo
 
@@ -17,13 +17,23 @@ Geo: province→canton JS cascade; Employee email/phone/role meta box
 
 Mark in order, one `checklist <id> n` command per item, immediately after that step is finished.
 
-- [ ] Implement
-- [ ] Verify locally (in testing — after `move testing`)
+- [x] Implement
+- [x] Verify locally (in testing — after `move testing`)
 
 ## Evidence
 
 Layer artifacts for the living HTML (code, commands, results). Compact windows — not the whole file. After each checklist item: `evidence <id> --title …`.
 
+### work
+
+```php
+APP-33-1: Geo province→canton JS cascade + Employee contact meta box
+```
+
 ## History
 
+- 2026-11-10T16:20:34.440Z checklist item 2 marked
+- 2026-11-10T16:20:34.355Z moved doing → testing
+- 2026-11-10T16:20:33.983Z checklist item 1 marked
+- 2026-11-10T16:19:58.692Z claimed by plugin-agent-1 → doing
 - 2026-11-10T16:15:45.327Z created → backlog
