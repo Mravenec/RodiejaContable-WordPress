@@ -1,0 +1,13 @@
+{
+  "status": "landed",
+  "started_at": "2026-11-10T16:27:45.294Z",
+  "finished_at": "2026-11-10T16:27:53.839Z",
+  "merge_commit": "bffe9829ec37a37eadfa5a43503e359e6cb5202f",
+  "conflicts": [],
+  "smoke_ok": true,
+  "smoke_at": "2026-11-10T16:27:51.594Z",
+  "git": "git push origin main",
+  "note": "Supervisor land note — Epic 33 geo-employee-cascade\n\nMerged province→canton JS cascade and Employee contact meta onto main. Read-Only untouched.\n\nYou can confirm it doing the following:\n1. Open a Location CPT edit screen — changing Province must refresh Canton options.\n2. Open an Employee CPT — email, phone, and position fields save with the WP user link.\n3. Layer audit on main is green; anonymous protected REST stays 401/403.",
+  "recorded_at": "2026-11-10T16:27:51.662Z",
+  "pushed_at": "2026-11-10T16:27:53.839Z"
+}

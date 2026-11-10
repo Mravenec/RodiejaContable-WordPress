@@ -1,6 +1,6 @@
 # Epic 33 — geo-employee-cascade
 
-**Status:** Planned · Board: `.linear/epics/33-geo-employee-cascade/`
+**Status:** Landed on main · Board: `.linear/epics/33-geo-employee-cascade/`
 
 ## Title
 
@@ -61,3 +61,21 @@ node .linear/scripts/board.mjs progress --epic 33
 ## Outcome
 
 (Filled when epic reaches 100%.)
+
+
+## Land on main
+
+- Merge commit: `bffe9829ec37a37eadfa5a43503e359e6cb5202f`
+- Branch: `feature/33-geo-employee-cascade` → `main`
+
+### Supervisor / Manager (land)
+
+Supervisor land note — Epic 33 geo-employee-cascade
+
+Merged province→canton JS cascade and Employee contact meta onto main. Read-Only untouched.
+
+You can confirm it doing the following:
+1. Open a Location CPT edit screen — changing Province must refresh Canton options.
+2. Open an Employee CPT — email, phone, and position fields save with the WP user link.
+3. Layer audit on main is green; anonymous protected REST stays 401/403.
+
