@@ -11,6 +11,7 @@ blocked_by:
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T07:41:29.787Z"
+summary_html: summaries/19-english-only-surfaces-beginner.html
 ---
 ## Objetivo
 
@@ -35,6 +36,8 @@ __('Vehicles') / __('View by Generations')
 
 ## History
 
+- 2026-11-10T07:43:55.061Z epic summary HTML → summaries/19-english-only-surfaces-beginner.html
+- 2026-11-10T07:43:55.052Z moved done → summarize
 - 2026-11-10T07:42:40.820Z moved testing → done
 - 2026-11-10T07:42:40.452Z checklist item 2 marked
 - 2026-11-10T07:42:40.369Z moved doing → testing

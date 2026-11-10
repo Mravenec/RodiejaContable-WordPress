@@ -14,6 +14,13 @@
           "ms": 72440,
           "close": "done",
           "agent": "orchestrator-1"
+        },
+        {
+          "start": "2026-11-10T07:43:54.982Z",
+          "end": "2026-11-10T07:43:54.982Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": "orchestrator-1"
         }
       ]
     },
@@ -28,15 +35,30 @@
           "ms": 71033,
           "close": "done",
           "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T07:43:55.054Z",
+          "end": "2026-11-10T07:43:55.054Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": "plugin-agent-1"
         }
       ]
     }
   },
   "land": {
-    "started_at": null,
-    "finished_at": null,
+    "started_at": "2026-11-10T07:44:21.510Z",
+    "finished_at": "2026-11-10T07:44:26.054Z",
     "paused": false,
     "open": null,
-    "segments": []
+    "segments": [
+      {
+        "start": "2026-11-10T07:44:21.510Z",
+        "end": "2026-11-10T07:44:26.054Z",
+        "ms": 4544,
+        "close": "land-finish",
+        "agent": "land-agent"
+      }
+    ]
   }
 }

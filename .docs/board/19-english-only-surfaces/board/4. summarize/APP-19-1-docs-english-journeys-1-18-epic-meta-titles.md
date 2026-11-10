@@ -9,6 +9,7 @@ blocked_by: []
 blocks: []
 agent: orchestrator-1
 claimed_at: "2026-11-10T07:40:13.994Z"
+summary_html: summaries/19-english-only-surfaces-beginner.html
 ---
 ## Objetivo
 
@@ -33,6 +34,8 @@ Status: Done · Title: Admin UI: maximum visual fidelity...
 
 ## History
 
+- 2026-11-10T07:43:54.989Z epic summary HTML → summaries/19-english-only-surfaces-beginner.html
+- 2026-11-10T07:43:54.981Z moved done → summarize
 - 2026-11-10T07:41:26.434Z moved testing → done
 - 2026-11-10T07:41:26.055Z checklist item 2 marked
 - 2026-11-10T07:41:25.977Z moved doing → testing

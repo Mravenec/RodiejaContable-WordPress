@@ -1,0 +1,13 @@
+{
+  "status": "landed",
+  "started_at": "2026-11-10T07:44:21.503Z",
+  "finished_at": "2026-11-10T07:44:26.054Z",
+  "merge_commit": "82cd06c77844edf9061ca7ba92e3bef90b2d846c",
+  "conflicts": [],
+  "smoke_ok": true,
+  "smoke_at": "2026-11-10T07:44:22.567Z",
+  "git": "git push origin main",
+  "note": "Epic 19 landed: English-only journeys, board titles, plugin admin UI. Read-Only not modified.",
+  "recorded_at": "2026-11-10T07:44:22.633Z",
+  "pushed_at": "2026-11-10T07:44:26.054Z"
+}

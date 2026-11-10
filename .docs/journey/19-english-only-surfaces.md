@@ -1,6 +1,6 @@
 # Epic 19 — english-only-surfaces
 
-**Status:** Done · LANDED on `origin/main` · Board: `.linear/epics/19-english-only-surfaces/` · Snapshot: `.docs/board/19-english-only-surfaces/`
+**Status:** Landed on main · Board: `.linear/epics/19-english-only-surfaces/`
 
 ## Title
 
@@ -41,3 +41,14 @@ CPT/meta keys may stay Spanish-derived; labels English. Never edit Read-Only.
 ## Outcome
 
 English-only surfaces shipped on origin/main. Harness and Rodieja share the english-only rule/skill/spec.
+
+
+## Land on main
+
+- Merge commit: `82cd06c77844edf9061ca7ba92e3bef90b2d846c`
+- Branch: `feature/19-english-only-surfaces` → `main`
+
+### Supervisor / Manager (land)
+
+Epic 19 landed: English-only journeys, board titles, plugin admin UI. Read-Only not modified.
+

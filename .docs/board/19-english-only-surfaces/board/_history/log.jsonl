@@ -12,3 +12,5 @@
 {"at":"2026-11-10T07:42:40.371Z","type":"move","issueId":"APP-19-2","from":"doing","to":"testing"}
 {"at":"2026-11-10T07:42:40.452Z","type":"checklist","issueId":"APP-19-2","item":"2"}
 {"at":"2026-11-10T07:42:40.822Z","type":"move","issueId":"APP-19-2","from":"testing","to":"done"}
+{"at":"2026-11-10T07:43:54.989Z","type":"move","issueId":"APP-19-1","from":"done","to":"summarize","summary_html":"summaries/19-english-only-surfaces-beginner.html"}
+{"at":"2026-11-10T07:43:55.061Z","type":"move","issueId":"APP-19-2","from":"done","to":"summarize","summary_html":"summaries/19-english-only-surfaces-beginner.html"}

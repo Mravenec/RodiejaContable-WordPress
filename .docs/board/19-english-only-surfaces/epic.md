@@ -5,7 +5,7 @@
 | Id | 19 |
 | Slug | english-only-surfaces |
 | Status | in_progress |
-| Progress | **83%** (0/2 in summarize · column + checklist) |
+| Progress | **100%** (2/2 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,10 +35,10 @@ _empty_
 
 ### 3. done
 
-- `APP-19-1` Docs · English journeys 1–18 + epic meta titles _(role:orchestrator)_
-- `APP-19-2` Plugin · translate admin __() UI strings to English _(role:plugin)_
+_empty_
 
 ### 4. summarize
 
-_empty_
+- `APP-19-1` Docs · English journeys 1–18 + epic meta titles _(role:orchestrator)_
+- `APP-19-2` Plugin · translate admin __() UI strings to English _(role:plugin)_
 
