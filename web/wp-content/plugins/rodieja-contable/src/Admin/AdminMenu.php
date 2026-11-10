@@ -331,19 +331,41 @@ final class AdminMenu {
 			array( __( 'Reports', 'rodieja-contable' ), __( 'CSV and digests', 'rodieja-contable' ), 'dashicons-chart-bar', admin_url( 'admin.php?page=' . ReportesAdminPage::SLUG ) ),
 			array( __( 'Settings', 'rodieja-contable' ), __( 'Profile and settings', 'rodieja-contable' ), 'dashicons-admin-generic', admin_url( 'admin.php?page=rodieja-settings' ) ),
 		);
+		$veh_n = (int) ( $counts['rodieja_vehiculo'] ?? 0 );
+		$ord_n = (int) ( $counts['rodieja_pedido'] ?? 0 );
 		?>
 		<div class="wrap rodieja-admin-wrap">
 			<div class="rodieja-hero">
-				<p class="rodieja-hero__eyebrow"><?php echo $this->escaper->html( __( 'Rodieja Contable', 'rodieja-contable' ) ); ?></p>
-				<h1><?php echo $this->escaper->html( $org ); ?></h1>
-				<p><?php echo $this->escaper->html( __( 'Home — same module map as Rodieja Contable Read-Only, on native WordPress.', 'rodieja-contable' ) ); ?></p>
+				<div class="rodieja-hero__copy">
+					<p class="rodieja-hero__eyebrow"><?php echo $this->escaper->html( __( 'Rodieja Contable', 'rodieja-contable' ) ); ?></p>
+					<h1><?php echo $this->escaper->html( $org ); ?></h1>
+					<p><?php echo $this->escaper->html( __( 'Native WordPress operations console — same module map as Read-Only, Figma-grade shells without a SPA.', 'rodieja-contable' ) ); ?></p>
+				</div>
+				<div class="rodieja-hero__aside" aria-hidden="true">
+					<div class="rodieja-hero-chip">
+						<span class="rodieja-hero-chip__label"><?php echo $this->escaper->html( __( 'Vehicles', 'rodieja-contable' ) ); ?></span>
+						<span class="rodieja-hero-chip__value"><?php echo $this->escaper->html( (string) $veh_n ); ?></span>
+					</div>
+					<div class="rodieja-hero-chip">
+						<span class="rodieja-hero-chip__label"><?php echo $this->escaper->html( __( 'Orders', 'rodieja-contable' ) ); ?></span>
+						<span class="rodieja-hero-chip__value"><?php echo $this->escaper->html( (string) $ord_n ); ?></span>
+					</div>
+					<div class="rodieja-hero-chip">
+						<span class="rodieja-hero-chip__label"><?php echo $this->escaper->html( __( 'Month balance', 'rodieja-contable' ) ); ?></span>
+						<span class="rodieja-hero-chip__value"><?php echo $this->escaper->html( number_format_i18n( (float) $snap['finance_month']['balance'], 0 ) ); ?></span>
+					</div>
+					<div class="rodieja-hero-chip">
+						<span class="rodieja-hero-chip__label"><?php echo $this->escaper->html( __( 'Est. margin', 'rodieja-contable' ) ); ?></span>
+						<span class="rodieja-hero-chip__value"><?php echo $this->escaper->html( number_format_i18n( (float) $snap['profitability']['margen_bruto'], 0 ) ); ?></span>
+					</div>
+				</div>
 			</div>
 
 			<h2 class="rodieja-section-title"><?php echo $this->escaper->html( __( 'Indicators', 'rodieja-contable' ) ); ?></h2>
 			<div class="rodieja-metrics" role="group" aria-label="<?php echo $this->escaper->attr( __( 'Indicators', 'rodieja-contable' ) ); ?>">
 				<div class="rodieja-metric rodieja-metric--accent">
 					<span class="rodieja-metric__label"><?php echo $this->escaper->html( __( 'Vehicles', 'rodieja-contable' ) ); ?></span>
-					<span class="rodieja-metric__value"><?php echo $this->escaper->html( (string) ( $counts['rodieja_vehiculo'] ?? 0 ) ); ?></span>
+					<span class="rodieja-metric__value"><?php echo $this->escaper->html( (string) $veh_n ); ?></span>
 				</div>
 				<div class="rodieja-metric">
 					<span class="rodieja-metric__label"><?php echo $this->escaper->html( __( 'Parts', 'rodieja-contable' ) ); ?></span>
@@ -351,7 +373,7 @@ final class AdminMenu {
 				</div>
 				<div class="rodieja-metric">
 					<span class="rodieja-metric__label"><?php echo $this->escaper->html( __( 'Orders', 'rodieja-contable' ) ); ?></span>
-					<span class="rodieja-metric__value"><?php echo $this->escaper->html( (string) ( $counts['rodieja_pedido'] ?? 0 ) ); ?></span>
+					<span class="rodieja-metric__value"><?php echo $this->escaper->html( (string) $ord_n ); ?></span>
 				</div>
 				<div class="rodieja-metric rodieja-metric--ok">
 					<span class="rodieja-metric__label"><?php echo $this->escaper->html( __( 'Month balance', 'rodieja-contable' ) ); ?></span>
@@ -395,27 +417,38 @@ final class AdminMenu {
 		);
 		?>
 		<div class="wrap rodieja-admin-wrap">
-			<div class="rodieja-page-head">
-				<h1><?php echo $this->escaper->html( __( 'Settings', 'rodieja-contable' ) ); ?></h1>
-				<p class="rodieja-admin-lede"><?php echo $this->escaper->html( __( 'Native settings (Options API) — equivalent to Read-Only Configuration.', 'rodieja-contable' ) ); ?></p>
+			<div class="rodieja-page-header">
+				<div class="rodieja-page-header__main">
+					<p class="rodieja-page-header__crumbs">
+						<a href="<?php echo $this->escaper->url( admin_url( 'admin.php?page=' . self::SLUG_INICIO ) ); ?>"><?php echo $this->escaper->html( __( 'Home', 'rodieja-contable' ) ); ?></a>
+						· <?php echo $this->escaper->html( __( 'Settings', 'rodieja-contable' ) ); ?>
+					</p>
+					<h1><?php echo $this->escaper->html( __( 'Settings', 'rodieja-contable' ) ); ?></h1>
+					<p class="rodieja-page-header__lede"><?php echo $this->escaper->html( __( 'Native Options API — Read-Only Configuration parity, Figma-grade shell.', 'rodieja-contable' ) ); ?></p>
+				</div>
 			</div>
-			<form method="post" action="options.php" class="rodieja-admin-card">
-				<?php settings_fields( 'rodieja_contable_settings' ); ?>
-				<table class="form-table" role="presentation">
-					<tr>
-						<th scope="row"><label for="rodieja_contable_org_name"><?php echo $this->escaper->html( __( 'Organization name', 'rodieja-contable' ) ); ?></label></th>
-						<td><input type="text" class="regular-text" id="rodieja_contable_org_name" name="rodieja_contable_org_name" value="<?php echo $this->escaper->attr( (string) $org ); ?>" /></td>
-					</tr>
-				</table>
-				<?php submit_button(); ?>
-			</form>
-			<div class="rodieja-admin-card">
-				<h2 class="title"><?php echo $this->escaper->html( __( 'More options', 'rodieja-contable' ) ); ?></h2>
-				<ul class="rodieja-link-list">
-					<?php foreach ( $links as $link ) : ?>
-						<li><a href="<?php echo $this->escaper->url( $link[1] ); ?>"><?php echo $this->escaper->html( $link[0] ); ?></a></li>
-					<?php endforeach; ?>
-				</ul>
+			<div class="rodieja-shell-grid">
+				<form method="post" action="options.php" class="rodieja-shell-panel">
+					<h2 class="rodieja-shell-panel__title"><?php echo $this->escaper->html( __( 'Organization', 'rodieja-contable' ) ); ?></h2>
+					<p class="rodieja-shell-panel__hint"><?php echo $this->escaper->html( __( 'Shown on Home and login branding.', 'rodieja-contable' ) ); ?></p>
+					<?php settings_fields( 'rodieja_contable_settings' ); ?>
+					<table class="form-table" role="presentation">
+						<tr>
+							<th scope="row"><label for="rodieja_contable_org_name"><?php echo $this->escaper->html( __( 'Organization name', 'rodieja-contable' ) ); ?></label></th>
+							<td><input type="text" class="regular-text" id="rodieja_contable_org_name" name="rodieja_contable_org_name" value="<?php echo $this->escaper->attr( (string) $org ); ?>" /></td>
+						</tr>
+					</table>
+					<?php submit_button( __( 'Save changes', 'rodieja-contable' ) ); ?>
+				</form>
+				<div class="rodieja-shell-panel">
+					<h2 class="rodieja-shell-panel__title"><?php echo $this->escaper->html( __( 'More options', 'rodieja-contable' ) ); ?></h2>
+					<p class="rodieja-shell-panel__hint"><?php echo $this->escaper->html( __( 'Integrations, geo, tools, and roles.', 'rodieja-contable' ) ); ?></p>
+					<ul class="rodieja-link-list">
+						<?php foreach ( $links as $link ) : ?>
+							<li><a href="<?php echo $this->escaper->url( $link[1] ); ?>"><?php echo $this->escaper->html( $link[0] ); ?></a></li>
+						<?php endforeach; ?>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<?php

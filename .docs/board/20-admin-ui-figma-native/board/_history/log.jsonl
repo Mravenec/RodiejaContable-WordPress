@@ -5,3 +5,9 @@
 {"at":"2026-11-10T07:49:48.577Z","type":"evidence","issueId":"APP-20-1","title":"shell-css"}
 {"at":"2026-11-10T07:49:48.689Z","type":"move","issueId":"APP-20-1","from":"doing","to":"testing"}
 {"at":"2026-11-10T07:49:48.768Z","type":"checklist","issueId":"APP-20-1","item":"2"}
+{"at":"2026-11-10T07:49:49.101Z","type":"move","issueId":"APP-20-1","from":"testing","to":"done"}
+{"at":"2026-11-10T07:49:51.630Z","type":"claim","issueId":"APP-20-2","agent":"plugin-agent-1"}
+{"at":"2026-11-10T07:51:03.440Z","type":"checklist","issueId":"APP-20-2","item":"1"}
+{"at":"2026-11-10T07:51:03.520Z","type":"evidence","issueId":"APP-20-2","title":"shells"}
+{"at":"2026-11-10T07:51:03.637Z","type":"move","issueId":"APP-20-2","from":"doing","to":"testing"}
+{"at":"2026-11-10T07:51:03.711Z","type":"checklist","issueId":"APP-20-2","item":"2"}
