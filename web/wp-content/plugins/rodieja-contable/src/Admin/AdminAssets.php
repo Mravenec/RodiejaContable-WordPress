@@ -23,7 +23,24 @@ final class AdminAssets {
 		if ( current_user_can( CapabilityGate::MANAGE ) || current_user_can( 'manage_options' ) || $this->is_rodieja_screen() ) {
 			$classes .= ' rodieja-contable-admin';
 		}
+		if ( $this->is_rodieja_list_screen() ) {
+			$classes .= ' rodieja-cpt-list';
+		}
 		return $classes;
+	}
+
+	/**
+	 * CPT list screens (edit.php) for Ant Table–like chrome.
+	 */
+	private function is_rodieja_list_screen(): bool {
+		$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+		if ( ! ( $screen instanceof \WP_Screen ) ) {
+			return false;
+		}
+		if ( 'edit' !== $screen->base ) {
+			return false;
+		}
+		return is_string( $screen->post_type ) && str_starts_with( $screen->post_type, 'rodieja_' );
 	}
 
 	public function enqueue_admin( string $hook ): void {

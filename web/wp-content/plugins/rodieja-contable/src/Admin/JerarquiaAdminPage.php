@@ -33,11 +33,18 @@ final class JerarquiaAdminPage {
 		}
 
 		$tree = $this->hierarchy->tree();
+		$marca_n = count( $tree );
 		?>
 		<div class="wrap rodieja-admin-wrap">
 			<div class="rodieja-page-head">
 				<h1><?php echo $this->escaper->html( __( 'Ver por Generaciones', 'rodieja-contable' ) ); ?></h1>
-				<p class="rodieja-admin-lede"><?php echo $this->escaper->html( __( 'Jerarquía nativa Marca → Modelo → Generación → Vehículo (como Rodieja Contable Read-Only).', 'rodieja-contable' ) ); ?></p>
+				<p class="rodieja-admin-lede"><?php echo $this->escaper->html( __( 'Árbol Marca → Modelo → Generación → Vehículo — misma vista que Rodieja Contable Read-Only, con CPT y meta nativos.', 'rodieja-contable' ) ); ?></p>
+			</div>
+
+			<div class="rodieja-toolbar">
+				<strong><?php echo $this->escaper->html( sprintf( /* translators: %d brand count */ _n( '%d marca', '%d marcas', $marca_n, 'rodieja-contable' ), $marca_n ) ); ?></strong>
+				<p class="rodieja-toolbar__hint"><?php echo $this->escaper->html( __( 'Expande cada nivel · Editar abre el CPT correspondiente', 'rodieja-contable' ) ); ?></p>
+				<a class="button button-primary" href="<?php echo $this->escaper->url( admin_url( 'edit.php?post_type=rodieja_vehiculo' ) ); ?>"><?php echo $this->escaper->html( __( 'Lista de Vehículos', 'rodieja-contable' ) ); ?></a>
 			</div>
 
 			<?php if ( empty( $tree ) ) : ?>
@@ -45,7 +52,7 @@ final class JerarquiaAdminPage {
 					<p><?php echo $this->escaper->html( __( 'No hay marcas aún. Crea Marcas, Modelos, Generaciones y Vehículos en el menú Vehículos.', 'rodieja-contable' ) ); ?></p>
 				</div>
 			<?php else : ?>
-				<div class="rodieja-hierarchy">
+				<div class="rodieja-hierarchy" role="tree" aria-label="<?php echo $this->escaper->attr( __( 'Jerarquía de vehículos', 'rodieja-contable' ) ); ?>">
 					<?php foreach ( $tree as $marca ) : ?>
 						<details class="rodieja-hierarchy__marca" open>
 							<summary>
