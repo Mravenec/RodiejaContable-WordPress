@@ -56,6 +56,13 @@
           "ms": 28818,
           "close": "done",
           "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T08:09:11.835Z",
+          "end": "2026-11-10T08:09:11.835Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": "plugin-agent-1"
         }
       ]
     }

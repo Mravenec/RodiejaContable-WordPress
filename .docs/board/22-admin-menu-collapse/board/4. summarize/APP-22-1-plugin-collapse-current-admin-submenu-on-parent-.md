@@ -10,6 +10,7 @@ blocked_by: []
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T08:06:45.862Z"
+summary_html: summaries/22-admin-menu-collapse-beginner.html
 ---
 ## Objetivo
 
@@ -34,6 +35,8 @@ toggle rodieja-submenu-collapsed on current menu-top click
 
 ## History
 
+- 2026-11-10T08:09:11.953Z epic summary HTML → summaries/22-admin-menu-collapse-beginner.html
+- 2026-11-10T08:09:11.944Z moved done → summarize
 - 2026-11-10T08:07:00.910Z moved testing → done
 - 2026-11-10T08:07:00.568Z checklist item 2 marked
 - 2026-11-10T08:07:00.492Z moved doing → testing

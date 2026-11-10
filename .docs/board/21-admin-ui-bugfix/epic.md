@@ -5,7 +5,7 @@
 | Id | 21 |
 | Slug | admin-ui-bugfix |
 | Status | completed |
-| Progress | **94%** (2/3 in summarize · column + checklist) |
+| Progress | **100%** (3/3 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,10 +35,11 @@ _empty_
 
 ### 3. done
 
-- `APP-21-3` plugin: Fix sticky admin submenu flyouts (all modules) _(role:plugin)_
+_empty_
 
 ### 4. summarize
 
 - `APP-21-1` plugin: English leftovers (Add Transaction, My Profile, New province) _(role:plugin)_
 - `APP-21-2` plugin: Transactions list columns + tablenav bulk/filter polish _(role:plugin)_
+- `APP-21-3` plugin: Fix sticky admin submenu flyouts (all modules) _(role:plugin)_
 

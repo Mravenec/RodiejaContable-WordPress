@@ -10,6 +10,7 @@ blocked_by: []
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T08:00:53.124Z"
+summary_html: summaries/21-admin-ui-bugfix-beginner.html
 ---
 ## Objetivo
 
@@ -34,6 +35,8 @@ remove left:160px; current submenu left:auto inline
 
 ## History
 
+- 2026-11-10T08:09:11.842Z epic summary HTML → summaries/21-admin-ui-bugfix-beginner.html
+- 2026-11-10T08:09:11.833Z moved done → summarize
 - 2026-11-10T08:01:21.944Z moved testing → done
 - 2026-11-10T08:01:21.603Z checklist item 2 marked
 - 2026-11-10T08:01:21.525Z moved doing → testing

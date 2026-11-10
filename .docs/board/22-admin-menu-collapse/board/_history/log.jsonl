@@ -5,3 +5,4 @@
 {"at":"2026-11-10T08:07:00.493Z","type":"move","issueId":"APP-22-1","from":"doing","to":"testing"}
 {"at":"2026-11-10T08:07:00.569Z","type":"checklist","issueId":"APP-22-1","item":"2"}
 {"at":"2026-11-10T08:07:00.911Z","type":"move","issueId":"APP-22-1","from":"testing","to":"done"}
+{"at":"2026-11-10T08:09:11.954Z","type":"move","issueId":"APP-22-1","from":"done","to":"summarize","summary_html":"summaries/22-admin-menu-collapse-beginner.html"}

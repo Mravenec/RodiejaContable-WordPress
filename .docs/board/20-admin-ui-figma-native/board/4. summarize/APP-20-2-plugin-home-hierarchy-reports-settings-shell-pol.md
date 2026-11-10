@@ -11,6 +11,7 @@ blocked_by:
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T07:49:51.628Z"
+summary_html: summaries/20-admin-ui-figma-native-beginner.html
 ---
 ## Objetivo
 
@@ -35,6 +36,8 @@ rodieja-page-header + hero chips + shell-grid
 
 ## History
 
+- 2026-11-10T08:09:11.510Z epic summary HTML → summaries/20-admin-ui-figma-native-beginner.html
+- 2026-11-10T08:09:11.492Z moved done → summarize
 - 2026-11-10T07:51:04.046Z moved testing → done
 - 2026-11-10T07:51:03.711Z checklist item 2 marked
 - 2026-11-10T07:51:03.636Z moved doing → testing

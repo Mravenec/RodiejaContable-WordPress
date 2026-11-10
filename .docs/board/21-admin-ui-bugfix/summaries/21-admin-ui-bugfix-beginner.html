@@ -138,11 +138,11 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
     <span class="badge">Epic 21</span>
     <span class="badge">21-admin-ui-bugfix</span>
     <span class="badge">MariaDB · WordPress (unified) · Custom Plugins</span>
-    <span class="badge">living summary</span>
+    <span class="badge">summarize · handoff recorded</span>
   </div>
   <h1>Admin UI bugfix: English labels + Transactions list</h1>
   <p>This page is a study guide for the epic. Tickets must show <strong>this work’s</strong> compact code, commands, and results — not the same glossary copied from every other summary. Dark windows are artifacts to study.</p>
-  <p class="small" style="opacity:.85;">Slug <code>admin-ui-bugfix</code> · 2/3 in summarize · Generated 2026-11-10T08:01:21.950Z · active work <strong>1m 5s</strong> (elapsed 3m 10s)</p>
+  <p class="small" style="opacity:.85;">Slug <code>admin-ui-bugfix</code> · 3/3 in summarize · Generated 2026-11-10T08:09:11.838Z · active work <strong>1m 5s</strong> (elapsed 11m)</p>
 </header>
 
 <div class="card ok" id="time">
@@ -151,7 +151,7 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
   <ul>
     <li>Active (calendar of working windows): <strong>1m 5s</strong></li>
     <li>Agent effort (sum of tickets): <strong>1m 5s</strong></li>
-    <li>Elapsed wall (first work → last event): <strong>3m 10s</strong></li>
+    <li>Elapsed wall (first work → last event): <strong>11m</strong></li>
   </ul>
   <p class="small">Started 2026-11-10T07:58:11.012Z · idle gap 3 min</p>
 </div>
@@ -178,9 +178,9 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
     <a href="#time">Active time</a>
     <a href="#log">Epic work log</a>
     <a href="#tickets">Tickets (sections)</a>
-    <a href="#APP-21-3">APP-21-3 — plugin: Fix sticky admin submenu flyouts (all modules) <span class="small">(done)</span></a>
-<a href="#APP-21-1">APP-21-1 — plugin: English leftovers (Add Transaction, My Profile, New province) <span class="small">(summarize)</span></a>
+    <a href="#APP-21-1">APP-21-1 — plugin: English leftovers (Add Transaction, My Profile, New province) <span class="small">(summarize)</span></a>
 <a href="#APP-21-2">APP-21-2 — plugin: Transactions list columns + tablenav bulk/filter polish <span class="small">(summarize)</span></a>
+<a href="#APP-21-3">APP-21-3 — plugin: Fix sticky admin submenu flyouts (all modules) <span class="small">(summarize)</span></a>
     <a href="#handoff">Git command + Supervisor / Manager</a>
     <a href="#faq">FAQ for beginners</a>
     <a href="#file">Where this file lives</a>
@@ -255,68 +255,6 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 
 <h2 id="tickets">Tickets (sections)</h2>
 <p class="small">Every ticket in this epic — not only those already in <code>summarize</code>.</p>
-
-<section class="ticket" id="APP-21-3">
-  <h2>APP-21-3 — plugin: Fix sticky admin submenu flyouts (all modules)</h2>
-  <p><span class="pill" style="background:var(--copper600)">column:done</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span> · agent <code>plugin-agent-1</code> · active <strong>28s</strong></p>
-  <p class="small">Work folder (required after claim): <code>.worktrees/21-admin-ui-bugfix/APP-21-3</code> · ticket branch <code>ticket/21-admin-ui-bugfix/APP-21-3</code> · ships on <code>feature/21-admin-ui-bugfix</code> after integrate (one push).</p>
-
-  <h3>Goal</h3>
-  <div class="card ok">
-    <p>plugin: Fix sticky admin submenu flyouts (all modules)</p>
-    <p class="small">Checklist progress: <strong>2/2</strong>.</p>
-  </div>
-
-  <h3>Role</h3>
-  <div class="card note">
-    <p>Owns web/wp-content/plugins/&lt;module&gt;/.</p>
-  </div>
-
-  <h3>Checklist</h3>
-  <div class="card">
-    <ul class="checklist">
-<li class=""><strong>Step 1.</strong> Implement</li>
-<li class=""><strong>Step 2.</strong> Verify locally (in testing — after `move testing`)</li>
-    </ul>
-  </div>
-
-  <h3>What was built (this ticket)</h3>
-  <div class="card ok beginner">
-  <p class="small">Windows this role should include:</p><ul><li>Contract</li>
-<li>Repository ($wpdb)</li>
-<li>Service</li>
-<li>REST/Admin controller</li>
-<li>DI provider</li>
-<li>HTTP result</li></ul>
-  <p>Layer artifacts for the living HTML (code, commands, results). Compact windows — not the whole file. After each checklist item: `evidence &lt;id&gt; --title …`.</p>
-<p>### submenu-css</p>
-<span class="filepath">css</span><pre><code>remove left:160px; current submenu left:auto inline</code></pre>
-</div>
-
-  <h3>Board history</h3>
-  <div class="card">
-    <p class="small">Forward moves, checklist marks, and returns (for example testing → doing when verification fails) all stay here. This is not a substitute for the code windows above.</p>
-    <ul>
-<li class=""><code>2026-11-10T08:01:21.944Z moved testing → done</code></li>
-<li class=""><code>2026-11-10T08:01:21.603Z checklist item 2 marked</code></li>
-<li class=""><code>2026-11-10T08:01:21.525Z moved doing → testing</code></li>
-<li class=""><code>2026-11-10T08:01:21.266Z checklist item 1 marked</code></li>
-<li class=""><code>2026-11-10T08:00:53.125Z claimed by plugin-agent-1 → doing</code></li>
-<li class=""><code>2026-11-10T08:00:47.944Z created → backlog</code></li>
-    </ul>
-  </div>
-
-  <h3>How you can verify this ticket</h3>
-  <div class="card step">
-    <ul>
-<li>Contracts → Repository → Service → Controller order inside the plugin.</li>
-<li>health 200; protected routes 401 anonymous; authenticated 2xx.</li>
-    </ul>
-    <span class="filepath">copy-paste</span><pre><code>ddev wp plugin activate harness-plugin</code></pre>
-<span class="filepath">copy-paste</span><pre><code>curl -sk https://harness-wp.ddev.site/wp-json/harness/v1/health</code></pre>
-<span class="filepath">copy-paste</span><pre><code>ddev composer install</code></pre>
-  </div>
-</section>
 
 <section class="ticket" id="APP-21-1">
   <h2>APP-21-1 — plugin: English leftovers (Add Transaction, My Profile, New province)</h2>
@@ -446,6 +384,69 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
   </div>
 </section>
 
+<section class="ticket" id="APP-21-3">
+  <h2>APP-21-3 — plugin: Fix sticky admin submenu flyouts (all modules)</h2>
+  <p><span class="pill">summarize</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span> · agent <code>plugin-agent-1</code> · active <strong>28s</strong></p>
+  <p class="small">Work folder (required after claim): <code>.worktrees/21-admin-ui-bugfix/APP-21-3</code> · ticket branch <code>ticket/21-admin-ui-bugfix/APP-21-3</code> · ships on <code>feature/21-admin-ui-bugfix</code> after integrate (one push).</p>
+
+  <h3>Goal</h3>
+  <div class="card ok">
+    <p>plugin: Fix sticky admin submenu flyouts (all modules)</p>
+    <p class="small">Checklist progress: <strong>2/2</strong>.</p>
+  </div>
+
+  <h3>Role</h3>
+  <div class="card note">
+    <p>Owns web/wp-content/plugins/&lt;module&gt;/.</p>
+  </div>
+
+  <h3>Checklist</h3>
+  <div class="card">
+    <ul class="checklist">
+<li class=""><strong>Step 1.</strong> Implement</li>
+<li class=""><strong>Step 2.</strong> Verify locally (in testing — after `move testing`)</li>
+    </ul>
+  </div>
+
+  <h3>What was built (this ticket)</h3>
+  <div class="card ok beginner">
+  <p class="small">Windows this role should include:</p><ul><li>Contract</li>
+<li>Repository ($wpdb)</li>
+<li>Service</li>
+<li>REST/Admin controller</li>
+<li>DI provider</li>
+<li>HTTP result</li></ul>
+  <p>Layer artifacts for the living HTML (code, commands, results). Compact windows — not the whole file. After each checklist item: `evidence &lt;id&gt; --title …`.</p>
+<p>### submenu-css</p>
+<span class="filepath">css</span><pre><code>remove left:160px; current submenu left:auto inline</code></pre>
+</div>
+
+  <h3>Board history</h3>
+  <div class="card">
+    <p class="small">Forward moves, checklist marks, and returns (for example testing → doing when verification fails) all stay here. This is not a substitute for the code windows above.</p>
+    <ul>
+<li class=""><code>2026-11-10T08:09:11.833Z moved done → summarize</code></li>
+<li class=""><code>2026-11-10T08:01:21.944Z moved testing → done</code></li>
+<li class=""><code>2026-11-10T08:01:21.603Z checklist item 2 marked</code></li>
+<li class=""><code>2026-11-10T08:01:21.525Z moved doing → testing</code></li>
+<li class=""><code>2026-11-10T08:01:21.266Z checklist item 1 marked</code></li>
+<li class=""><code>2026-11-10T08:00:53.125Z claimed by plugin-agent-1 → doing</code></li>
+<li class=""><code>2026-11-10T08:00:47.944Z created → backlog</code></li>
+    </ul>
+  </div>
+
+  <h3>How you can verify this ticket</h3>
+  <div class="card step">
+    <ul>
+<li>Contracts → Repository → Service → Controller order inside the plugin.</li>
+<li>health 200; protected routes 401 anonymous; authenticated 2xx.</li>
+    </ul>
+    <span class="filepath">copy-paste</span><pre><code>ddev wp plugin activate harness-plugin</code></pre>
+<span class="filepath">copy-paste</span><pre><code>curl -sk https://harness-wp.ddev.site/wp-json/harness/v1/health</code></pre>
+<span class="filepath">copy-paste</span><pre><code>ddev composer install</code></pre>
+  </div>
+</section>
+
 <h2 id="handoff">Git command + Supervisor / Manager</h2>
 <p class="small">Recorded on the board at wrap-up so the SUMMARIZE column tracks the same git line and note the agent proposed.</p>
 <div class="card ok" id="handoff-body">
@@ -473,18 +474,5 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 </div>
 
 </div>
-
-<section id="land-main" class="card ok">
-  <h2>Land on main</h2>
-  <p><strong>Status:</strong> landed · merge <code>0bdf9cdb6f60a2f2db7d9a26c1e6ac6519b04505</code></p>
-  <p><strong>Git:</strong></p>
-  <pre><code>git push origin main</code></pre>
-  <h3>Supervisor / Manager (land)</h3>
-  <div id="land-handoff-body">
-    <p>Supervisor: Epic 21 — English leftovers, Transactions columns, sticky submenu flyouts fixed (no left:160px). layer-audit green. Read-Only untouched.</p>
-  </div>
-  <p class="small">Recorded 2026-11-10T08:03:19.770Z</p>
-</section>
-
 </body>
 </html>

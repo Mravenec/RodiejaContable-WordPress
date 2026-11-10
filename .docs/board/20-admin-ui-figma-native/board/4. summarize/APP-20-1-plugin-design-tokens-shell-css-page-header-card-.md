@@ -10,6 +10,7 @@ blocked_by: []
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T07:49:07.749Z"
+summary_html: summaries/20-admin-ui-figma-native-beginner.html
 ---
 ## Objetivo
 
@@ -34,6 +35,8 @@ Layer artifacts for the living HTML (code, commands, results). Compact windows �
 
 ## History
 
+- 2026-11-10T08:09:11.385Z epic summary HTML → summaries/20-admin-ui-figma-native-beginner.html
+- 2026-11-10T08:09:11.375Z moved done → summarize
 - 2026-11-10T07:49:49.099Z moved testing → done
 - 2026-11-10T07:49:48.766Z checklist item 2 marked
 - 2026-11-10T07:49:48.687Z moved doing → testing
