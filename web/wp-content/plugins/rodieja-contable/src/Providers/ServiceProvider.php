@@ -11,6 +11,9 @@ use Rodieja\Contable\Admin\AdminMenu;
 use Rodieja\Contable\Admin\CatalogAdminFilters;
 use Rodieja\Contable\Admin\CatalogListColumns;
 use Rodieja\Contable\Admin\CatalogMetaBoxes;
+use Rodieja\Contable\Admin\CriticalStockPage;
+use Rodieja\Contable\Admin\InventoryAdminFilters;
+use Rodieja\Contable\Admin\InventoryMetaBoxes;
 use Rodieja\Contable\Controllers\Rest\DomainStatsController;
 use Rodieja\Contable\Controllers\Rest\HealthController;
 use Rodieja\Contable\Core\Container;
@@ -75,6 +78,25 @@ final class ServiceProvider {
 		$container->set(
 			CatalogAdminFilters::class,
 			static fn( Container $c ) => new CatalogAdminFilters( $c->get( OutputEscaper::class ) )
+		);
+		$container->set(
+			InventoryMetaBoxes::class,
+			static fn( Container $c ) => new InventoryMetaBoxes(
+				$c->get( NonceGuard::class ),
+				$c->get( OutputEscaper::class ),
+				$c->get( CapabilityGate::class )
+			)
+		);
+		$container->set(
+			InventoryAdminFilters::class,
+			static fn( Container $c ) => new InventoryAdminFilters( $c->get( OutputEscaper::class ) )
+		);
+		$container->set(
+			CriticalStockPage::class,
+			static fn( Container $c ) => new CriticalStockPage(
+				$c->get( OutputEscaper::class ),
+				$c->get( CapabilityGate::class )
+			)
 		);
 	}
 }

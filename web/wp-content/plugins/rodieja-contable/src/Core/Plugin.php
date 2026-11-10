@@ -13,6 +13,9 @@ use Rodieja\Contable\Admin\AdminMenu;
 use Rodieja\Contable\Admin\CatalogAdminFilters;
 use Rodieja\Contable\Admin\CatalogListColumns;
 use Rodieja\Contable\Admin\CatalogMetaBoxes;
+use Rodieja\Contable\Admin\CriticalStockPage;
+use Rodieja\Contable\Admin\InventoryAdminFilters;
+use Rodieja\Contable\Admin\InventoryMetaBoxes;
 use Rodieja\Contable\Controllers\Rest\DomainStatsController;
 use Rodieja\Contable\Controllers\Rest\HealthController;
 use Rodieja\Contable\Meta\MetaRegistrar;
@@ -51,6 +54,9 @@ final class Plugin {
 		$this->container->get( CatalogMetaBoxes::class )->register();
 		$this->container->get( CatalogListColumns::class )->register();
 		$this->container->get( CatalogAdminFilters::class )->register();
+		$this->container->get( InventoryMetaBoxes::class )->register();
+		$this->container->get( InventoryAdminFilters::class )->register();
+		$this->container->get( CriticalStockPage::class )->register();
 		$this->container->get( SecurityHeaders::class )->register();
 
 		add_action( 'rest_api_init', array( $this, 'register_rest' ) );
