@@ -1,6 +1,6 @@
 # Epic 29 — hierarchy-vehicle-expand
 
-**Status:** Planned · Board: `.linear/epics/29-hierarchy-vehicle-expand/`
+**Status:** Landed on main · Board: `.linear/epics/29-hierarchy-vehicle-expand/`
 
 ## Title
 
@@ -61,3 +61,14 @@ node .linear/scripts/board.mjs progress --epic 29
 ## Outcome
 
 (Filled when epic reaches 100%.)
+
+
+## Land on main
+
+- Merge commit: `6db4d0893b2611f4957bc82e09e9bd8f29a1d5a0`
+- Branch: `feature/29-hierarchy-vehicle-expand` → `main`
+
+### Supervisor / Manager (land)
+
+Supervisor: Epic 29 LANDED. Hierarchy vehicle rows expand (native details) with investment, costs, status, linked parts and transactions — Read-Only parity without SPA. layer-audit green.
+

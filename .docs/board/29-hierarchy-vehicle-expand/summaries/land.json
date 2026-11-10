@@ -1,0 +1,13 @@
+{
+  "status": "landed",
+  "started_at": "2026-11-10T16:00:47.003Z",
+  "finished_at": "2026-11-10T16:00:57.798Z",
+  "merge_commit": "6db4d0893b2611f4957bc82e09e9bd8f29a1d5a0",
+  "conflicts": [],
+  "smoke_ok": true,
+  "smoke_at": "2026-11-10T16:00:53.227Z",
+  "git": "git push origin main",
+  "note": "Supervisor: Epic 29 LANDED. Hierarchy vehicle rows expand (native details) with investment, costs, status, linked parts and transactions — Read-Only parity without SPA. layer-audit green.",
+  "recorded_at": "2026-11-10T16:00:53.307Z",
+  "pushed_at": "2026-11-10T16:00:57.798Z"
+}
