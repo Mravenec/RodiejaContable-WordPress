@@ -34,6 +34,7 @@ PublicSiteSeed::maybe_run(); // Home+About, show_on_front=page, trash Sample/Hel
 
 ## History
 
+- 2026-11-10T16:44:04.544Z moved testing → done
 - 2026-11-10T16:44:04.062Z checklist item 2 marked
 - 2026-11-10T16:44:03.973Z moved doing → testing
 - 2026-11-10T16:44:03.733Z checklist item 1 marked
