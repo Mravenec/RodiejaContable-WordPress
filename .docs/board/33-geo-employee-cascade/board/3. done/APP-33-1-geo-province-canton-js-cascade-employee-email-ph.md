@@ -3,6 +3,8 @@ id: APP-33-1
 title: "Geo: province→canton JS cascade; Employee email/phone/role meta box"
 role: plugin
 epic: 33
+http_ok: true
+tests_ok: true
 estimate: 1
 blocked_by: []
 blocks: []
@@ -32,6 +34,7 @@ APP-33-1: Geo province→canton JS cascade + Employee contact meta box
 
 ## History
 
+- 2026-11-10T16:20:43.585Z moved testing → done
 - 2026-11-10T16:20:34.440Z checklist item 2 marked
 - 2026-11-10T16:20:34.355Z moved doing → testing
 - 2026-11-10T16:20:33.983Z checklist item 1 marked

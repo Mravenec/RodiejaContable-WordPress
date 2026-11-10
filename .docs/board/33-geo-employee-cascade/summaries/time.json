@@ -4,15 +4,18 @@
   "finished_at": null,
   "issues": {
     "APP-33-1": {
-      "active_ms": 0,
+      "active_ms": 44895,
       "paused": false,
-      "open": {
-        "start": "2026-11-10T16:19:58.693Z",
-        "last": "2026-11-10T16:20:34.441Z",
-        "agent": "plugin-agent-1",
-        "event": "checklist"
-      },
-      "segments": []
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T16:19:58.693Z",
+          "end": "2026-11-10T16:20:43.588Z",
+          "ms": 44895,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        }
+      ]
     }
   },
   "land": {
