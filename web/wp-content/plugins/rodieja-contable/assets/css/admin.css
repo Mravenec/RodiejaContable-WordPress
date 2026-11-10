@@ -345,3 +345,95 @@ body.rodieja-contable-admin .subsubsub {
 body.rodieja-contable-admin .tablenav .button {
 	border-radius: 8px;
 }
+
+/* Hierarchy tree (Ver por Generaciones) */
+.rodieja-hierarchy {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.rodieja-hierarchy details {
+	background: var(--rdj-card);
+	border: 1px solid var(--rdj-line);
+	border-radius: var(--rdj-radius);
+	box-shadow: var(--rdj-shadow);
+	padding: 0;
+}
+
+.rodieja-hierarchy__modelo,
+.rodieja-hierarchy__gen {
+	margin: 8px 12px;
+	box-shadow: none;
+}
+
+.rodieja-hierarchy summary {
+	cursor: pointer;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	padding: 12px 14px;
+	font-weight: 600;
+	color: var(--rdj-ink);
+}
+
+.rodieja-hierarchy summary::-webkit-details-marker {
+	display: none;
+}
+
+.rodieja-hierarchy summary .dashicons {
+	color: var(--rdj-accent);
+}
+
+.rodieja-hierarchy__count,
+.rodieja-hierarchy__years {
+	font-size: 12px;
+	font-weight: 500;
+	color: #64748b;
+}
+
+.rodieja-hierarchy__edit {
+	margin-left: auto;
+	font-size: 12px;
+	font-weight: 600;
+	text-decoration: none;
+	color: var(--rdj-accent) !important;
+}
+
+.rodieja-hierarchy__vehiculos {
+	list-style: none;
+	margin: 0 12px 12px;
+	padding: 0;
+	border-top: 1px solid var(--rdj-line);
+}
+
+.rodieja-hierarchy__vehiculos li {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 8px;
+	border-bottom: 1px solid var(--rdj-line);
+}
+
+.rodieja-hierarchy__vehiculos li:last-child {
+	border-bottom: 0;
+}
+
+.rodieja-hierarchy__vehiculos a {
+	font-weight: 600;
+	text-decoration: none;
+	color: var(--rdj-ink);
+}
+
+.rodieja-hierarchy__vehiculos a:hover {
+	color: var(--rdj-accent);
+}
+
+.rodieja-hierarchy__empty {
+	margin: 0 16px 12px;
+	color: #64748b;
+	font-size: 13px;
+}
