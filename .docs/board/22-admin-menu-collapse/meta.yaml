@@ -1,0 +1,9 @@
+id: 22
+slug: admin-menu-collapse
+title: "Admin menu: collapse current section on re-click (native JS)"
+color: "#b45309"
+status: in_progress
+created_at: "2026-11-10T08:06:25.314Z"
+updated_at: "2026-11-10T08:07:00.914Z"
+summary_html: summaries/22-admin-menu-collapse-beginner.html
+summary_updated_at: "2026-11-10T08:07:00.917Z"

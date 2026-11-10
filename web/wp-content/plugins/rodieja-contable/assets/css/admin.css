@@ -107,6 +107,11 @@ body.rodieja-contable-admin #adminmenu li.wp-has-current-submenu > .wp-submenu {
 	box-shadow: none;
 }
 
+/* User toggle: second click on current top-level collapses the section. */
+body.rodieja-contable-admin #adminmenu li.wp-has-current-submenu.rodieja-submenu-collapsed > .wp-submenu {
+	display: none !important;
+}
+
 body.rodieja-contable-admin #collapse-menu {
 	color: rgba(255, 255, 255, 0.45) !important;
 }

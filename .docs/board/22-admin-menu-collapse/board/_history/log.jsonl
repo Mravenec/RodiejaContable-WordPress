@@ -1,0 +1,7 @@
+{"at":"2026-11-10T08:06:45.743Z","type":"create","issueId":"APP-22-1","column":"backlog"}
+{"at":"2026-11-10T08:06:45.864Z","type":"claim","issueId":"APP-22-1","agent":"plugin-agent-1"}
+{"at":"2026-11-10T08:07:00.294Z","type":"checklist","issueId":"APP-22-1","item":"1"}
+{"at":"2026-11-10T08:07:00.371Z","type":"evidence","issueId":"APP-22-1","title":"collapse-js"}
+{"at":"2026-11-10T08:07:00.493Z","type":"move","issueId":"APP-22-1","from":"doing","to":"testing"}
+{"at":"2026-11-10T08:07:00.569Z","type":"checklist","issueId":"APP-22-1","item":"2"}
+{"at":"2026-11-10T08:07:00.911Z","type":"move","issueId":"APP-22-1","from":"testing","to":"done"}
