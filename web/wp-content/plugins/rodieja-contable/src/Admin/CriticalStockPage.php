@@ -22,18 +22,7 @@ final class CriticalStockPage {
 	) {}
 
 	public function register(): void {
-		add_action( 'admin_menu', array( $this, 'add_page' ) );
-	}
-
-	public function add_page(): void {
-		add_submenu_page(
-			'rodieja-contable',
-			__( 'Stock crítico', 'rodieja-contable' ),
-			__( 'Stock crítico', 'rodieja-contable' ),
-			CapabilityGate::MANAGE,
-			'rodieja-stock-critico',
-			array( $this, 'render' )
-		);
+		// Rendered via AdminMenu submenu.
 	}
 
 	public function render(): void {
@@ -59,7 +48,7 @@ final class CriticalStockPage {
 			)
 		);
 		?>
-		<div class="wrap">
+		<div class="wrap rodieja-admin-wrap">
 			<h1><?php echo $this->escaper->html( __( 'Stock crítico', 'rodieja-contable' ) ); ?></h1>
 			<p><?php echo $this->escaper->html( sprintf( __( 'Repuestos con stock ≤ %d (WP_Query nativo).', 'rodieja-contable' ), self::THRESHOLD ) ); ?></p>
 			<table class="widefat striped">

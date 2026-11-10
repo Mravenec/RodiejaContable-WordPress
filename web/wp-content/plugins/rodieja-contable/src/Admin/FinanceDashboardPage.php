@@ -22,18 +22,7 @@ final class FinanceDashboardPage {
 	) {}
 
 	public function register(): void {
-		add_action( 'admin_menu', array( $this, 'add_page' ) );
-	}
-
-	public function add_page(): void {
-		add_submenu_page(
-			'rodieja-contable',
-			__( 'Finanzas', 'rodieja-contable' ),
-			__( 'Finanzas', 'rodieja-contable' ),
-			CapabilityGate::MANAGE,
-			'rodieja-finanzas',
-			array( $this, 'render' )
-		);
+		// Rendered via AdminMenu submenu.
 	}
 
 	public function render(): void {
@@ -43,8 +32,8 @@ final class FinanceDashboardPage {
 		$all   = $this->totals->totals();
 		$month = $this->totals->totals( gmdate( 'Y-m' ) );
 		?>
-		<div class="wrap">
-			<h1><?php echo $this->escaper->html( __( 'Dashboard financiero', 'rodieja-contable' ) ); ?></h1>
+		<div class="wrap rodieja-admin-wrap">
+			<h1><?php echo $this->escaper->html( __( 'Dashboard montos', 'rodieja-contable' ) ); ?></h1>
 			<p><?php echo $this->escaper->html( __( 'Totales calculados con WP_Query + post meta (sin tablas custom).', 'rodieja-contable' ) ); ?></p>
 			<table class="widefat striped" style="max-width:520px">
 				<thead><tr><th></th><th><?php echo $this->escaper->html( __( 'Todo', 'rodieja-contable' ) ); ?></th><th><?php echo $this->escaper->html( __( 'Mes actual', 'rodieja-contable' ) ); ?></th></tr></thead>

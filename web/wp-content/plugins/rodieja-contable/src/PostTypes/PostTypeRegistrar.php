@@ -11,91 +11,106 @@ namespace Rodieja\Contable\PostTypes;
 
 final class PostTypeRegistrar {
 
+	public const MENU_PARENT = 'rodieja-contable';
+
 	public function register(): void {
 		add_action( 'init', array( $this, 'register_types' ) );
 	}
 
 	public function register_types(): void {
+		$nest = array( 'show_in_menu' => self::MENU_PARENT );
+
 		$this->cpt(
 			'rodieja_marca',
-			array(
-				'label' => __( 'Marcas', 'rodieja-contable' ),
-				'labels' => $this->labels( __( 'Marca', 'rodieja-contable' ), __( 'Marcas', 'rodieja-contable' ) ),
-				'menu_icon' => 'dashicons-tag',
-				'menu_position' => 26,
+			array_merge(
+				$nest,
+				array(
+					'label'  => __( 'Marcas', 'rodieja-contable' ),
+					'labels' => $this->labels( __( 'Marca', 'rodieja-contable' ), __( 'Marcas', 'rodieja-contable' ) ),
+				)
 			)
 		);
 		$this->cpt(
 			'rodieja_modelo',
-			array(
-				'label' => __( 'Modelos', 'rodieja-contable' ),
-				'labels' => $this->labels( __( 'Modelo', 'rodieja-contable' ), __( 'Modelos', 'rodieja-contable' ) ),
-				'menu_icon' => 'dashicons-tag',
-				'menu_position' => 27,
+			array_merge(
+				$nest,
+				array(
+					'label'  => __( 'Modelos', 'rodieja-contable' ),
+					'labels' => $this->labels( __( 'Modelo', 'rodieja-contable' ), __( 'Modelos', 'rodieja-contable' ) ),
+				)
 			)
 		);
 		$this->cpt(
 			'rodieja_generacion',
-			array(
-				'label' => __( 'Generaciones', 'rodieja-contable' ),
-				'labels' => $this->labels( __( 'Generación', 'rodieja-contable' ), __( 'Generaciones', 'rodieja-contable' ) ),
-				'menu_icon' => 'dashicons-backup',
-				'menu_position' => 28,
+			array_merge(
+				$nest,
+				array(
+					'label'  => __( 'Generaciones', 'rodieja-contable' ),
+					'labels' => $this->labels( __( 'Generación', 'rodieja-contable' ), __( 'Generaciones', 'rodieja-contable' ) ),
+				)
 			)
 		);
 		$this->cpt(
 			'rodieja_vehiculo',
-			array(
-				'label' => __( 'Vehículos', 'rodieja-contable' ),
-				'labels' => $this->labels( __( 'Vehículo', 'rodieja-contable' ), __( 'Vehículos', 'rodieja-contable' ) ),
-				'menu_icon' => 'dashicons-car',
-				'menu_position' => 25,
-				'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+			array_merge(
+				$nest,
+				array(
+					'label'    => __( 'Vehículos', 'rodieja-contable' ),
+					'labels'   => $this->labels( __( 'Vehículo', 'rodieja-contable' ), __( 'Vehículos', 'rodieja-contable' ) ),
+					'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+				)
 			)
 		);
 		$this->cpt(
 			'rodieja_repuesto',
-			array(
-				'label' => __( 'Repuestos', 'rodieja-contable' ),
-				'labels' => $this->labels( __( 'Repuesto', 'rodieja-contable' ), __( 'Repuestos', 'rodieja-contable' ) ),
-				'menu_icon' => 'dashicons-admin-tools',
-				'menu_position' => 29,
+			array_merge(
+				$nest,
+				array(
+					'label'  => __( 'Repuestos', 'rodieja-contable' ),
+					'labels' => $this->labels( __( 'Repuesto', 'rodieja-contable' ), __( 'Repuestos', 'rodieja-contable' ) ),
+				)
 			)
 		);
 		$this->cpt(
 			'rodieja_empleado',
-			array(
-				'label' => __( 'Empleados', 'rodieja-contable' ),
-				'labels' => $this->labels( __( 'Empleado', 'rodieja-contable' ), __( 'Empleados', 'rodieja-contable' ) ),
-				'menu_icon' => 'dashicons-groups',
-				'menu_position' => 30,
+			array_merge(
+				$nest,
+				array(
+					'label'        => __( 'Empleados', 'rodieja-contable' ),
+					'labels'       => $this->labels( __( 'Empleado', 'rodieja-contable' ), __( 'Empleados', 'rodieja-contable' ) ),
+					'show_in_menu' => false,
+				)
 			)
 		);
 		$this->cpt(
 			'rodieja_transaccion',
-			array(
-				'label' => __( 'Transacciones', 'rodieja-contable' ),
-				'labels' => $this->labels( __( 'Transacción', 'rodieja-contable' ), __( 'Transacciones', 'rodieja-contable' ) ),
-				'menu_icon' => 'dashicons-money-alt',
-				'menu_position' => 31,
+			array_merge(
+				$nest,
+				array(
+					'label'  => __( 'Transacciones', 'rodieja-contable' ),
+					'labels' => $this->labels( __( 'Transacción', 'rodieja-contable' ), __( 'Transacciones', 'rodieja-contable' ) ),
+				)
 			)
 		);
 		$this->cpt(
 			'rodieja_pedido',
-			array(
-				'label' => __( 'Pedidos', 'rodieja-contable' ),
-				'labels' => $this->labels( __( 'Pedido', 'rodieja-contable' ), __( 'Pedidos', 'rodieja-contable' ) ),
-				'menu_icon' => 'dashicons-cart',
-				'menu_position' => 32,
+			array_merge(
+				$nest,
+				array(
+					'label'  => __( 'Pedidos', 'rodieja-contable' ),
+					'labels' => $this->labels( __( 'Pedido', 'rodieja-contable' ), __( 'Pedidos', 'rodieja-contable' ) ),
+				)
 			)
 		);
 		$this->cpt(
 			'rodieja_pedido_item',
-			array(
-				'label'         => __( 'Ítems de pedido', 'rodieja-contable' ),
-				'labels'        => $this->labels( __( 'Ítem de pedido', 'rodieja-contable' ), __( 'Ítems de pedido', 'rodieja-contable' ) ),
-				'menu_icon'     => 'dashicons-list-view',
-				'menu_position' => 33,
+			array_merge(
+				$nest,
+				array(
+					'label'        => __( 'Ítems de pedido', 'rodieja-contable' ),
+					'labels'       => $this->labels( __( 'Ítem de pedido', 'rodieja-contable' ), __( 'Ítems de pedido', 'rodieja-contable' ) ),
+					'show_in_menu' => false,
+				)
 			)
 		);
 	}
@@ -105,17 +120,17 @@ final class PostTypeRegistrar {
 	 */
 	private function cpt( string $type, array $args ): void {
 		$defaults = array(
-			'public'              => false,
-			'show_ui'             => true,
-			'show_in_menu'        => true,
-			'show_in_rest'        => true,
-			'rest_base'           => $type,
-			'has_archive'         => false,
-			'hierarchical'        => false,
-			'capability_type'     => $type,
-			'map_meta_cap'        => true,
-			'supports'            => array( 'title', 'custom-fields' ),
-			'delete_with_user'    => false,
+			'public'           => false,
+			'show_ui'          => true,
+			'show_in_menu'     => self::MENU_PARENT,
+			'show_in_rest'     => true,
+			'rest_base'        => $type,
+			'has_archive'      => false,
+			'hierarchical'     => false,
+			'capability_type'  => $type,
+			'map_meta_cap'     => true,
+			'supports'         => array( 'title', 'custom-fields' ),
+			'delete_with_user' => false,
 		);
 		register_post_type( $type, array_merge( $defaults, $args ) );
 	}

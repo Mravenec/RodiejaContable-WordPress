@@ -27,4 +27,21 @@ curl -sk https://rodieja-wp.ddev.site/wp-json/rodieja/v1/health
 ddev launch
 ```
 
+### Admin login (local dev)
+
+| Field | Value |
+|---|---|
+| User | `admin` |
+| Email | `admin@rodieja.com` |
+| Password | `Admin123!` |
+
+Create or update the dev administrator:
+
+```bash
+ddev wp user update admin --user_email=admin@rodieja.com --user_pass='Admin123!' || \
+ddev wp user create admin admin@rodieja.com --role=administrator --user_pass='Admin123!'
+```
+
+WP Admin hub: **Rodieja Contable** (single top-level menu). REST (authenticated): `/wp-json/rodieja/v1/stats`, `/finance/totals`, `/pedidos`.
+
 Board: `.linear/` · Agents: `AGENTS.md` · Harness twin: `HarnessMariaDB-WordPressPHP-CustomPlugins`.

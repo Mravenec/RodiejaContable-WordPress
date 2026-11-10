@@ -1,0 +1,56 @@
+/**
+ * Rodieja Contable — React-adjacent admin chrome (wp-admin only).
+ */
+body.rodieja-contable-admin #adminmenu li.toplevel_page_rodieja-contable > a {
+	background: #001529;
+	color: #fff;
+}
+
+body.rodieja-contable-admin #adminmenu li.toplevel_page_rodieja-contable.wp-has-current-submenu > a,
+body.rodieja-contable-admin #adminmenu li.toplevel_page_rodieja-contable.current > a {
+	background: #1890ff;
+	color: #fff;
+}
+
+body.rodieja-contable-admin #adminmenu li.toplevel_page_rodieja-contable .wp-submenu {
+	background: #001529;
+}
+
+body.rodieja-contable-admin #adminmenu li.toplevel_page_rodieja-contable .wp-submenu a {
+	color: rgba(255, 255, 255, 0.85);
+}
+
+body.rodieja-contable-admin #adminmenu li.toplevel_page_rodieja-contable .wp-submenu a:hover,
+body.rodieja-contable-admin #adminmenu li.toplevel_page_rodieja-contable .wp-submenu .current a {
+	color: #1890ff;
+}
+
+body.rodieja-contable-admin #wpcontent,
+body.rodieja-contable-admin #wpfooter {
+	background: #f0f2f5;
+}
+
+body.rodieja-contable-admin .wrap.rodieja-admin-wrap > h1 {
+	border-left: 4px solid #1890ff;
+	padding-left: 12px;
+	margin-bottom: 1em;
+}
+
+body.rodieja-contable-admin .rodieja-admin-card {
+	background: #fff;
+	border: 1px solid #d9d9d9;
+	border-radius: 4px;
+	padding: 16px 20px;
+	margin: 16px 0;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+body.rodieja-contable-admin #adminmenu a[href*="rodieja-menu-sep"] {
+	pointer-events: none;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: rgba(255, 255, 255, 0.45) !important;
+	padding-top: 12px;
+}
