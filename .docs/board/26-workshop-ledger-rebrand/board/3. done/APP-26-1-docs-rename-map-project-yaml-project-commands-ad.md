@@ -34,6 +34,7 @@ project.yaml workshop-ledger; project-commands admin@workshop.com; RENAME-MAP; R
 
 ## History
 
+- 2026-11-10T15:17:13.464Z moved testing → done
 - 2026-11-10T15:17:13.030Z checklist item 2 marked
 - 2026-11-10T15:17:12.936Z moved doing → testing
 - 2026-11-10T15:17:12.707Z checklist item 1 marked

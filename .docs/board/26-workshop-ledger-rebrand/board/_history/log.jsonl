@@ -7,3 +7,9 @@
 {"at":"2026-11-10T15:17:12.797Z","type":"evidence","issueId":"APP-26-1","title":"rename-docs"}
 {"at":"2026-11-10T15:17:12.938Z","type":"move","issueId":"APP-26-1","from":"doing","to":"testing"}
 {"at":"2026-11-10T15:17:13.031Z","type":"checklist","issueId":"APP-26-1","item":"2"}
+{"at":"2026-11-10T15:17:13.466Z","type":"move","issueId":"APP-26-1","from":"testing","to":"done"}
+{"at":"2026-11-10T15:17:23.316Z","type":"claim","issueId":"APP-26-2","agent":"plugin-agent-1"}
+{"at":"2026-11-10T15:18:36.003Z","type":"checklist","issueId":"APP-26-2","item":"1"}
+{"at":"2026-11-10T15:18:36.086Z","type":"evidence","issueId":"APP-26-2","title":"plugin-rename"}
+{"at":"2026-11-10T15:18:36.206Z","type":"move","issueId":"APP-26-2","from":"doing","to":"testing"}
+{"at":"2026-11-10T15:18:36.283Z","type":"checklist","issueId":"APP-26-2","item":"2"}

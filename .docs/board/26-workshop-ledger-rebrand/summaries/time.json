@@ -4,11 +4,25 @@
   "finished_at": null,
   "issues": {
     "APP-26-1": {
+      "active_ms": 47063,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T15:16:26.403Z",
+          "end": "2026-11-10T15:17:13.466Z",
+          "ms": 47063,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        }
+      ]
+    },
+    "APP-26-2": {
       "active_ms": 0,
       "paused": false,
       "open": {
-        "start": "2026-11-10T15:16:26.403Z",
-        "last": "2026-11-10T15:17:13.031Z",
+        "start": "2026-11-10T15:17:23.316Z",
+        "last": "2026-11-10T15:18:36.285Z",
         "agent": "plugin-agent-1",
         "event": "checklist"
       },
