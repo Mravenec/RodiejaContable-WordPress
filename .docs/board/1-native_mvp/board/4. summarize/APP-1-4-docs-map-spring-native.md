@@ -1,17 +1,19 @@
 ---
-id: APP-1-1
-title: Roles CONTADOR + caps (native)
-role: security
+id: APP-1-4
+title: Docs map Spring→native
+role: database
 epic: 1
 estimate: 1
-blocked_by: []
+blocked_by:
+  - APP-1-2
 blocks: []
 agent: null
 claimed_at: null
+summary_html: summaries/1-native-mvp-beginner.html
 ---
 ## Objetivo
 
-Roles CONTADOR + caps (native)
+Docs map Spring→native
 
 ## Checklist
 
@@ -26,6 +28,6 @@ Layer artifacts for the living HTML (code, commands, results). Compact windows �
 
 ## History
 
-- 2026-11-10T04:52:05.273Z moved testing → done
-- 2026-11-10T04:52:05.140Z moved backlog → testing
-- 2026-11-10T04:52:04.287Z created → backlog
+- 2026-11-10T04:52:05.890Z moved testing → done
+- 2026-11-10T04:52:05.808Z moved backlog → testing
+- 2026-11-10T04:52:04.506Z created → backlog

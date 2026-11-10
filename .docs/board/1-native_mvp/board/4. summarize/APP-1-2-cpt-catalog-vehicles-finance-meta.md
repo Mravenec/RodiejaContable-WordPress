@@ -1,18 +1,19 @@
 ---
-id: APP-1-4
-title: Docs map Spring→native
-role: database
+id: APP-1-2
+title: CPT catalog + vehicles + finance meta
+role: plugin
 epic: 1
 estimate: 1
 blocked_by:
-  - APP-1-2
+  - APP-1-1
 blocks: []
 agent: null
 claimed_at: null
+summary_html: summaries/1-native-mvp-beginner.html
 ---
 ## Objetivo
 
-Docs map Spring→native
+CPT catalog + vehicles + finance meta
 
 ## Checklist
 
@@ -27,6 +28,6 @@ Layer artifacts for the living HTML (code, commands, results). Compact windows �
 
 ## History
 
-- 2026-11-10T04:52:05.890Z moved testing → done
-- 2026-11-10T04:52:05.808Z moved backlog → testing
-- 2026-11-10T04:52:04.506Z created → backlog
+- 2026-11-10T04:52:05.544Z moved testing → done
+- 2026-11-10T04:52:05.351Z moved backlog → testing
+- 2026-11-10T04:52:04.357Z created → backlog

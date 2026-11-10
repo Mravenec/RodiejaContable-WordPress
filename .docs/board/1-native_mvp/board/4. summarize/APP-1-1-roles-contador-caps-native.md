@@ -1,18 +1,18 @@
 ---
-id: APP-1-2
-title: CPT catalog + vehicles + finance meta
-role: plugin
+id: APP-1-1
+title: Roles CONTADOR + caps (native)
+role: security
 epic: 1
 estimate: 1
-blocked_by:
-  - APP-1-1
+blocked_by: []
 blocks: []
 agent: null
 claimed_at: null
+summary_html: summaries/1-native-mvp-beginner.html
 ---
 ## Objetivo
 
-CPT catalog + vehicles + finance meta
+Roles CONTADOR + caps (native)
 
 ## Checklist
 
@@ -27,6 +27,6 @@ Layer artifacts for the living HTML (code, commands, results). Compact windows �
 
 ## History
 
-- 2026-11-10T04:52:05.544Z moved testing → done
-- 2026-11-10T04:52:05.351Z moved backlog → testing
-- 2026-11-10T04:52:04.357Z created → backlog
+- 2026-11-10T04:52:05.273Z moved testing → done
+- 2026-11-10T04:52:05.140Z moved backlog → testing
+- 2026-11-10T04:52:04.287Z created → backlog

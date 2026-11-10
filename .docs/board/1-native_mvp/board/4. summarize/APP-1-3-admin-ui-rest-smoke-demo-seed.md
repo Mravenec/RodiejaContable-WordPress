@@ -9,6 +9,7 @@ blocked_by:
 blocks: []
 agent: null
 claimed_at: null
+summary_html: summaries/1-native-mvp-beginner.html
 ---
 ## Objetivo
 

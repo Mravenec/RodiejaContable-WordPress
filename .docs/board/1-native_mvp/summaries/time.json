@@ -1,7 +1,7 @@
 {
   "idle_ms": 180000,
   "started_at": "2026-11-10T04:52:05.141Z",
-  "finished_at": null,
+  "finished_at": "2026-11-10T04:52:19.395Z",
   "issues": {
     "APP-1-1": {
       "active_ms": 134,
