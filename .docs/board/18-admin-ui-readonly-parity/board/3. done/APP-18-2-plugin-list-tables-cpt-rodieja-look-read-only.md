@@ -35,6 +35,7 @@ body.rodieja-cpt-list .tablenav.top{/* Ant toolbar */}
 
 ## History
 
+- 2026-11-10T07:34:25.346Z moved testing → done
 - 2026-11-10T07:34:24.989Z checklist item 2 marked
 - 2026-11-10T07:34:24.902Z moved doing → testing
 - 2026-11-10T07:34:24.618Z checklist item 1 marked

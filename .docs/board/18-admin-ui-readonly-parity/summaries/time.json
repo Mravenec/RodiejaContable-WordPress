@@ -18,11 +18,25 @@
       ]
     },
     "APP-18-2": {
+      "active_ms": 22695,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T07:34:02.653Z",
+          "end": "2026-11-10T07:34:25.348Z",
+          "ms": 22695,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        }
+      ]
+    },
+    "APP-18-3": {
       "active_ms": 0,
       "paused": false,
       "open": {
-        "start": "2026-11-10T07:34:02.653Z",
-        "last": "2026-11-10T07:34:24.990Z",
+        "start": "2026-11-10T07:34:28.200Z",
+        "last": "2026-11-10T07:34:59.081Z",
         "agent": "plugin-agent-1",
         "event": "checklist"
       },
