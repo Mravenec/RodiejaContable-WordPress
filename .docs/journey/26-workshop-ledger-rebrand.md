@@ -1,6 +1,6 @@
 # Epic 26 — workshop-ledger-rebrand
 
-**Status:** In progress · Board: `.linear/epics/26-workshop-ledger-rebrand/`
+**Status:** Landed on main · Board: `.linear/epics/26-workshop-ledger-rebrand/`
 
 ## Title
 
@@ -54,3 +54,14 @@ Rodieja Contable was a paid-client brand. The product must become a neutral **Wo
 ## Notes
 
 Historical `.docs/journey` epics 1–25 may keep “Rodieja” in titles as history. New work uses Workshop Ledger. GitHub remote rename is human ops after land.
+
+
+## Land on main
+
+- Merge commit: `e344cad558923d99e8d8187a35b9bdcf80e47d69`
+- Branch: `feature/26-workshop-ledger-rebrand` → `main`
+
+### Supervisor / Manager (land)
+
+Epic 26: Rebrand to Workshop Ledger. Plugin workshop-ledger / WorkshopLedger namespace, BrandMigrate rodieja_*→wl_*, DDEV name workshop-ledger. Login admin@workshop.com / WorkshopLedger1!. Read-Only untouched.
+

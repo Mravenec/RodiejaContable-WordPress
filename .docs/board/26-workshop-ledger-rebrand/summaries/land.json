@@ -1,12 +1,13 @@
 {
-  "status": "smoke-main",
+  "status": "landed",
   "started_at": "2026-11-10T15:20:45.743Z",
-  "finished_at": null,
+  "finished_at": "2026-11-10T15:20:48.197Z",
   "merge_commit": "e344cad558923d99e8d8187a35b9bdcf80e47d69",
   "conflicts": [],
-  "smoke_ok": null,
-  "smoke_at": null,
+  "smoke_ok": true,
+  "smoke_at": "2026-11-10T15:20:45.853Z",
   "git": "git push origin main",
-  "note": null,
-  "recorded_at": null
+  "note": "Epic 26: Rebrand to Workshop Ledger. Plugin workshop-ledger / WorkshopLedger namespace, BrandMigrate rodieja_*→wl_*, DDEV name workshop-ledger. Login admin@workshop.com / WorkshopLedger1!. Read-Only untouched.",
+  "recorded_at": "2026-11-10T15:20:45.921Z",
+  "pushed_at": "2026-11-10T15:20:48.197Z"
 }
