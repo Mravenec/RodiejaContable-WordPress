@@ -51,17 +51,17 @@ final class ToolsAdminPage {
 			<?php if ( '' !== $notice ) : ?>
 				<div class="notice notice-info"><p><?php echo $this->escaper->html( $notice ); ?></p></div>
 			<?php endif; ?>
-			<h2><?php echo $this->escaper->html( __( 'Exportar dominio', 'rodieja-contable' ) ); ?></h2>
+			<h2><?php echo $this->escaper->html( __( 'Export dominio', 'rodieja-contable' ) ); ?></h2>
 			<p>
 				<a class="button button-primary" href="<?php echo $this->escaper->attr( $export_json_url ); ?>"><?php echo $this->escaper->html( __( 'Descargar JSON', 'rodieja-contable' ) ); ?></a>
 				<a class="button" href="<?php echo $this->escaper->attr( $export_csv_url ); ?>"><?php echo $this->escaper->html( __( 'Descargar CSV', 'rodieja-contable' ) ); ?></a>
 			</p>
-			<h2><?php echo $this->escaper->html( __( 'Importar JSON', 'rodieja-contable' ) ); ?></h2>
+			<h2><?php echo $this->escaper->html( __( 'Import JSON', 'rodieja-contable' ) ); ?></h2>
 			<form method="post" enctype="multipart/form-data">
 				<input type="hidden" name="rodieja_tools_action" value="<?php echo $this->escaper->attr( self::ACTION_IMPORT ); ?>" />
 				<?php $this->nonce->field( 'rodieja_tools_import' ); ?>
 				<p><input type="file" name="rodieja_domain_json" accept=".json,application/json" required /></p>
-				<?php submit_button( __( 'Importar dominio', 'rodieja-contable' ) ); ?>
+				<?php submit_button( __( 'Import dominio', 'rodieja-contable' ) ); ?>
 			</form>
 		</div>
 		<?php
@@ -99,7 +99,7 @@ final class ToolsAdminPage {
 		}
 		$body = file_get_contents( (string) $_FILES['rodieja_domain_json']['tmp_name'] );
 		if ( ! is_string( $body ) || '' === $body ) {
-			return __( 'Archivo vacío.', 'rodieja-contable' );
+			return __( 'Empty file.', 'rodieja-contable' );
 		}
 		$result = $this->import->from_json_string( $body );
 		$msg    = sprintf(

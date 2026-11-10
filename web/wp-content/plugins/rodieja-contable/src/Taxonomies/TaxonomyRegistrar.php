@@ -21,8 +21,8 @@ final class TaxonomyRegistrar {
 			array( 'rodieja_repuesto', 'rodieja_vehiculo' ),
 			array(
 				'labels'            => array(
-					'name'          => __( 'Partes', 'rodieja-contable' ),
-					'singular_name' => __( 'Parte', 'rodieja-contable' ),
+					'name'          => __( 'Parts', 'rodieja-contable' ),
+					'singular_name' => __( 'Part', 'rodieja-contable' ),
 				),
 				'public'            => false,
 				'show_ui'           => true,
@@ -37,8 +37,8 @@ final class TaxonomyRegistrar {
 			array( 'rodieja_transaccion' ),
 			array(
 				'labels'            => array(
-					'name'          => __( 'Tipos de transacción', 'rodieja-contable' ),
-					'singular_name' => __( 'Tipo de transacción', 'rodieja-contable' ),
+					'name'          => __( 'Transaction types', 'rodieja-contable' ),
+					'singular_name' => __( 'Transaction type', 'rodieja-contable' ),
 				),
 				'public'            => false,
 				'show_ui'           => true,
@@ -53,8 +53,8 @@ final class TaxonomyRegistrar {
 			array( 'rodieja_vehiculo' ),
 			array(
 				'labels'            => array(
-					'name'          => __( 'Estados vehículo', 'rodieja-contable' ),
-					'singular_name' => __( 'Estado', 'rodieja-contable' ),
+					'name'          => __( 'Vehicle statuses', 'rodieja-contable' ),
+					'singular_name' => __( 'Status', 'rodieja-contable' ),
 				),
 				'public'            => false,
 				'show_ui'           => true,

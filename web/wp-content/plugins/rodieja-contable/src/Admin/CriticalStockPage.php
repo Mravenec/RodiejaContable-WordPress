@@ -49,20 +49,20 @@ final class CriticalStockPage {
 		);
 		?>
 		<div class="wrap rodieja-admin-wrap">
-			<h1><?php echo $this->escaper->html( __( 'Stock crítico', 'rodieja-contable' ) ); ?></h1>
-			<p><?php echo $this->escaper->html( sprintf( __( 'Repuestos con stock ≤ %d (WP_Query nativo).', 'rodieja-contable' ), self::THRESHOLD ) ); ?></p>
+			<h1><?php echo $this->escaper->html( __( 'Critical stock', 'rodieja-contable' ) ); ?></h1>
+			<p><?php echo $this->escaper->html( sprintf( __( 'Parts with stock ≤ %d (native WP_Query).', 'rodieja-contable' ), self::THRESHOLD ) ); ?></p>
 			<table class="widefat striped">
 				<thead>
 					<tr>
-						<th><?php echo $this->escaper->html( __( 'Repuesto', 'rodieja-contable' ) ); ?></th>
+						<th><?php echo $this->escaper->html( __( 'Part', 'rodieja-contable' ) ); ?></th>
 						<th><?php echo $this->escaper->html( __( 'Stock', 'rodieja-contable' ) ); ?></th>
-						<th><?php echo $this->escaper->html( __( 'Precio', 'rodieja-contable' ) ); ?></th>
-						<th><?php echo $this->escaper->html( __( 'Vehículo', 'rodieja-contable' ) ); ?></th>
+						<th><?php echo $this->escaper->html( __( 'Price', 'rodieja-contable' ) ); ?></th>
+						<th><?php echo $this->escaper->html( __( 'Vehicle', 'rodieja-contable' ) ); ?></th>
 					</tr>
 				</thead>
 				<tbody>
 				<?php if ( ! $q->have_posts() ) : ?>
-					<tr><td colspan="4"><?php echo $this->escaper->html( __( 'Sin ítems críticos.', 'rodieja-contable' ) ); ?></td></tr>
+					<tr><td colspan="4"><?php echo $this->escaper->html( __( 'No critical items.', 'rodieja-contable' ) ); ?></td></tr>
 				<?php else : ?>
 					<?php
 					while ( $q->have_posts() ) :

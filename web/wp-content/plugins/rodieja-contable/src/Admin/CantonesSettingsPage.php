@@ -44,7 +44,7 @@ final class CantonesSettingsPage {
 				);
 			}
 			$this->cantones->save( $rows );
-			echo '<div class="notice notice-success"><p>' . $this->escaper->html( __( 'Cantones guardados.', 'rodieja-contable' ) ) . '</p></div>';
+			echo '<div class="notice notice-success"><p>' . $this->escaper->html( __( 'Cantons saved.', 'rodieja-contable' ) ) . '</p></div>';
 		}
 		$list = $this->cantones->all();
 		?>
@@ -53,7 +53,7 @@ final class CantonesSettingsPage {
 			<form method="post">
 				<?php $this->nonce->field( 'rodieja_cantones_settings' ); ?>
 				<table class="widefat striped" style="max-width:640px">
-					<thead><tr><th><?php echo $this->escaper->html( __( 'Provincia', 'rodieja-contable' ) ); ?></th><th><?php echo $this->escaper->html( __( 'Cantón', 'rodieja-contable' ) ); ?></th></tr></thead>
+					<thead><tr><th><?php echo $this->escaper->html( __( 'Province', 'rodieja-contable' ) ); ?></th><th><?php echo $this->escaper->html( __( 'Canton', 'rodieja-contable' ) ); ?></th></tr></thead>
 					<tbody>
 					<?php foreach ( $list as $row ) : ?>
 						<tr>
@@ -62,12 +62,12 @@ final class CantonesSettingsPage {
 						</tr>
 					<?php endforeach; ?>
 						<tr>
-							<td><input type="text" class="regular-text" name="provincia[]" value="" placeholder="<?php echo $this->escaper->attr( __( 'Nueva provincia', 'rodieja-contable' ) ); ?>" /></td>
-							<td><input type="text" class="regular-text" name="canton[]" value="" placeholder="<?php echo $this->escaper->attr( __( 'Nuevo cantón', 'rodieja-contable' ) ); ?>" /></td>
+							<td><input type="text" class="regular-text" name="provincia[]" value="" placeholder="<?php echo $this->escaper->attr( __( 'Nueva province', 'rodieja-contable' ) ); ?>" /></td>
+							<td><input type="text" class="regular-text" name="canton[]" value="" placeholder="<?php echo $this->escaper->attr( __( 'Nuevo canton', 'rodieja-contable' ) ); ?>" /></td>
 						</tr>
 					</tbody>
 				</table>
-				<?php submit_button( __( 'Guardar cantones', 'rodieja-contable' ) ); ?>
+				<?php submit_button( __( 'Save cantones', 'rodieja-contable' ) ); ?>
 			</form>
 		</div>
 		<?php

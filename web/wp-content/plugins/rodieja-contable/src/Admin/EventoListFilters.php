@@ -30,7 +30,7 @@ final class EventoListFilters {
 		}
 
 		$current = isset( $_GET['rodieja_origen_cpt'] ) ? sanitize_key( wp_unslash( (string) $_GET['rodieja_origen_cpt'] ) ) : '';
-		echo '<select name="rodieja_origen_cpt"><option value="">' . esc_html__( 'Todos los orígenes', 'rodieja-contable' ) . '</option>';
+		echo '<select name="rodieja_origen_cpt"><option value="">' . esc_html__( 'All sources', 'rodieja-contable' ) . '</option>';
 		foreach ( DomainPostTypes::historial_tracked() as $cpt ) {
 			printf(
 				'<option value="%1$s" %2$s>%3$s</option>',
@@ -74,8 +74,8 @@ final class EventoListFilters {
 	 */
 	public function columns( array $cols ): array {
 		$cols['rodieja_origen'] = __( 'Origen', 'rodieja-contable' );
-		$cols['rodieja_accion'] = __( 'Acción', 'rodieja-contable' );
-		$cols['rodieja_user']   = __( 'Usuario', 'rodieja-contable' );
+		$cols['rodieja_accion'] = __( 'Action', 'rodieja-contable' );
+		$cols['rodieja_user']   = __( 'User', 'rodieja-contable' );
 		return $cols;
 	}
 

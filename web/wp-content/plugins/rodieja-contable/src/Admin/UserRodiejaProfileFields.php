@@ -34,7 +34,7 @@ final class UserRodiejaProfileFields {
 		<h2><?php esc_html_e( 'Rodieja Contable', 'rodieja-contable' ); ?></h2>
 		<table class="form-table" role="presentation">
 			<tr>
-				<th><label for="rodieja_empleado_id"><?php esc_html_e( 'Empleado vinculado', 'rodieja-contable' ); ?></label></th>
+				<th><label for="rodieja_empleado_id"><?php esc_html_e( 'Employee vinculado', 'rodieja-contable' ); ?></label></th>
 				<td>
 					<select name="rodieja_empleado_id" id="rodieja_empleado_id">
 						<option value="0">—</option>

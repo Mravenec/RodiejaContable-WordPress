@@ -31,7 +31,7 @@ final class CatalogMetaBoxes {
 	public function add_boxes(): void {
 		add_meta_box(
 			'rodieja_modelo_links',
-			__( 'Catálogo · Modelo', 'rodieja-contable' ),
+			__( 'Catalog · Model', 'rodieja-contable' ),
 			array( $this, 'render_modelo' ),
 			'rodieja_modelo',
 			'normal',
@@ -39,7 +39,7 @@ final class CatalogMetaBoxes {
 		);
 		add_meta_box(
 			'rodieja_generacion_links',
-			__( 'Catálogo · Generación', 'rodieja-contable' ),
+			__( 'Catalog · Generation', 'rodieja-contable' ),
 			array( $this, 'render_generacion' ),
 			'rodieja_generacion',
 			'normal',
@@ -47,7 +47,7 @@ final class CatalogMetaBoxes {
 		);
 		add_meta_box(
 			'rodieja_vehiculo_links',
-			__( 'Catálogo · Vehículo', 'rodieja-contable' ),
+			__( 'Catalog · Vehicle', 'rodieja-contable' ),
 			array( $this, 'render_vehiculo' ),
 			'rodieja_vehiculo',
 			'normal',
@@ -61,7 +61,7 @@ final class CatalogMetaBoxes {
 		}
 		$this->nonce->field( 'rodieja_catalog_meta' );
 		$marca_id = (int) get_post_meta( $post->ID, 'rodieja_marca_id', true );
-		echo '<p><label for="rodieja_marca_id">' . $this->escaper->html( __( 'Marca', 'rodieja-contable' ) ) . '</label><br />';
+		echo '<p><label for="rodieja_marca_id">' . $this->escaper->html( __( 'Brand', 'rodieja-contable' ) ) . '</label><br />';
 		$this->post_select( 'rodieja_marca', 'rodieja_marca_id', $marca_id );
 		echo '</p>';
 	}
@@ -74,12 +74,12 @@ final class CatalogMetaBoxes {
 		$modelo_id = (int) get_post_meta( $post->ID, 'rodieja_modelo_id', true );
 		$anio_i    = (int) get_post_meta( $post->ID, 'rodieja_anio_inicio', true );
 		$anio_f    = (int) get_post_meta( $post->ID, 'rodieja_anio_fin', true );
-		echo '<p><label for="rodieja_modelo_id">' . $this->escaper->html( __( 'Modelo', 'rodieja-contable' ) ) . '</label><br />';
+		echo '<p><label for="rodieja_modelo_id">' . $this->escaper->html( __( 'Model', 'rodieja-contable' ) ) . '</label><br />';
 		$this->post_select( 'rodieja_modelo', 'rodieja_modelo_id', $modelo_id );
 		echo '</p>';
-		echo '<p><label>' . $this->escaper->html( __( 'Año inicio', 'rodieja-contable' ) ) . '</label><br />';
+		echo '<p><label>' . $this->escaper->html( __( 'Start year', 'rodieja-contable' ) ) . '</label><br />';
 		echo '<input type="number" name="rodieja_anio_inicio" value="' . $this->escaper->attr( (string) $anio_i ) . '" class="small-text" /></p>';
-		echo '<p><label>' . $this->escaper->html( __( 'Año fin', 'rodieja-contable' ) ) . '</label><br />';
+		echo '<p><label>' . $this->escaper->html( __( 'End year', 'rodieja-contable' ) ) . '</label><br />';
 		echo '<input type="number" name="rodieja_anio_fin" value="' . $this->escaper->attr( (string) $anio_f ) . '" class="small-text" /></p>';
 	}
 
@@ -89,17 +89,17 @@ final class CatalogMetaBoxes {
 		}
 		$this->nonce->field( 'rodieja_catalog_meta' );
 		$fields = array(
-			'rodieja_codigo'           => array( 'label' => __( 'Código', 'rodieja-contable' ), 'type' => 'text' ),
-			'rodieja_generacion_id'    => array( 'label' => __( 'Generación', 'rodieja-contable' ), 'type' => 'select_gen' ),
-			'rodieja_anio'             => array( 'label' => __( 'Año', 'rodieja-contable' ), 'type' => 'number' ),
-			'rodieja_precio_compra'    => array( 'label' => __( 'Precio compra', 'rodieja-contable' ), 'type' => 'number' ),
-			'rodieja_costo_grua'       => array( 'label' => __( 'Costo grúa', 'rodieja-contable' ), 'type' => 'number' ),
+			'rodieja_codigo'           => array( 'label' => __( 'Code', 'rodieja-contable' ), 'type' => 'text' ),
+			'rodieja_generacion_id'    => array( 'label' => __( 'Generation', 'rodieja-contable' ), 'type' => 'select_gen' ),
+			'rodieja_anio'             => array( 'label' => __( 'Year', 'rodieja-contable' ), 'type' => 'number' ),
+			'rodieja_precio_compra'    => array( 'label' => __( 'Price compra', 'rodieja-contable' ), 'type' => 'number' ),
+			'rodieja_costo_grua'       => array( 'label' => __( 'Tow cost', 'rodieja-contable' ), 'type' => 'number' ),
 			'rodieja_comisiones'       => array( 'label' => __( 'Comisiones', 'rodieja-contable' ), 'type' => 'number' ),
 			'rodieja_costo_recuperado' => array( 'label' => __( 'Costo recuperado', 'rodieja-contable' ), 'type' => 'number' ),
-			'rodieja_traccion'         => array( 'label' => __( 'Tracción', 'rodieja-contable' ), 'type' => 'text' ),
-			'rodieja_transmision'      => array( 'label' => __( 'Transmisión', 'rodieja-contable' ), 'type' => 'text' ),
+			'rodieja_traccion'         => array( 'label' => __( 'Drivetrain', 'rodieja-contable' ), 'type' => 'text' ),
+			'rodieja_transmision'      => array( 'label' => __( 'Transmission', 'rodieja-contable' ), 'type' => 'text' ),
 			'rodieja_combustible'      => array( 'label' => __( 'Combustible', 'rodieja-contable' ), 'type' => 'text' ),
-			'rodieja_fecha_ingreso'    => array( 'label' => __( 'Fecha ingreso', 'rodieja-contable' ), 'type' => 'date' ),
+			'rodieja_fecha_ingreso'    => array( 'label' => __( 'Date ingreso', 'rodieja-contable' ), 'type' => 'date' ),
 		);
 		foreach ( $fields as $key => $cfg ) {
 			$val = get_post_meta( $post->ID, $key, true );
@@ -179,7 +179,7 @@ final class CatalogMetaBoxes {
 			)
 		);
 		echo '<select name="' . $this->escaper->attr( $name ) . '" id="' . $this->escaper->attr( $name ) . '">';
-		echo '<option value="0">' . $this->escaper->html( __( '— Seleccionar —', 'rodieja-contable' ) ) . '</option>';
+		echo '<option value="0">' . $this->escaper->html( __( '— Select —', 'rodieja-contable' ) ) . '</option>';
 		foreach ( $posts as $p ) {
 			printf(
 				'<option value="%1$d" %2$s>%3$s</option>',

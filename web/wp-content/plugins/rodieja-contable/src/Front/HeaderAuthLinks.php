@@ -62,7 +62,7 @@ final class HeaderAuthLinks {
 				),
 				$this->item(
 					wp_logout_url( home_url( '/' ) ),
-					__( 'Cerrar sesión', 'rodieja-contable' )
+					__( 'Log out', 'rodieja-contable' )
 				),
 			);
 			return implode( '', $parts );

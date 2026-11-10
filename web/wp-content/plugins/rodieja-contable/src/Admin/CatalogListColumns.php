@@ -31,7 +31,7 @@ final class CatalogListColumns {
 	 * @return array<string, string>
 	 */
 	public function modelo_cols( array $cols ): array {
-		$cols['rodieja_marca'] = __( 'Marca', 'rodieja-contable' );
+		$cols['rodieja_marca'] = __( 'Brand', 'rodieja-contable' );
 		return $cols;
 	}
 
@@ -48,8 +48,8 @@ final class CatalogListColumns {
 	 * @return array<string, string>
 	 */
 	public function generacion_cols( array $cols ): array {
-		$cols['rodieja_modelo'] = __( 'Modelo', 'rodieja-contable' );
-		$cols['rodieja_anios']  = __( 'Años', 'rodieja-contable' );
+		$cols['rodieja_modelo'] = __( 'Model', 'rodieja-contable' );
+		$cols['rodieja_anios']  = __( 'Years', 'rodieja-contable' );
 		return $cols;
 	}
 
@@ -70,10 +70,10 @@ final class CatalogListColumns {
 	 * @return array<string, string>
 	 */
 	public function vehiculo_cols( array $cols ): array {
-		$cols['rodieja_codigo']     = __( 'Código', 'rodieja-contable' );
-		$cols['rodieja_generacion'] = __( 'Generación', 'rodieja-contable' );
-		$cols['rodieja_anio']       = __( 'Año', 'rodieja-contable' );
-		$cols['rodieja_precio']     = __( 'Precio compra', 'rodieja-contable' );
+		$cols['rodieja_codigo']     = __( 'Code', 'rodieja-contable' );
+		$cols['rodieja_generacion'] = __( 'Generation', 'rodieja-contable' );
+		$cols['rodieja_anio']       = __( 'Year', 'rodieja-contable' );
+		$cols['rodieja_precio']     = __( 'Price compra', 'rodieja-contable' );
 		return $cols;
 	}
 

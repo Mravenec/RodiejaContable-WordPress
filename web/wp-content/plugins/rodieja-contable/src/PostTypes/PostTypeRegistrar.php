@@ -26,8 +26,8 @@ final class PostTypeRegistrar {
 			array_merge(
 				$hidden,
 				array(
-					'label'  => __( 'Marcas', 'rodieja-contable' ),
-					'labels' => $this->labels( __( 'Marca', 'rodieja-contable' ), __( 'Marcas', 'rodieja-contable' ) ),
+					'label'  => __( 'Brands', 'rodieja-contable' ),
+					'labels' => $this->labels( __( 'Brand', 'rodieja-contable' ), __( 'Brands', 'rodieja-contable' ) ),
 				)
 			)
 		);
@@ -36,8 +36,8 @@ final class PostTypeRegistrar {
 			array_merge(
 				$hidden,
 				array(
-					'label'  => __( 'Modelos', 'rodieja-contable' ),
-					'labels' => $this->labels( __( 'Modelo', 'rodieja-contable' ), __( 'Modelos', 'rodieja-contable' ) ),
+					'label'  => __( 'Models', 'rodieja-contable' ),
+					'labels' => $this->labels( __( 'Model', 'rodieja-contable' ), __( 'Models', 'rodieja-contable' ) ),
 				)
 			)
 		);
@@ -46,8 +46,8 @@ final class PostTypeRegistrar {
 			array_merge(
 				$hidden,
 				array(
-					'label'  => __( 'Generaciones', 'rodieja-contable' ),
-					'labels' => $this->labels( __( 'Generación', 'rodieja-contable' ), __( 'Generaciones', 'rodieja-contable' ) ),
+					'label'  => __( 'Generations', 'rodieja-contable' ),
+					'labels' => $this->labels( __( 'Generation', 'rodieja-contable' ), __( 'Generations', 'rodieja-contable' ) ),
 				)
 			)
 		);
@@ -56,8 +56,8 @@ final class PostTypeRegistrar {
 			array_merge(
 				$hidden,
 				array(
-					'label'    => __( 'Vehículos', 'rodieja-contable' ),
-					'labels'   => $this->labels( __( 'Vehículo', 'rodieja-contable' ), __( 'Vehículos', 'rodieja-contable' ) ),
+					'label'    => __( 'Vehicles', 'rodieja-contable' ),
+					'labels'   => $this->labels( __( 'Vehicle', 'rodieja-contable' ), __( 'Vehicles', 'rodieja-contable' ) ),
 					'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
 				)
 			)
@@ -67,8 +67,8 @@ final class PostTypeRegistrar {
 			array_merge(
 				$hidden,
 				array(
-					'label'  => __( 'Repuestos', 'rodieja-contable' ),
-					'labels' => $this->labels( __( 'Repuesto', 'rodieja-contable' ), __( 'Repuestos', 'rodieja-contable' ) ),
+					'label'  => __( 'Parts', 'rodieja-contable' ),
+					'labels' => $this->labels( __( 'Part', 'rodieja-contable' ), __( 'Parts', 'rodieja-contable' ) ),
 				)
 			)
 		);
@@ -77,8 +77,8 @@ final class PostTypeRegistrar {
 			array_merge(
 				$hidden,
 				array(
-					'label'  => __( 'Empleados', 'rodieja-contable' ),
-					'labels' => $this->labels( __( 'Empleado', 'rodieja-contable' ), __( 'Empleados', 'rodieja-contable' ) ),
+					'label'  => __( 'Employees', 'rodieja-contable' ),
+					'labels' => $this->labels( __( 'Employee', 'rodieja-contable' ), __( 'Employees', 'rodieja-contable' ) ),
 				)
 			)
 		);
@@ -87,8 +87,8 @@ final class PostTypeRegistrar {
 			array_merge(
 				$hidden,
 				array(
-					'label'  => __( 'Transacciones', 'rodieja-contable' ),
-					'labels' => $this->labels( __( 'Transacción', 'rodieja-contable' ), __( 'Transacciones', 'rodieja-contable' ) ),
+					'label'  => __( 'Transactions', 'rodieja-contable' ),
+					'labels' => $this->labels( __( 'Transaction', 'rodieja-contable' ), __( 'Transactions', 'rodieja-contable' ) ),
 				)
 			)
 		);
@@ -97,8 +97,8 @@ final class PostTypeRegistrar {
 			array_merge(
 				$hidden,
 				array(
-					'label'  => __( 'Pedidos', 'rodieja-contable' ),
-					'labels' => $this->labels( __( 'Pedido', 'rodieja-contable' ), __( 'Pedidos', 'rodieja-contable' ) ),
+					'label'  => __( 'Orders', 'rodieja-contable' ),
+					'labels' => $this->labels( __( 'Order', 'rodieja-contable' ), __( 'Orders', 'rodieja-contable' ) ),
 				)
 			)
 		);
@@ -107,8 +107,8 @@ final class PostTypeRegistrar {
 			array_merge(
 				$hidden,
 				array(
-					'label'  => __( 'Ítems de pedido', 'rodieja-contable' ),
-					'labels' => $this->labels( __( 'Ítem de pedido', 'rodieja-contable' ), __( 'Ítems de pedido', 'rodieja-contable' ) ),
+					'label'  => __( 'Order items', 'rodieja-contable' ),
+					'labels' => $this->labels( __( 'Order item', 'rodieja-contable' ), __( 'Order items', 'rodieja-contable' ) ),
 				)
 			)
 		);
