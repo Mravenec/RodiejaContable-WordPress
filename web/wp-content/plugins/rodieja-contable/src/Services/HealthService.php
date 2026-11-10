@@ -1,7 +1,5 @@
 <?php
 /**
- * Read-only health payload.
- *
  * @package Rodieja\Contable
  */
 
@@ -12,14 +10,16 @@ namespace Rodieja\Contable\Services;
 final class HealthService {
 
 	/**
-	 * @return array{status:string,plugin:string,version:string,mode:string}
+	 * @return array{status:string,plugin:string,version:string,php:string,wordpress:string,native:bool}
 	 */
 	public function status(): array {
 		return array(
-			'status'  => 'ok',
-			'plugin'  => 'rodieja-contable',
-			'version' => RODIEJA_CONTABLE_VERSION,
-			'mode'    => 'native-wordpress-cpt',
+			'status'    => 'ok',
+			'plugin'    => 'rodieja-contable',
+			'version'   => RODIEJA_PLUGIN_VERSION,
+			'php'       => PHP_VERSION,
+			'wordpress' => get_bloginfo( 'version' ),
+			'native'    => true,
 		);
 	}
 }

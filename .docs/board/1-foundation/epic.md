@@ -1,11 +1,11 @@
-# Native WP MVP vehicles + finance
+# Foundation: WP + plugin scaffold + roles
 
 | Field | Value |
 |---|---|
 | Id | 1 |
-| Slug | native_mvp |
+| Slug | foundation |
 | Status | in_progress |
-| Progress | **50%** (0/4 in summarize · column + checklist) |
+| Progress | **83%** (0/3 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,10 +35,9 @@ _empty_
 
 ### 3. done
 
-- `APP-1-1` Roles CONTADOR + caps (native) _(role:security)_
-- `APP-1-2` CPT catalog + vehicles + finance meta _(role:plugin)_
-- `APP-1-3` Admin UI + REST smoke + demo seed _(role:plugin)_
-- `APP-1-4` Docs map Spring→native _(role:database)_
+- `APP-1-1` Plugin · scaffold DI + health REST _(role:plugin)_
+- `APP-1-2` Security · roles caps + MU hardening verify _(role:security)_
+- `APP-1-3` Docs · journey + native map in AGENTS _(role:orchestrator)_
 
 ### 4. summarize
 

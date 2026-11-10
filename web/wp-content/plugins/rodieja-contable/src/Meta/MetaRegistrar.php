@@ -1,6 +1,6 @@
 <?php
 /**
- * Native post meta (register_post_meta + show_in_rest).
+ * register_post_meta — native REST-visible meta (no custom tables).
  *
  * @package Rodieja\Contable
  */
@@ -16,40 +16,43 @@ final class MetaRegistrar {
 	}
 
 	public function register_meta(): void {
-		$this->int_meta( 'rodieja_modelo', '_rodieja_marca_id', 'Marca (post ID)' );
-		$this->int_meta( 'rodieja_generacion', '_rodieja_modelo_id', 'Modelo (post ID)' );
-		$this->int_meta( 'rodieja_generacion', '_rodieja_anio_inicio', 'Año inicio' );
-		$this->int_meta( 'rodieja_generacion', '_rodieja_anio_fin', 'Año fin' );
+		$this->string_meta( 'rodieja_modelo', 'rodieja_marca_id' );
+		$this->string_meta( 'rodieja_generacion', 'rodieja_modelo_id' );
+		$this->number_meta( 'rodieja_generacion', 'rodieja_anio_inicio' );
+		$this->number_meta( 'rodieja_generacion', 'rodieja_anio_fin' );
 
-		$this->int_meta( 'rodieja_vehiculo', '_rodieja_generacion_id', 'Generación (post ID)' );
-		$this->string_meta( 'rodieja_vehiculo', '_rodieja_codigo', 'Código vehículo' );
-		$this->int_meta( 'rodieja_vehiculo', '_rodieja_anio', 'Año' );
-		$this->number_meta( 'rodieja_vehiculo', '_rodieja_precio_compra', 'Precio compra' );
-		$this->number_meta( 'rodieja_vehiculo', '_rodieja_costo_grua', 'Costo grúa' );
-		$this->number_meta( 'rodieja_vehiculo', '_rodieja_comisiones', 'Comisiones' );
-		$this->number_meta( 'rodieja_vehiculo', '_rodieja_costo_recuperado', 'Costo recuperado' );
-		$this->string_meta( 'rodieja_vehiculo', '_rodieja_traccion', 'Tracción' );
-		$this->string_meta( 'rodieja_vehiculo', '_rodieja_transmision', 'Transmisión' );
-		$this->string_meta( 'rodieja_vehiculo', '_rodieja_combustible', 'Combustible' );
-		$this->string_meta( 'rodieja_vehiculo', '_rodieja_estado', 'Estado' );
-		$this->string_meta( 'rodieja_vehiculo', '_rodieja_fecha_ingreso', 'Fecha ingreso' );
-		$this->number_meta( 'rodieja_vehiculo', '_rodieja_precio_venta', 'Precio venta' );
+		$this->string_meta( 'rodieja_vehiculo', 'rodieja_codigo' );
+		$this->string_meta( 'rodieja_vehiculo', 'rodieja_generacion_id' );
+		$this->number_meta( 'rodieja_vehiculo', 'rodieja_anio' );
+		$this->number_meta( 'rodieja_vehiculo', 'rodieja_precio_compra' );
+		$this->number_meta( 'rodieja_vehiculo', 'rodieja_costo_grua' );
+		$this->number_meta( 'rodieja_vehiculo', 'rodieja_comisiones' );
+		$this->number_meta( 'rodieja_vehiculo', 'rodieja_costo_recuperado' );
+		$this->string_meta( 'rodieja_vehiculo', 'rodieja_traccion' );
+		$this->string_meta( 'rodieja_vehiculo', 'rodieja_transmision' );
+		$this->string_meta( 'rodieja_vehiculo', 'rodieja_combustible' );
+		$this->string_meta( 'rodieja_vehiculo', 'rodieja_fecha_ingreso' );
 
-		$this->string_meta( 'rodieja_repuesto', '_rodieja_codigo', 'Código repuesto' );
-		$this->number_meta( 'rodieja_repuesto', '_rodieja_stock', 'Stock' );
-		$this->number_meta( 'rodieja_repuesto', '_rodieja_precio', 'Precio' );
-		$this->int_meta( 'rodieja_repuesto', '_rodieja_vehiculo_id', 'Vehículo origen (post ID)' );
+		$this->string_meta( 'rodieja_repuesto', 'rodieja_vehiculo_id' );
+		$this->number_meta( 'rodieja_repuesto', 'rodieja_precio' );
+		$this->number_meta( 'rodieja_repuesto', 'rodieja_stock' );
 
-		$this->string_meta( 'rodieja_transaccion', '_rodieja_codigo', 'Código transacción' );
-		$this->string_meta( 'rodieja_transaccion', '_rodieja_fecha', 'Fecha' );
-		$this->string_meta( 'rodieja_transaccion', '_rodieja_categoria', 'Categoría INGRESO|EGRESO' );
-		$this->number_meta( 'rodieja_transaccion', '_rodieja_monto', 'Monto' );
-		$this->int_meta( 'rodieja_transaccion', '_rodieja_vehiculo_id', 'Vehículo (post ID)' );
-		$this->int_meta( 'rodieja_transaccion', '_rodieja_repuesto_id', 'Repuesto (post ID)' );
-		$this->string_meta( 'rodieja_transaccion', '_rodieja_estado', 'Estado' );
+		$this->string_meta( 'rodieja_empleado', 'rodieja_email' );
+		$this->string_meta( 'rodieja_empleado', 'rodieja_telefono' );
+		$this->string_meta( 'rodieja_empleado', 'rodieja_puesto' );
+
+		$this->number_meta( 'rodieja_transaccion', 'rodieja_monto' );
+		$this->string_meta( 'rodieja_transaccion', 'rodieja_fecha' );
+		$this->string_meta( 'rodieja_transaccion', 'rodieja_vehiculo_id' );
+		$this->string_meta( 'rodieja_transaccion', 'rodieja_empleado_id' );
+		$this->string_meta( 'rodieja_transaccion', 'rodieja_sentido' ); // ingreso|egreso
+
+		$this->string_meta( 'rodieja_pedido', 'rodieja_origen' ); // audatex|ins|manual
+		$this->string_meta( 'rodieja_pedido', 'rodieja_estado_pedido' );
+		$this->string_meta( 'rodieja_pedido', 'rodieja_referencia_ext' );
 	}
 
-	private function string_meta( string $type, string $key, string $description ): void {
+	private function string_meta( string $type, string $key ): void {
 		register_post_meta(
 			$type,
 			$key,
@@ -57,29 +60,13 @@ final class MetaRegistrar {
 				'type'              => 'string',
 				'single'            => true,
 				'show_in_rest'      => true,
-				'description'       => $description,
 				'auth_callback'     => array( $this, 'can_edit' ),
 				'sanitize_callback' => 'sanitize_text_field',
 			)
 		);
 	}
 
-	private function int_meta( string $type, string $key, string $description ): void {
-		register_post_meta(
-			$type,
-			$key,
-			array(
-				'type'              => 'integer',
-				'single'            => true,
-				'show_in_rest'      => true,
-				'description'       => $description,
-				'auth_callback'     => array( $this, 'can_edit' ),
-				'sanitize_callback' => 'absint',
-			)
-		);
-	}
-
-	private function number_meta( string $type, string $key, string $description ): void {
+	private function number_meta( string $type, string $key ): void {
 		register_post_meta(
 			$type,
 			$key,
@@ -87,13 +74,14 @@ final class MetaRegistrar {
 				'type'              => 'number',
 				'single'            => true,
 				'show_in_rest'      => true,
-				'description'       => $description,
 				'auth_callback'     => array( $this, 'can_edit' ),
-				'sanitize_callback' => static function ( $value ) {
-					return round( (float) $value, 2 );
-				},
+				'sanitize_callback' => array( $this, 'sanitize_number' ),
 			)
 		);
+	}
+
+	public function sanitize_number( mixed $value ): float {
+		return (float) $value;
 	}
 
 	public function can_edit(): bool {

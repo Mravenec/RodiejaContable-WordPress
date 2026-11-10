@@ -1,10 +1,10 @@
-# Epic 1 — native_mvp
+# Epic 1 — foundation
 
-**Status:** Done · Board: `.linear/epics/1-native_mvp/`
+**Status:** Planned · Board: `.linear/epics/1-foundation/`
 
 ## Title
 
-Native WP MVP vehicles + finance
+Foundation: WP + plugin scaffold + roles
 
 ## Why
 

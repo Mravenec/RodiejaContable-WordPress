@@ -11,32 +11,39 @@ namespace Rodieja\Contable\Roles;
 
 final class RoleRegistrar {
 
-	public const CAP_MANAGE = 'manage_rodieja_contable';
 	public const ROLE_CONTADOR = 'rodieja_contador';
+	public const CAP_MANAGE    = 'manage_rodieja_contable';
 
 	/** @return list<string> */
-	public static function caps(): array {
-		return array(
-			self::CAP_MANAGE,
-			'edit_rodieja_vehiculos',
-			'edit_others_rodieja_vehiculos',
-			'publish_rodieja_vehiculos',
-			'read_private_rodieja_vehiculos',
-			'delete_rodieja_vehiculos',
-			'edit_rodieja_transacciones',
-			'edit_others_rodieja_transacciones',
-			'publish_rodieja_transacciones',
-			'read_private_rodieja_transacciones',
-			'delete_rodieja_transacciones',
-			'edit_rodieja_repuestos',
-			'publish_rodieja_repuestos',
-			'delete_rodieja_repuestos',
-			'read',
+	public function post_caps(): array {
+		$types = array(
+			'rodieja_marca',
+			'rodieja_modelo',
+			'rodieja_generacion',
+			'rodieja_vehiculo',
+			'rodieja_repuesto',
+			'rodieja_empleado',
+			'rodieja_transaccion',
+			'rodieja_pedido',
 		);
+		$caps  = array( self::CAP_MANAGE, 'read' );
+		foreach ( $types as $type ) {
+			$caps[] = "edit_{$type}";
+			$caps[] = "read_{$type}";
+			$caps[] = "delete_{$type}";
+			$caps[] = "edit_{$type}s";
+			$caps[] = "edit_others_{$type}s";
+			$caps[] = "publish_{$type}s";
+			$caps[] = "read_private_{$type}s";
+			$caps[] = "delete_{$type}s";
+			$caps[] = "delete_others_{$type}s";
+		}
+		return array_values( array_unique( $caps ) );
 	}
 
-	public static function install_roles(): void {
-		$caps = array_fill_keys( self::caps(), true );
+	public function install(): void {
+		$caps = array_fill_keys( $this->post_caps(), true );
+		add_role( self::ROLE_CONTADOR, __( 'Rodieja Contador', 'rodieja-contable' ), $caps );
 
 		$admin = get_role( 'administrator' );
 		if ( $admin instanceof \WP_Role ) {
@@ -44,25 +51,12 @@ final class RoleRegistrar {
 				$admin->add_cap( $cap );
 			}
 		}
-
-		if ( ! get_role( self::ROLE_CONTADOR ) ) {
-			add_role(
-				self::ROLE_CONTADOR,
-				__( 'Contador Rodieja', 'rodieja-contable' ),
-				$caps
-			);
-		} else {
-			$role = get_role( self::ROLE_CONTADOR );
-			if ( $role instanceof \WP_Role ) {
-				foreach ( array_keys( $caps ) as $cap ) {
-					$role->add_cap( $cap );
-				}
-			}
-		}
 	}
 
 	public function register(): void {
-		// Ensure caps stay on admin after upgrades.
-		add_action( 'admin_init', array( self::class, 'install_roles' ) );
+		// Ensure role exists after upgrades.
+		if ( ! get_role( self::ROLE_CONTADOR ) ) {
+			$this->install();
+		}
 	}
 }

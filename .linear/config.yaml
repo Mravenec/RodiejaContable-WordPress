@@ -35,5 +35,5 @@ progress:
   unlock_column: done
 claims_file: agents/claims.json
 ui:
-  api_port: 47381
-  ui_port: 47382
+  api_port: 47481
+  ui_port: 47482
