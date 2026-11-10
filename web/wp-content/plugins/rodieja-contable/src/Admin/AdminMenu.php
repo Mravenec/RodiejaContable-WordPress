@@ -336,10 +336,11 @@ final class AdminMenu {
 			<div class="rodieja-hero">
 				<p class="rodieja-hero__eyebrow"><?php echo $this->escaper->html( __( 'Rodieja Contable', 'rodieja-contable' ) ); ?></p>
 				<h1><?php echo $this->escaper->html( $org ); ?></h1>
-				<p><?php echo $this->escaper->html( __( 'Panel nativo WordPress — misma estructura de menús que Rodieja Contable Read-Only.', 'rodieja-contable' ) ); ?></p>
+				<p><?php echo $this->escaper->html( __( 'Inicio — mismo mapa de módulos que Rodieja Contable Read-Only, en WordPress nativo.', 'rodieja-contable' ) ); ?></p>
 			</div>
 
-			<div class="rodieja-metrics">
+			<h2 class="rodieja-section-title"><?php echo $this->escaper->html( __( 'Indicadores', 'rodieja-contable' ) ); ?></h2>
+			<div class="rodieja-metrics" role="group" aria-label="<?php echo $this->escaper->attr( __( 'Indicadores', 'rodieja-contable' ) ); ?>">
 				<div class="rodieja-metric rodieja-metric--accent">
 					<span class="rodieja-metric__label"><?php echo $this->escaper->html( __( 'Vehículos', 'rodieja-contable' ) ); ?></span>
 					<span class="rodieja-metric__value"><?php echo $this->escaper->html( (string) ( $counts['rodieja_vehiculo'] ?? 0 ) ); ?></span>
@@ -366,7 +367,7 @@ final class AdminMenu {
 				</div>
 			</div>
 
-			<p class="rodieja-admin-lede"><?php echo $this->escaper->html( __( 'Accesos rápidos', 'rodieja-contable' ) ); ?></p>
+			<h2 class="rodieja-section-title"><?php echo $this->escaper->html( __( 'Módulos', 'rodieja-contable' ) ); ?></h2>
 			<div class="rodieja-nav-grid">
 				<?php foreach ( $tiles as $tile ) : ?>
 					<a class="rodieja-nav-tile" href="<?php echo $this->escaper->url( $tile[3] ); ?>">
