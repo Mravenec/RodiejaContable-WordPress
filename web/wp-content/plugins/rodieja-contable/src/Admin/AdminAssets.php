@@ -48,11 +48,22 @@ final class AdminAssets {
 		if ( ! current_user_can( CapabilityGate::MANAGE ) && ! current_user_can( 'manage_options' ) && ! $this->is_rodieja_screen() ) {
 			return;
 		}
+		$admin_css = RODIEJA_PLUGIN_DIR . 'assets/css/admin.css';
+		$shell_css = RODIEJA_PLUGIN_DIR . 'assets/css/admin-shell.css';
+		$ver_admin = is_readable( $admin_css ) ? (string) filemtime( $admin_css ) : RODIEJA_PLUGIN_VERSION;
+		$ver_shell = is_readable( $shell_css ) ? (string) filemtime( $shell_css ) : RODIEJA_PLUGIN_VERSION;
+
 		wp_enqueue_style(
 			'rodieja-contable-admin',
 			RODIEJA_PLUGIN_URL . 'assets/css/admin.css',
 			array(),
-			RODIEJA_PLUGIN_VERSION
+			$ver_admin
+		);
+		wp_enqueue_style(
+			'rodieja-contable-admin-shell',
+			RODIEJA_PLUGIN_URL . 'assets/css/admin-shell.css',
+			array( 'rodieja-contable-admin' ),
+			$ver_shell
 		);
 	}
 
