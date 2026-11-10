@@ -2,6 +2,8 @@
 
 Board of record: `.linear/` only (UI brand **private.board**). **No** cloud issue-tracker API/MCP.
 
+**Rodieja product:** process is always mandatory (`.ai/rules/board-process-mandatory.md`) — Spring-harness discipline on the WordPress stack. Keep `.docs/journey` and `.docs/board` current; never ship only on `main`.
+
 ## Flow
 
 1. `node .linear/scripts/board.mjs next --role <role> --epic <n>`

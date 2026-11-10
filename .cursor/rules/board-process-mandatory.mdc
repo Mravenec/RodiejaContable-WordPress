@@ -1,0 +1,14 @@
+---
+description: Always use .linear + worktrees + .docs like the Spring harness — WordPress stack
+alwaysApply: true
+---
+
+# Board process mandatory (Rodieja Contable)
+
+Product repo — every change uses `.linear` + worktrees + `.docs` (Spring harness discipline, WordPress stack).
+
+Never: drive-by `main`, skip worktrees, stub journeys, fake LANDED.
+
+Always: journey story → claim → worktree-add → checklist/evidence → testing → finish → integrate → summarize/handoff → push → land to `origin/main`.
+
+WP: native-first · Contracts → Repos → Services → Controllers · DI · layer-audit green.
