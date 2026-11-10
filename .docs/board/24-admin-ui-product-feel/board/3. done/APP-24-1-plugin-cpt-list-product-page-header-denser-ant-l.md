@@ -34,6 +34,7 @@ CptListChrome page-header + denser admin-list.css
 
 ## History
 
+- 2026-11-10T08:18:28.069Z moved testing → done
 - 2026-11-10T08:18:27.683Z checklist item 2 marked
 - 2026-11-10T08:18:27.602Z moved doing → testing
 - 2026-11-10T08:18:27.390Z checklist item 1 marked

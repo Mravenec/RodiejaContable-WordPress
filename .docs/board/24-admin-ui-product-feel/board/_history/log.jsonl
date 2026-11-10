@@ -4,3 +4,4 @@
 {"at":"2026-11-10T08:18:27.481Z","type":"evidence","issueId":"APP-24-1","title":"product-chrome"}
 {"at":"2026-11-10T08:18:27.604Z","type":"move","issueId":"APP-24-1","from":"doing","to":"testing"}
 {"at":"2026-11-10T08:18:27.684Z","type":"checklist","issueId":"APP-24-1","item":"2"}
+{"at":"2026-11-10T08:18:28.071Z","type":"move","issueId":"APP-24-1","from":"testing","to":"done"}
