@@ -58,7 +58,8 @@ final class PostTypeRegistrar {
 				array(
 					'label'    => __( 'Vehicles', 'workshop-ledger' ),
 					'labels'   => $this->labels( __( 'Vehicle', 'workshop-ledger' ), __( 'Vehicles', 'workshop-ledger' ) ),
-					'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+					// Classic meta-box form (Read-Only parity) — no Gutenberg canvas.
+					'supports' => array( 'title', 'thumbnail' ),
 				)
 			)
 		);

@@ -1,0 +1,7 @@
+{"at":"2026-11-10T15:30:35.045Z","type":"create","issueId":"APP-27-1","column":"backlog"}
+{"at":"2026-11-10T15:30:35.118Z","type":"create","issueId":"APP-27-2","column":"backlog"}
+{"at":"2026-11-10T15:30:35.200Z","type":"claim","issueId":"APP-27-1","agent":"plugin-agent-1"}
+{"at":"2026-11-10T15:31:06.528Z","type":"checklist","issueId":"APP-27-1","item":"1"}
+{"at":"2026-11-10T15:31:06.611Z","type":"evidence","issueId":"APP-27-1","title":"classic-editor"}
+{"at":"2026-11-10T15:31:06.740Z","type":"move","issueId":"APP-27-1","from":"doing","to":"testing"}
+{"at":"2026-11-10T15:31:06.819Z","type":"checklist","issueId":"APP-27-1","item":"2"}
