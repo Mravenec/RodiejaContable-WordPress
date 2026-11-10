@@ -1,0 +1,13 @@
+{
+  "status": "landed",
+  "started_at": "2026-11-10T15:36:36.461Z",
+  "finished_at": "2026-11-10T15:36:53.820Z",
+  "merge_commit": "87078e7560b3aff6017a6008ae2131a3c7b99ea5",
+  "conflicts": [],
+  "smoke_ok": true,
+  "smoke_at": "2026-11-10T15:36:51.543Z",
+  "git": "git push origin main",
+  "note": "Supervisor: Epic 27 LANDED. Add Vehicle uses classic editor + Brand→Model→Generation cascade (native meta). layer-audit green. Hard-refresh post-new.php?post_type=wl_vehiculo.",
+  "recorded_at": "2026-11-10T15:36:51.606Z",
+  "pushed_at": "2026-11-10T15:36:53.820Z"
+}

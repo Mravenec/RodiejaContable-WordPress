@@ -1,6 +1,6 @@
 # Epic 27 — vehicle-add-readonly-form
 
-**Status:** In progress · Board: `.linear/epics/27-vehicle-add-readonly-form/`
+**Status:** Landed on main · Board: `.linear/epics/27-vehicle-add-readonly-form/`
 
 ## Title
 
@@ -35,3 +35,14 @@ Add Vehicle: classic form like Read-Only (native cascade)
 ## Notes
 
 Read-Only multi-step wizard UX approximated in one classic form (native). Full step wizard SPA is out of scope.
+
+
+## Land on main
+
+- Merge commit: `87078e7560b3aff6017a6008ae2131a3c7b99ea5`
+- Branch: `feature/27-vehicle-add-readonly-form` → `main`
+
+### Supervisor / Manager (land)
+
+Supervisor: Epic 27 LANDED. Add Vehicle uses classic editor + Brand→Model→Generation cascade (native meta). layer-audit green. Hard-refresh post-new.php?post_type=wl_vehiculo.
+
