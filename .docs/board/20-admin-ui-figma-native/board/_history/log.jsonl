@@ -11,3 +11,4 @@
 {"at":"2026-11-10T07:51:03.520Z","type":"evidence","issueId":"APP-20-2","title":"shells"}
 {"at":"2026-11-10T07:51:03.637Z","type":"move","issueId":"APP-20-2","from":"doing","to":"testing"}
 {"at":"2026-11-10T07:51:03.711Z","type":"checklist","issueId":"APP-20-2","item":"2"}
+{"at":"2026-11-10T07:51:04.047Z","type":"move","issueId":"APP-20-2","from":"testing","to":"done"}

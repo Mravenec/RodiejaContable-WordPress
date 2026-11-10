@@ -35,6 +35,7 @@ rodieja-page-header + hero chips + shell-grid
 
 ## History
 
+- 2026-11-10T07:51:04.046Z moved testing → done
 - 2026-11-10T07:51:03.711Z checklist item 2 marked
 - 2026-11-10T07:51:03.636Z moved doing → testing
 - 2026-11-10T07:51:03.439Z checklist item 1 marked

@@ -1,6 +1,6 @@
 # Epic 20 — admin-ui-figma-native
 
-**Status:** In progress · Board: `.linear/epics/20-admin-ui-figma-native/`
+**Status:** Done · LANDED on `origin/main` · Board: `.linear/epics/20-admin-ui-figma-native/`
 
 ## Title
 
@@ -8,25 +8,21 @@ Admin UI: Figma-grade native shells (Read-Only fidelity)
 
 ## Why
 
-Stakeholders want Divi/Figma-level polish while staying WordPress-native. Read-Only is the visual source of truth; wp-admin Contable screens need denser, product-grade shells without a SPA or Divi.
+Divi/Figma-level polish while staying WordPress-native. Read-Only is the visual source of truth; Contable screens need denser product shells without SPA/Divi.
 
-## What we will do
+## What we did
 
-- [ ] Expand design tokens + shared shell CSS (header, toolbar, cards, tables, forms)
-- [ ] Polish Home, View by Generations, Reports hub, Settings
-- [ ] Keep CPT data native; English-only; never edit Read-Only
-- [ ] Land to origin/main
+- [x] `admin-shell.css` design system (page header, hero chips, shell grid, table polish)
+- [x] Enqueue shell after admin.css with filemtime cache-bust
+- [x] Home / View by Generations / Reports / Settings shell markup
+- [x] Plugin version 0.4.0 · land origin/main
 
 ## Acceptance
 
 - Given Rodieja admin screens
-- Expect Figma-like density/chrome closer to Read-Only
-- No Divi, no React SPA, layer-audit green
-
-## Agent notes
-
-Native CSS/PHP only. Read-Only = reference only.
+- Expect Figma-like density closer to Read-Only
+- No Divi, no React SPA, Read-Only untouched, layer-audit green
 
 ## Outcome
 
-(Filled at land.)
+Figma-grade native Contable chrome on origin/main (epic 20).

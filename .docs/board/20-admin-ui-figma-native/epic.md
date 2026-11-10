@@ -5,7 +5,7 @@
 | Id | 20 |
 | Slug | admin-ui-figma-native |
 | Status | in_progress |
-| Progress | **75%** (0/2 in summarize · column + checklist) |
+| Progress | **83%** (0/2 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -31,11 +31,12 @@ _empty_
 
 ### 2. testing
 
-- `APP-20-2` Plugin · Home + hierarchy + reports/settings shell polish _(role:plugin)_
+_empty_
 
 ### 3. done
 
 - `APP-20-1` Plugin · design tokens + shell CSS (page/header/card/table) _(role:plugin)_
+- `APP-20-2` Plugin · Home + hierarchy + reports/settings shell polish _(role:plugin)_
 
 ### 4. summarize
 
