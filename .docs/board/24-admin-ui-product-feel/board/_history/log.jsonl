@@ -1,0 +1,6 @@
+{"at":"2026-11-10T08:17:21.161Z","type":"create","issueId":"APP-24-1","column":"backlog"}
+{"at":"2026-11-10T08:17:21.253Z","type":"claim","issueId":"APP-24-1","agent":"plugin-agent-1"}
+{"at":"2026-11-10T08:18:27.391Z","type":"checklist","issueId":"APP-24-1","item":"1"}
+{"at":"2026-11-10T08:18:27.481Z","type":"evidence","issueId":"APP-24-1","title":"product-chrome"}
+{"at":"2026-11-10T08:18:27.604Z","type":"move","issueId":"APP-24-1","from":"doing","to":"testing"}
+{"at":"2026-11-10T08:18:27.684Z","type":"checklist","issueId":"APP-24-1","item":"2"}
