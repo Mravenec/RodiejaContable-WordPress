@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace Rodieja\Contable\Core;
 
 use Rodieja\Contable\Admin\AdminMenu;
+use Rodieja\Contable\Admin\CatalogAdminFilters;
 use Rodieja\Contable\Admin\CatalogListColumns;
 use Rodieja\Contable\Admin\CatalogMetaBoxes;
 use Rodieja\Contable\Controllers\Rest\DomainStatsController;
@@ -49,6 +50,7 @@ final class Plugin {
 		$this->container->get( AdminMenu::class )->register();
 		$this->container->get( CatalogMetaBoxes::class )->register();
 		$this->container->get( CatalogListColumns::class )->register();
+		$this->container->get( CatalogAdminFilters::class )->register();
 		$this->container->get( SecurityHeaders::class )->register();
 
 		add_action( 'rest_api_init', array( $this, 'register_rest' ) );

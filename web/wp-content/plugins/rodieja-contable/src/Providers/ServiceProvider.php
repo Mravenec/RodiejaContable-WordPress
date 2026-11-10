@@ -8,6 +8,7 @@ declare(strict_types=1);
 namespace Rodieja\Contable\Providers;
 
 use Rodieja\Contable\Admin\AdminMenu;
+use Rodieja\Contable\Admin\CatalogAdminFilters;
 use Rodieja\Contable\Admin\CatalogListColumns;
 use Rodieja\Contable\Admin\CatalogMetaBoxes;
 use Rodieja\Contable\Controllers\Rest\DomainStatsController;
@@ -70,6 +71,10 @@ final class ServiceProvider {
 		$container->set(
 			CatalogListColumns::class,
 			static fn( Container $c ) => new CatalogListColumns( $c->get( OutputEscaper::class ) )
+		);
+		$container->set(
+			CatalogAdminFilters::class,
+			static fn( Container $c ) => new CatalogAdminFilters( $c->get( OutputEscaper::class ) )
 		);
 	}
 }
