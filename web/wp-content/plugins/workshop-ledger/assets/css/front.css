@@ -71,6 +71,96 @@ body.workshop-ledger-front .wp-block-query {
 	color: var(--wl-ink);
 }
 
+/* Page title is redundant next to the branded lead — keep for a11y */
+body.workshop-ledger-front.home .wp-block-post-title,
+body.workshop-ledger-front.page-template-default .wp-block-post-title {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+/* Professional entry panel */
+body.workshop-ledger-front .wl-front-panel {
+	max-width: 40rem;
+	margin: 0 auto;
+	padding: 2.5rem 1.75rem 3rem;
+	background: var(--wl-card);
+	border: 1px solid var(--wl-line);
+	border-radius: var(--wl-radius-lg);
+	box-shadow: var(--wl-shadow);
+}
+
+body.workshop-ledger-front .wl-front-kicker {
+	margin: 0 0 0.5rem;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--wl-accent);
+}
+
+body.workshop-ledger-front .wl-front-lead {
+	margin: 0 0 0.85rem;
+	font-size: clamp(1.65rem, 2.4vw, 2rem);
+	font-weight: 650;
+	line-height: 1.25;
+	letter-spacing: -0.02em;
+	color: var(--wl-ink);
+}
+
+body.workshop-ledger-front .wl-front-lede {
+	margin: 0 0 1.25rem;
+	font-size: 1.05rem;
+	line-height: 1.65;
+	color: var(--wl-ink-soft);
+}
+
+body.workshop-ledger-front .wl-front-modules {
+	list-style: none;
+	margin: 0 0 1.5rem;
+	padding: 0;
+	display: grid;
+	gap: 0.75rem;
+}
+
+body.workshop-ledger-front .wl-front-modules li {
+	display: grid;
+	gap: 0.2rem;
+	padding: 0.9rem 1rem;
+	background: var(--wl-surface);
+	border: 1px solid var(--wl-line);
+	border-radius: var(--wl-radius-lg);
+}
+
+body.workshop-ledger-front .wl-front-module__name {
+	font-size: 0.95rem;
+	font-weight: 650;
+	color: var(--wl-ink);
+}
+
+body.workshop-ledger-front .wl-front-module__desc {
+	font-size: 0.9rem;
+	line-height: 1.5;
+	color: var(--wl-ink-muted);
+}
+
+body.workshop-ledger-front .wl-front-note {
+	margin: 0;
+	font-size: 0.9rem;
+	line-height: 1.55;
+	color: var(--wl-ink-muted);
+}
+
+body.workshop-ledger-front .entry-content > .wl-front-panel {
+	margin-top: 0.5rem;
+}
+
 body.workshop-ledger-front a:not(.wp-block-button__link):not(.wp-element-button) {
 	color: var(--wl-accent);
 }
