@@ -1,0 +1,13 @@
+{
+  "status": "landed",
+  "started_at": "2026-11-10T07:36:16.573Z",
+  "finished_at": "2026-11-10T07:36:29.680Z",
+  "merge_commit": "6e59388e53664c54801c15f0bfbc5848e3ddfe43",
+  "conflicts": [],
+  "smoke_ok": true,
+  "smoke_at": "2026-11-10T07:36:23.482Z",
+  "git": "git push origin main",
+  "note": "Epic 18 landed: native admin chrome maximally faithful to Read-Only (no SPA).",
+  "recorded_at": "2026-11-10T07:36:23.553Z",
+  "pushed_at": "2026-11-10T07:36:29.680Z"
+}

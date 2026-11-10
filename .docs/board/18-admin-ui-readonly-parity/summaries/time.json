@@ -1,0 +1,85 @@
+{
+  "idle_ms": 180000,
+  "started_at": "2026-11-10T07:32:17.431Z",
+  "finished_at": null,
+  "issues": {
+    "APP-18-1": {
+      "active_ms": 102194,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T07:32:17.431Z",
+          "end": "2026-11-10T07:33:59.625Z",
+          "ms": 102194,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T07:36:07.402Z",
+          "end": "2026-11-10T07:36:07.402Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": "plugin-agent-1"
+        }
+      ]
+    },
+    "APP-18-2": {
+      "active_ms": 22695,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T07:34:02.653Z",
+          "end": "2026-11-10T07:34:25.348Z",
+          "ms": 22695,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T07:36:07.478Z",
+          "end": "2026-11-10T07:36:07.478Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": "plugin-agent-1"
+        }
+      ]
+    },
+    "APP-18-3": {
+      "active_ms": 31291,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T07:34:28.200Z",
+          "end": "2026-11-10T07:34:59.491Z",
+          "ms": 31291,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T07:36:07.555Z",
+          "end": "2026-11-10T07:36:07.555Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": "plugin-agent-1"
+        }
+      ]
+    }
+  },
+  "land": {
+    "started_at": "2026-11-10T07:36:16.579Z",
+    "finished_at": "2026-11-10T07:36:29.680Z",
+    "paused": false,
+    "open": null,
+    "segments": [
+      {
+        "start": "2026-11-10T07:36:16.579Z",
+        "end": "2026-11-10T07:36:29.680Z",
+        "ms": 13101,
+        "close": "land-finish",
+        "agent": "land-agent"
+      }
+    ]
+  }
+}
