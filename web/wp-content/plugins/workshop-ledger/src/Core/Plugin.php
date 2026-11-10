@@ -47,6 +47,7 @@ use WorkshopLedger\Controllers\Rest\DomainStatsController;
 use WorkshopLedger\Controllers\Rest\FinanceController;
 use WorkshopLedger\Controllers\Rest\HealthController;
 use WorkshopLedger\Controllers\Rest\PedidoController;
+use WorkshopLedger\Front\FooterBrandNav;
 use WorkshopLedger\Front\HeaderAuthLinks;
 use WorkshopLedger\Front\LoginChrome;
 use WorkshopLedger\Meta\MetaRegistrar;
@@ -92,6 +93,7 @@ final class Plugin {
 		$this->container->get( ClassicEditorForce::class )->register();
 		$this->container->get( CptListChrome::class )->register();
 		$this->container->get( HeaderAuthLinks::class )->register();
+		$this->container->get( FooterBrandNav::class )->register();
 		$this->container->get( LoginChrome::class )->register();
 		$this->container->get( AdminMenu::class )->register();
 		$this->container->get( CatalogMetaBoxes::class )->register();

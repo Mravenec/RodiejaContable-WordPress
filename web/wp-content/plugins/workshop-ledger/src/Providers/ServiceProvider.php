@@ -53,6 +53,7 @@ use WorkshopLedger\Controllers\Rest\FinanceController;
 use WorkshopLedger\Controllers\Rest\HealthController;
 use WorkshopLedger\Controllers\Rest\PedidoController;
 use WorkshopLedger\Core\Container;
+use WorkshopLedger\Front\FooterBrandNav;
 use WorkshopLedger\Front\HeaderAuthLinks;
 use WorkshopLedger\Front\LoginChrome;
 use WorkshopLedger\Meta\MetaRegistrar;
@@ -115,6 +116,7 @@ final class ServiceProvider {
 			)
 		);
 		$container->set( HeaderAuthLinks::class, static fn() => new HeaderAuthLinks() );
+		$container->set( FooterBrandNav::class, static fn() => new FooterBrandNav() );
 		$container->set( LoginChrome::class, static fn() => new LoginChrome() );
 
 		$container->set(
