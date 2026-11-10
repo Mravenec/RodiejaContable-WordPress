@@ -1,6 +1,6 @@
 # Epic 21 — admin-ui-bugfix
 
-**Status:** Done · LANDED on `origin/main` · Board: `.linear/epics/21-admin-ui-bugfix/`
+**Status:** Landed on main · Board: `.linear/epics/21-admin-ui-bugfix/`
 
 ## Title
 
@@ -28,3 +28,14 @@ Finance showed Spanglish (**Nueva Transaction**). Transactions list duplicated D
 1. Open Reports — Overview/Sales/… appear under Reports in the sidebar (not a stuck right flyout)
 2. Hover Vehicles — temporary flyout; leave — closes
 3. Finance submenu: **Add Transaction**
+
+
+## Land on main
+
+- Merge commit: `0bdf9cdb6f60a2f2db7d9a26c1e6ac6519b04505`
+- Branch: `feature/21-admin-ui-bugfix` → `main`
+
+### Supervisor / Manager (land)
+
+Supervisor: Epic 21 — English leftovers, Transactions columns, sticky submenu flyouts fixed (no left:160px). layer-audit green. Read-Only untouched.
+

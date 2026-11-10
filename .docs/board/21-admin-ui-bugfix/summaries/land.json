@@ -1,0 +1,13 @@
+{
+  "status": "landed",
+  "started_at": "2026-11-10T08:02:36.000Z",
+  "finished_at": "2026-11-10T08:03:19.768Z",
+  "merge_commit": "0bdf9cdb6f60a2f2db7d9a26c1e6ac6519b04505",
+  "conflicts": [],
+  "smoke_ok": true,
+  "smoke_at": "2026-11-10T08:03:11.489Z",
+  "git": "git push origin main",
+  "note": "Supervisor: Epic 21 — English leftovers, Transactions columns, sticky submenu flyouts fixed (no left:160px). layer-audit green. Read-Only untouched.",
+  "recorded_at": "2026-11-10T08:03:17.650Z",
+  "pushed_at": "2026-11-10T08:03:19.768Z"
+}
