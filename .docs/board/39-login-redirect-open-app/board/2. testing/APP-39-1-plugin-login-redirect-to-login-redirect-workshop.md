@@ -1,4 +1,5 @@
 ---
+http_ok: true
 id: APP-39-1
 title: "Plugin: Login redirect_to + login_redirect → workshop-ledger hub"
 role: plugin
@@ -39,6 +40,14 @@ add_filter( 'login_redirect', [ $this, 'login_redirect' ], 10, 3 );
 ```text
 HeaderAuthLinks Login → admin.php?page=workshop-ledger via wp_login_url
 LoginChrome registers login_redirect for manage_workshop_ledger / manage_options
+```
+
+### GATE_HTTP login redirect
+
+```text
+LOGIN_HREF includes redirect_to=...admin.php%3Fpage%3Dworkshop-ledger
+LoginChrome::login_redirect(home→home, admin) → .../admin.php?page=workshop-ledger
+http_ok: true
 ```
 
 ## History

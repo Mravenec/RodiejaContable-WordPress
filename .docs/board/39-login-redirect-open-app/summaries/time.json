@@ -8,9 +8,9 @@
       "paused": false,
       "open": {
         "start": "2026-11-10T17:07:00.196Z",
-        "last": "2026-11-10T17:07:35.526Z",
+        "last": "2026-11-10T17:08:02.568Z",
         "agent": "plugin-agent-1",
-        "event": "checklist"
+        "event": "evidence"
       },
       "segments": []
     }

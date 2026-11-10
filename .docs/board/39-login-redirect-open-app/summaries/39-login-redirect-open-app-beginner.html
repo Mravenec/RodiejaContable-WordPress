@@ -142,16 +142,16 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
   </div>
   <h1>After login, open Workshop Ledger app (native redirect)</h1>
   <p>This page is a study guide for the epic. Tickets must show <strong>this work’s</strong> compact code, commands, and results — not the same glossary copied from every other summary. Dark windows are artifacts to study.</p>
-  <p class="small" style="opacity:.85;">Slug <code>login-redirect-open-app</code> · 0/1 in summarize · Generated 2026-11-10T17:07:35.538Z · active work <strong>35s</strong> (elapsed 35s)</p>
+  <p class="small" style="opacity:.85;">Slug <code>login-redirect-open-app</code> · 0/1 in summarize · Generated 2026-11-10T17:08:02.578Z · active work <strong>1m 2s</strong> (elapsed 1m 2s)</p>
 </header>
 
 <div class="card ok" id="time">
   <strong>Active work time</strong>
   <p>Counted only while the board sees work. Waiting for a Run / Approve click, overnight, or parked-in-done time is not included.</p>
   <ul>
-    <li>Active (calendar of working windows): <strong>35s</strong></li>
-    <li>Agent effort (sum of tickets): <strong>35s</strong></li>
-    <li>Elapsed wall (first work → last event): <strong>35s</strong></li>
+    <li>Active (calendar of working windows): <strong>1m 2s</strong></li>
+    <li>Agent effort (sum of tickets): <strong>1m 2s</strong></li>
+    <li>Elapsed wall (first work → last event): <strong>1m 2s</strong></li>
   </ul>
   <p class="small">Started 2026-11-10T17:07:00.196Z · idle gap 3 min</p>
 </div>
@@ -229,6 +229,7 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 <li class=""><code>2026-11-10T17:07:29.171Z</code> APP-39-1 doing → testing</li>
 <li class=""><code>2026-11-10T17:07:35.429Z</code> evidence APP-39-1</li>
 <li class=""><code>2026-11-10T17:07:35.525Z</code> checklist APP-39-1</li>
+<li class=""><code>2026-11-10T17:08:02.567Z</code> evidence APP-39-1</li>
   </ul>
 </div>
 
@@ -239,7 +240,7 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 
 <section class="ticket" id="APP-39-1">
   <h2>APP-39-1 — Plugin: Login redirect_to + login_redirect → workshop-ledger hub</h2>
-  <p><span class="pill" style="background:var(--copper600)">column:testing</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span> · agent <code>plugin-agent-1</code> · active <strong>35s</strong></p>
+  <p><span class="pill" style="background:var(--copper600)">column:testing</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span> · agent <code>plugin-agent-1</code> · active <strong>1m 2s</strong></p>
   <p class="small">Work folder (required after claim): <code>.worktrees/39-login-redirect-open-app/APP-39-1</code> · ticket branch <code>ticket/39-login-redirect-open-app/APP-39-1</code> · ships on <code>feature/39-login-redirect-open-app</code> after integrate (one push).</p>
 
   <h3>Goal</h3>
@@ -279,6 +280,10 @@ add_filter( 'login_redirect', [ $this, 'login_redirect' ], 10, 3 );</code></pre>
 <p>### verify login target</p>
 <span class="filepath">text</span><pre><code>HeaderAuthLinks Login → admin.php?page=workshop-ledger via wp_login_url
 LoginChrome registers login_redirect for manage_workshop_ledger / manage_options</code></pre>
+<p>### GATE_HTTP login redirect</p>
+<span class="filepath">text</span><pre><code>LOGIN_HREF includes redirect_to=...admin.php%3Fpage%3Dworkshop-ledger
+LoginChrome::login_redirect(home→home, admin) → .../admin.php?page=workshop-ledger
+http_ok: true</code></pre>
 </div>
 
   <h3>Board history</h3>
