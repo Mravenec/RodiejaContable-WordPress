@@ -18,6 +18,7 @@ forbidden_packages:
 services_without_repository:
   - HealthService
   - DemoSeedService
+  - DomainStatsService
 security:
   disallow_file_edit: true
   rest_public_routes_allowlist:

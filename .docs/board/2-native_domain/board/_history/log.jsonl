@@ -1,0 +1,8 @@
+{"at":"2026-11-10T05:20:02.466Z","type":"create","issueId":"APP-2-1","column":"backlog"}
+{"at":"2026-11-10T05:20:02.536Z","type":"create","issueId":"APP-2-2","column":"backlog"}
+{"at":"2026-11-10T05:20:11.295Z","type":"claim","issueId":"APP-2-1","agent":"plugin-agent-1"}
+{"at":"2026-11-10T05:22:05.211Z","type":"checklist","issueId":"APP-2-1","item":"1"}
+{"at":"2026-11-10T05:22:05.292Z","type":"evidence","issueId":"APP-2-1","title":"ensure seed fills pedidos"}
+{"at":"2026-11-10T05:22:05.381Z","type":"move","issueId":"APP-2-1","from":"doing","to":"testing"}
+{"at":"2026-11-10T05:22:05.469Z","type":"checklist","issueId":"APP-2-1","item":"2"}
+{"at":"2026-11-10T05:23:21.595Z","type":"move","issueId":"APP-2-1","from":"testing","to":"done"}
