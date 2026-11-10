@@ -4,3 +4,4 @@
 {"at":"2026-11-10T16:22:51.121Z","type":"evidence","issueId":"APP-34-1","title":"tokens"}
 {"at":"2026-11-10T16:22:51.239Z","type":"move","issueId":"APP-34-1","from":"doing","to":"testing"}
 {"at":"2026-11-10T16:22:51.322Z","type":"checklist","issueId":"APP-34-1","item":"2"}
+{"at":"2026-11-10T16:22:51.776Z","type":"move","issueId":"APP-34-1","from":"testing","to":"done"}
