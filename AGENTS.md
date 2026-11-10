@@ -1,18 +1,18 @@
-# Agent Guide — RodiejaContable-WordPress
+# Agent Guide — WorkshopLedger-WordPress
 
-Product on the **unified WordPress harness**. **Native-first** (`.ai/rules/native-first.md`).
+Product: **Workshop Ledger** (accounting for vehicle workshops) on the **unified WordPress harness**. **Native-first** (`.ai/rules/native-first.md`).
 
 **Process parity with** `HarnessMariaDB-SpringBootJOOQ-ReactJS`: always `.linear` + worktrees + `.docs/journey` + `.docs/board` + land. Stack is WordPress — see `.ai/rules/board-process-mandatory.md`.
 
-**English only** (`.ai/rules/english-only.md`): journeys, board, commits, handoffs, and plugin UI strings — even if the human writes Spanish. **Never edit Rodieja Contable Read-Only** unless the human explicitly targets that repo.
+**English only** (`.ai/rules/english-only.md`): journeys, board, commits, handoffs, and plugin UI strings — even if the human writes Spanish. **Never edit the Read-Only React/Java repos** unless the human explicitly targets them.
 
-Board of record: **`.linear/`**. Journeys: **`.docs/journey/`**. Snapshots: **`.docs/board/`**.
+Board of record: **`.linear/`**. Journeys: **`.docs/journey/`**. Snapshots: **`.docs/board/`**. Rename map: **`docs/RENAME-MAP.md`**.
 
 ## Layout
 
 ```
 web/                          ← WordPress docroot
-  wp-content/plugins/rodieja-contable/
+  wp-content/plugins/workshop-ledger/
   wp-content/mu-plugins/
 .linear/ .ai/ .claude/ .cursor/ .ddev/ .docs/
 ```
@@ -48,23 +48,18 @@ node .ai/scripts/worktree-finish.mjs APP-n-k --agent plugin-agent-1
 
 Roles: `database` · `plugin` · `security` · `orchestrator`
 
-## Native domain map (Spring / SQL → WP)
+## Native domain map
 
-| Spring / SQL | Native WordPress |
+| Domain | Native WordPress |
 |---|---|
-| users / roles | WP Users + roles/caps |
-| marcas / modelos / generaciones | CPTs + post meta |
-| vehiculos | CPT `rodieja_vehiculo` + meta |
-| parte_vehiculo | Taxonomy `rodieja_parte` |
-| inventario_repuestos | CPT `rodieja_repuesto` + meta |
-| empleados | CPT `rodieja_empleado` + meta (± user link) |
-| tipos_transacciones | Taxonomy `rodieja_tipo_tx` |
-| transacciones_financieras | CPT `rodieja_transaccion` + meta |
-| pedidos Audatex/INS | CPT `rodieja_pedido` (+ items) + meta |
+| users / roles | WP Users + `workshop_accountant` + `manage_workshop_ledger` |
+| brands / models / generations | CPTs `wl_*` + post meta |
+| vehicles / parts / employees | CPTs `wl_vehiculo` · `wl_repuesto` · `wl_empleado` |
+| finance / orders | CPT `wl_transaccion` · `wl_pedido` (+ items) |
 | UI | WP Admin menus / list tables / metaboxes (no React SPA) |
-| API | Core REST for CPTs + thin `rodieja/v1/*` |
+| API | Core REST for CPTs + thin `workshop-ledger/v1/*` |
 
-**Domain parity goal:** same entities/fields as Read-Only, stored the WordPress way. **No custom tables** unless native APIs are insufficient and human OK is on the ticket.
+**No custom tables** unless native APIs are insufficient and human OK is on the ticket.
 
 ## Layer order (never invert)
 

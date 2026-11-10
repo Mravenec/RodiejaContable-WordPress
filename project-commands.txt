@@ -1,12 +1,29 @@
-# RodiejaContable-WordPress
+# WorkshopLedger-WordPress
+# Accounting for vehicle workshops — native WordPress (DDEV)
 
+# —— Local runtime ——
 ddev start
-ddev wp plugin activate rodieja-contable
+# After epic 26 DDEV rename: https://workshop-ledger.ddev.site
+# (Until APP-26-4 lands, hostname may still be rodieja-wp.ddev.site)
+
+# —— Admin login (native WP user) ——
+# Email / username : admin@workshop.com
+# Password         : WorkshopLedger1!
+# Set/update with:
+#   ddev wp user update 1 --user_email=admin@workshop.com --user_pass='WorkshopLedger1!' --display_name='Workshop Admin'
+#   # or create if missing:
+#   ddev wp user create admin@workshop.com admin@workshop.com --role=administrator --user_pass='WorkshopLedger1!' --display_name='Workshop Admin'
+
+# —— Plugin ——
+ddev wp plugin activate workshop-ledger
 ddev wp rewrite flush
-ddev wp eval 'echo \\Rodieja\\Contable\\Core\\Plugin::instance()->container()->get(\\Rodieja\\Contable\\Services\\DemoSeedService::class)->seed_if_needed() ? "seeded\n" : "already\n";'
-curl -sk https://rodieja-wp.ddev.site/wp-json/rodieja/v1/health
-curl -sk https://rodieja-wp.ddev.site/wp-json/wp/v2/rodieja-vehiculos | head
+ddev wp eval 'echo \\WorkshopLedger\\Core\\Plugin::instance()->container()->get(\\WorkshopLedger\\Services\\DemoSeedService::class)->seed_if_needed() ? "seeded\n" : "already\n";'
+
+# —— Smoke ——
+curl -sk https://workshop-ledger.ddev.site/wp-json/workshop-ledger/v1/health
+curl -sk https://workshop-ledger.ddev.site/wp-json/wp/v2/wl-vehiculo | head
 ddev launch
 
+# —— Board / audit ——
 node .linear/scripts/board.mjs epics
 node .ai/scripts/layer-audit.mjs
