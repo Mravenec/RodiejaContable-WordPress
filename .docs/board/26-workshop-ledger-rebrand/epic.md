@@ -5,7 +5,7 @@
 | Id | 26 |
 | Slug | workshop-ledger-rebrand |
 | Status | in_progress |
-| Progress | **16%** (0/4 in summarize · column + checklist) |
+| Progress | **83%** (0/4 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -23,9 +23,7 @@ This folder is the **operational** board (claims, checklist, %). There is no `.a
 
 ### 0. backlog
 
-- `APP-26-2` Plugin · WorkshopLedger namespace + workshop-ledger folder + UI strings _(role:plugin)_
-- `APP-26-3` Plugin · DB migrate rodieja_* → wl_* CPT/meta/options/caps _(role:plugin)_
-- `APP-26-4` Ops · DDEV workshop-ledger + activate plugin + verify login/health _(role:plugin)_
+_empty_
 
 ### 1. doing
 
@@ -33,11 +31,14 @@ _empty_
 
 ### 2. testing
 
-- `APP-26-1` Docs · rename map + project.yaml + project-commands + admin@workshop.com _(role:plugin)_
+_empty_
 
 ### 3. done
 
-_empty_
+- `APP-26-1` Docs · rename map + project.yaml + project-commands + admin@workshop.com _(role:plugin)_
+- `APP-26-2` Plugin · WorkshopLedger namespace + workshop-ledger folder + UI strings _(role:plugin)_
+- `APP-26-3` Plugin · DB migrate rodieja_* → wl_* CPT/meta/options/caps _(role:plugin)_
+- `APP-26-4` Ops · DDEV workshop-ledger + activate plugin + verify login/health _(role:plugin)_
 
 ### 4. summarize
 
