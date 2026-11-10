@@ -19,3 +19,4 @@
 {"at":"2026-11-10T05:18:43.243Z","type":"evidence","issueId":"APP-1-3","title":"AGENTS native map"}
 {"at":"2026-11-10T05:18:43.361Z","type":"move","issueId":"APP-1-3","from":"doing","to":"testing"}
 {"at":"2026-11-10T05:18:43.452Z","type":"checklist","issueId":"APP-1-3","item":"2"}
+{"at":"2026-11-10T05:18:43.709Z","type":"move","issueId":"APP-1-3","from":"testing","to":"done"}

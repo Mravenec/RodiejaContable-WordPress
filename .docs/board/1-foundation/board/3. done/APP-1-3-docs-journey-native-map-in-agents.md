@@ -76,6 +76,7 @@ Roles: `database` · `plugin` · `security` · `orchestrator`
 
 ## History
 
+- 2026-11-10T05:18:43.707Z moved testing → done
 - 2026-11-10T05:18:43.450Z checklist item 2 marked
 - 2026-11-10T05:18:43.359Z moved doing → testing
 - 2026-11-10T05:18:43.132Z checklist item 1 marked

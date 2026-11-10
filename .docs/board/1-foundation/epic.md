@@ -5,7 +5,7 @@
 | Id | 1 |
 | Slug | foundation |
 | Status | in_progress |
-| Progress | **77%** (0/3 in summarize · column + checklist) |
+| Progress | **83%** (0/3 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -31,12 +31,13 @@ _empty_
 
 ### 2. testing
 
-- `APP-1-3` Docs · journey + native map in AGENTS _(role:orchestrator)_
+_empty_
 
 ### 3. done
 
 - `APP-1-1` Plugin · scaffold DI + health REST _(role:plugin)_
 - `APP-1-2` Security · roles caps + MU hardening verify _(role:security)_
+- `APP-1-3` Docs · journey + native map in AGENTS _(role:orchestrator)_
 
 ### 4. summarize
 
