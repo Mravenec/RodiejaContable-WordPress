@@ -1,0 +1,28 @@
+{
+  "idle_ms": 180000,
+  "started_at": "2026-11-10T16:43:14.227Z",
+  "finished_at": null,
+  "issues": {
+    "APP-37-1": {
+      "active_ms": 50319,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T16:43:14.227Z",
+          "end": "2026-11-10T16:44:04.546Z",
+          "ms": 50319,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        }
+      ]
+    }
+  },
+  "land": {
+    "started_at": null,
+    "finished_at": null,
+    "paused": false,
+    "open": null,
+    "segments": []
+  }
+}
