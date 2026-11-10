@@ -224,13 +224,7 @@ final class CatalogMetaBoxes {
 		if ( ! $this->gate->can_manage() ) {
 			return false;
 		}
-		if ( ! isset( $_POST['_wl_nonce'] ) ) {
-			return false;
-		}
-		if ( ! wp_verify_nonce( sanitize_text_field( wp_unslash( (string) $_POST['_wl_nonce'] ) ), 'wl_catalog_meta' ) ) {
-			return false;
-		}
-		return true;
+		return $this->nonce->verify_post( 'wl_catalog_meta' );
 	}
 
 	private function post_select( string $type, string $name, int $selected ): void {

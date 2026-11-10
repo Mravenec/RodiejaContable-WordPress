@@ -81,10 +81,7 @@ final class InventoryMetaBoxes {
 		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 			return;
 		}
-		if ( ! $this->gate->can_manage() || ! isset( $_POST['_wl_nonce'] ) ) {
-			return;
-		}
-		if ( ! wp_verify_nonce( sanitize_text_field( wp_unslash( (string) $_POST['_wl_nonce'] ) ), 'wl_inventory_meta' ) ) {
+		if ( ! $this->gate->can_manage() || ! $this->nonce->verify_post( 'wl_inventory_meta' ) ) {
 			return;
 		}
 		update_post_meta( $post_id, 'wl_vehiculo_id', (string) ( isset( $_POST['wl_vehiculo_id'] ) ? absint( wp_unslash( $_POST['wl_vehiculo_id'] ) ) : 0 ) );

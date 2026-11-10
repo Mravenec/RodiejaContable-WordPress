@@ -43,8 +43,8 @@ final class ToolsAdminPage {
 			$this->nonce->verify_admin( 'wl_tools_import' );
 			$notice = $this->handle_import();
 		}
-		$export_json_url = wp_nonce_url( admin_url( 'admin-post.php?action=' . self::ACTION_EXPORT_JSON ), 'wl_export_json', '_wl_nonce' );
-		$export_csv_url  = wp_nonce_url( admin_url( 'admin-post.php?action=' . self::ACTION_EXPORT_CSV ), 'wl_export_csv', '_wl_nonce' );
+		$export_json_url = wp_nonce_url( admin_url( 'admin-post.php?action=' . self::ACTION_EXPORT_JSON ), 'wl_export_json', \WorkshopLedger\Security\NonceGuard::name_for( 'wl_export_json' ) );
+		$export_csv_url  = wp_nonce_url( admin_url( 'admin-post.php?action=' . self::ACTION_EXPORT_CSV ), 'wl_export_csv', \WorkshopLedger\Security\NonceGuard::name_for( 'wl_export_csv' ) );
 		?>
 		<div class="wrap wl-admin-wrap">
 			<div class="wl-page-header">
@@ -91,7 +91,7 @@ final class ToolsAdminPage {
 		if ( ! $this->gate->can_manage() ) {
 			wp_die( esc_html__( 'Forbidden.', 'workshop-ledger' ), 403 );
 		}
-		check_admin_referer( 'wl_export_json', '_wl_nonce' );
+		check_admin_referer( 'wl_export_json', \WorkshopLedger\Security\NonceGuard::name_for( 'wl_export_json' ) );
 		$body = $this->export->to_json_string();
 		header( 'Content-Type: application/json; charset=utf-8' );
 		header( 'Content-Disposition: attachment; filename=wl-domain-' . gmdate( 'Y-m-d' ) . '.json' );
@@ -104,7 +104,7 @@ final class ToolsAdminPage {
 		if ( ! $this->gate->can_manage() ) {
 			wp_die( esc_html__( 'Forbidden.', 'workshop-ledger' ), 403 );
 		}
-		check_admin_referer( 'wl_export_csv', '_wl_nonce' );
+		check_admin_referer( 'wl_export_csv', \WorkshopLedger\Security\NonceGuard::name_for( 'wl_export_csv' ) );
 		$body = $this->export->to_csv_string();
 		header( 'Content-Type: text/csv; charset=utf-8' );
 		header( 'Content-Disposition: attachment; filename=wl-domain-' . gmdate( 'Y-m-d' ) . '.csv' );

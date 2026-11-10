@@ -127,7 +127,7 @@ final class ReportesAdminPage {
 				$base
 			),
 			CsvExportHandler::ACTION,
-			'_wl_nonce'
+			\WorkshopLedger\Security\NonceGuard::name_for( CsvExportHandler::ACTION )
 		);
 	}
 }
