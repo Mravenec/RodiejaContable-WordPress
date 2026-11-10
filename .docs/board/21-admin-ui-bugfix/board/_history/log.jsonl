@@ -11,3 +11,14 @@
 {"at":"2026-11-10T07:58:49.727Z","type":"evidence","issueId":"APP-21-2","title":"columns-tablenav"}
 {"at":"2026-11-10T07:58:49.849Z","type":"move","issueId":"APP-21-2","from":"doing","to":"testing"}
 {"at":"2026-11-10T07:58:49.931Z","type":"checklist","issueId":"APP-21-2","item":"2"}
+{"at":"2026-11-10T07:58:50.274Z","type":"move","issueId":"APP-21-2","from":"testing","to":"done"}
+{"at":"2026-11-10T07:58:59.853Z","type":"move","issueId":"APP-21-1","from":"done","to":"summarize","summary_html":"summaries/21-admin-ui-bugfix-beginner.html"}
+{"at":"2026-11-10T07:58:59.926Z","type":"move","issueId":"APP-21-2","from":"done","to":"summarize","summary_html":"summaries/21-admin-ui-bugfix-beginner.html"}
+{"at":"2026-11-10T07:59:00.060Z","type":"handoff","git":"cd .worktrees/21-admin-ui-bugfix/_epic && git push -u origin feature/21-admin-ui-bugfix"}
+{"at":"2026-11-10T08:00:47.945Z","type":"create","issueId":"APP-21-3","column":"backlog"}
+{"at":"2026-11-10T08:00:53.126Z","type":"claim","issueId":"APP-21-3","agent":"plugin-agent-1"}
+{"at":"2026-11-10T08:01:21.268Z","type":"checklist","issueId":"APP-21-3","item":"1"}
+{"at":"2026-11-10T08:01:21.400Z","type":"evidence","issueId":"APP-21-3","title":"submenu-css"}
+{"at":"2026-11-10T08:01:21.527Z","type":"move","issueId":"APP-21-3","from":"doing","to":"testing"}
+{"at":"2026-11-10T08:01:21.604Z","type":"checklist","issueId":"APP-21-3","item":"2"}
+{"at":"2026-11-10T08:01:21.945Z","type":"move","issueId":"APP-21-3","from":"testing","to":"done"}

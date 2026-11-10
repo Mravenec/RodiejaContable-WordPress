@@ -14,19 +14,50 @@
           "ms": 13312,
           "close": "done",
           "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T07:58:59.846Z",
+          "end": "2026-11-10T07:58:59.846Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": "plugin-agent-1"
         }
       ]
     },
     "APP-21-2": {
-      "active_ms": 0,
+      "active_ms": 23686,
       "paused": false,
-      "open": {
-        "start": "2026-11-10T07:58:26.589Z",
-        "last": "2026-11-10T07:58:49.931Z",
-        "agent": "plugin-agent-1",
-        "event": "checklist"
-      },
-      "segments": []
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T07:58:26.589Z",
+          "end": "2026-11-10T07:58:50.275Z",
+          "ms": 23686,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T07:58:59.919Z",
+          "end": "2026-11-10T07:58:59.919Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": "plugin-agent-1"
+        }
+      ]
+    },
+    "APP-21-3": {
+      "active_ms": 28818,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T08:00:53.127Z",
+          "end": "2026-11-10T08:01:21.945Z",
+          "ms": 28818,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        }
+      ]
     }
   },
   "land": {
