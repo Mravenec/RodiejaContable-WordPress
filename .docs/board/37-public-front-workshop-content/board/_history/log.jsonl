@@ -1,0 +1,6 @@
+{"at":"2026-11-10T16:43:14.094Z","type":"create","issueId":"APP-37-1","column":"backlog"}
+{"at":"2026-11-10T16:43:14.225Z","type":"claim","issueId":"APP-37-1","agent":"plugin-agent-1"}
+{"at":"2026-11-10T16:44:03.735Z","type":"checklist","issueId":"APP-37-1","item":"1"}
+{"at":"2026-11-10T16:44:03.830Z","type":"evidence","issueId":"APP-37-1","title":"public-seed"}
+{"at":"2026-11-10T16:44:03.974Z","type":"move","issueId":"APP-37-1","from":"doing","to":"testing"}
+{"at":"2026-11-10T16:44:04.063Z","type":"checklist","issueId":"APP-37-1","item":"2"}
