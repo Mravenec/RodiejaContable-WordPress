@@ -47,12 +47,11 @@ final class PublicSiteSeed {
 		if ( $home_id > 0 ) {
 			update_option( 'show_on_front', 'page', false );
 			update_option( 'page_on_front', $home_id, false );
-			if ( $about_id > 0 ) {
-				update_option( 'page_for_posts', 0, false );
-			}
+			update_option( 'page_for_posts', 0, false );
 		}
 
-		flush_rewrite_rules( false );
+		// Avoid flush during request bootstrap; permalinks refresh on next admin visit / activate.
+		unset( $about_id );
 	}
 
 	private function home_html(): string {

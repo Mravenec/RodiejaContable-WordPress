@@ -79,7 +79,10 @@ final class Plugin {
 	public function boot(): void {
 		BrandMigrate::maybe_run();
 		OrphanEstadoMigrate::maybe_run();
-		PublicSiteSeed::maybe_run();
+		// Defer page seed to init — wp_insert_post/revisions are not safe on plugins_loaded.
+		add_action( 'init', static function (): void {
+			PublicSiteSeed::maybe_run();
+		}, 20 );
 		$this->container->get( RoleRegistrar::class )->register();
 		$this->container->get( PostTypeRegistrar::class )->register();
 		$this->container->get( TaxonomyRegistrar::class )->register();
