@@ -5,7 +5,7 @@
 | Id | 23 |
 | Slug | cpt-list-figma-mobile |
 | Status | in_progress |
-| Progress | **33%** (0/2 in summarize · column + checklist) |
+| Progress | **83%** (0/2 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -23,7 +23,7 @@ This folder is the **operational** board (claims, checklist, %). There is no `.a
 
 ### 0. backlog
 
-- `APP-23-2` plugin: English CPT list filter labels (All vehicles / All statuses) _(role:plugin)_
+_empty_
 
 ### 1. doing
 
@@ -31,11 +31,12 @@ _empty_
 
 ### 2. testing
 
-- `APP-23-1` plugin: Figma CPT list shell CSS for all rodieja_* + mobile _(role:plugin)_
+_empty_
 
 ### 3. done
 
-_empty_
+- `APP-23-1` plugin: Figma CPT list shell CSS for all rodieja_* + mobile _(role:plugin)_
+- `APP-23-2` plugin: English CPT list filter labels (All vehicles / All statuses) _(role:plugin)_
 
 ### 4. summarize
 
