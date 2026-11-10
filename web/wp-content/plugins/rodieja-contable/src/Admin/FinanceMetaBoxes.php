@@ -54,7 +54,7 @@ final class FinanceMetaBoxes {
 		echo '<input type="number" step="0.01" name="rodieja_monto" value="' . $this->escaper->attr( (string) $monto ) . '" class="regular-text" /></p>';
 		echo '<p><label>' . $this->escaper->html( __( 'Date', 'rodieja-contable' ) ) . '</label><br />';
 		echo '<input type="date" name="rodieja_fecha" value="' . $this->escaper->attr( $fecha ) . '" /></p>';
-		echo '<p><label>' . $this->escaper->html( __( 'Sentido', 'rodieja-contable' ) ) . '</label><br />';
+		echo '<p><label>' . $this->escaper->html( __( 'Direction', 'rodieja-contable' ) ) . '</label><br />';
 		echo '<select name="rodieja_sentido">';
 		foreach ( array( 'ingreso' => __( 'Income', 'rodieja-contable' ), 'egreso' => __( 'Expense', 'rodieja-contable' ) ) as $k => $lab ) {
 			printf( '<option value="%1$s" %2$s>%3$s</option>', $this->escaper->attr( $k ), selected( $sentido, $k, false ), $this->escaper->html( $lab ) );
@@ -62,7 +62,7 @@ final class FinanceMetaBoxes {
 		echo '</select></p>';
 		$this->select_posts( 'rodieja_vehiculo', 'rodieja_vehiculo_id', $vehiculo, __( 'Vehicle', 'rodieja-contable' ) );
 		$this->select_posts( 'rodieja_empleado', 'rodieja_empleado_id', $empleado, __( 'Employee', 'rodieja-contable' ) );
-		echo '<p class="description">' . $this->escaper->html( __( 'Tipo (Income/Expense tax) en el panel lateral native.', 'rodieja-contable' ) ) . '</p>';
+		echo '<p class="description">' . $this->escaper->html( __( 'Income/Expense type also syncs to the native taxonomy in the side panel.', 'rodieja-contable' ) ) . '</p>';
 	}
 
 	public function save( int $post_id, \WP_Post $post ): void {
@@ -96,8 +96,10 @@ final class FinanceMetaBoxes {
 	 * @return array<string, string>
 	 */
 	public function columns( array $cols ): array {
+		// Keep one Date (transaction meta); drop WP publish date duplicate.
+		unset( $cols['date'] );
 		$cols['rodieja_monto']    = __( 'Amount', 'rodieja-contable' );
-		$cols['rodieja_sentido']  = __( 'Sentido', 'rodieja-contable' );
+		$cols['rodieja_sentido']  = __( 'Direction', 'rodieja-contable' );
 		$cols['rodieja_fecha']    = __( 'Date', 'rodieja-contable' );
 		$cols['rodieja_vehiculo'] = __( 'Vehicle', 'rodieja-contable' );
 		return $cols;
@@ -109,7 +111,11 @@ final class FinanceMetaBoxes {
 				echo $this->escaper->html( number_format_i18n( (float) get_post_meta( $post_id, 'rodieja_monto', true ), 2 ) );
 				break;
 			case 'rodieja_sentido':
-				echo $this->escaper->html( (string) get_post_meta( $post_id, 'rodieja_sentido', true ) );
+				$sentido = (string) get_post_meta( $post_id, 'rodieja_sentido', true );
+				$label   = 'ingreso' === $sentido
+					? __( 'Income', 'rodieja-contable' )
+					: ( 'egreso' === $sentido ? __( 'Expense', 'rodieja-contable' ) : $sentido );
+				echo $this->escaper->html( $label );
 				break;
 			case 'rodieja_fecha':
 				echo $this->escaper->html( (string) get_post_meta( $post_id, 'rodieja_fecha', true ) );

@@ -34,6 +34,7 @@ Add Transaction / My Profile / New province
 
 ## History
 
+- 2026-11-10T07:58:24.322Z moved testing → done
 - 2026-11-10T07:58:23.994Z checklist item 2 marked
 - 2026-11-10T07:58:23.913Z moved doing → testing
 - 2026-11-10T07:58:23.715Z checklist item 1 marked

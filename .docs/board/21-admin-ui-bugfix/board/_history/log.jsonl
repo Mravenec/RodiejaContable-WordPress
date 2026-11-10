@@ -5,3 +5,9 @@
 {"at":"2026-11-10T07:58:23.794Z","type":"evidence","issueId":"APP-21-1","title":"english"}
 {"at":"2026-11-10T07:58:23.915Z","type":"move","issueId":"APP-21-1","from":"doing","to":"testing"}
 {"at":"2026-11-10T07:58:23.995Z","type":"checklist","issueId":"APP-21-1","item":"2"}
+{"at":"2026-11-10T07:58:24.324Z","type":"move","issueId":"APP-21-1","from":"testing","to":"done"}
+{"at":"2026-11-10T07:58:26.589Z","type":"claim","issueId":"APP-21-2","agent":"plugin-agent-1"}
+{"at":"2026-11-10T07:58:49.647Z","type":"checklist","issueId":"APP-21-2","item":"1"}
+{"at":"2026-11-10T07:58:49.727Z","type":"evidence","issueId":"APP-21-2","title":"columns-tablenav"}
+{"at":"2026-11-10T07:58:49.849Z","type":"move","issueId":"APP-21-2","from":"doing","to":"testing"}
+{"at":"2026-11-10T07:58:49.931Z","type":"checklist","issueId":"APP-21-2","item":"2"}
