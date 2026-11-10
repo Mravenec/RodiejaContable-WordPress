@@ -1,0 +1,29 @@
+@startuml rodieja-contable-native
+skinparam packageStyle rectangle
+
+package "Native WordPress" {
+  class CPT_Marca
+  class CPT_Modelo
+  class CPT_Generacion
+  class CPT_Vehiculo
+  class CPT_Repuesto
+  class CPT_Transaccion
+  class Tax_TipoTx
+  class Role_Contador
+}
+
+package "Plugin DI" {
+  class Container
+  class PostTypeRegistrar
+  class MetaRegistrar
+  class RoleRegistrar
+  class AdminMenu
+}
+
+PostTypeRegistrar --> CPT_Marca
+PostTypeRegistrar --> CPT_Vehiculo
+PostTypeRegistrar --> CPT_Transaccion
+MetaRegistrar --> CPT_Vehiculo
+RoleRegistrar --> Role_Contador
+AdminMenu --> CPT_Vehiculo
+@enduml

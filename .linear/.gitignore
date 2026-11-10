@@ -1,0 +1,12 @@
+node_modules/
+ui/node_modules/
+ui/dist/
+.DS_Store
+*.log
+.env
+.env.*
+
+# Board data is local — start empty; use `npm run seed` only for demo
+epics/*/
+!epics/.gitkeep
+agents/claims.json

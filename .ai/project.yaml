@@ -1,0 +1,25 @@
+harness: mariadb-wordpress-php-plugins
+module_name: rodieja-contable
+php_version: "8.3"
+wordpress_requires: "6.4"
+native_only: true
+native_first: true
+custom_requires_human_ok: true
+layout: unified-wordpress
+docroot: web
+plugin_path: web/wp-content/plugins/rodieja-contable
+mu_plugin_path: web/wp-content/mu-plugins/harness-hardening.php
+product: RodiejaContable
+forbidden_packages:
+  - illuminate/*
+  - laravel/*
+  - doctrine/*
+  - symfony/framework-bundle
+services_without_repository:
+  - HealthService
+  - DemoSeedService
+security:
+  disallow_file_edit: true
+  rest_public_routes_allowlist:
+    - rodieja/v1/health
+  require_capability_on_mutations: true

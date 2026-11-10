@@ -1,0 +1,52 @@
+# WordPress core (keep custom wp-content)
+/web/*
+!/web/wp-content/
+/web/wp-content/*
+!/web/wp-content/plugins/
+!/web/wp-content/mu-plugins/
+!/web/wp-content/themes/
+
+# Track custom plugin + MU-plugin; ignore stock WP plugins/themes noise
+/web/wp-content/plugins/*
+!/web/wp-content/plugins/harness-plugin/
+!/web/wp-content/plugins/harness-plugin/**
+/web/wp-content/mu-plugins/*
+!/web/wp-content/mu-plugins/harness-hardening.php
+/web/wp-content/themes/*
+!/web/wp-content/themes/.gitkeep
+
+# Runtime / uploads / cache
+/web/wp-content/uploads/
+/web/wp-content/cache/
+/web/wp-content/upgrade/
+/web/wp-content/debug.log
+**/wp-config.php
+**/wp-config-ddev.php
+
+# Secrets & local
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+
+# Composer
+**/vendor/
+
+# IDE / tooling
+.idea/
+.vscode/
+*.swp
+
+# DDEV extras
+.ddev/.homeadditions/
+.ddev/xhprof/
+.ddev/import-db/
+.ddev/import-files/
+
+# Tests / coverage
+.phpunit.result.cache
+coverage/
+
+# Ticket worktrees (local only; never commit)
+.worktrees/

@@ -1,0 +1,39 @@
+version: 1
+team_key: APP
+harness: mariadb-wordpress-php-plugins
+board:
+  columns:
+    - id: backlog
+      folder: "0. backlog"
+      order: 0
+    - id: doing
+      folder: "1. doing"
+      order: 1
+    - id: testing
+      folder: "2. testing"
+      order: 2
+    - id: done
+      folder: "3. done"
+      order: 3
+    - id: summarize
+      folder: "4. summarize"
+      order: 4
+roles:
+  - database
+  - plugin
+  - security
+  - orchestrator
+heartbeat_ttl_ms: 300000
+# Active work clock: a gap longer than idle_ms between board pulses is not counted
+# (approval wait / away). Default 3 minutes.
+time:
+  idle_ms: 180000
+progress:
+  # Epic % is column + checklist (backlog→…→summarize and marked items); 100% when all are in done_column with checklists complete
+  done_column: summarize
+  # Dependents unlock when work is accepted (done or later)
+  unlock_column: done
+claims_file: agents/claims.json
+ui:
+  api_port: 47381
+  ui_port: 47382

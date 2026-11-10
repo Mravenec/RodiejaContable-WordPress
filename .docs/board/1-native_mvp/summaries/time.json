@@ -1,0 +1,70 @@
+{
+  "idle_ms": 180000,
+  "started_at": "2026-11-10T04:52:05.141Z",
+  "finished_at": null,
+  "issues": {
+    "APP-1-1": {
+      "active_ms": 134,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T04:52:05.141Z",
+          "end": "2026-11-10T04:52:05.275Z",
+          "ms": 134,
+          "close": "done",
+          "agent": null
+        }
+      ]
+    },
+    "APP-1-2": {
+      "active_ms": 192,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T04:52:05.353Z",
+          "end": "2026-11-10T04:52:05.545Z",
+          "ms": 192,
+          "close": "done",
+          "agent": null
+        }
+      ]
+    },
+    "APP-1-3": {
+      "active_ms": 90,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T04:52:05.624Z",
+          "end": "2026-11-10T04:52:05.714Z",
+          "ms": 90,
+          "close": "done",
+          "agent": null
+        }
+      ]
+    },
+    "APP-1-4": {
+      "active_ms": 81,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T04:52:05.811Z",
+          "end": "2026-11-10T04:52:05.892Z",
+          "ms": 81,
+          "close": "done",
+          "agent": null
+        }
+      ]
+    }
+  },
+  "land": {
+    "started_at": null,
+    "finished_at": null,
+    "paused": false,
+    "open": null,
+    "segments": []
+  }
+}

@@ -1,0 +1,12 @@
+# RodiejaContable-WordPress
+
+ddev start
+ddev wp plugin activate rodieja-contable
+ddev wp rewrite flush
+ddev wp eval 'echo \\Rodieja\\Contable\\Core\\Plugin::instance()->container()->get(\\Rodieja\\Contable\\Services\\DemoSeedService::class)->seed_if_needed() ? "seeded\n" : "already\n";'
+curl -sk https://rodieja-wp.ddev.site/wp-json/rodieja/v1/health
+curl -sk https://rodieja-wp.ddev.site/wp-json/wp/v2/rodieja-vehiculos | head
+ddev launch
+
+node .linear/scripts/board.mjs epics
+node .ai/scripts/layer-audit.mjs

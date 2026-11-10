@@ -1,0 +1,23 @@
+{
+  "name": "private-board",
+  "version": "1.0.0",
+  "private": true,
+  "description": "private.board — filesystem board for multi-agent workflows",
+  "type": "module",
+  "scripts": {
+    "board": "node scripts/board.mjs",
+    "seed": "node scripts/seed-demo.mjs",
+    "smoke:columns": "node scripts/_smoke-column-order.mjs",
+    "smoke:living": "node scripts/_smoke-living-summary.mjs",
+    "smoke:clock": "node scripts/_smoke-work-clock.mjs",
+    "smoke:hours": "node scripts/_smoke-hours.mjs",
+    "smoke:share": "node scripts/_smoke-board-share.mjs",
+    "epics": "node scripts/board.mjs epics",
+    "api": "node scripts/api.mjs",
+    "ui": "npm run dev --prefix ui",
+    "ui:install": "npm install --prefix ui"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
