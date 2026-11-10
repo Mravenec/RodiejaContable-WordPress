@@ -1,0 +1,13 @@
+{
+  "status": "landed",
+  "started_at": "2026-11-10T07:51:43.000Z",
+  "finished_at": "2026-11-10T07:53:29.604Z",
+  "merge_commit": "957ceccd95730aabe1f5480e490aa72c4e47dd8f",
+  "conflicts": [],
+  "smoke_ok": true,
+  "smoke_at": "2026-11-10T07:53:23.380Z",
+  "git": "git push origin main",
+  "note": "Supervisor: Epic 20 Figma-grade native shells (admin-shell.css + Home / View by Generations / Reports / Settings). Plugin 0.4.0. layer-audit green. Health probe skipped (8080 down). Read-Only untouched. English-only.",
+  "recorded_at": "2026-11-10T07:53:27.422Z",
+  "pushed_at": "2026-11-10T07:53:29.604Z"
+}

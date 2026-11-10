@@ -1,6 +1,6 @@
 # Epic 20 — admin-ui-figma-native
 
-**Status:** Done · LANDED on `origin/main` · Board: `.linear/epics/20-admin-ui-figma-native/`
+**Status:** Landed on main · Board: `.linear/epics/20-admin-ui-figma-native/`
 
 ## Title
 
@@ -26,3 +26,14 @@ Divi/Figma-level polish while staying WordPress-native. Read-Only is the visual 
 ## Outcome
 
 Figma-grade native Contable chrome on origin/main (epic 20).
+
+
+## Land on main
+
+- Merge commit: `957ceccd95730aabe1f5480e490aa72c4e47dd8f`
+- Branch: `feature/20-admin-ui-figma-native` → `main`
+
+### Supervisor / Manager (land)
+
+Supervisor: Epic 20 Figma-grade native shells (admin-shell.css + Home / View by Generations / Reports / Settings). Plugin 0.4.0. layer-audit green. Health probe skipped (8080 down). Read-Only untouched. English-only.
+
