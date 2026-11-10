@@ -13,7 +13,7 @@ use WorkshopLedger\Roles\RoleRegistrar;
 
 final class BrandMigrate {
 
-	public const OPTION_FLAG = 'wl_brand_migrated_v1';
+	public const OPTION_FLAG = 'wl_brand_migrated_v2';
 
 	/** @var array<string, string> */
 	private const POST_TYPES = array(
@@ -87,20 +87,20 @@ final class BrandMigrate {
 
 	private function migrate_meta_keys(): void {
 		global $wpdb;
-		// Rename post meta keys that still start with rodieja_
+		// Rename post meta: rodieja_* and protected _rodieja_* → wl_* (native public keys).
 		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 		$rows = $wpdb->get_col(
-			$wpdb->prepare(
-				"SELECT DISTINCT meta_key FROM {$wpdb->postmeta} WHERE meta_key LIKE %s",
-				$wpdb->esc_like( 'rodieja_' ) . '%'
-			)
+			"SELECT DISTINCT meta_key FROM {$wpdb->postmeta} WHERE meta_key LIKE 'rodieja\\_%' OR meta_key LIKE '\\_rodieja\\_%'"
 		);
 		if ( ! is_array( $rows ) ) {
 			return;
 		}
 		foreach ( $rows as $key ) {
 			$key = (string) $key;
-			$new = 'wl_' . substr( $key, strlen( 'rodieja_' ) );
+			$new = $this->wl_meta_key_from_legacy( $key );
+			if ( '' === $new || $new === $key ) {
+				continue;
+			}
 			// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 			$wpdb->query(
 				$wpdb->prepare(
@@ -114,15 +114,15 @@ final class BrandMigrate {
 		// User meta
 		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 		$umeta = $wpdb->get_col(
-			$wpdb->prepare(
-				"SELECT DISTINCT meta_key FROM {$wpdb->usermeta} WHERE meta_key LIKE %s",
-				$wpdb->esc_like( 'rodieja_' ) . '%'
-			)
+			"SELECT DISTINCT meta_key FROM {$wpdb->usermeta} WHERE meta_key LIKE 'rodieja\\_%' OR meta_key LIKE '\\_rodieja\\_%'"
 		);
 		if ( is_array( $umeta ) ) {
 			foreach ( $umeta as $key ) {
 				$key = (string) $key;
-				$new = 'wl_' . substr( $key, strlen( 'rodieja_' ) );
+				$new = $this->wl_meta_key_from_legacy( $key );
+				if ( '' === $new || $new === $key ) {
+					continue;
+				}
 				// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 				$wpdb->query(
 					$wpdb->prepare(
@@ -133,6 +133,20 @@ final class BrandMigrate {
 				);
 			}
 		}
+	}
+
+	/**
+	 * Map legacy Rodieja meta keys to Workshop Ledger public keys.
+	 * `_rodieja_marca_id` / `rodieja_marca_id` → `wl_marca_id`.
+	 */
+	private function wl_meta_key_from_legacy( string $key ): string {
+		if ( str_starts_with( $key, '_rodieja_' ) ) {
+			return 'wl_' . substr( $key, strlen( '_rodieja_' ) );
+		}
+		if ( str_starts_with( $key, 'rodieja_' ) ) {
+			return 'wl_' . substr( $key, strlen( 'rodieja_' ) );
+		}
+		return $key;
 	}
 
 	private function migrate_options(): void {
