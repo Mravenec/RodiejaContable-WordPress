@@ -1,1 +1,2 @@
 {"at":"2026-11-10T16:15:45.587Z","type":"create","issueId":"APP-35-1","column":"backlog"}
+{"at":"2026-11-10T16:40:04.498Z","type":"move","issueId":"APP-35-1","from":"backlog","to":"summarize","summary_html":"summaries/35-orphan-meta-english-cleanup-beginner.html"}

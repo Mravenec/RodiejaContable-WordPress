@@ -2,8 +2,8 @@ id: 35
 slug: orphan-meta-english-cleanup
 title: Cleanup orphan wl_estado + leftover Spanish admin strings
 color: "#b45309"
-status: planned
+status: completed
 created_at: "2026-11-10T16:15:44.948Z"
-updated_at: "2026-11-10T16:15:45.588Z"
+updated_at: "2026-11-10T16:40:04.501Z"
 summary_html: summaries/35-orphan-meta-english-cleanup-beginner.html
 summary_updated_at: "2026-11-10T16:15:45.594Z"

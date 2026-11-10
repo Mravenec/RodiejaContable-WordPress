@@ -10,6 +10,7 @@ blocked_by: []
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T16:12:01.551Z"
+summary_html: summaries/31-part-add-readonly-parity-beginner.html
 ---
 ## Objetivo
 
@@ -34,6 +35,8 @@ InventoryMetaBoxes: con/sin vehicle + Brand→Model→Generation + part-cascade.
 
 ## History
 
+- 2026-11-10T16:40:04.075Z epic summary HTML → summaries/31-part-add-readonly-parity-beginner.html
+- 2026-11-10T16:40:04.061Z moved done → summarize
 - 2026-11-10T16:13:17.655Z moved testing → done
 - 2026-11-10T16:13:17.195Z checklist item 2 marked
 - 2026-11-10T16:13:17.117Z moved doing → testing

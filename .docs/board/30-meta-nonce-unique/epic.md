@@ -5,7 +5,7 @@
 | Id | 30 |
 | Slug | meta-nonce-unique |
 | Status | in_progress |
-| Progress | **83%** (0/1 in summarize · column + checklist) |
+| Progress | **100%** (1/1 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,9 +35,9 @@ _empty_
 
 ### 3. done
 
-- `APP-30-1` NonceGuard: unique field name per meta-box action; fix all save handlers _(role:security)_
+_empty_
 
 ### 4. summarize
 
-_empty_
+- `APP-30-1` NonceGuard: unique field name per meta-box action; fix all save handlers _(role:security)_
 

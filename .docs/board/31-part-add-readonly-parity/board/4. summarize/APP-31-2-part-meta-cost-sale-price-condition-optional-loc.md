@@ -10,6 +10,7 @@ blocked_by: []
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T16:13:17.845Z"
+summary_html: summaries/31-part-add-readonly-parity-beginner.html
 ---
 ## Objetivo
 
@@ -34,6 +35,8 @@ Cost/sale/condition/location meta + list columns; sale defaults to cost×1.5
 
 ## History
 
+- 2026-11-10T16:40:04.176Z epic summary HTML → summaries/31-part-add-readonly-parity-beginner.html
+- 2026-11-10T16:40:04.166Z moved done → summarize
 - 2026-11-10T16:13:36.650Z moved testing → done
 - 2026-11-10T16:13:36.234Z checklist item 2 marked
 - 2026-11-10T16:13:36.156Z moved doing → testing

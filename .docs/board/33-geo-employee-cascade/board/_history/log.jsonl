@@ -5,3 +5,4 @@
 {"at":"2026-11-10T16:20:34.357Z","type":"move","issueId":"APP-33-1","from":"doing","to":"testing"}
 {"at":"2026-11-10T16:20:34.441Z","type":"checklist","issueId":"APP-33-1","item":"2"}
 {"at":"2026-11-10T16:20:43.587Z","type":"move","issueId":"APP-33-1","from":"testing","to":"done"}
+{"at":"2026-11-10T16:40:04.339Z","type":"move","issueId":"APP-33-1","from":"done","to":"summarize","summary_html":"summaries/33-geo-employee-cascade-beginner.html"}

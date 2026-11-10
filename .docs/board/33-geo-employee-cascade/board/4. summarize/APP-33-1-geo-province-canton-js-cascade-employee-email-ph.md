@@ -10,6 +10,7 @@ blocked_by: []
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T16:19:58.691Z"
+summary_html: summaries/33-geo-employee-cascade-beginner.html
 ---
 ## Objetivo
 
@@ -34,6 +35,8 @@ APP-33-1: Geo province→canton JS cascade + Employee contact meta box
 
 ## History
 
+- 2026-11-10T16:40:04.339Z epic summary HTML → summaries/33-geo-employee-cascade-beginner.html
+- 2026-11-10T16:40:04.330Z moved done → summarize
 - 2026-11-10T16:20:43.585Z moved testing → done
 - 2026-11-10T16:20:34.440Z checklist item 2 marked
 - 2026-11-10T16:20:34.355Z moved doing → testing

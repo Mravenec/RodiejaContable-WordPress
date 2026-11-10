@@ -10,6 +10,7 @@ blocked_by: []
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T16:15:51.484Z"
+summary_html: summaries/32-transaction-add-readonly-parity-beginner.html
 ---
 ## Objetivo
 
@@ -34,6 +35,8 @@ FinanceMetaBoxes: payment method, transfer type, part link, supplier, descriptio
 
 ## History
 
+- 2026-11-10T16:40:04.261Z epic summary HTML → summaries/32-transaction-add-readonly-parity-beginner.html
+- 2026-11-10T16:40:04.253Z moved done → summarize
 - 2026-11-10T16:16:41.738Z moved testing → done
 - 2026-11-10T16:16:31.274Z checklist item 2 marked
 - 2026-11-10T16:16:31.197Z moved doing → testing

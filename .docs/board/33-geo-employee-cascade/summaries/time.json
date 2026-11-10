@@ -1,44 +1,28 @@
 {
   "idle_ms": 180000,
-  "started_at": "2026-11-10T16:19:58.693Z",
+  "started_at": "2026-11-10T16:40:04.332Z",
   "finished_at": null,
   "issues": {
     "APP-33-1": {
-      "active_ms": 44895,
+      "active_ms": 0,
       "paused": false,
       "open": null,
       "segments": [
         {
-          "start": "2026-11-10T16:19:58.693Z",
-          "end": "2026-11-10T16:20:43.588Z",
-          "ms": 44895,
-          "close": "done",
+          "start": "2026-11-10T16:40:04.332Z",
+          "end": "2026-11-10T16:40:04.332Z",
+          "ms": 0,
+          "close": "summarize",
           "agent": "plugin-agent-1"
         }
       ]
     }
   },
   "land": {
-<<<<<<< HEAD
-    "started_at": "2026-11-10T16:27:45.303Z",
-    "finished_at": "2026-11-10T16:27:53.840Z",
-    "paused": false,
-    "open": null,
-    "segments": [
-      {
-        "start": "2026-11-10T16:27:45.303Z",
-        "end": "2026-11-10T16:27:53.840Z",
-        "ms": 8537,
-        "close": "land-finish",
-        "agent": "land-agent"
-      }
-    ]
-=======
     "started_at": null,
     "finished_at": null,
     "paused": false,
     "open": null,
     "segments": []
->>>>>>> origin/feature/34-admin-color-token-fidelity
   }
 }

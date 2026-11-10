@@ -5,7 +5,7 @@
 | Id | 32 |
 | Slug | transaction-add-readonly-parity |
 | Status | in_progress |
-| Progress | **83%** (0/1 in summarize · column + checklist) |
+| Progress | **100%** (1/1 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,9 +35,9 @@ _empty_
 
 ### 3. done
 
-- `APP-32-1` Finance meta: payment method, richer tipo, optional part link, amount helpers _(role:plugin)_
+_empty_
 
 ### 4. summarize
 
-_empty_
+- `APP-32-1` Finance meta: payment method, richer tipo, optional part link, amount helpers _(role:plugin)_
 

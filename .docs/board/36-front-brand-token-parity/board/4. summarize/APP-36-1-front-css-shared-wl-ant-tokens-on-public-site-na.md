@@ -10,6 +10,7 @@ blocked_by: []
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T16:35:46.906Z"
+summary_html: summaries/36-front-brand-token-parity-beginner.html
 ---
 ## Objetivo
 
@@ -34,6 +35,8 @@ body.workshop-ledger-front { background: var(--wl-surface); } header { navy→ac
 
 ## History
 
+- 2026-11-10T16:39:53.863Z epic summary HTML → summaries/36-front-brand-token-parity-beginner.html
+- 2026-11-10T16:39:53.848Z moved done → summarize
 - 2026-11-10T16:36:33.046Z moved testing → done
 - 2026-11-10T16:36:32.558Z checklist item 2 marked
 - 2026-11-10T16:36:32.469Z moved doing → testing

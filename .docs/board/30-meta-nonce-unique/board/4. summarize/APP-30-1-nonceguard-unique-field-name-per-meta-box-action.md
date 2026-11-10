@@ -10,6 +10,7 @@ blocked_by: []
 blocks: []
 agent: security-agent-1
 claimed_at: "2026-11-10T16:08:36.034Z"
+summary_html: summaries/30-meta-nonce-unique-beginner.html
 ---
 ## Objetivo
 
@@ -34,6 +35,8 @@ NonceGuard::name_for(action) + verify_post; meta boxes no longer share _wl_nonce
 
 ## History
 
+- 2026-11-10T16:40:03.974Z epic summary HTML → summaries/30-meta-nonce-unique-beginner.html
+- 2026-11-10T16:40:03.966Z moved done → summarize
 - 2026-11-10T16:09:43.362Z moved testing → done
 - 2026-11-10T16:09:42.862Z checklist item 2 marked
 - 2026-11-10T16:09:42.769Z moved doing → testing

@@ -5,7 +5,7 @@
 | Id | 36 |
 | Slug | front-brand-token-parity |
 | Status | in_progress |
-| Progress | **83%** (0/1 in summarize · column + checklist) |
+| Progress | **100%** (1/1 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,9 +35,9 @@ _empty_
 
 ### 3. done
 
-- `APP-36-1` Front CSS: shared --wl-* Ant tokens on public site (native) _(role:plugin)_
+_empty_
 
 ### 4. summarize
 
-_empty_
+- `APP-36-1` Front CSS: shared --wl-* Ant tokens on public site (native) _(role:plugin)_
 

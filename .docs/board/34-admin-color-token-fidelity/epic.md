@@ -5,7 +5,7 @@
 | Id | 34 |
 | Slug | admin-color-token-fidelity |
 | Status | in_progress |
-| Progress | **83%** (0/1 in summarize · column + checklist) |
+| Progress | **100%** (1/1 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,9 +35,9 @@ _empty_
 
 ### 3. done
 
-- `APP-34-1` Tokens/CSS: align remaining admin screens to Read-Only Ant palette (native) _(role:plugin)_
+_empty_
 
 ### 4. summarize
 
-_empty_
+- `APP-34-1` Tokens/CSS: align remaining admin screens to Read-Only Ant palette (native) _(role:plugin)_
 
