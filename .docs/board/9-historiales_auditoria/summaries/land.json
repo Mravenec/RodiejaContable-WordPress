@@ -1,0 +1,8 @@
+{
+  "status": "landed",
+  "merge_commit": "605e4ba59a2e68b564300f1b5f9f624bb5b50e10",
+  "smoke_ok": true,
+  "pushed_at": "2026-11-10T06:21:25Z",
+  "git": "git push origin main",
+  "note": "Landed on origin/main 605e4ba \u2014 feature branch \u2286 main"
+}
