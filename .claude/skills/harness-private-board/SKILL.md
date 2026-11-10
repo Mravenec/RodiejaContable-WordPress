@@ -5,6 +5,8 @@ description: private.board filesystem board (.linear). Use when starting, claimi
 
 Source: follow `.ai/skills/private-board/SKILL.md` and `.ai/rules/private-board.md` (mirror — do not duplicate content here).
 
+Mandatory on this product: `.ai/rules/board-process-mandatory.md` (Spring-harness process, WordPress stack).
+
 Board flow (must match `AGENTS.md` / `CLAUDE.md`):
 
     `next` → `claim` → do one checklist item → **immediately mark it** → **`evidence`** (compact code/command/result) → repeat in `doing` → **`move testing`** → verify + flags. If verification fails: `fail` (testing → doing, claim kept) or `move doing --reason`, fix, `move testing` again. Then **`worktree-finish`** (commit then park). Living HTML refreshes on every move and evidence pulse. When **every** ticket is in `done`, agents **`worktree-integrate`** (prunes ticket folders), then **`summarize`** + **`handoff`** (git line + smoke note), then **`worktree-push`**.
