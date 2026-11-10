@@ -48,6 +48,7 @@ role_ok cap_ok file_edit_disallowed
 
 ## History
 
+- 2026-11-10T05:18:31.015Z moved testing → done
 - 2026-11-10T05:18:30.767Z checklist item 2 marked
 - 2026-11-10T05:18:30.638Z moved doing → testing
 - 2026-11-10T05:18:30.442Z checklist item 1 marked

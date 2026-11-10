@@ -5,7 +5,7 @@
 | Id | 1 |
 | Slug | foundation |
 | Status | in_progress |
-| Progress | **50%** (0/3 in summarize · column + checklist) |
+| Progress | **77%** (0/3 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -23,7 +23,7 @@ This folder is the **operational** board (claims, checklist, %). There is no `.a
 
 ### 0. backlog
 
-- `APP-1-3` Docs · journey + native map in AGENTS _(role:orchestrator)_
+_empty_
 
 ### 1. doing
 
@@ -31,11 +31,12 @@ _empty_
 
 ### 2. testing
 
-- `APP-1-2` Security · roles caps + MU hardening verify _(role:security)_
+- `APP-1-3` Docs · journey + native map in AGENTS _(role:orchestrator)_
 
 ### 3. done
 
 - `APP-1-1` Plugin · scaffold DI + health REST _(role:plugin)_
+- `APP-1-2` Security · roles caps + MU hardening verify _(role:security)_
 
 ### 4. summarize
 
