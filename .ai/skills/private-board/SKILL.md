@@ -12,7 +12,7 @@ Board of record: `.linear/` only (UI brand **private.board**). **No** cloud issu
 4. `move <ID> testing` **before** any verification
 5. In **testing**: remaining checklist (prove `.http` / setup / build), harness flags
 6. `node .ai/scripts/worktree-finish.mjs <ID> --agent <name>` — **commit then park**. Do not summarize yet. Do not ask the human to commit.
-7. When **every** ticket in the epic is in `done`, `worktree-integrate` (agents merge, then prune APP-* folders), smoke, then `move <ID> summarize` + `handoff` (git line + smoke note in the living HTML), then `worktree-push`.
+7. When **every** ticket in the epic is in `done`, `worktree-integrate` (agents merge, then prune APP-* folders), smoke, then **`move <ID> summarize` for every ticket** + `handoff` (git line + smoke note in the living HTML), then `worktree-push`. Do not leave tickets parked in `done` after handoff — epic **%** stays below 100% until **`summarize`**. After land, `worktree-land-finish` also enforces this hygiene so LANDED cannot ship with 83%.
 
 Claim stays through `done` so `done` → `summarize` does not require `--force`.
 

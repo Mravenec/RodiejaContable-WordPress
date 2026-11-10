@@ -19,6 +19,7 @@ import {
   pushMain,
 } from "./lib/land-main.mjs";
 import { snapshotEpicToDocs } from "../../.linear/scripts/lib/board-snapshot.mjs";
+import { ensureEpicTicketsSummarized } from "../../.linear/scripts/lib/board-land-hygiene.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const SCRIPT_ROOT = path.resolve(__dirname, "../..");
@@ -200,6 +201,40 @@ if (flag(argv, "--no-push")) {
 land.status = "smoke-main";
 writeLand(epicPath, land);
 
+// LANDED UI % must be 100%: all tickets in summarize with checklists complete.
+// Snapshots often leave tickets parked in `done` (83%) — promote before snap/push.
+let boardHygiene = { ok: true, pct: 100, promoted: [], open: [] };
+try {
+  boardHygiene = ensureEpicTicketsSummarized(config, epicPath);
+} catch (e) {
+  boardHygiene = {
+    ok: false,
+    pct: 0,
+    promoted: [],
+    open: [],
+    error: e?.message || String(e),
+  };
+}
+if (!boardHygiene.ok) {
+  writeLand(epicPath, land);
+  console.error(
+    JSON.stringify(
+      {
+        ok: false,
+        epicKey,
+        landStatus: "smoke-main",
+        error:
+          boardHygiene.error ||
+          "Board hygiene failed — refuse LANDED while epic % < 100%.",
+        boardHygiene,
+      },
+      null,
+      2
+    )
+  );
+  process.exit(1);
+}
+
 // Journey + board snapshot belong on main after land, before push.
 const porcelain = git(["status", "--porcelain"], primary);
 if (porcelain.trim()) {
@@ -263,6 +298,7 @@ console.log(
       journey,
       htmlPath,
       snap,
+      boardHygiene,
       pushed,
       next: "node .ai/scripts/worktree-land-next.mjs",
     },

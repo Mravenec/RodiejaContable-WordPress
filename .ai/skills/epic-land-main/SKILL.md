@@ -14,7 +14,7 @@ Merge `origin/feature/{n}-{slug}` into `main` in epic order, resolve conflicts, 
 4. `node .ai/scripts/worktree-land-main.mjs <n>` — starts land clock, merges `--no-ff`. On conflicts: resolve on `main`, `git add`, `git commit`, set status `smoke-main` (or re-run land-main after fix).
 5. `node .ai/scripts/worktree-land-smoke.mjs <n>` — follow journey verify for this epic **and** keep prior landed epics healthy (DDEV WP: health / protected REST / plugin smoke). Mark `--pass` when OK. The smoke also runs the layer audit on `main`; on violations it records `smoke_ok=false` and exits 1 (fix on `main`, commit, re-run).
 6. Write a short Supervisor / Manager land note (English, first person, “You can confirm it doing the following:” + smoke steps).
-7. `node .ai/scripts/worktree-land-finish.mjs <n> --note-file path/to/note.txt` — HTML land section, journey Status, freeze clock, **`git push origin main`**. This is the **only** step that may set board **LANDED**. If push fails, status stays `smoke-main` — fix auth/history and re-run. Never hand-edit `land.json` to `landed`.
+7. `node .ai/scripts/worktree-land-finish.mjs <n> --note-file path/to/note.txt` — board land hygiene (tickets → **`summarize`**, epic **% = 100%**), HTML land section, journey Status, freeze clock, **`git push origin main`**. This is the **only** step that may set board **LANDED**. If hygiene fails (open tickets) or push fails, status stays `smoke-main` — fix and re-run. Never hand-edit `land.json` to `landed`.
 8. Repeat from step 3 until `worktree-land-ready` is true.
 
 ## Board / HTML / time
@@ -34,5 +34,6 @@ Merge `origin/feature/{n}-{slug}` into `main` in epic order, resolve conflicts, 
 - Invent APP ticket columns for land
 - Delete untracked non-persist folders to make a merge fit
 - Call an epic **LANDED** after local merge only (must be on GitHub `origin/main`)
+- Accept **LANDED + % &lt; 100%** (tickets stuck in `done`/`backlog`) — hygiene must promote to `summarize`
 
 Details: `.ai/rules/epic-land-main.md` · `.ai/rules/landed-means-origin-main.md` · spec: `.ai/specs/epic-land-main.md`

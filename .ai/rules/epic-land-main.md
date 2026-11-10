@@ -28,6 +28,8 @@ Each epic: **merge → conflicts → cumulative smoke → land handoff (human su
 
 **LANDED law:** the board badge **LANDED** means `origin/main` on GitHub includes this epic. Local merge alone is **not** landed. Only `worktree-land-finish` may set `"status":"landed"`, and only **after** `git push origin main` succeeds (`.ai/rules/landed-means-origin-main.md`). Never hand-edit `land.json` to `landed`.
 
+**LANDED ⇒ epic % 100%:** the board row **%** is independent of the LANDED badge. **100%** only when every ticket is in **`summarize`** with checklists complete. `worktree-land-finish` must run land hygiene (promote `done` → `summarize`, refuse open columns) before snap/push so the UI cannot show LANDED + 83% (spec failure #20).
+
 `worktree-land-smoke` runs the layer audit (`.ai/scripts/layer-audit.mjs`) on `main` and refuses a pass (`smoke_ok=false`) on violations. Fix them on `main` as part of conflict resolution, commit, re-run the smoke.
 
 `worktree-land-main` deletes nothing but untracked **persist files** (`.docs/board`, `.docs/journey`) that the merge would overwrite, listed one by one. Any other dirty or untracked path that collides with the feature merge makes it **refuse** and stay on disk (park or move it). It also refuses a feature branch that adds a **gitlink** (nested clone) not declared in `.gitmodules` — fix on the feature branch (`git rm --cached <path>`, gitignore the folder), push again, re-run (spec failures #13, #17, #18).

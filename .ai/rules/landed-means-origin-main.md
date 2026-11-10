@@ -14,6 +14,7 @@ The board UI badge **LANDED** is a **GitHub fact**, not a local convenience labe
 | `land.json` `"status": "landed"` | `git push origin main` **succeeded** via `worktree-land-finish.mjs` |
 | Feature is “on origin” | `worktree-push.mjs` published `origin/feature/{n}-{slug}` |
 | Ready to land | `worktree-origin-ready.mjs` → `originReady: true` |
+| Board row **%** after LANDED | **100%** — every ticket in **`summarize`** with checklists complete (`worktree-land-finish` land hygiene) |
 
 ## Forbidden (this is how false LANDED badges appear)
 
@@ -21,6 +22,7 @@ The board UI badge **LANDED** is a **GitHub fact**, not a local convenience labe
 - Merging `feature/*` into local `main` and calling it landed without push
 - Checking out plugin files onto local `main` and skipping `worktree-push` + land-main pipeline
 - Setting LANDED while `origin/main` still lacks the epic merge (non-fast-forward / auth failure = **not** landed)
+- Leaving tickets in `done` / `backlog` so the UI shows **LANDED + 83%** (or 0%) — promote to `summarize` before snap
 
 ## Correct pipeline (do not shortcut)
 

@@ -5,3 +5,4 @@
 {"at":"2026-11-10T16:44:03.974Z","type":"move","issueId":"APP-37-1","from":"doing","to":"testing"}
 {"at":"2026-11-10T16:44:04.063Z","type":"checklist","issueId":"APP-37-1","item":"2"}
 {"at":"2026-11-10T16:44:04.545Z","type":"move","issueId":"APP-37-1","from":"testing","to":"done"}
+{"at":"2026-11-10T16:52:40.220Z","type":"move","issueId":"APP-37-1","from":"done","to":"summarize","summary_html":"summaries/37-public-front-workshop-content-beginner.html"}

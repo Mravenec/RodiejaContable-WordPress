@@ -14,6 +14,7 @@ Same **discipline** as `HarnessMariaDB-SpringBootJOOQ-ReactJS`. This is a **prod
 - Leave `.docs/journey/{n}-{slug}.md` as “Planned” stubs after work lands (or omit the journey file for a board epic).
 - Skip `.docs/board/{n}-{slug}/` snapshots.
 - Fake LANDED without `worktree-land-finish` → `origin/main`.
+- Leave LANDED with epic **% &lt; 100%** (tickets not in `summarize`) — land-finish hygiene must promote `done` → `summarize`.
 
 ## Always do this
 

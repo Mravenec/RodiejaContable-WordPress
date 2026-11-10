@@ -10,6 +10,7 @@ blocked_by: []
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T16:43:14.222Z"
+summary_html: summaries/37-public-front-workshop-content-beginner.html
 ---
 ## Objetivo
 
@@ -34,6 +35,8 @@ PublicSiteSeed::maybe_run(); // Home+About, show_on_front=page, trash Sample/Hel
 
 ## History
 
+- 2026-11-10T16:52:40.220Z epic summary HTML → summaries/37-public-front-workshop-content-beginner.html
+- 2026-11-10T16:52:40.213Z moved done → summarize
 - 2026-11-10T16:44:04.544Z moved testing → done
 - 2026-11-10T16:44:04.062Z checklist item 2 marked
 - 2026-11-10T16:44:03.973Z moved doing → testing
