@@ -682,31 +682,159 @@ body.workshop-ledger-admin .view-switch {
 	border-radius: 0 0 var(--wl-radius) var(--wl-radius);
 }
 
-.wl-hierarchy__vehiculos li {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	gap: 8px;
-	padding: 10px 12px;
+.wl-hierarchy__vehiculo {
+	padding: 0;
 	border-bottom: 1px solid var(--wl-line);
 	font-size: 14px;
 }
 
-.wl-hierarchy__vehiculos li:last-child {
+.wl-hierarchy__vehiculo:last-child {
 	border-bottom: 0;
 }
 
-.wl-hierarchy__vehiculos li:hover {
+.wl-hierarchy__veh-detail {
+	border: 0;
+	box-shadow: none;
+	background: transparent;
+	border-radius: 0;
+}
+
+.wl-hierarchy__veh-summary {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+	padding: 10px 12px;
+	font-weight: 500;
+}
+
+.wl-hierarchy__veh-summary:hover {
 	background: var(--wl-accent-soft);
 }
 
-.wl-hierarchy__vehiculos a {
+.wl-hierarchy__thumb {
+	width: 40px;
+	height: 40px;
+	object-fit: cover;
+	border-radius: 4px;
+	border: 1px solid var(--wl-line-strong);
+	flex: 0 0 auto;
+}
+
+.wl-hierarchy__thumb--empty {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: #f5f5f5;
+	color: rgba(0, 0, 0, 0.35);
+	font-size: 18px;
+	width: 40px;
+	height: 40px;
+}
+
+.wl-hierarchy__veh-main {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	min-width: 0;
+	flex: 1 1 160px;
+}
+
+.wl-hierarchy__estado {
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+	color: var(--wl-accent-deep, #0958d9);
+	background: var(--wl-accent-soft, #e6f4ff);
+	border-radius: 10px;
+	padding: 2px 8px;
+	line-height: 18px;
+}
+
+.wl-hierarchy__veh-money {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 2px;
+	margin-left: auto;
+	font-size: 13px;
+}
+
+.wl-hierarchy__money-label {
+	display: block;
+	font-size: 11px;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.45);
+}
+
+.wl-hierarchy__veh-body {
+	padding: 0 12px 14px 62px;
+	border-top: 1px dashed var(--wl-line);
+}
+
+.wl-hierarchy__metrics {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+	gap: 10px 16px;
+	padding: 12px 0;
+}
+
+.wl-hierarchy__pending {
+	color: #cf1322;
+}
+
+.wl-hierarchy__ok {
+	color: #389e0d;
+}
+
+.wl-hierarchy__related {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 12px;
+}
+
+.wl-hierarchy__related section {
+	background: #fafafa;
+	border: 1px solid var(--wl-line);
+	border-radius: 8px;
+	padding: 10px 12px;
+}
+
+.wl-hierarchy__related h3 {
+	margin: 0 0 8px;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.wl-hierarchy__related ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.wl-hierarchy__related li {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 0;
+	border-bottom: 1px solid var(--wl-line);
+	font-size: 13px;
+}
+
+.wl-hierarchy__related li:last-child {
+	border-bottom: 0;
+}
+
+.wl-hierarchy__related a {
 	font-weight: 500;
 	text-decoration: none;
 	color: rgba(0, 0, 0, 0.85);
 }
 
-.wl-hierarchy__vehiculos a:hover {
+.wl-hierarchy__related a:hover {
 	color: var(--wl-accent);
 }
 
@@ -714,6 +842,10 @@ body.workshop-ledger-admin .view-switch {
 	margin: 0 16px 12px;
 	color: rgba(0, 0, 0, 0.45);
 	font-size: 13px;
+}
+
+.wl-hierarchy__related .wl-hierarchy__empty {
+	margin: 0;
 }
 
 /* Toolbar strip above hierarchy */

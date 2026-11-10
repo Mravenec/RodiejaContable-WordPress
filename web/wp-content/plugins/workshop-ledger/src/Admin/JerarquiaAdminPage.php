@@ -32,8 +32,8 @@ final class JerarquiaAdminPage {
 			wp_die( esc_html__( 'Forbidden.', 'workshop-ledger' ), '', array( 'response' => 403 ) );
 		}
 
-		$tree = $this->hierarchy->tree();
-		$marca_n = count( $tree );
+		$tree     = $this->hierarchy->tree();
+		$marca_n  = count( $tree );
 		?>
 		<div class="wrap wl-admin-wrap">
 			<div class="wl-page-header">
@@ -43,7 +43,7 @@ final class JerarquiaAdminPage {
 						· <?php echo $this->escaper->html( __( 'View by Generations', 'workshop-ledger' ) ); ?>
 					</p>
 					<h1><?php echo $this->escaper->html( __( 'View by Generations', 'workshop-ledger' ) ); ?></h1>
-					<p class="wl-page-header__lede"><?php echo $this->escaper->html( __( 'Brand → Model → Generation → Vehicle — Read-Only tree parity on native CPT/meta.', 'workshop-ledger' ) ); ?></p>
+					<p class="wl-page-header__lede"><?php echo $this->escaper->html( __( 'Brand → Model → Generation → Vehicle — expand a vehicle for costs, parts, and transactions (native details).', 'workshop-ledger' ) ); ?></p>
 				</div>
 				<div class="wl-page-header__actions">
 					<a class="button button-primary" href="<?php echo $this->escaper->url( admin_url( 'edit.php?post_type=wl_vehiculo' ) ); ?>"><?php echo $this->escaper->html( __( 'Vehicle list', 'workshop-ledger' ) ); ?></a>
@@ -53,7 +53,7 @@ final class JerarquiaAdminPage {
 
 			<div class="wl-toolbar">
 				<strong><?php echo $this->escaper->html( sprintf( /* translators: %d brand count */ _n( '%d brand', '%d brands', $marca_n, 'workshop-ledger' ), $marca_n ) ); ?></strong>
-				<p class="wl-toolbar__hint"><?php echo $this->escaper->html( __( 'Expand each level · Edit opens the matching CPT', 'workshop-ledger' ) ); ?></p>
+				<p class="wl-toolbar__hint"><?php echo $this->escaper->html( __( 'Expand each level · Expand a vehicle for detail · Edit opens the matching CPT', 'workshop-ledger' ) ); ?></p>
 			</div>
 
 			<?php if ( empty( $tree ) ) : ?>
@@ -94,17 +94,8 @@ final class JerarquiaAdminPage {
 											<?php else : ?>
 												<ul class="wl-hierarchy__vehiculos">
 													<?php foreach ( $gen['vehiculos'] as $veh ) : ?>
-														<li>
-															<span class="dashicons dashicons-car" aria-hidden="true"></span>
-															<a href="<?php echo $this->escaper->url( (string) $veh['edit_url'] ); ?>">
-																<?php echo $this->escaper->html( (string) $veh['title'] ); ?>
-															</a>
-															<?php if ( '' !== (string) $veh['codigo'] ) : ?>
-																<code><?php echo $this->escaper->html( (string) $veh['codigo'] ); ?></code>
-															<?php endif; ?>
-															<?php if ( '' !== (string) $veh['anio'] ) : ?>
-																<span class="wl-hierarchy__years"><?php echo $this->escaper->html( (string) $veh['anio'] ); ?></span>
-															<?php endif; ?>
+														<li class="wl-hierarchy__vehiculo">
+															<?php $this->render_vehicle( $veh ); ?>
 														</li>
 													<?php endforeach; ?>
 												</ul>
@@ -119,5 +110,115 @@ final class JerarquiaAdminPage {
 			<?php endif; ?>
 		</div>
 		<?php
+	}
+
+	/**
+	 * @param array<string, mixed> $veh
+	 */
+	private function render_vehicle( array $veh ): void {
+		$codigo   = (string) ( $veh['codigo'] ?? '' );
+		$label    = '' !== $codigo ? $codigo : (string) ( $veh['title'] ?? '' );
+		$anio     = (string) ( $veh['anio'] ?? '' );
+		$estado   = (string) ( $veh['estado'] ?? '' );
+		$thumb    = (string) ( $veh['thumb_url'] ?? '' );
+		$edit     = (string) ( $veh['edit_url'] ?? '#' );
+		$parts    = is_array( $veh['repuestos'] ?? null ) ? $veh['repuestos'] : array();
+		$txs      = is_array( $veh['transacciones'] ?? null ) ? $veh['transacciones'] : array();
+		?>
+		<details class="wl-hierarchy__veh-detail">
+			<summary class="wl-hierarchy__veh-summary">
+				<?php if ( '' !== $thumb ) : ?>
+					<img class="wl-hierarchy__thumb" src="<?php echo $this->escaper->url( $thumb ); ?>" alt="" width="40" height="40" />
+				<?php else : ?>
+					<span class="wl-hierarchy__thumb wl-hierarchy__thumb--empty dashicons dashicons-car" aria-hidden="true"></span>
+				<?php endif; ?>
+				<span class="wl-hierarchy__veh-main">
+					<strong><?php echo $this->escaper->html( $label ); ?></strong>
+					<?php if ( '' !== $anio ) : ?>
+						<span class="wl-hierarchy__years"><?php echo $this->escaper->html( $anio ); ?></span>
+					<?php endif; ?>
+					<?php if ( '' !== $estado ) : ?>
+						<span class="wl-hierarchy__estado"><?php echo $this->escaper->html( $estado ); ?></span>
+					<?php endif; ?>
+				</span>
+				<span class="wl-hierarchy__veh-money">
+					<span class="wl-hierarchy__money-label"><?php echo $this->escaper->html( __( 'Investment', 'workshop-ledger' ) ); ?></span>
+					<strong><?php echo $this->escaper->html( $this->money( (float) ( $veh['inversion_total'] ?? 0 ) ) ); ?></strong>
+				</span>
+				<a class="wl-hierarchy__edit" href="<?php echo $this->escaper->url( $edit ); ?>" onclick="event.stopPropagation();"><?php echo $this->escaper->html( __( 'Edit', 'workshop-ledger' ) ); ?></a>
+			</summary>
+
+			<div class="wl-hierarchy__veh-body">
+				<div class="wl-hierarchy__metrics">
+					<div>
+						<span class="wl-hierarchy__money-label"><?php echo $this->escaper->html( __( 'Intake date', 'workshop-ledger' ) ); ?></span>
+						<strong><?php echo $this->escaper->html( (string) ( $veh['fecha_ingreso'] ?: '—' ) ); ?></strong>
+					</div>
+					<div>
+						<span class="wl-hierarchy__money-label"><?php echo $this->escaper->html( __( 'Purchase', 'workshop-ledger' ) ); ?></span>
+						<strong><?php echo $this->escaper->html( $this->money( (float) ( $veh['precio_compra'] ?? 0 ) ) ); ?></strong>
+					</div>
+					<div>
+						<span class="wl-hierarchy__money-label"><?php echo $this->escaper->html( __( 'Tow', 'workshop-ledger' ) ); ?></span>
+						<strong><?php echo $this->escaper->html( $this->money( (float) ( $veh['costo_grua'] ?? 0 ) ) ); ?></strong>
+					</div>
+					<div>
+						<span class="wl-hierarchy__money-label"><?php echo $this->escaper->html( __( 'Commissions', 'workshop-ledger' ) ); ?></span>
+						<strong><?php echo $this->escaper->html( $this->money( (float) ( $veh['comisiones'] ?? 0 ) ) ); ?></strong>
+					</div>
+					<div>
+						<span class="wl-hierarchy__money-label"><?php echo $this->escaper->html( __( 'Recovered', 'workshop-ledger' ) ); ?></span>
+						<strong><?php echo $this->escaper->html( $this->money( (float) ( $veh['costo_recuperado'] ?? 0 ) ) ); ?></strong>
+					</div>
+					<div>
+						<span class="wl-hierarchy__money-label"><?php echo $this->escaper->html( __( 'Pending', 'workshop-ledger' ) ); ?></span>
+						<strong class="<?php echo ( (float) ( $veh['costo_pendiente'] ?? 0 ) ) > 0 ? 'wl-hierarchy__pending' : 'wl-hierarchy__ok'; ?>">
+							<?php echo $this->escaper->html( $this->money( (float) ( $veh['costo_pendiente'] ?? 0 ) ) ); ?>
+						</strong>
+					</div>
+				</div>
+
+				<div class="wl-hierarchy__related">
+					<section>
+						<h3><?php echo $this->escaper->html( sprintf( /* translators: %d count */ __( 'Transactions (%d)', 'workshop-ledger' ), count( $txs ) ) ); ?></h3>
+						<?php if ( empty( $txs ) ) : ?>
+							<p class="wl-hierarchy__empty"><?php echo $this->escaper->html( __( 'No transactions linked.', 'workshop-ledger' ) ); ?></p>
+						<?php else : ?>
+							<ul>
+								<?php foreach ( $txs as $tx ) : ?>
+									<li>
+										<a href="<?php echo $this->escaper->url( (string) $tx['edit_url'] ); ?>"><?php echo $this->escaper->html( (string) $tx['title'] ); ?></a>
+										<span class="wl-hierarchy__years"><?php echo $this->escaper->html( (string) $tx['fecha'] ); ?></span>
+										<span class="wl-hierarchy__estado"><?php echo $this->escaper->html( (string) $tx['sentido'] ); ?></span>
+										<strong><?php echo $this->escaper->html( $this->money( (float) $tx['monto'] ) ); ?></strong>
+									</li>
+								<?php endforeach; ?>
+							</ul>
+						<?php endif; ?>
+					</section>
+					<section>
+						<h3><?php echo $this->escaper->html( sprintf( /* translators: %d count */ __( 'Parts (%d)', 'workshop-ledger' ), count( $parts ) ) ); ?></h3>
+						<?php if ( empty( $parts ) ) : ?>
+							<p class="wl-hierarchy__empty"><?php echo $this->escaper->html( __( 'No parts linked.', 'workshop-ledger' ) ); ?></p>
+						<?php else : ?>
+							<ul>
+								<?php foreach ( $parts as $part ) : ?>
+									<li>
+										<a href="<?php echo $this->escaper->url( (string) $part['edit_url'] ); ?>"><?php echo $this->escaper->html( (string) $part['title'] ); ?></a>
+										<span class="wl-hierarchy__years"><?php echo $this->escaper->html( sprintf( /* translators: %d stock */ __( 'Stock %d', 'workshop-ledger' ), (int) $part['stock'] ) ); ?></span>
+										<strong><?php echo $this->escaper->html( $this->money( (float) $part['precio'] ) ); ?></strong>
+									</li>
+								<?php endforeach; ?>
+							</ul>
+						<?php endif; ?>
+					</section>
+				</div>
+			</div>
+		</details>
+		<?php
+	}
+
+	private function money( float $amount ): string {
+		return number_format_i18n( $amount, 2 );
 	}
 }

@@ -28,7 +28,18 @@ interface CatalogHierarchyRepositoryInterface {
 	 *         title:string,
 	 *         codigo:string,
 	 *         anio:int|float|string,
-	 *         edit_url:string
+	 *         edit_url:string,
+	 *         thumb_url:string,
+	 *         estado:string,
+	 *         fecha_ingreso:string,
+	 *         precio_compra:float,
+	 *         costo_grua:float,
+	 *         comisiones:float,
+	 *         costo_recuperado:float,
+	 *         inversion_total:float,
+	 *         costo_pendiente:float,
+	 *         repuestos:list<array{id:int,title:string,precio:float,stock:int,edit_url:string}>,
+	 *         transacciones:list<array{id:int,title:string,monto:float,fecha:string,sentido:string,edit_url:string}>
 	 *       }>
 	 *     }>
 	 *   }>
