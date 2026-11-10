@@ -715,3 +715,92 @@ body.rodieja-contable-admin .view-switch {
 	font-size: 13px;
 	color: rgba(0, 0, 0, 0.45);
 }
+
+/* —— CPT list shell (edit.php) — Ant Table toolbar —— */
+body.rodieja-cpt-list .wrap {
+	background: transparent;
+}
+
+body.rodieja-cpt-list .wp-header-end {
+	margin: 0;
+}
+
+body.rodieja-cpt-list .tablenav.top {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	padding: 12px 16px;
+	margin: 0 0 0;
+	background: var(--rdj-card);
+	border: 1px solid var(--rdj-line-strong);
+	border-bottom: 0;
+	border-radius: var(--rdj-radius-lg) var(--rdj-radius-lg) 0 0;
+	box-shadow: none;
+	height: auto;
+}
+
+body.rodieja-cpt-list .wp-list-table {
+	border-top-left-radius: 0 !important;
+	border-top-right-radius: 0 !important;
+	margin-top: 0;
+}
+
+body.rodieja-cpt-list .tablenav.bottom {
+	padding: 8px 4px;
+	height: auto;
+}
+
+body.rodieja-cpt-list .tablenav select {
+	min-height: 32px;
+	border-radius: var(--rdj-radius);
+	border-color: #d9d9d9;
+}
+
+body.rodieja-cpt-list .search-box {
+	margin: 0;
+	padding: 0;
+}
+
+body.rodieja-cpt-list .search-box input[type="search"] {
+	min-height: 32px;
+	width: 220px;
+}
+
+body.rodieja-cpt-list .subsubsub {
+	background: var(--rdj-card);
+	border: 1px solid var(--rdj-line-strong);
+	border-bottom: 0;
+	border-radius: var(--rdj-radius-lg) var(--rdj-radius-lg) 0 0;
+	padding: 10px 16px 0;
+	margin: 0 0 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+body.rodieja-cpt-list .subsubsub + .tablenav.top {
+	border-radius: 0;
+}
+
+body.rodieja-cpt-list .subsubsub + .tablenav.top + .wp-list-table,
+body.rodieja-cpt-list .tablenav.top + .wp-list-table {
+	border-radius: 0 0 var(--rdj-radius-lg) var(--rdj-radius-lg) !important;
+}
+
+body.rodieja-cpt-list .check-column input {
+	margin-top: 2px;
+}
+
+body.rodieja-cpt-list .column-title .row-title,
+body.rodieja-cpt-list .row-title {
+	font-weight: 500;
+	color: rgba(0, 0, 0, 0.85);
+}
+
+body.rodieja-cpt-list .striped > tbody > :nth-child(odd) {
+	background: #fff;
+}
+
+body.rodieja-cpt-list .striped > tbody > :nth-child(even) {
+	background: #fafafa;
+}
