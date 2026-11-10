@@ -1,0 +1,13 @@
+{
+  "status": "landed",
+  "started_at": "2026-11-10T16:37:50.364Z",
+  "finished_at": "2026-11-10T16:37:53.851Z",
+  "merge_commit": "4896fc1bddee7381ca9453518769b3cd25534289",
+  "conflicts": [],
+  "smoke_ok": true,
+  "smoke_at": "2026-11-10T16:37:51.610Z",
+  "git": "git push origin main",
+  "note": "Supervisor land note — Epic 36 front-brand-token-parity\n\nPublic front now shares Read-Only Ant --wl-* tokens (navy header band, #1890ff actions, #f0f2f5 canvas). Native CSS on Twenty Twenty-Five; Read-Only untouched. Database remains WP posts/meta.\n\nYou can confirm it doing the following:\n1. Open https://workshop-ledger.ddev.site/ — body has workshop-ledger-front; header navy→accent; page surface #f0f2f5.\n2. Primary buttons / content links use #1890ff.\n3. Layer audit on main is green.",
+  "recorded_at": "2026-11-10T16:37:51.671Z",
+  "pushed_at": "2026-11-10T16:37:53.851Z"
+}
