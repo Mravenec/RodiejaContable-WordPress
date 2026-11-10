@@ -147,10 +147,10 @@ final class PedidoMetaBoxes {
 		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 			return false;
 		}
-		if ( ! $this->gate->can_manage() || empty( $_POST['_wl_nonce'] ) ) {
+		if ( ! $this->gate->can_manage() ) {
 			return false;
 		}
-		return (bool) wp_verify_nonce( sanitize_text_field( wp_unslash( (string) $_POST['_wl_nonce'] ) ), $action );
+		return $this->nonce->verify_post( $action );
 	}
 
 	private function select_cpt( string $type, string $name, int $selected, string $label ): void {

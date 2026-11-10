@@ -61,10 +61,7 @@ final class EmpleadoWpUserMetaBox {
 		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 			return;
 		}
-		if ( ! $this->gate->can_manage() || empty( $_POST['_wl_nonce'] ) ) {
-			return;
-		}
-		if ( ! wp_verify_nonce( sanitize_text_field( wp_unslash( (string) $_POST['_wl_nonce'] ) ), 'wl_empleado_user_meta' ) ) {
+		if ( ! $this->gate->can_manage() || ! $this->nonce->verify_post( 'wl_empleado_user_meta' ) ) {
 			return;
 		}
 		$uid = isset( $_POST['wl_user_id'] ) ? absint( wp_unslash( $_POST['wl_user_id'] ) ) : 0;

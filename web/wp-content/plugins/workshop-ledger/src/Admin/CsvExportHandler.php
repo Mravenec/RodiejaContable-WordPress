@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace WorkshopLedger\Admin;
 
 use WorkshopLedger\Security\CapabilityGate;
+use WorkshopLedger\Security\NonceGuard;
 use WorkshopLedger\Services\CsvExportService;
 
 final class CsvExportHandler {
@@ -26,7 +27,7 @@ final class CsvExportHandler {
 		if ( ! current_user_can( CapabilityGate::MANAGE ) && ! current_user_can( 'manage_options' ) ) {
 			wp_die( esc_html__( 'Forbidden.', 'workshop-ledger' ), 403 );
 		}
-		check_admin_referer( self::ACTION, '_wl_nonce' );
+		check_admin_referer( self::ACTION, NonceGuard::name_for( self::ACTION ) );
 
 		$kind = isset( $_GET['export'] ) ? sanitize_key( wp_unslash( (string) $_GET['export'] ) ) : '';
 		$name = 'wl-' . $kind . '-' . gmdate( 'Y-m-d' ) . '.csv';

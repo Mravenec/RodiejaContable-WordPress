@@ -73,10 +73,7 @@ final class GalleryMetaBox {
 		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 			return;
 		}
-		if ( ! $this->gate->can_manage() || empty( $_POST['_wl_nonce'] ) ) {
-			return;
-		}
-		if ( ! wp_verify_nonce( sanitize_text_field( wp_unslash( (string) $_POST['_wl_nonce'] ) ), 'wl_gallery_meta' ) ) {
+		if ( ! $this->gate->can_manage() || ! $this->nonce->verify_post( 'wl_gallery_meta' ) ) {
 			return;
 		}
 		if ( ! isset( $_POST['wl_gallery_ids'] ) ) {
