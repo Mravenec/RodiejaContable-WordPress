@@ -6,3 +6,9 @@
 {"at":"2026-11-10T05:22:05.381Z","type":"move","issueId":"APP-2-1","from":"doing","to":"testing"}
 {"at":"2026-11-10T05:22:05.469Z","type":"checklist","issueId":"APP-2-1","item":"2"}
 {"at":"2026-11-10T05:23:21.595Z","type":"move","issueId":"APP-2-1","from":"testing","to":"done"}
+{"at":"2026-11-10T05:23:33.726Z","type":"claim","issueId":"APP-2-2","agent":"plugin-agent-1"}
+{"at":"2026-11-10T05:23:36.262Z","type":"checklist","issueId":"APP-2-2","item":"1"}
+{"at":"2026-11-10T05:23:36.334Z","type":"evidence","issueId":"APP-2-2","title":"REST health+stats smoke"}
+{"at":"2026-11-10T05:23:36.411Z","type":"move","issueId":"APP-2-2","from":"doing","to":"testing"}
+{"at":"2026-11-10T05:23:36.484Z","type":"checklist","issueId":"APP-2-2","item":"2"}
+{"at":"2026-11-10T05:23:36.559Z","type":"move","issueId":"APP-2-2","from":"testing","to":"done"}
