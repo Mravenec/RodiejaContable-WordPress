@@ -38,7 +38,8 @@ final class AdminMenu {
 		private PedidoImportPage $pedido_import,
 		private AudatexInsSettingsPage $audatex_settings,
 		private CantonesSettingsPage $cantones_settings,
-		private ToolsAdminPage $tools
+		private ToolsAdminPage $tools,
+		private JerarquiaAdminPage $jerarquia
 	) {}
 
 	public function register(): void {
@@ -71,9 +72,17 @@ final class AdminMenu {
 			'dashicons-car',
 			3
 		);
-		$this->cpt_submenu( self::SLUG_VEHICULOS, __( 'Ver por Generaciones', 'rodieja-contable' ), 'rodieja_generacion' );
+		add_submenu_page(
+			self::SLUG_VEHICULOS,
+			__( 'Ver por Generaciones', 'rodieja-contable' ),
+			__( 'Ver por Generaciones', 'rodieja-contable' ),
+			$cap,
+			JerarquiaAdminPage::SLUG,
+			array( $this->jerarquia, 'render' )
+		);
 		$this->cpt_submenu( self::SLUG_VEHICULOS, __( 'Marcas', 'rodieja-contable' ), 'rodieja_marca' );
 		$this->cpt_submenu( self::SLUG_VEHICULOS, __( 'Modelos', 'rodieja-contable' ), 'rodieja_modelo' );
+		$this->cpt_submenu( self::SLUG_VEHICULOS, __( 'Generaciones', 'rodieja-contable' ), 'rodieja_generacion' );
 		add_submenu_page(
 			self::SLUG_VEHICULOS,
 			__( 'Nuevo Vehículo', 'rodieja-contable' ),

@@ -27,6 +27,7 @@ use Rodieja\Contable\Admin\AudatexInsSettingsPage;
 use Rodieja\Contable\Admin\CantonesSettingsPage;
 use Rodieja\Contable\Admin\GeoLocationMetaBoxes;
 use Rodieja\Contable\Admin\InventorySummaryReportPage;
+use Rodieja\Contable\Admin\JerarquiaAdminPage;
 use Rodieja\Contable\Admin\PedidoImportPage;
 use Rodieja\Contable\Admin\PedidoMetaBoxes;
 use Rodieja\Contable\Admin\ToolsAdminPage;
@@ -230,6 +231,14 @@ final class ServiceProvider {
 			)
 		);
 		$container->set(
+			JerarquiaAdminPage::class,
+			static fn( Container $c ) => new JerarquiaAdminPage(
+				$c->get( OutputEscaper::class ),
+				$c->get( CapabilityGate::class ),
+				$c->get( CatalogHierarchyService::class )
+			)
+		);
+		$container->set(
 			AdminMenu::class,
 			static fn( Container $c ) => new AdminMenu(
 				$c->get( OutputEscaper::class ),
@@ -245,7 +254,8 @@ final class ServiceProvider {
 				$c->get( PedidoImportPage::class ),
 				$c->get( AudatexInsSettingsPage::class ),
 				$c->get( CantonesSettingsPage::class ),
-				$c->get( ToolsAdminPage::class )
+				$c->get( ToolsAdminPage::class ),
+				$c->get( JerarquiaAdminPage::class )
 			)
 		);
 
