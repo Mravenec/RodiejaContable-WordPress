@@ -35,6 +35,7 @@ BrandMigrate CPT/meta/options/caps + active_plugins; gitignore workshop-ledger
 
 ## History
 
+- 2026-11-10T15:19:51.962Z moved testing → done
 - 2026-11-10T15:19:51.558Z checklist item 2 marked
 - 2026-11-10T15:19:51.482Z moved doing → testing
 - 2026-11-10T15:19:51.276Z checklist item 1 marked
