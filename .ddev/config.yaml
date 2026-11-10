@@ -1,4 +1,4 @@
-name: rodieja-wp
+name: workshop-ledger
 type: wordpress
 docroot: web
 php_version: "8.3"
@@ -11,11 +11,11 @@ database:
     version: "11.8"
 hooks:
     post-start:
-        - exec: test -f /var/www/html/web/wp-content/plugins/rodieja-contable/vendor/autoload.php || (cd /var/www/html/web/wp-content/plugins/rodieja-contable && composer install --no-interaction)
+        - exec: test -f /var/www/html/web/wp-content/plugins/workshop-ledger/vendor/autoload.php || (cd /var/www/html/web/wp-content/plugins/workshop-ledger && composer install --no-interaction)
 upload_dirs:
     - wp-content/uploads
 use_dns_when_possible: true
-composer_root: web/wp-content/plugins/rodieja-contable
+composer_root: web/wp-content/plugins/workshop-ledger
 composer_version: "2"
 web_environment: []
 corepack_enable: false
