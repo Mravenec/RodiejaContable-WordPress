@@ -38,13 +38,28 @@ final class ReportesAdminPage {
 		$sent = isset( $_GET['rodieja_resumen_sent'] ) && '1' === $_GET['rodieja_resumen_sent'];
 		$base = admin_url( 'admin-post.php' );
 		?>
+		$export_labels = array(
+			'vehiculos'      => __( 'Vehicles', 'rodieja-contable' ),
+			'repuestos'      => __( 'Parts', 'rodieja-contable' ),
+			'transacciones'  => __( 'Transactions', 'rodieja-contable' ),
+		);
+		?>
 		<div class="wrap rodieja-admin-wrap">
-			<h1><?php echo $this->escaper->html( __( 'Reports', 'rodieja-contable' ) ); ?></h1>
-			<p class="rodieja-admin-lede"><?php echo $this->escaper->html( __( 'Executive views, CSV, and email — all native (WP_Query / admin-post / wp_mail).', 'rodieja-contable' ) ); ?></p>
+			<div class="rodieja-page-header">
+				<div class="rodieja-page-header__main">
+					<p class="rodieja-page-header__crumbs">
+						<a href="<?php echo esc_url( admin_url( 'admin.php?page=rodieja-contable' ) ); ?>"><?php echo $this->escaper->html( __( 'Home', 'rodieja-contable' ) ); ?></a>
+						· <?php echo $this->escaper->html( __( 'Reports', 'rodieja-contable' ) ); ?>
+					</p>
+					<h1><?php echo $this->escaper->html( __( 'Reports', 'rodieja-contable' ) ); ?></h1>
+					<p class="rodieja-page-header__lede"><?php echo $this->escaper->html( __( 'Executive views, CSV, and email — native WP_Query / admin-post / wp_mail.', 'rodieja-contable' ) ); ?></p>
+				</div>
+			</div>
 			<?php if ( $sent ) : ?>
-				<div class="notice notice-success"><p><?php esc_html_e( 'Resumen enviado al correo del administrador.', 'rodieja-contable' ); ?></p></div>
+				<div class="notice notice-success is-dismissible"><p><?php echo $this->escaper->html( __( 'Digest sent to the administrator email.', 'rodieja-contable' ) ); ?></p></div>
 			<?php endif; ?>
 
+			<h2 class="rodieja-section-title"><?php echo $this->escaper->html( __( 'Executive views', 'rodieja-contable' ) ); ?></h2>
 			<div class="rodieja-nav-grid" style="margin-bottom:20px">
 				<a class="rodieja-nav-tile" href="<?php echo esc_url( admin_url( 'admin.php?page=rodieja-reporte-ventas' ) ); ?>">
 					<span class="dashicons dashicons-groups" aria-hidden="true"></span>
@@ -63,30 +78,31 @@ final class ReportesAdminPage {
 				</a>
 			</div>
 
-			<div class="rodieja-admin-card">
-			<h2 class="title"><?php echo $this->escaper->html( __( 'Export CSV', 'rodieja-contable' ) ); ?></h2>
-			<p><?php echo $this->escaper->html( __( 'Downloads via admin-post.php with nonce and manage_rodieja_contable capability.', 'rodieja-contable' ) ); ?></p>
-			<ul>
-				<?php foreach ( array( 'vehiculos', 'repuestos', 'transacciones' ) as $export ) : ?>
-					<li>
-						<a href="<?php echo esc_url( $this->export_url( $base, $export ) ); ?>">
-							<?php echo $this->escaper->html( ucfirst( $export ) ); ?>
-						</a>
-					</li>
-				<?php endforeach; ?>
-			</ul>
-			</div>
-
-			<div class="rodieja-admin-card">
-			<h2 class="title"><?php echo $this->escaper->html( __( 'Monthly digest (email)', 'rodieja-contable' ) ); ?></h2>
-			<p><?php echo $this->escaper->html( __( 'Also scheduled weekly via WP-Cron.', 'rodieja-contable' ) ); ?></p>
-			<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
-				<input type="hidden" name="action" value="<?php echo esc_attr( self::MAIL_ACTION ); ?>" />
-				<?php $this->nonce->field( self::MAIL_ACTION ); ?>
-				<?php submit_button( __( 'Send digest now', 'rodieja-contable' ) ); ?>
-			</form>
-			<h3><?php echo $this->escaper->html( __( 'Preview', 'rodieja-contable' ) ); ?></h3>
-			<pre style="background:#f8fafc;padding:1em;border:1px solid #e8edf3;border-radius:8px;max-width:640px;white-space:pre-wrap"><?php echo esc_html( $this->resumen->build_body() ); ?></pre>
+			<div class="rodieja-shell-grid">
+				<div class="rodieja-shell-panel">
+					<h2 class="rodieja-shell-panel__title"><?php echo $this->escaper->html( __( 'Export CSV', 'rodieja-contable' ) ); ?></h2>
+					<p class="rodieja-shell-panel__hint"><?php echo $this->escaper->html( __( 'Nonce + manage_rodieja_contable on admin-post.php.', 'rodieja-contable' ) ); ?></p>
+					<ul class="rodieja-link-list">
+						<?php foreach ( $export_labels as $export => $label ) : ?>
+							<li>
+								<a href="<?php echo esc_url( $this->export_url( $base, $export ) ); ?>">
+									<?php echo $this->escaper->html( $label ); ?>
+								</a>
+							</li>
+						<?php endforeach; ?>
+					</ul>
+				</div>
+				<div class="rodieja-shell-panel">
+					<h2 class="rodieja-shell-panel__title"><?php echo $this->escaper->html( __( 'Monthly digest (email)', 'rodieja-contable' ) ); ?></h2>
+					<p class="rodieja-shell-panel__hint"><?php echo $this->escaper->html( __( 'Also scheduled weekly via WP-Cron.', 'rodieja-contable' ) ); ?></p>
+					<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
+						<input type="hidden" name="action" value="<?php echo esc_attr( self::MAIL_ACTION ); ?>" />
+						<?php $this->nonce->field( self::MAIL_ACTION ); ?>
+						<?php submit_button( __( 'Send digest now', 'rodieja-contable' ) ); ?>
+					</form>
+					<h3 class="rodieja-shell-panel__title" style="margin-top:16px"><?php echo $this->escaper->html( __( 'Preview', 'rodieja-contable' ) ); ?></h3>
+					<pre style="background:#fafafa;padding:1em;border:1px solid #e8e8e8;border-radius:8px;max-width:100%;white-space:pre-wrap;font-size:12px"><?php echo esc_html( $this->resumen->build_body() ); ?></pre>
+				</div>
 			</div>
 		</div>
 		<?php

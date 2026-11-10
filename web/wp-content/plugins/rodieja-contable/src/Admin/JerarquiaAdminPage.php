@@ -36,15 +36,24 @@ final class JerarquiaAdminPage {
 		$marca_n = count( $tree );
 		?>
 		<div class="wrap rodieja-admin-wrap">
-			<div class="rodieja-page-head">
-				<h1><?php echo $this->escaper->html( __( 'View by Generations', 'rodieja-contable' ) ); ?></h1>
-				<p class="rodieja-admin-lede"><?php echo $this->escaper->html( __( 'Brand → Model → Generation → Vehicle tree — same view as Rodieja Contable Read-Only, with native CPT and meta.', 'rodieja-contable' ) ); ?></p>
+			<div class="rodieja-page-header">
+				<div class="rodieja-page-header__main">
+					<p class="rodieja-page-header__crumbs">
+						<a href="<?php echo $this->escaper->url( admin_url( 'admin.php?page=rodieja-vehiculos' ) ); ?>"><?php echo $this->escaper->html( __( 'Vehicles', 'rodieja-contable' ) ); ?></a>
+						· <?php echo $this->escaper->html( __( 'View by Generations', 'rodieja-contable' ) ); ?>
+					</p>
+					<h1><?php echo $this->escaper->html( __( 'View by Generations', 'rodieja-contable' ) ); ?></h1>
+					<p class="rodieja-page-header__lede"><?php echo $this->escaper->html( __( 'Brand → Model → Generation → Vehicle — Read-Only tree parity on native CPT/meta.', 'rodieja-contable' ) ); ?></p>
+				</div>
+				<div class="rodieja-page-header__actions">
+					<a class="button button-primary" href="<?php echo $this->escaper->url( admin_url( 'edit.php?post_type=rodieja_vehiculo' ) ); ?>"><?php echo $this->escaper->html( __( 'Vehicle list', 'rodieja-contable' ) ); ?></a>
+					<a class="button" href="<?php echo $this->escaper->url( admin_url( 'post-new.php?post_type=rodieja_vehiculo' ) ); ?>"><?php echo $this->escaper->html( __( 'Add Vehicle', 'rodieja-contable' ) ); ?></a>
+				</div>
 			</div>
 
 			<div class="rodieja-toolbar">
 				<strong><?php echo $this->escaper->html( sprintf( /* translators: %d brand count */ _n( '%d brand', '%d brands', $marca_n, 'rodieja-contable' ), $marca_n ) ); ?></strong>
 				<p class="rodieja-toolbar__hint"><?php echo $this->escaper->html( __( 'Expand each level · Edit opens the matching CPT', 'rodieja-contable' ) ); ?></p>
-				<a class="button button-primary" href="<?php echo $this->escaper->url( admin_url( 'edit.php?post_type=rodieja_vehiculo' ) ); ?>"><?php echo $this->escaper->html( __( 'Vehicle list', 'rodieja-contable' ) ); ?></a>
 			</div>
 
 			<?php if ( empty( $tree ) ) : ?>
