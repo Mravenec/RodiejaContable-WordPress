@@ -34,6 +34,7 @@ NonceGuard::name_for(action) + verify_post; meta boxes no longer share _wl_nonce
 
 ## History
 
+- 2026-11-10T16:09:43.362Z moved testing → done
 - 2026-11-10T16:09:42.862Z checklist item 2 marked
 - 2026-11-10T16:09:42.769Z moved doing → testing
 - 2026-11-10T16:09:42.523Z checklist item 1 marked
