@@ -65,6 +65,16 @@ final class AdminAssets {
 			array( 'rodieja-contable-admin' ),
 			$ver_shell
 		);
+
+		$menu_js = RODIEJA_PLUGIN_DIR . 'assets/js/admin-menu-collapse.js';
+		$ver_js  = is_readable( $menu_js ) ? (string) filemtime( $menu_js ) : RODIEJA_PLUGIN_VERSION;
+		wp_enqueue_script(
+			'rodieja-contable-admin-menu',
+			RODIEJA_PLUGIN_URL . 'assets/js/admin-menu-collapse.js',
+			array(),
+			$ver_js,
+			true
+		);
 	}
 
 	public function enqueue_front(): void {
