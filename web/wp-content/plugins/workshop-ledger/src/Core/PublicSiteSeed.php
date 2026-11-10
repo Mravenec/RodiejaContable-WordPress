@@ -1,6 +1,6 @@
 <?php
 /**
- * One-time native public site seed — Home + About pages, static front (no Sample/Hello World).
+ * Native public site seed — Home + About (professional product copy).
  *
  * @package WorkshopLedger
  */
@@ -11,7 +11,7 @@ namespace WorkshopLedger\Core;
 
 final class PublicSiteSeed {
 
-	public const OPTION_FLAG = 'wl_public_site_seeded_v1';
+	public const OPTION_FLAG = 'wl_public_site_seeded_v2';
 
 	public static function maybe_run(): void {
 		if ( get_option( self::OPTION_FLAG ) ) {
@@ -19,13 +19,15 @@ final class PublicSiteSeed {
 		}
 		( new self() )->run();
 		update_option( self::OPTION_FLAG, gmdate( 'c' ), false );
+		// Supersede v1 marker if present.
+		delete_option( 'wl_public_site_seeded_v1' );
 	}
 
 	private function run(): void {
 		update_option( 'blogname', 'Workshop Ledger', false );
 		update_option(
 			'blogdescription',
-			__( 'Vehicles · parts inventory · finance · Audatex InPart — WordPress native.', 'workshop-ledger' ),
+			__( 'Workshop accounting for vehicles, parts, finance, and Audatex InPart.', 'workshop-ledger' ),
 			false
 		);
 
@@ -40,7 +42,6 @@ final class PublicSiteSeed {
 			$this->about_html()
 		);
 
-		// Retire WordPress sample filler from navigation / front.
 		$this->retire_post_by_path( 'sample-page', 'page' );
 		$this->retire_post_by_path( 'hello-world', 'post' );
 
@@ -50,44 +51,51 @@ final class PublicSiteSeed {
 			update_option( 'page_for_posts', 0, false );
 		}
 
-		// Avoid flush during request bootstrap; permalinks refresh on next admin visit / activate.
 		unset( $about_id );
 	}
 
 	private function home_html(): string {
-		$login = esc_url( wp_login_url( admin_url() ) );
-		$admin = esc_url( admin_url( 'admin.php?page=workshop-ledger' ) );
-		return '<p>' . esc_html__(
-			'Workshop Ledger is the WordPress-native operations desk for workshop accounting: vehicle catalog, parts inventory, finance transactions, and Audatex InPart orders.',
-			'workshop-ledger'
-		) . '</p>'
-		. '<p>' . esc_html__(
-			'Day-to-day work happens in the admin app (CPT screens with Brand → Model → Generation cascades, hierarchy views, and reports). This public site is the branded entry point.',
-			'workshop-ledger'
-		) . '</p>'
-		. '<ul>'
-		. '<li><strong>' . esc_html__( 'Vehicles', 'workshop-ledger' ) . '</strong> — ' . esc_html__( 'brands, models, generations, vehicle status.', 'workshop-ledger' ) . '</li>'
-		. '<li><strong>' . esc_html__( 'Inventory', 'workshop-ledger' ) . '</strong> — ' . esc_html__( 'parts with or without a linked vehicle.', 'workshop-ledger' ) . '</li>'
-		. '<li><strong>' . esc_html__( 'Finance', 'workshop-ledger' ) . '</strong> — ' . esc_html__( 'income and expense transactions.', 'workshop-ledger' ) . '</li>'
-		. '<li><strong>' . esc_html__( 'Audatex InPart', 'workshop-ledger' ) . '</strong> — ' . esc_html__( 'orders and INS import.', 'workshop-ledger' ) . '</li>'
-		. '</ul>'
-		. '<p><a class="wp-element-button" href="' . $login . '">' . esc_html__( 'Sign in', 'workshop-ledger' ) . '</a> '
-		. '<a href="' . $admin . '">' . esc_html__( 'Open admin (after sign-in)', 'workshop-ledger' ) . '</a></p>';
+		return '<div class="wl-front-panel">'
+			. '<p class="wl-front-kicker">' . esc_html__( 'Workshop operations', 'workshop-ledger' ) . '</p>'
+			. '<h2 class="wl-front-lead">' . esc_html__( 'One place to run your workshop books.', 'workshop-ledger' ) . '</h2>'
+			. '<p class="wl-front-lede">' . esc_html__(
+				'Workshop Ledger helps teams track vehicles, parts inventory, financial movements, and Audatex InPart orders—built as a focused WordPress product for workshop accounting.',
+				'workshop-ledger'
+			) . '</p>'
+			. '<ul class="wl-front-modules">'
+			. '<li><span class="wl-front-module__name">' . esc_html__( 'Vehicles', 'workshop-ledger' ) . '</span>'
+			. '<span class="wl-front-module__desc">' . esc_html__( 'Catalog brands, models, generations, and vehicle status in one hierarchy.', 'workshop-ledger' ) . '</span></li>'
+			. '<li><span class="wl-front-module__name">' . esc_html__( 'Inventory', 'workshop-ledger' ) . '</span>'
+			. '<span class="wl-front-module__desc">' . esc_html__( 'Manage parts with clear pricing, condition, and optional vehicle links.', 'workshop-ledger' ) . '</span></li>'
+			. '<li><span class="wl-front-module__name">' . esc_html__( 'Finance', 'workshop-ledger' ) . '</span>'
+			. '<span class="wl-front-module__desc">' . esc_html__( 'Record income and expenses with the fields your workshop actually uses.', 'workshop-ledger' ) . '</span></li>'
+			. '<li><span class="wl-front-module__name">' . esc_html__( 'Audatex InPart', 'workshop-ledger' ) . '</span>'
+			. '<span class="wl-front-module__desc">' . esc_html__( 'Handle orders and INS imports without leaving the same workspace.', 'workshop-ledger' ) . '</span></li>'
+			. '</ul>'
+			. '<p class="wl-front-note">' . esc_html__(
+				'Use Login in the header to open the application.',
+				'workshop-ledger'
+			) . '</p>'
+			. '</div>';
 	}
 
 	private function about_html(): string {
-		return '<p>' . esc_html__(
-			'Workshop Ledger rewrites the Read-Only workshop product on WordPress core: custom post types, post meta, taxonomies, caps, and nonces — not a Spring schema clone.',
-			'workshop-ledger'
-		) . '</p>'
-		. '<p>' . esc_html__(
-			'Operators manage catalog, inventory, finance, and Audatex workflows inside wp-admin with the Ant-inspired Workshop Ledger chrome. Public pages stay thin and on-brand.',
-			'workshop-ledger'
-		) . '</p>'
-		. '<p>' . esc_html__(
-			'Need access? Ask an administrator for a Workshop Ledger account, then use Sign in from the site header.',
-			'workshop-ledger'
-		) . '</p>';
+		return '<div class="wl-front-panel">'
+			. '<p class="wl-front-kicker">' . esc_html__( 'About the product', 'workshop-ledger' ) . '</p>'
+			. '<h2 class="wl-front-lead">' . esc_html__( 'Designed for workshop teams on WordPress.', 'workshop-ledger' ) . '</h2>'
+			. '<p class="wl-front-lede">' . esc_html__(
+				'Workshop Ledger is a professional WordPress application for workshop accounting. It keeps vehicle catalog, inventory, finance, and Audatex InPart workflows in a single admin experience your staff can learn quickly.',
+				'workshop-ledger'
+			) . '</p>'
+			. '<p class="wl-front-lede">' . esc_html__(
+				'Everything is structured for day-to-day operations: clear modules, consistent screens, and a calm visual language so the work stays readable under pressure.',
+				'workshop-ledger'
+			) . '</p>'
+			. '<p class="wl-front-note">' . esc_html__(
+				'Need an account? Ask your administrator, then sign in from the site header.',
+				'workshop-ledger'
+			) . '</p>'
+			. '</div>';
 	}
 
 	private function upsert_page( string $slug, string $title, string $content ): int {
@@ -107,7 +115,6 @@ final class PublicSiteSeed {
 			return is_wp_error( $id ) ? (int) $existing->ID : (int) $id;
 		}
 
-		// Reuse Sample Page if present (same slot in page-list nav).
 		if ( 'about' === $slug ) {
 			$sample = get_page_by_path( 'sample-page', OBJECT, 'page' );
 			if ( $sample instanceof \WP_Post ) {
@@ -143,7 +150,6 @@ final class PublicSiteSeed {
 		if ( ! ( $post instanceof \WP_Post ) ) {
 			return;
 		}
-		// About may have been renamed from sample-page already.
 		if ( 'sample-page' === $path && 'about' === $post->post_name ) {
 			return;
 		}
