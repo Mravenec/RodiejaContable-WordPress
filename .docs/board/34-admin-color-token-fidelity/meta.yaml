@@ -2,8 +2,8 @@ id: 34
 slug: admin-color-token-fidelity
 title: Admin color/token fidelity closer to Read-Only Ant shell
 color: "#b45309"
-status: planned
+status: in_progress
 created_at: "2026-11-10T16:15:44.833Z"
-updated_at: "2026-11-10T16:15:45.458Z"
+updated_at: "2026-11-10T16:22:51.779Z"
 summary_html: summaries/34-admin-color-token-fidelity-beginner.html
-summary_updated_at: "2026-11-10T16:15:45.464Z"
+summary_updated_at: "2026-11-10T16:22:51.783Z"

@@ -19,6 +19,7 @@
     }
   },
   "land": {
+<<<<<<< HEAD
     "started_at": "2026-11-10T16:27:45.303Z",
     "finished_at": "2026-11-10T16:27:53.840Z",
     "paused": false,
@@ -32,5 +33,12 @@
         "agent": "land-agent"
       }
     ]
+=======
+    "started_at": null,
+    "finished_at": null,
+    "paused": false,
+    "open": null,
+    "segments": []
+>>>>>>> origin/feature/34-admin-color-token-fidelity
   }
 }
