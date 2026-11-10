@@ -1,6 +1,6 @@
 # Epic 23 — cpt-list-figma-mobile
 
-**Status:** In progress · Board: `.linear/epics/23-cpt-list-figma-mobile/`
+**Status:** Done · LANDED on `origin/main` · Board: `.linear/epics/23-cpt-list-figma-mobile/`
 
 ## Title
 
@@ -8,24 +8,15 @@ All CPT lists: Figma/Read-Only density + mobile (native CSS)
 
 ## Why
 
-Parts / Vehicles / Generations / every `rodieja_*` `edit.php` still feels classic WP. Users want Divi/Figma-grade density closer to Read-Only — still native list tables — including usable mobile admin.
+Every `rodieja_*` list needed Divi/Figma-grade density closer to Read-Only, still native WP tables, including mobile.
 
-## Native-first
+## What we did
 
-- Keep `WP_List_Table` / `edit.php` — no React SPA, no Divi.
-- Deepen `body.rodieja-cpt-list` CSS (+ shell) for all CPTs already tagged by `AdminAssets`.
-- Mobile: responsive toolbar + horizontal table scroll; WP auto-fold for sidebar.
-- Human ask: polish **all** list screens + mobile.
-
-## What we will do
-
-- [ ] Page-header / tabs / toolbar / table density for all CPT lists
-- [ ] Mobile breakpoints for list chrome
-- [ ] English leftovers in list filters (All vehicles / All statuses)
-- [ ] Land origin/main
+- [x] `admin-list.css` — PageHeader / Ant tabs / toolbar / table / mobile scroll
+- [x] Enqueue + taxonomy list body class
+- [x] English: All vehicles / All statuses
+- [x] Land origin/main
 
 ## Acceptance
 
-- Every `rodieja_*` list looks like one Ant/Figma product table shell
-- Narrow viewport: toolbar wraps, table scrolls, actions tappable
-- English filter labels · layer-audit green · Read-Only untouched
+- All CPT lists share one Figma shell · mobile toolbar wrap + table scroll · English filters · layer-audit green

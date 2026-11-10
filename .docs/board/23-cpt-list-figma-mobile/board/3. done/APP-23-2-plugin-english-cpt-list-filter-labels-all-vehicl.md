@@ -34,6 +34,7 @@ All vehicles / All statuses
 
 ## History
 
+- 2026-11-10T08:13:30.837Z moved testing → done
 - 2026-11-10T08:13:30.488Z checklist item 2 marked
 - 2026-11-10T08:13:30.412Z moved doing → testing
 - 2026-11-10T08:13:30.198Z checklist item 1 marked

@@ -11,3 +11,4 @@
 {"at":"2026-11-10T08:13:30.294Z","type":"evidence","issueId":"APP-23-2","title":"english-filters"}
 {"at":"2026-11-10T08:13:30.413Z","type":"move","issueId":"APP-23-2","from":"doing","to":"testing"}
 {"at":"2026-11-10T08:13:30.489Z","type":"checklist","issueId":"APP-23-2","item":"2"}
+{"at":"2026-11-10T08:13:30.838Z","type":"move","issueId":"APP-23-2","from":"testing","to":"done"}
