@@ -7,3 +7,9 @@
 {"at":"2026-11-10T05:40:32.818Z","type":"move","issueId":"APP-3-1","from":"doing","to":"testing"}
 {"at":"2026-11-10T05:40:32.891Z","type":"checklist","issueId":"APP-3-1","item":"2"}
 {"at":"2026-11-10T05:40:32.968Z","type":"move","issueId":"APP-3-1","from":"testing","to":"done"}
+{"at":"2026-11-10T05:40:35.667Z","type":"claim","issueId":"APP-3-2","agent":"plugin-agent-1"}
+{"at":"2026-11-10T05:40:58.812Z","type":"checklist","issueId":"APP-3-2","item":"1"}
+{"at":"2026-11-10T05:40:58.889Z","type":"evidence","issueId":"APP-3-2","title":"estado filter WP_Query"}
+{"at":"2026-11-10T05:40:58.975Z","type":"move","issueId":"APP-3-2","from":"doing","to":"testing"}
+{"at":"2026-11-10T05:40:59.055Z","type":"checklist","issueId":"APP-3-2","item":"2"}
+{"at":"2026-11-10T05:40:59.140Z","type":"move","issueId":"APP-3-2","from":"testing","to":"done"}

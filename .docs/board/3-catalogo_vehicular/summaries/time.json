@@ -23,6 +23,20 @@
           "agent": "plugin-agent-1"
         }
       ]
+    },
+    "APP-3-2": {
+      "active_ms": 23472,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T05:40:35.668Z",
+          "end": "2026-11-10T05:40:59.140Z",
+          "ms": 23472,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        }
+      ]
     }
   },
   "land": {
