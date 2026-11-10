@@ -1,7 +1,8 @@
 {
   "status": "landed",
-  "merge_commit": "0b697807c56e5459450822ff13cd21b7a04573cc",
+  "merge_commit": "e449debcfb702e14a55300f4713e4f07b2a5941b",
   "smoke_ok": true,
-  "landed_at": "2026-11-10T05:24:12.000Z",
-  "note": "Local land on main — DDEV https://rodieja-wp.ddev.site"
+  "pushed_at": "2026-11-10T05:53:45Z",
+  "git": "git push origin main",
+  "note": "Landed on origin/main e449deb"
 }
