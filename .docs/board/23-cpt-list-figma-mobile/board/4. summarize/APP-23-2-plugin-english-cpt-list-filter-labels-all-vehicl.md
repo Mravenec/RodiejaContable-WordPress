@@ -10,6 +10,7 @@ blocked_by: []
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T08:13:17.423Z"
+summary_html: summaries/23-cpt-list-figma-mobile-beginner.html
 ---
 ## Objetivo
 
@@ -34,6 +35,8 @@ All vehicles / All statuses
 
 ## History
 
+- 2026-11-10T08:14:59.177Z epic summary HTML → summaries/23-cpt-list-figma-mobile-beginner.html
+- 2026-11-10T08:14:59.170Z moved done → summarize
 - 2026-11-10T08:13:30.837Z moved testing → done
 - 2026-11-10T08:13:30.488Z checklist item 2 marked
 - 2026-11-10T08:13:30.412Z moved doing → testing

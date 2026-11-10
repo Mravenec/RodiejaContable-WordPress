@@ -10,6 +10,7 @@ blocked_by: []
 blocks: []
 agent: plugin-agent-1
 claimed_at: "2026-11-10T08:12:33.508Z"
+summary_html: summaries/23-cpt-list-figma-mobile-beginner.html
 ---
 ## Objetivo
 
@@ -34,6 +35,8 @@ admin-list.css: PageHeader + Ant tabs + table + mobile scroll
 
 ## History
 
+- 2026-11-10T08:14:59.106Z epic summary HTML → summaries/23-cpt-list-figma-mobile-beginner.html
+- 2026-11-10T08:14:59.097Z moved done → summarize
 - 2026-11-10T08:13:17.277Z moved testing → done
 - 2026-11-10T08:13:16.923Z checklist item 2 marked
 - 2026-11-10T08:13:16.846Z moved doing → testing

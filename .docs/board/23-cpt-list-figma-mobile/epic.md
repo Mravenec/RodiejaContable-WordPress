@@ -5,7 +5,7 @@
 | Id | 23 |
 | Slug | cpt-list-figma-mobile |
 | Status | in_progress |
-| Progress | **83%** (0/2 in summarize · column + checklist) |
+| Progress | **100%** (2/2 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,10 +35,10 @@ _empty_
 
 ### 3. done
 
-- `APP-23-1` plugin: Figma CPT list shell CSS for all rodieja_* + mobile _(role:plugin)_
-- `APP-23-2` plugin: English CPT list filter labels (All vehicles / All statuses) _(role:plugin)_
+_empty_
 
 ### 4. summarize
 
-_empty_
+- `APP-23-1` plugin: Figma CPT list shell CSS for all rodieja_* + mobile _(role:plugin)_
+- `APP-23-2` plugin: English CPT list filter labels (All vehicles / All statuses) _(role:plugin)_
 
