@@ -1,6 +1,6 @@
 # Epic 22 — admin-menu-collapse
 
-**Status:** Done · LANDED on `origin/main` · Board: `.linear/epics/22-admin-menu-collapse/`
+**Status:** Landed on main · Board: `.linear/epics/22-admin-menu-collapse/`
 
 ## Title
 
@@ -22,3 +22,14 @@ Second click on Inventory / Finance / Reports should collapse the open submenu. 
 - Re-click current top-level → collapse; again → expand
 - Non-current modules unchanged
 - layer-audit green · Read-Only untouched
+
+
+## Land on main
+
+- Merge commit: `e1b5ff3f8c304081473de3b5cbe30d9c2ebf50ac`
+- Branch: `feature/22-admin-menu-collapse` → `main`
+
+### Supervisor / Manager (land)
+
+Supervisor: Epic 22 — current admin section collapses on parent re-click (native JS). layer-audit green. Read-Only untouched.
+
