@@ -1,0 +1,13 @@
+{
+  "status": "landed",
+  "started_at": "2026-11-10T16:17:42.573Z",
+  "finished_at": "2026-11-10T16:17:49.174Z",
+  "merge_commit": "e7dabed6f36af1a448871590d0e03a926bd3c490",
+  "conflicts": [],
+  "smoke_ok": true,
+  "smoke_at": "2026-11-10T16:17:46.625Z",
+  "git": "git push origin main",
+  "note": "Supervisor: Epic 32 LANDED. Add Transaction native fields. Read-Only untouched.",
+  "recorded_at": "2026-11-10T16:17:46.697Z",
+  "pushed_at": "2026-11-10T16:17:49.174Z"
+}
