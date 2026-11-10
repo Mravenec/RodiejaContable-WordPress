@@ -11,3 +11,4 @@
 {"at":"2026-11-10T16:13:36.035Z","type":"evidence","issueId":"APP-31-2","title":"part-prices-location"}
 {"at":"2026-11-10T16:13:36.157Z","type":"move","issueId":"APP-31-2","from":"doing","to":"testing"}
 {"at":"2026-11-10T16:13:36.235Z","type":"checklist","issueId":"APP-31-2","item":"2"}
+{"at":"2026-11-10T16:13:36.652Z","type":"move","issueId":"APP-31-2","from":"testing","to":"done"}
