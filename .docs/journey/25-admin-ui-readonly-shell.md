@@ -1,6 +1,6 @@
 # Epic 25 — admin-ui-readonly-shell
 
-**Status:** In progress · Board: `.linear/epics/25-admin-ui-readonly-shell/`
+**Status:** Landed on main · Board: `.linear/epics/25-admin-ui-readonly-shell/`
 
 ## Title
 
@@ -35,3 +35,14 @@ Read-Only sider shows only product modules (Dashboard → Vehicles → Inventory
 ## Notes
 
 Live Audatex API sync stays out of scope (native local file import remains). Never edit Read-Only.
+
+
+## Land on main
+
+- Merge commit: `ca799e0d270c8fd660947c90f494dfe167d2783a`
+- Branch: `feature/25-admin-ui-readonly-shell` → `main`
+
+### Supervisor / Manager (land)
+
+Epic 25: Read-Only menu + shell parity on native WP. Hid Appearance/Plugins/WP Tools/Settings/Dashboard/Pages; kept Media+Users; renamed Audatex InPart; shelled INS/Import and Settings stubs with page-headers (English). Hard-refresh admin.
+

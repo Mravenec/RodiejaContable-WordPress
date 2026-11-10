@@ -1,12 +1,13 @@
 {
-  "status": "smoke-main",
+  "status": "landed",
   "started_at": "2026-11-10T14:13:42.615Z",
-  "finished_at": null,
+  "finished_at": "2026-11-10T14:13:45.958Z",
   "merge_commit": "ca799e0d270c8fd660947c90f494dfe167d2783a",
   "conflicts": [],
-  "smoke_ok": null,
-  "smoke_at": null,
+  "smoke_ok": true,
+  "smoke_at": "2026-11-10T14:13:42.689Z",
   "git": "git push origin main",
-  "note": null,
-  "recorded_at": null
+  "note": "Epic 25: Read-Only menu + shell parity on native WP. Hid Appearance/Plugins/WP Tools/Settings/Dashboard/Pages; kept Media+Users; renamed Audatex InPart; shelled INS/Import and Settings stubs with page-headers (English). Hard-refresh admin.",
+  "recorded_at": "2026-11-10T14:13:42.763Z",
+  "pushed_at": "2026-11-10T14:13:45.958Z"
 }
