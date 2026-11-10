@@ -71,7 +71,6 @@ final class AdminMenu {
 			'dashicons-car',
 			3
 		);
-		$this->cpt_submenu( self::SLUG_VEHICULOS, __( 'Lista de Vehículos', 'rodieja-contable' ), 'rodieja_vehiculo' );
 		$this->cpt_submenu( self::SLUG_VEHICULOS, __( 'Ver por Generaciones', 'rodieja-contable' ), 'rodieja_generacion' );
 		$this->cpt_submenu( self::SLUG_VEHICULOS, __( 'Marcas', 'rodieja-contable' ), 'rodieja_marca' );
 		$this->cpt_submenu( self::SLUG_VEHICULOS, __( 'Modelos', 'rodieja-contable' ), 'rodieja_modelo' );
@@ -93,7 +92,6 @@ final class AdminMenu {
 			'dashicons-admin-tools',
 			4
 		);
-		$this->cpt_submenu( self::SLUG_INVENTARIO, __( 'Lista de Repuestos', 'rodieja-contable' ), 'rodieja_repuesto' );
 		add_submenu_page(
 			self::SLUG_INVENTARIO,
 			__( 'Nuevo Repuesto', 'rodieja-contable' ),
@@ -120,7 +118,6 @@ final class AdminMenu {
 			'dashicons-money-alt',
 			5
 		);
-		$this->cpt_submenu( self::SLUG_FINANZAS, __( 'Transacciones', 'rodieja-contable' ), 'rodieja_transaccion' );
 		add_submenu_page(
 			self::SLUG_FINANZAS,
 			__( 'Nueva Transacción', 'rodieja-contable' ),
@@ -182,7 +179,6 @@ final class AdminMenu {
 			'dashicons-email-alt',
 			7
 		);
-		$this->cpt_submenu( self::SLUG_INPART, __( 'Pedidos', 'rodieja-contable' ), 'rodieja_pedido' );
 		add_submenu_page(
 			self::SLUG_INPART,
 			__( 'INS / Importar', 'rodieja-contable' ),
@@ -254,24 +250,27 @@ final class AdminMenu {
 	}
 
 	/**
-	 * Rename the auto-added "parent slug" first submenu to match React labels.
+	 * Rename the auto-added parent submenu and point list parents at CPT screens.
 	 */
 	public function relabel_first_items(): void {
 		global $submenu;
 		$map = array(
-			self::SLUG_INICIO     => __( 'Inicio', 'rodieja-contable' ),
-			self::SLUG_VEHICULOS  => __( 'Lista de Vehículos', 'rodieja-contable' ),
-			self::SLUG_INVENTARIO => __( 'Lista de Repuestos', 'rodieja-contable' ),
-			self::SLUG_FINANZAS   => __( 'Transacciones', 'rodieja-contable' ),
-			self::SLUG_REPORTES   => __( 'General', 'rodieja-contable' ),
-			self::SLUG_INPART     => __( 'Pedidos', 'rodieja-contable' ),
-			self::SLUG_CONFIG     => __( 'Ajustes', 'rodieja-contable' ),
+			self::SLUG_INICIO     => array( 'label' => __( 'Inicio', 'rodieja-contable' ), 'slug' => null ),
+			self::SLUG_VEHICULOS  => array( 'label' => __( 'Lista de Vehículos', 'rodieja-contable' ), 'slug' => 'edit.php?post_type=rodieja_vehiculo' ),
+			self::SLUG_INVENTARIO => array( 'label' => __( 'Lista de Repuestos', 'rodieja-contable' ), 'slug' => 'edit.php?post_type=rodieja_repuesto' ),
+			self::SLUG_FINANZAS   => array( 'label' => __( 'Transacciones', 'rodieja-contable' ), 'slug' => 'edit.php?post_type=rodieja_transaccion' ),
+			self::SLUG_REPORTES   => array( 'label' => __( 'General', 'rodieja-contable' ), 'slug' => null ),
+			self::SLUG_INPART     => array( 'label' => __( 'Pedidos', 'rodieja-contable' ), 'slug' => 'edit.php?post_type=rodieja_pedido' ),
+			self::SLUG_CONFIG     => array( 'label' => __( 'Ajustes', 'rodieja-contable' ), 'slug' => null ),
 		);
-		foreach ( $map as $parent => $label ) {
+		foreach ( $map as $parent => $cfg ) {
 			if ( empty( $submenu[ $parent ][0] ) || ! is_array( $submenu[ $parent ][0] ) ) {
 				continue;
 			}
-			$submenu[ $parent ][0][0] = $label;
+			$submenu[ $parent ][0][0] = $cfg['label'];
+			if ( ! empty( $cfg['slug'] ) ) {
+				$submenu[ $parent ][0][2] = $cfg['slug'];
+			}
 		}
 	}
 
