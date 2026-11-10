@@ -1,18 +1,17 @@
 ---
-id: APP-5-3
-title: Security · caps contador en REST mutaciones
-role: security
-epic: 5
+id: APP-6-1
+title: Plugin · meta pedidos Audatex-shape (cotización/WAN/VIN/…)
+role: plugin
+epic: 6
 estimate: 1
-blocked_by:
-  - APP-5-2
+blocked_by: []
 blocks: []
-agent: null
-claimed_at: null
+agent: plugin-agent-1
+claimed_at: "2026-11-10T05:45:05.383Z"
 ---
 ## Objetivo
 
-Security · caps contador en REST mutaciones
+Plugin · meta pedidos Audatex-shape (cotización/WAN/VIN/…)
 
 ## Checklist
 
@@ -27,4 +26,5 @@ Layer artifacts for the living HTML (code, commands, results). Compact windows �
 
 ## History
 
-- 2026-11-10T05:35:44.473Z created → backlog
+- 2026-11-10T05:45:05.384Z claimed by plugin-agent-1 → doing
+- 2026-11-10T05:35:44.551Z created → backlog

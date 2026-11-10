@@ -11,4 +11,5 @@ alwaysApply: true
 - Optional docs only: `docs/database/`, `docs/diagrams/`.
 - Board: `.linear/`. After every `claim`: `node .ai/scripts/worktree-add.mjs <ID>`.
 - **Native-first (day zero):** CPT/meta/Options/Settings/`WP_Query`/core REST/caps/nonces/hooks before custom tables or bespoke CRUD. If custom seems needed → propose + ask human → record OK on the ticket (`.ai/rules/native-first.md`).
+- **LANDED = GitHub `origin/main`:** only `worktree-land-finish` after successful push (`.ai/rules/landed-means-origin-main.md`).
 - No Laravel/Doctrine. Mutating REST must not use `__return_true`. Keep `node .ai/scripts/layer-audit.mjs` green.

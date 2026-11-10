@@ -4,8 +4,8 @@
 |---|---|
 | Id | 5 |
 | Slug | finanzas |
-| Status | planned |
-| Progress | **0%** (0/3 in summarize · column + checklist) |
+| Status | in_progress |
+| Progress | **83%** (0/3 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -23,9 +23,7 @@ This folder is the **operational** board (claims, checklist, %). There is no `.a
 
 ### 0. backlog
 
-- `APP-5-1` Plugin · transacciones ingreso/egreso + tax + vínculos _(role:plugin)_
-- `APP-5-2` Plugin · dashboard montos WP_Query/meta _(role:plugin)_
-- `APP-5-3` Security · caps contador en REST mutaciones _(role:security)_
+_empty_
 
 ### 1. doing
 
@@ -37,7 +35,9 @@ _empty_
 
 ### 3. done
 
-_empty_
+- `APP-5-1` Plugin · transacciones ingreso/egreso + tax + vínculos _(role:plugin)_
+- `APP-5-2` Plugin · dashboard montos WP_Query/meta _(role:plugin)_
+- `APP-5-3` Security · caps contador en REST mutaciones _(role:security)_
 
 ### 4. summarize
 

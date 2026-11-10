@@ -18,9 +18,11 @@ use Rodieja\Contable\Admin\FinanceDashboardPage;
 use Rodieja\Contable\Admin\FinanceMetaBoxes;
 use Rodieja\Contable\Admin\InventoryAdminFilters;
 use Rodieja\Contable\Admin\InventoryMetaBoxes;
+use Rodieja\Contable\Admin\PedidoMetaBoxes;
 use Rodieja\Contable\Controllers\Rest\DomainStatsController;
 use Rodieja\Contable\Controllers\Rest\FinanceController;
 use Rodieja\Contable\Controllers\Rest\HealthController;
+use Rodieja\Contable\Controllers\Rest\PedidoController;
 use Rodieja\Contable\Meta\MetaRegistrar;
 use Rodieja\Contable\PostTypes\PostTypeRegistrar;
 use Rodieja\Contable\Providers\ServiceProvider;
@@ -62,6 +64,7 @@ final class Plugin {
 		$this->container->get( CriticalStockPage::class )->register();
 		$this->container->get( FinanceMetaBoxes::class )->register();
 		$this->container->get( FinanceDashboardPage::class )->register();
+		$this->container->get( PedidoMetaBoxes::class )->register();
 		$this->container->get( SecurityHeaders::class )->register();
 
 		add_action( 'rest_api_init', array( $this, 'register_rest' ) );
@@ -76,6 +79,7 @@ final class Plugin {
 		$this->container->get( HealthController::class )->register_routes();
 		$this->container->get( DomainStatsController::class )->register_routes();
 		$this->container->get( FinanceController::class )->register_routes();
+		$this->container->get( PedidoController::class )->register_routes();
 	}
 
 	public function load_textdomain(): void {

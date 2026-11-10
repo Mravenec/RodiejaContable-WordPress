@@ -40,3 +40,7 @@ node .ai/scripts/epic-new.mjs <n> <slug> --title "…"
 ```
 
 Roles: `database` · `plugin` · `security` · `orchestrator`
+
+## LANDED = GitHub `origin/main`
+
+Board **LANDED** requires `worktree-push` (feature) then land-main → `worktree-land-finish` (successful `git push origin main`). Local merge alone is not landed. See `.ai/rules/landed-means-origin-main.md`.

@@ -25,6 +25,7 @@ final class RoleRegistrar {
 			'rodieja_empleado',
 			'rodieja_transaccion',
 			'rodieja_pedido',
+			'rodieja_pedido_item',
 		);
 	}
 

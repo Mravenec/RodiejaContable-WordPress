@@ -142,13 +142,18 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
   </div>
   <h1>Inventario repuestos: stock, partes, crítico</h1>
   <p>This page is a study guide for the epic. Tickets must show <strong>this work’s</strong> compact code, commands, and results — not the same glossary copied from every other summary. Dark windows are artifacts to study.</p>
-  <p class="small" style="opacity:.85;">Slug <code>inventario_repuestos</code> · 0/3 in summarize · Generated 2026-11-10T05:35:44.246Z · active work <strong>0s</strong> (elapsed 0s)</p>
+  <p class="small" style="opacity:.85;">Slug <code>inventario_repuestos</code> · 0/3 in summarize · Generated 2026-11-10T05:43:23.284Z · active work <strong>1m 42s</strong> (elapsed 1m 43s)</p>
 </header>
 
-<div class="card note" id="time">
+<div class="card ok" id="time">
   <strong>Active work time</strong>
   <p>Counted only while the board sees work. Waiting for a Run / Approve click, overnight, or parked-in-done time is not included.</p>
-  <p class="small">No active time yet. The clock starts on the first claim.</p>
+  <ul>
+    <li>Active (calendar of working windows): <strong>1m 42s</strong></li>
+    <li>Agent effort (sum of tickets): <strong>1m 42s</strong></li>
+    <li>Elapsed wall (first work → last event): <strong>1m 43s</strong></li>
+  </ul>
+  <p class="small">Started 2026-11-10T05:41:39.536Z · idle gap 3 min</p>
 </div>
 
 <div class="card beginner" id="for-whom">
@@ -173,9 +178,9 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
     <a href="#time">Active time</a>
     <a href="#log">Epic work log</a>
     <a href="#tickets">Tickets (sections)</a>
-    <a href="#APP-4-1">APP-4-1 — Plugin · stock/precio meta UI + tax rodieja_parte <span class="small">(backlog)</span></a>
-<a href="#APP-4-2">APP-4-2 — Plugin · vínculo repuesto↔vehículo en admin <span class="small">(backlog)</span></a>
-<a href="#APP-4-3">APP-4-3 — Plugin · listado stock crítico WP_Query admin page <span class="small">(backlog)</span></a>
+    <a href="#APP-4-1">APP-4-1 — Plugin · stock/precio meta UI + tax rodieja_parte <span class="small">(done)</span></a>
+<a href="#APP-4-2">APP-4-2 — Plugin · vínculo repuesto↔vehículo en admin <span class="small">(done)</span></a>
+<a href="#APP-4-3">APP-4-3 — Plugin · listado stock crítico WP_Query admin page <span class="small">(done)</span></a>
     <a href="#handoff">Git command + Supervisor / Manager</a>
     <a href="#faq">FAQ for beginners</a>
     <a href="#file">Where this file lives</a>
@@ -222,6 +227,24 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 <li class=""><code>2026-11-10T05:35:44.081Z</code> create APP-4-1</li>
 <li class=""><code>2026-11-10T05:35:44.161Z</code> create APP-4-2</li>
 <li class=""><code>2026-11-10T05:35:44.240Z</code> create APP-4-3</li>
+<li class=""><code>2026-11-10T05:41:39.536Z</code> APP-4-1 claimed by plugin-agent-1</li>
+<li class=""><code>2026-11-10T05:42:28.135Z</code> checklist APP-4-1</li>
+<li class=""><code>2026-11-10T05:42:28.216Z</code> evidence APP-4-1</li>
+<li class=""><code>2026-11-10T05:42:28.293Z</code> APP-4-1 doing → testing</li>
+<li class=""><code>2026-11-10T05:42:28.364Z</code> checklist APP-4-1</li>
+<li class=""><code>2026-11-10T05:42:28.437Z</code> APP-4-1 testing → done</li>
+<li class=""><code>2026-11-10T05:42:28.787Z</code> APP-4-2 claimed by plugin-agent-1</li>
+<li class=""><code>2026-11-10T05:42:52.450Z</code> checklist APP-4-2</li>
+<li class=""><code>2026-11-10T05:42:52.524Z</code> evidence APP-4-2</li>
+<li class=""><code>2026-11-10T05:42:52.601Z</code> APP-4-2 doing → testing</li>
+<li class=""><code>2026-11-10T05:42:52.673Z</code> checklist APP-4-2</li>
+<li class=""><code>2026-11-10T05:42:52.748Z</code> APP-4-2 testing → done</li>
+<li class=""><code>2026-11-10T05:42:53.160Z</code> APP-4-3 claimed by plugin-agent-1</li>
+<li class=""><code>2026-11-10T05:43:22.959Z</code> checklist APP-4-3</li>
+<li class=""><code>2026-11-10T05:43:23.035Z</code> evidence APP-4-3</li>
+<li class=""><code>2026-11-10T05:43:23.118Z</code> APP-4-3 doing → testing</li>
+<li class=""><code>2026-11-10T05:43:23.206Z</code> checklist APP-4-3</li>
+<li class=""><code>2026-11-10T05:43:23.280Z</code> APP-4-3 testing → done</li>
   </ul>
 </div>
 
@@ -232,13 +255,13 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 
 <section class="ticket" id="APP-4-1">
   <h2>APP-4-1 — Plugin · stock/precio meta UI + tax rodieja_parte</h2>
-  <p><span class="pill" style="background:var(--copper600)">column:backlog</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span></p>
+  <p><span class="pill" style="background:var(--copper600)">column:done</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span> · agent <code>plugin-agent-1</code> · active <strong>48s</strong></p>
   <p class="small">Work folder (required after claim): <code>.worktrees/4-inventario_repuestos/APP-4-1</code> · ticket branch <code>ticket/4-inventario_repuestos/APP-4-1</code> · ships on <code>feature/4-inventario_repuestos</code> after integrate (one push).</p>
 
   <h3>Goal</h3>
   <div class="card ok">
     <p>Plugin · stock/precio meta UI + tax rodieja_parte</p>
-    <p class="small">Checklist progress: <strong>0/2</strong>.</p>
+    <p class="small">Checklist progress: <strong>2/2</strong>.</p>
   </div>
 
   <h3>Role</h3>
@@ -249,27 +272,82 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
   <h3>Checklist</h3>
   <div class="card">
     <ul class="checklist">
-<li class="pending"><strong>Step 1.</strong> Implement <span class="pill">pending</span></li>
-<li class="pending"><strong>Step 2.</strong> Verify locally (in testing — after `move testing`) <span class="pill">pending</span></li>
+<li class=""><strong>Step 1.</strong> Implement</li>
+<li class=""><strong>Step 2.</strong> Verify locally (in testing — after `move testing`)</li>
     </ul>
   </div>
 
   <h3>What was built (this ticket)</h3>
-  <div class="card warn">
-  <p><strong>No layer evidence yet.</strong> This ticket has board history but no compact code/command/result windows. A beginner cannot see what changed; a senior cannot audit the layer. After each checklist item record evidence:</p>
-  <pre><code>node scripts/board.mjs evidence APP-4-1 --title "…" --path "file" --lang sql --code-file … --command "…" --result-file …</code></pre>
-  <p class="small">Expected windows for role <code>plugin</code>:</p><ul><li>Contract</li>
+  <div class="card ok beginner">
+  <p class="small">Windows this role should include:</p><ul><li>Contract</li>
 <li>Repository ($wpdb)</li>
 <li>Service</li>
 <li>REST/Admin controller</li>
 <li>DI provider</li>
 <li>HTTP result</li></ul>
+  <p>Layer artifacts for the living HTML (code, commands, results). Compact windows — not the whole file. After each checklist item: `evidence &lt;id&gt; --title …`.</p>
+<p>### InventoryMetaBoxes</p>
+<p>Path: `src/Admin/InventoryMetaBoxes.php`</p>
+<span class="filepath">php</span><pre><code>&lt;?php
+/**
+ * Native meta boxes for repuestos (stock, precio, vehículo, parte tax UI helper).
+ *
+ * @package Rodieja\Contable
+ */
+
+declare(strict_types=1);
+
+namespace Rodieja\Contable\Admin;
+
+use Rodieja\Contable\Security\CapabilityGate;
+use Rodieja\Contable\Security\NonceGuard;
+use Rodieja\Contable\Security\OutputEscaper;
+
+final class InventoryMetaBoxes {
+
+	public function __construct(
+		private NonceGuard $nonce,
+		private OutputEscaper $escaper,
+		private CapabilityGate $gate
+	) {}
+
+	public function register(): void {
+		add_action( 'add_meta_boxes', array( $this, 'add_boxes' ) );
+		add_action( 'save_post_rodieja_repuesto', array( $this, 'save' ), 10, 2 );
+		add_filter( 'manage_rodieja_repuesto_posts_columns', array( $this, 'columns' ) );
+		add_action( 'manage_rodieja_repuesto_posts_custom_column', array( $this, 'column' ), 10, 2 );
+	}
+
+	public function add_boxes(): void {
+		add_meta_box(
+			'rodieja_repuesto_inv',
+			__( 'Inventario · Repuesto', 'rodieja-contable' ),
+			array( $this, 'render' ),
+			'rodieja_repuesto',
+			'normal',
+			'high'
+		);
+	}
+
+	public function render( \WP_Post $post ): void {
+		if ( ! $this-&gt;gate-&gt;can_manage() ) {
+			return;
+		}
+		$this-&gt;nonce-&gt;field( 'rodieja_inventory_meta' );
+		$vehiculo = (int) get_post_meta( $post-&gt;ID, 'rodieja_vehiculo_id', true );
+		$precio   = get_post_meta( $post-&gt;ID, 'rodieja_precio', true );
+/* … truncated 82 more lines — open the file */</code></pre>
 </div>
 
   <h3>Board history</h3>
   <div class="card">
     <p class="small">Forward moves, checklist marks, and returns (for example testing → doing when verification fails) all stay here. This is not a substitute for the code windows above.</p>
     <ul>
+<li class=""><code>2026-11-10T05:42:28.436Z moved testing → done</code></li>
+<li class=""><code>2026-11-10T05:42:28.363Z checklist item 2 marked</code></li>
+<li class=""><code>2026-11-10T05:42:28.291Z moved doing → testing</code></li>
+<li class=""><code>2026-11-10T05:42:28.133Z checklist item 1 marked</code></li>
+<li class=""><code>2026-11-10T05:41:39.535Z claimed by plugin-agent-1 → doing</code></li>
 <li class=""><code>2026-11-10T05:35:44.080Z created → backlog</code></li>
     </ul>
   </div>
@@ -288,13 +366,13 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 
 <section class="ticket" id="APP-4-2">
   <h2>APP-4-2 — Plugin · vínculo repuesto↔vehículo en admin</h2>
-  <p><span class="pill" style="background:var(--copper600)">column:backlog</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span></p>
+  <p><span class="pill" style="background:var(--copper600)">column:done</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span> · agent <code>plugin-agent-1</code> · active <strong>23s</strong></p>
   <p class="small">Work folder (required after claim): <code>.worktrees/4-inventario_repuestos/APP-4-2</code> · ticket branch <code>ticket/4-inventario_repuestos/APP-4-2</code> · ships on <code>feature/4-inventario_repuestos</code> after integrate (one push).</p>
 
   <h3>Goal</h3>
   <div class="card ok">
     <p>Plugin · vínculo repuesto↔vehículo en admin</p>
-    <p class="small">Checklist progress: <strong>0/2</strong>.</p>
+    <p class="small">Checklist progress: <strong>2/2</strong>.</p>
   </div>
 
   <h3>Role</h3>
@@ -305,27 +383,82 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
   <h3>Checklist</h3>
   <div class="card">
     <ul class="checklist">
-<li class="pending"><strong>Step 1.</strong> Implement <span class="pill">pending</span></li>
-<li class="pending"><strong>Step 2.</strong> Verify locally (in testing — after `move testing`) <span class="pill">pending</span></li>
+<li class=""><strong>Step 1.</strong> Implement</li>
+<li class=""><strong>Step 2.</strong> Verify locally (in testing — after `move testing`)</li>
     </ul>
   </div>
 
   <h3>What was built (this ticket)</h3>
-  <div class="card warn">
-  <p><strong>No layer evidence yet.</strong> This ticket has board history but no compact code/command/result windows. A beginner cannot see what changed; a senior cannot audit the layer. After each checklist item record evidence:</p>
-  <pre><code>node scripts/board.mjs evidence APP-4-2 --title "…" --path "file" --lang sql --code-file … --command "…" --result-file …</code></pre>
-  <p class="small">Expected windows for role <code>plugin</code>:</p><ul><li>Contract</li>
+  <div class="card ok beginner">
+  <p class="small">Windows this role should include:</p><ul><li>Contract</li>
 <li>Repository ($wpdb)</li>
 <li>Service</li>
 <li>REST/Admin controller</li>
 <li>DI provider</li>
 <li>HTTP result</li></ul>
+  <p>Layer artifacts for the living HTML (code, commands, results). Compact windows — not the whole file. After each checklist item: `evidence &lt;id&gt; --title …`.</p>
+<p>### filter by vehiculo meta</p>
+<p>Path: `src/Admin/InventoryAdminFilters.php`</p>
+<span class="filepath">php</span><pre><code>&lt;?php
+/**
+ * Filter repuestos by linked vehículo (meta query — native WP_Query).
+ *
+ * @package Rodieja\Contable
+ */
+
+declare(strict_types=1);
+
+namespace Rodieja\Contable\Admin;
+
+use Rodieja\Contable\Security\OutputEscaper;
+
+final class InventoryAdminFilters {
+
+	public function __construct( private OutputEscaper $escaper ) {}
+
+	public function register(): void {
+		add_action( 'restrict_manage_posts', array( $this, 'render_vehiculo_filter' ) );
+		add_filter( 'parse_query', array( $this, 'filter_by_vehiculo' ) );
+	}
+
+	public function render_vehiculo_filter( string $post_type ): void {
+		if ( 'rodieja_repuesto' !== $post_type ) {
+			return;
+		}
+		$selected = isset( $_GET['rodieja_vehiculo_id'] ) ? absint( wp_unslash( $_GET['rodieja_vehiculo_id'] ) ) : 0;
+		$vehicles = get_posts(
+			array(
+				'post_type'      =&gt; 'rodieja_vehiculo',
+				'post_status'    =&gt; 'publish',
+				'posts_per_page' =&gt; 200,
+				'orderby'        =&gt; 'title',
+				'order'          =&gt; 'ASC',
+			)
+		);
+		echo '&lt;select name=&quot;rodieja_vehiculo_id&quot;&gt;';
+		echo '&lt;option value=&quot;0&quot;&gt;' . $this-&gt;escaper-&gt;html( __( 'Todos los vehículos', 'rodieja-contable' ) ) . '&lt;/option&gt;';
+		foreach ( $vehicles as $v ) {
+			printf(
+				'&lt;option value=&quot;%1$d&quot; %2$s&gt;%3$s&lt;/option&gt;',
+				(int) $v-&gt;ID,
+				selected( $selected, (int) $v-&gt;ID, false ),
+				$this-&gt;escaper-&gt;html( get_the_title( $v ) )
+			);
+		}
+		echo '&lt;/select&gt;';
+	}
+/* … truncated 24 more lines — open the file */</code></pre>
 </div>
 
   <h3>Board history</h3>
   <div class="card">
     <p class="small">Forward moves, checklist marks, and returns (for example testing → doing when verification fails) all stay here. This is not a substitute for the code windows above.</p>
     <ul>
+<li class=""><code>2026-11-10T05:42:52.747Z moved testing → done</code></li>
+<li class=""><code>2026-11-10T05:42:52.672Z checklist item 2 marked</code></li>
+<li class=""><code>2026-11-10T05:42:52.599Z moved doing → testing</code></li>
+<li class=""><code>2026-11-10T05:42:52.449Z checklist item 1 marked</code></li>
+<li class=""><code>2026-11-10T05:42:28.787Z claimed by plugin-agent-1 → doing</code></li>
 <li class=""><code>2026-11-10T05:35:44.160Z created → backlog</code></li>
     </ul>
   </div>
@@ -344,13 +477,13 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 
 <section class="ticket" id="APP-4-3">
   <h2>APP-4-3 — Plugin · listado stock crítico WP_Query admin page</h2>
-  <p><span class="pill" style="background:var(--copper600)">column:backlog</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span></p>
+  <p><span class="pill" style="background:var(--copper600)">column:done</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span> · agent <code>plugin-agent-1</code> · active <strong>30s</strong></p>
   <p class="small">Work folder (required after claim): <code>.worktrees/4-inventario_repuestos/APP-4-3</code> · ticket branch <code>ticket/4-inventario_repuestos/APP-4-3</code> · ships on <code>feature/4-inventario_repuestos</code> after integrate (one push).</p>
 
   <h3>Goal</h3>
   <div class="card ok">
     <p>Plugin · listado stock crítico WP_Query admin page</p>
-    <p class="small">Checklist progress: <strong>0/2</strong>.</p>
+    <p class="small">Checklist progress: <strong>2/2</strong>.</p>
   </div>
 
   <h3>Role</h3>
@@ -361,27 +494,82 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
   <h3>Checklist</h3>
   <div class="card">
     <ul class="checklist">
-<li class="pending"><strong>Step 1.</strong> Implement <span class="pill">pending</span></li>
-<li class="pending"><strong>Step 2.</strong> Verify locally (in testing — after `move testing`) <span class="pill">pending</span></li>
+<li class=""><strong>Step 1.</strong> Implement</li>
+<li class=""><strong>Step 2.</strong> Verify locally (in testing — after `move testing`)</li>
     </ul>
   </div>
 
   <h3>What was built (this ticket)</h3>
-  <div class="card warn">
-  <p><strong>No layer evidence yet.</strong> This ticket has board history but no compact code/command/result windows. A beginner cannot see what changed; a senior cannot audit the layer. After each checklist item record evidence:</p>
-  <pre><code>node scripts/board.mjs evidence APP-4-3 --title "…" --path "file" --lang sql --code-file … --command "…" --result-file …</code></pre>
-  <p class="small">Expected windows for role <code>plugin</code>:</p><ul><li>Contract</li>
+  <div class="card ok beginner">
+  <p class="small">Windows this role should include:</p><ul><li>Contract</li>
 <li>Repository ($wpdb)</li>
 <li>Service</li>
 <li>REST/Admin controller</li>
 <li>DI provider</li>
 <li>HTTP result</li></ul>
+  <p>Layer artifacts for the living HTML (code, commands, results). Compact windows — not the whole file. After each checklist item: `evidence &lt;id&gt; --title …`.</p>
+<p>### CriticalStockPage WP_Query</p>
+<p>Path: `src/Admin/CriticalStockPage.php`</p>
+<span class="filepath">php</span><pre><code>&lt;?php
+/**
+ * Admin page: critical stock (native WP_Query meta_query).
+ *
+ * @package Rodieja\Contable
+ */
+
+declare(strict_types=1);
+
+namespace Rodieja\Contable\Admin;
+
+use Rodieja\Contable\Security\CapabilityGate;
+use Rodieja\Contable\Security\OutputEscaper;
+
+final class CriticalStockPage {
+
+	public const THRESHOLD = 1;
+
+	public function __construct(
+		private OutputEscaper $escaper,
+		private CapabilityGate $gate
+	) {}
+
+	public function register(): void {
+		add_action( 'admin_menu', array( $this, 'add_page' ) );
+	}
+
+	public function add_page(): void {
+		add_submenu_page(
+			'rodieja-contable',
+			__( 'Stock crítico', 'rodieja-contable' ),
+			__( 'Stock crítico', 'rodieja-contable' ),
+			CapabilityGate::MANAGE,
+			'rodieja-stock-critico',
+			array( $this, 'render' )
+		);
+	}
+
+	public function render(): void {
+		if ( ! $this-&gt;gate-&gt;can_manage() ) {
+			wp_die( esc_html__( 'Forbidden.', 'rodieja-contable' ), 403 );
+		}
+		$q = new \WP_Query(
+			array(
+				'post_type'      =&gt; 'rodieja_repuesto',
+				'post_status'    =&gt; 'publish',
+				'posts_per_page' =&gt; 100,
+				'meta_query'     =&gt; array(
+/* … truncated 52 more lines — open the file */</code></pre>
 </div>
 
   <h3>Board history</h3>
   <div class="card">
     <p class="small">Forward moves, checklist marks, and returns (for example testing → doing when verification fails) all stay here. This is not a substitute for the code windows above.</p>
     <ul>
+<li class=""><code>2026-11-10T05:43:23.279Z moved testing → done</code></li>
+<li class=""><code>2026-11-10T05:43:23.205Z checklist item 2 marked</code></li>
+<li class=""><code>2026-11-10T05:43:23.116Z moved doing → testing</code></li>
+<li class=""><code>2026-11-10T05:43:22.958Z checklist item 1 marked</code></li>
+<li class=""><code>2026-11-10T05:42:53.159Z claimed by plugin-agent-1 → doing</code></li>
 <li class=""><code>2026-11-10T05:35:44.239Z created → backlog</code></li>
     </ul>
   </div>

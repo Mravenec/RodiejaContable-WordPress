@@ -6,6 +6,8 @@ Neutral harness. After `worktree-origin-ready` reports `originReady: true`, agen
 
 11. **Stopped forever at origin:** `epic-on-origin` correctly refuses to merge `main`, but left no next automation. **Required:** after `originReady`, agents run the land pipeline (next → merge → smoke → finish → push `main`).
 
+19. **False LANDED badge:** agents wrote `summaries/land.json` with `"status":"landed"` after a **local** merge (or plugin checkout onto local `main`) without `worktree-push` / `worktree-land-finish` / successful `git push origin main`. The board UI then showed LANDED while GitHub `origin/main` was unchanged. **Required:** only `worktree-land-finish` sets `landed`, and only **after** push succeeds; `readLandStatus` must not trust a hand-written `landed` file unless `origin/feature/{n}-{slug}` is an ancestor of `origin/main` (`.ai/rules/landed-means-origin-main.md`).
+
 12. **Out-of-order land:** merging epic 5 before 1–4 breaks schema/API/UI. **Required:** `worktree-land-next` always picks the lowest epic not yet `landed`. Refuse `worktree-land-main <n>` if a lower epic is not landed.
 
 13. **Dirty primary blocks merge:** untracked `.docs/board` / journeys on `main` collide with the same paths arriving from `feature/*`. Feature branches may carry **all** orchestrated persist docs (not only that epic). **Required:** before merge, list untracked files **one by one** (`git status --untracked-files=all`) and unlink only the untracked **persist files** that appear in `git diff HEAD...origin/feature/{n}-{slug}`. Never recurse-delete a directory. Refuse if non-persist dirty or untracked paths overlap the merge.
@@ -31,7 +33,7 @@ Stored in `.linear/epics/{n}-{slug}/summaries/land.json` (live board; also snapp
 | `on-origin` | `origin/feature/{n}-{slug}` exists; not merged to `main` |
 | `landing` | Merge in progress or conflicts being resolved |
 | `smoke-main` | Merge commit on `main`; cumulative smoke running |
-| `landed` | Smoke OK, land handoff recorded, `main` pushed |
+| `landed` | Smoke OK, land handoff recorded, **`git push origin main` succeeded** (GitHub `origin/main` has the merge). Local-only merge ≠ landed. |
 
 Ticket columns stay `backlog…summarize`. Do **not** invent Review/QA ticket columns for land.
 

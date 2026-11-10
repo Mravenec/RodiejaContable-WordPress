@@ -1,0 +1,56 @@
+{
+  "idle_ms": 180000,
+  "started_at": "2026-11-10T05:43:27.926Z",
+  "finished_at": null,
+  "issues": {
+    "APP-5-1": {
+      "active_ms": 85694,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T05:43:27.926Z",
+          "end": "2026-11-10T05:44:53.620Z",
+          "ms": 85694,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        }
+      ]
+    },
+    "APP-5-2": {
+      "active_ms": 761,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T05:44:54.006Z",
+          "end": "2026-11-10T05:44:54.767Z",
+          "ms": 761,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        }
+      ]
+    },
+    "APP-5-3": {
+      "active_ms": 754,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T05:44:55.133Z",
+          "end": "2026-11-10T05:44:55.887Z",
+          "ms": 754,
+          "close": "done",
+          "agent": "security-agent-1"
+        }
+      ]
+    }
+  },
+  "land": {
+    "started_at": null,
+    "finished_at": null,
+    "paused": false,
+    "open": null,
+    "segments": []
+  }
+}

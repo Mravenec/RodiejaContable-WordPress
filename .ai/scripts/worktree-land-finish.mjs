@@ -170,11 +170,77 @@ try {
   /* default */
 }
 
-land.status = "landed";
+// Do NOT set status=landed until origin/main push succeeds.
+// --no-push keeps smoke-main (local only — board must NOT show LANDED).
 land.note = String(note).trim();
 land.git = "git push origin main";
 land.recorded_at = new Date().toISOString();
-land.finished_at = land.recorded_at;
+if (flag(argv, "--no-push")) {
+  land.status = "smoke-main";
+  writeLand(epicPath, land);
+  writeLandHandoff(epicPath, { git: land.git, note: land.note });
+  const snap = snapshotEpicToDocs(epicPath, primary);
+  console.error(
+    JSON.stringify(
+      {
+        ok: false,
+        epicKey,
+        landStatus: "smoke-main",
+        error:
+          "Refusing LANDED with --no-push. Push origin/main via land-finish without --no-push (see .ai/rules/landed-means-origin-main.md).",
+        snap,
+      },
+      null,
+      2
+    )
+  );
+  process.exit(1);
+}
+
+land.status = "smoke-main";
+writeLand(epicPath, land);
+
+// Journey + board snapshot belong on main after land, before push.
+const porcelain = git(["status", "--porcelain"], primary);
+if (porcelain.trim()) {
+  git(["add", "--", ".docs/journey", ".docs/board"], primary);
+  const staged = git(["diff", "--cached", "--name-only"], primary);
+  if (staged.trim()) {
+    git(
+      [
+        "commit",
+        "-m",
+        `Land ${epicKey}: journey + board snapshot after merge`,
+      ],
+      primary
+    );
+  }
+}
+
+const pushed = pushMain(primary);
+if (!pushed.ok) {
+  writeLand(epicPath, land); // still smoke-main
+  console.error(
+    JSON.stringify(
+      {
+        ok: false,
+        epicKey,
+        landStatus: "smoke-main",
+        error:
+          "Push origin/main failed — epic is NOT LANDED. Fix auth or non-fast-forward, then re-run land-finish.",
+        land,
+        pushed,
+      },
+      null,
+      2
+    )
+  );
+  process.exit(1);
+}
+
+land.status = "landed";
+land.finished_at = new Date().toISOString();
+land.pushed_at = land.finished_at;
 writeLand(epicPath, land);
 writeLandHandoff(epicPath, { git: land.git, note: land.note });
 
@@ -185,37 +251,6 @@ const journey = updateJourneyLanded(primary, epicKey, {
 });
 const htmlPath = appendLandToHtml(epicPath, epicKey, land, land.note);
 const snap = snapshotEpicToDocs(epicPath, primary);
-
-let pushed = { skipped: true };
-if (!flag(argv, "--no-push")) {
-  // Journey + board snapshot belong on main after land.
-  const porcelain = git(["status", "--porcelain"], primary);
-  if (porcelain.trim()) {
-    git(["add", "--", ".docs/journey", ".docs/board"], primary);
-    const staged = git(["diff", "--cached", "--name-only"], primary);
-    if (staged.trim()) {
-      git(
-        [
-          "commit",
-          "-m",
-          `Land ${epicKey}: journey + board snapshot after merge`,
-        ],
-        primary
-      );
-    }
-  }
-  pushed = pushMain(primary);
-  if (!pushed.ok) {
-    console.error(
-      JSON.stringify(
-        { ok: false, epicKey, land, clock, journey, htmlPath, snap, pushed },
-        null,
-        2
-      )
-    );
-    process.exit(1);
-  }
-}
 
 console.log(
   JSON.stringify(

@@ -50,6 +50,32 @@ final class MetaRegistrar {
 		$this->string_meta( 'rodieja_pedido', 'rodieja_origen' ); // audatex|ins|manual
 		$this->string_meta( 'rodieja_pedido', 'rodieja_estado_pedido' );
 		$this->string_meta( 'rodieja_pedido', 'rodieja_referencia_ext' );
+		// Audatex-shape (native meta; no live sync).
+		$this->string_meta( 'rodieja_pedido', 'rodieja_numero_pedido' );
+		$this->string_meta( 'rodieja_pedido', 'rodieja_cotizacion_id' );
+		$this->string_meta( 'rodieja_pedido', 'rodieja_siniestro' );
+		$this->string_meta( 'rodieja_pedido', 'rodieja_wan' );
+		$this->string_meta( 'rodieja_pedido', 'rodieja_aseguradora' );
+		$this->string_meta( 'rodieja_pedido', 'rodieja_vehiculo_label' );
+		$this->string_meta( 'rodieja_pedido', 'rodieja_vin' );
+		$this->number_meta( 'rodieja_pedido', 'rodieja_total_pedido' );
+		$this->number_meta( 'rodieja_pedido', 'rodieja_comision_calculada' );
+		$this->number_meta( 'rodieja_pedido', 'rodieja_porcentaje_comision' );
+		$this->string_meta( 'rodieja_pedido', 'rodieja_comision_pagada' );
+		$this->string_meta( 'rodieja_pedido', 'rodieja_fecha_pago_comision' );
+		$this->string_meta( 'rodieja_pedido', 'rodieja_referencia_pago_comision' );
+		$this->string_meta( 'rodieja_pedido', 'rodieja_notas' );
+		$this->string_meta( 'rodieja_pedido', 'rodieja_detalle_json' );
+		$this->string_meta( 'rodieja_pedido', 'rodieja_user_id' );
+		$this->string_meta( 'rodieja_pedido', 'rodieja_transaccion_id' );
+
+		$this->string_meta( 'rodieja_pedido_item', 'rodieja_pedido_id' );
+		$this->string_meta( 'rodieja_pedido_item', 'rodieja_repuesto_id' );
+		$this->number_meta( 'rodieja_pedido_item', 'rodieja_precio_ofrecido' );
+		$this->number_meta( 'rodieja_pedido_item', 'rodieja_cantidad' );
+		$this->string_meta( 'rodieja_pedido_item', 'rodieja_descripcion' );
+		$this->string_meta( 'rodieja_pedido_item', 'rodieja_tipo_pieza' );
+		$this->number_meta( 'rodieja_pedido_item', 'rodieja_dias_entrega' );
 	}
 
 	private function string_meta( string $type, string $key ): void {

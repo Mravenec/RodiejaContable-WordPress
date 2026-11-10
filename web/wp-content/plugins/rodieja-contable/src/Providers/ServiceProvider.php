@@ -16,9 +16,11 @@ use Rodieja\Contable\Admin\FinanceDashboardPage;
 use Rodieja\Contable\Admin\FinanceMetaBoxes;
 use Rodieja\Contable\Admin\InventoryAdminFilters;
 use Rodieja\Contable\Admin\InventoryMetaBoxes;
+use Rodieja\Contable\Admin\PedidoMetaBoxes;
 use Rodieja\Contable\Controllers\Rest\DomainStatsController;
 use Rodieja\Contable\Controllers\Rest\FinanceController;
 use Rodieja\Contable\Controllers\Rest\HealthController;
+use Rodieja\Contable\Controllers\Rest\PedidoController;
 use Rodieja\Contable\Core\Container;
 use Rodieja\Contable\Meta\MetaRegistrar;
 use Rodieja\Contable\PostTypes\PostTypeRegistrar;
@@ -64,6 +66,10 @@ final class ServiceProvider {
 				$c->get( FinanceTotalsService::class ),
 				$c->get( CapabilityGate::class )
 			)
+		);
+		$container->set(
+			PedidoController::class,
+			static fn( Container $c ) => new PedidoController( $c->get( CapabilityGate::class ) )
 		);
 		$container->set(
 			AdminMenu::class,
@@ -124,6 +130,14 @@ final class ServiceProvider {
 				$c->get( OutputEscaper::class ),
 				$c->get( CapabilityGate::class ),
 				$c->get( FinanceTotalsService::class )
+			)
+		);
+		$container->set(
+			PedidoMetaBoxes::class,
+			static fn( Container $c ) => new PedidoMetaBoxes(
+				$c->get( NonceGuard::class ),
+				$c->get( OutputEscaper::class ),
+				$c->get( CapabilityGate::class )
 			)
 		);
 	}

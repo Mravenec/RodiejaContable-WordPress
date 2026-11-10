@@ -1,3 +1,4 @@
 {"at":"2026-11-10T05:35:44.552Z","type":"create","issueId":"APP-6-1","column":"backlog"}
 {"at":"2026-11-10T05:35:44.628Z","type":"create","issueId":"APP-6-2","column":"backlog"}
 {"at":"2026-11-10T05:35:44.706Z","type":"create","issueId":"APP-6-3","column":"backlog"}
+{"at":"2026-11-10T05:45:05.384Z","type":"claim","issueId":"APP-6-1","agent":"plugin-agent-1"}

@@ -76,43 +76,65 @@ export function readLandStatus(epicDir) {
     smoke_ok: doc?.smoke_ok ?? null,
   };
 
+  const host = hostGitRootFromBoard();
+  const br = featureBranchName(epicKey);
+
+  // Truth source for LANDED: origin/main contains origin/feature/{epicKey}.
+  // Never trust a hand-written land.json "landed" without GitHub evidence.
+  if (host) {
+    const onOrigin = remoteHeadsHas(host, br);
+    const onMain =
+      onOrigin &&
+      remoteHeadsHas(host, "main") &&
+      gitOk(["merge-base", "--is-ancestor", `origin/${br}`, "origin/main"], host);
+
+    if (onMain) {
+      return {
+        status: "landed",
+        merge_commit: base.merge_commit,
+        smoke_ok: base.smoke_ok ?? true,
+        inferred: fileStatus !== "landed",
+      };
+    }
+
+    // File claimed landed but origin/main does not have the feature → demote.
+    if (fileStatus === "landed") {
+      return {
+        status: onOrigin ? "on-origin" : "smoke-main",
+        merge_commit: base.merge_commit,
+        smoke_ok: base.smoke_ok,
+        demoted: true,
+        reason: "land.json said landed but origin/main lacks feature branch",
+      };
+    }
+
+    if (fileStatus === "landing" || fileStatus === "smoke-main") {
+      return base;
+    }
+
+    if (fileStatus === "on-origin" || onOrigin) {
+      return {
+        status: "on-origin",
+        merge_commit: base.merge_commit,
+        smoke_ok: base.smoke_ok,
+      };
+    }
+
+    return { status: null, merge_commit: null, smoke_ok: null };
+  }
+
+  // Standalone board engine (no host git): file only; still refuse bare "landed"
+  // without merge_commit (agents must not invent LANDED).
+  if (fileStatus === "landed" && !base.merge_commit) {
+    return { status: null, merge_commit: null, smoke_ok: null, demoted: true };
+  }
   if (
     fileStatus === "landed" ||
     fileStatus === "landing" ||
-    fileStatus === "smoke-main"
+    fileStatus === "smoke-main" ||
+    fileStatus === "on-origin"
   ) {
     return base;
   }
-
-  const host = hostGitRootFromBoard();
-  if (!host) {
-    // Standalone engine clone: file only. Missing file → not landed (UI label).
-    return base.status ? base : { status: null, merge_commit: null, smoke_ok: null };
-  }
-
-  const br = featureBranchName(epicKey);
-  const onOrigin = remoteHeadsHas(host, br);
-  const onMain =
-    onOrigin &&
-    remoteHeadsHas(host, "main") &&
-    gitOk(["merge-base", "--is-ancestor", `origin/${br}`, "origin/main"], host);
-
-  if (onMain) {
-    return {
-      status: "landed",
-      merge_commit: base.merge_commit,
-      smoke_ok: base.smoke_ok ?? true,
-      inferred: true,
-    };
-  }
-
-  if (fileStatus === "on-origin" || onOrigin) {
-    return {
-      status: "on-origin",
-      merge_commit: base.merge_commit,
-      smoke_ok: base.smoke_ok,
-    };
-  }
-
   return { status: null, merge_commit: null, smoke_ok: null };
 }

@@ -24,3 +24,5 @@ Tool adapters must stay in **harmony** (`.ai/rules/tool-adapters-harmony.md`). P
 - Layer audit: `node .ai/scripts/layer-audit.mjs`
 - Worktrees: after **every** `claim`, `worktree-add`
 - **git push:** denied in `.claude/settings.json`
+
+**LANDED** = `origin/main` on GitHub via `worktree-land-finish` (`.ai/rules/landed-means-origin-main.md`). Never hand-write `land.json` landed.

@@ -1,3 +1,21 @@
 {"at":"2026-11-10T05:35:44.081Z","type":"create","issueId":"APP-4-1","column":"backlog"}
 {"at":"2026-11-10T05:35:44.161Z","type":"create","issueId":"APP-4-2","column":"backlog"}
 {"at":"2026-11-10T05:35:44.240Z","type":"create","issueId":"APP-4-3","column":"backlog"}
+{"at":"2026-11-10T05:41:39.536Z","type":"claim","issueId":"APP-4-1","agent":"plugin-agent-1"}
+{"at":"2026-11-10T05:42:28.135Z","type":"checklist","issueId":"APP-4-1","item":"1"}
+{"at":"2026-11-10T05:42:28.216Z","type":"evidence","issueId":"APP-4-1","title":"InventoryMetaBoxes"}
+{"at":"2026-11-10T05:42:28.293Z","type":"move","issueId":"APP-4-1","from":"doing","to":"testing"}
+{"at":"2026-11-10T05:42:28.364Z","type":"checklist","issueId":"APP-4-1","item":"2"}
+{"at":"2026-11-10T05:42:28.437Z","type":"move","issueId":"APP-4-1","from":"testing","to":"done"}
+{"at":"2026-11-10T05:42:28.787Z","type":"claim","issueId":"APP-4-2","agent":"plugin-agent-1"}
+{"at":"2026-11-10T05:42:52.450Z","type":"checklist","issueId":"APP-4-2","item":"1"}
+{"at":"2026-11-10T05:42:52.524Z","type":"evidence","issueId":"APP-4-2","title":"filter by vehiculo meta"}
+{"at":"2026-11-10T05:42:52.601Z","type":"move","issueId":"APP-4-2","from":"doing","to":"testing"}
+{"at":"2026-11-10T05:42:52.673Z","type":"checklist","issueId":"APP-4-2","item":"2"}
+{"at":"2026-11-10T05:42:52.748Z","type":"move","issueId":"APP-4-2","from":"testing","to":"done"}
+{"at":"2026-11-10T05:42:53.160Z","type":"claim","issueId":"APP-4-3","agent":"plugin-agent-1"}
+{"at":"2026-11-10T05:43:22.959Z","type":"checklist","issueId":"APP-4-3","item":"1"}
+{"at":"2026-11-10T05:43:23.035Z","type":"evidence","issueId":"APP-4-3","title":"CriticalStockPage WP_Query"}
+{"at":"2026-11-10T05:43:23.118Z","type":"move","issueId":"APP-4-3","from":"doing","to":"testing"}
+{"at":"2026-11-10T05:43:23.206Z","type":"checklist","issueId":"APP-4-3","item":"2"}
+{"at":"2026-11-10T05:43:23.280Z","type":"move","issueId":"APP-4-3","from":"testing","to":"done"}

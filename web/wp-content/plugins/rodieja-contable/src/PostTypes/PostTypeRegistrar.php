@@ -89,6 +89,15 @@ final class PostTypeRegistrar {
 				'menu_position' => 32,
 			)
 		);
+		$this->cpt(
+			'rodieja_pedido_item',
+			array(
+				'label'         => __( 'Ítems de pedido', 'rodieja-contable' ),
+				'labels'        => $this->labels( __( 'Ítem de pedido', 'rodieja-contable' ), __( 'Ítems de pedido', 'rodieja-contable' ) ),
+				'menu_icon'     => 'dashicons-list-view',
+				'menu_position' => 33,
+			)
+		);
 	}
 
 	/**

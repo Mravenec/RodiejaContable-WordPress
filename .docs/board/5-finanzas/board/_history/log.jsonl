@@ -1,3 +1,21 @@
 {"at":"2026-11-10T05:35:44.319Z","type":"create","issueId":"APP-5-1","column":"backlog"}
 {"at":"2026-11-10T05:35:44.396Z","type":"create","issueId":"APP-5-2","column":"backlog"}
 {"at":"2026-11-10T05:35:44.474Z","type":"create","issueId":"APP-5-3","column":"backlog"}
+{"at":"2026-11-10T05:43:27.926Z","type":"claim","issueId":"APP-5-1","agent":"plugin-agent-1"}
+{"at":"2026-11-10T05:44:53.284Z","type":"checklist","issueId":"APP-5-1","item":"1"}
+{"at":"2026-11-10T05:44:53.365Z","type":"evidence","issueId":"APP-5-1","title":"FinanceMetaBoxes"}
+{"at":"2026-11-10T05:44:53.445Z","type":"move","issueId":"APP-5-1","from":"doing","to":"testing"}
+{"at":"2026-11-10T05:44:53.528Z","type":"checklist","issueId":"APP-5-1","item":"2"}
+{"at":"2026-11-10T05:44:53.619Z","type":"move","issueId":"APP-5-1","from":"testing","to":"done"}
+{"at":"2026-11-10T05:44:54.006Z","type":"claim","issueId":"APP-5-2","agent":"plugin-agent-1"}
+{"at":"2026-11-10T05:44:54.453Z","type":"checklist","issueId":"APP-5-2","item":"1"}
+{"at":"2026-11-10T05:44:54.528Z","type":"evidence","issueId":"APP-5-2","title":"FinanceDashboardPage"}
+{"at":"2026-11-10T05:44:54.605Z","type":"move","issueId":"APP-5-2","from":"doing","to":"testing"}
+{"at":"2026-11-10T05:44:54.682Z","type":"checklist","issueId":"APP-5-2","item":"2"}
+{"at":"2026-11-10T05:44:54.766Z","type":"move","issueId":"APP-5-2","from":"testing","to":"done"}
+{"at":"2026-11-10T05:44:55.132Z","type":"claim","issueId":"APP-5-3","agent":"security-agent-1"}
+{"at":"2026-11-10T05:44:55.589Z","type":"checklist","issueId":"APP-5-3","item":"1"}
+{"at":"2026-11-10T05:44:55.662Z","type":"evidence","issueId":"APP-5-3","title":"Finance REST permission_callback"}
+{"at":"2026-11-10T05:44:55.741Z","type":"move","issueId":"APP-5-3","from":"doing","to":"testing"}
+{"at":"2026-11-10T05:44:55.813Z","type":"checklist","issueId":"APP-5-3","item":"2"}
+{"at":"2026-11-10T05:44:55.887Z","type":"move","issueId":"APP-5-3","from":"testing","to":"done"}

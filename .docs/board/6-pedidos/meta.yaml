@@ -2,8 +2,8 @@ id: 6
 slug: pedidos
 title: "Pedidos nativos: meta Audatex-shape + items + REST"
 color: "#b45309"
-status: planned
+status: in_progress
 created_at: "2026-11-10T05:35:43.536Z"
-updated_at: "2026-11-10T05:35:44.708Z"
+updated_at: "2026-11-10T05:45:05.386Z"
 summary_html: summaries/6-pedidos-beginner.html
-summary_updated_at: "2026-11-10T05:35:44.716Z"
+summary_updated_at: "2026-11-10T05:45:05.393Z"

@@ -4,8 +4,8 @@
 |---|---|
 | Id | 4 |
 | Slug | inventario_repuestos |
-| Status | planned |
-| Progress | **0%** (0/3 in summarize · column + checklist) |
+| Status | in_progress |
+| Progress | **83%** (0/3 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -23,9 +23,7 @@ This folder is the **operational** board (claims, checklist, %). There is no `.a
 
 ### 0. backlog
 
-- `APP-4-1` Plugin · stock/precio meta UI + tax rodieja_parte _(role:plugin)_
-- `APP-4-2` Plugin · vínculo repuesto↔vehículo en admin _(role:plugin)_
-- `APP-4-3` Plugin · listado stock crítico WP_Query admin page _(role:plugin)_
+_empty_
 
 ### 1. doing
 
@@ -37,7 +35,9 @@ _empty_
 
 ### 3. done
 
-_empty_
+- `APP-4-1` Plugin · stock/precio meta UI + tax rodieja_parte _(role:plugin)_
+- `APP-4-2` Plugin · vínculo repuesto↔vehículo en admin _(role:plugin)_
+- `APP-4-3` Plugin · listado stock crítico WP_Query admin page _(role:plugin)_
 
 ### 4. summarize
 

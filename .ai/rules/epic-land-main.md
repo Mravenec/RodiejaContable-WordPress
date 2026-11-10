@@ -26,6 +26,8 @@ node .ai/scripts/worktree-land-ready.mjs
 
 Each epic: **merge → conflicts → cumulative smoke → land handoff (human summary) → push `main`**. Track **land** active + elapsed (billable). Update living HTML **Land on main** section and journey **Status: Landed on main**.
 
+**LANDED law:** the board badge **LANDED** means `origin/main` on GitHub includes this epic. Local merge alone is **not** landed. Only `worktree-land-finish` may set `"status":"landed"`, and only **after** `git push origin main` succeeds (`.ai/rules/landed-means-origin-main.md`). Never hand-edit `land.json` to `landed`.
+
 `worktree-land-smoke` runs the layer audit (`.ai/scripts/layer-audit.mjs`) on `main` and refuses a pass (`smoke_ok=false`) on violations. Fix them on `main` as part of conflict resolution, commit, re-run the smoke.
 
 `worktree-land-main` deletes nothing but untracked **persist files** (`.docs/board`, `.docs/journey`) that the merge would overwrite, listed one by one. Any other dirty or untracked path that collides with the feature merge makes it **refuse** and stay on disk (park or move it). It also refuses a feature branch that adds a **gitlink** (nested clone) not declared in `.gitmodules` — fix on the feature branch (`git rm --cached <path>`, gitignore the folder), push again, re-run (spec failures #13, #17, #18).
@@ -38,5 +40,7 @@ Each epic: **merge → conflicts → cumulative smoke → land handoff (human su
 - Force-push `main`
 - Commit untracked `.docs/board` / journeys onto `main` before the feature merge
 - Add Review/QA ticket columns for land (epic lifecycle in `summaries/land.json` only)
+- Mark `land.json` `landed` (or tell the human “LANDED”) before `origin/main` has the push
+- Shortcut land by copying plugin files onto local `main` and skipping `worktree-push` / land-main
 
 Rule map: `.ai/rules/tool-adapters-harmony.md`
