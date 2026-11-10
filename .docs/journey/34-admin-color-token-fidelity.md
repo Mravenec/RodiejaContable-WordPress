@@ -1,6 +1,6 @@
 # Epic 34 — admin-color-token-fidelity
 
-**Status:** Planned · Board: `.linear/epics/34-admin-color-token-fidelity/`
+**Status:** Landed on main · Board: `.linear/epics/34-admin-color-token-fidelity/`
 
 ## Title
 
@@ -61,3 +61,21 @@ node .linear/scripts/board.mjs progress --epic 34
 ## Outcome
 
 (Filled when epic reaches 100%.)
+
+
+## Land on main
+
+- Merge commit: `(unknown)`
+- Branch: `feature/34-admin-color-token-fidelity` → `main`
+
+### Supervisor / Manager (land)
+
+Supervisor land note — Epic 34 admin-color-token-fidelity
+
+Aligned Workshop Ledger admin/list/login CSS variables with Read-Only Ant theme tokens (#1890ff / #001529 / #f0f2f5). Native CSS only; Read-Only untouched.
+
+You can confirm it doing the following:
+1. Load any Workshop Ledger CPT list — surface #f0f2f5, primary actions #1890ff, table header #fafafa via --wl-* tokens.
+2. Check wp-login branding still uses the navy→accent gradient from the same tokens.
+3. Layer audit on main stays green.
+
