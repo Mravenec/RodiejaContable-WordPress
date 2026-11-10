@@ -46,6 +46,7 @@ use Rodieja\Contable\Controllers\Rest\FinanceController;
 use Rodieja\Contable\Controllers\Rest\HealthController;
 use Rodieja\Contable\Controllers\Rest\PedidoController;
 use Rodieja\Contable\Core\Container;
+use Rodieja\Contable\Front\HeaderAuthLinks;
 use Rodieja\Contable\Meta\MetaRegistrar;
 use Rodieja\Contable\PostTypes\PostTypeRegistrar;
 use Rodieja\Contable\Roles\RoleRegistrar;
@@ -86,6 +87,7 @@ final class ServiceProvider {
 		$container->set( TaxonomyRegistrar::class, static fn() => new TaxonomyRegistrar() );
 		$container->set( MetaRegistrar::class, static fn() => new MetaRegistrar() );
 		$container->set( AdminAssets::class, static fn() => new AdminAssets() );
+		$container->set( HeaderAuthLinks::class, static fn() => new HeaderAuthLinks() );
 
 		$container->set(
 			HealthController::class,

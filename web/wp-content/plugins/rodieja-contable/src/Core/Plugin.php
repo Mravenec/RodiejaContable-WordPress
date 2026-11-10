@@ -43,6 +43,7 @@ use Rodieja\Contable\Controllers\Rest\DomainStatsController;
 use Rodieja\Contable\Controllers\Rest\FinanceController;
 use Rodieja\Contable\Controllers\Rest\HealthController;
 use Rodieja\Contable\Controllers\Rest\PedidoController;
+use Rodieja\Contable\Front\HeaderAuthLinks;
 use Rodieja\Contable\Meta\MetaRegistrar;
 use Rodieja\Contable\PostTypes\PostTypeRegistrar;
 use Rodieja\Contable\Providers\ServiceProvider;
@@ -76,6 +77,7 @@ final class Plugin {
 		$this->container->get( TaxonomyRegistrar::class )->register();
 		$this->container->get( MetaRegistrar::class )->register();
 		$this->container->get( AdminAssets::class )->register();
+		$this->container->get( HeaderAuthLinks::class )->register();
 		$this->container->get( AdminMenu::class )->register();
 		$this->container->get( CatalogMetaBoxes::class )->register();
 		$this->container->get( CatalogListColumns::class )->register();
