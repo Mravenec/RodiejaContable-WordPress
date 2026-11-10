@@ -4,3 +4,4 @@
 {"at":"2026-11-10T16:50:02.140Z","type":"evidence","issueId":"APP-38-1","title":"copy-css"}
 {"at":"2026-11-10T16:50:02.407Z","type":"move","issueId":"APP-38-1","from":"doing","to":"testing"}
 {"at":"2026-11-10T16:50:02.492Z","type":"checklist","issueId":"APP-38-1","item":"2"}
+{"at":"2026-11-10T16:50:03.009Z","type":"move","issueId":"APP-38-1","from":"testing","to":"done"}
