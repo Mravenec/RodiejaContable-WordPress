@@ -1,12 +1,13 @@
 {
-  "status": "smoke-main",
+  "status": "landed",
   "started_at": "2026-11-10T08:20:23.913Z",
-  "finished_at": null,
+  "finished_at": "2026-11-10T08:20:26.208Z",
   "merge_commit": "2c1e6e4c2437e88a8e69bdf742c40f91458b86fa",
   "conflicts": [],
-  "smoke_ok": null,
-  "smoke_at": null,
+  "smoke_ok": true,
+  "smoke_at": "2026-11-10T08:20:24.046Z",
   "git": "git push origin main",
-  "note": null,
-  "recorded_at": null
+  "note": "Epic 24 lands CPT list product chrome: CptListChrome page-header on every Rodieja list screen, denser Ant-style admin-list.css (hide WP h1, pill tabs, card table). Hard-refresh Transactions / Vehicles / Inventory lists — product header + modern shell should replace stock WP chrome.",
+  "recorded_at": "2026-11-10T08:20:24.116Z",
+  "pushed_at": "2026-11-10T08:20:26.208Z"
 }
