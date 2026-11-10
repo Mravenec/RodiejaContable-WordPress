@@ -1,7 +1,5 @@
 <?php
 /**
- * Deactivation.
- *
  * @package Rodieja\Contable
  */
 

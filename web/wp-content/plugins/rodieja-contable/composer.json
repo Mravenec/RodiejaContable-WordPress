@@ -1,6 +1,6 @@
 {
   "name": "rodieja/rodieja-contable",
-  "description": "Rodieja Contable — native WordPress plugin (CPT, taxonomies, roles, REST).",
+  "description": "Neutral WordPress plugin scaffold with native DI, SOLID layers, and security defaults.",
   "type": "wordpress-plugin",
   "license": "GPL-2.0-or-later",
   "require": {
@@ -20,6 +20,10 @@
     "psr-4": {
       "Rodieja\\Contable\\Tests\\": "tests/"
     }
+  },
+  "scripts": {
+    "phpcs": "phpcs --standard=WordPress,WordPress-Extra src harness-plugin.php uninstall.php",
+    "test": "phpunit"
   },
   "config": {
     "allow-plugins": {

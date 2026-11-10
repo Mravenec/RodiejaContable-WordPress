@@ -1,6 +1,6 @@
 <?php
 /**
- * Activation: roles + rewrite flush.
+ * Activation — native caps/roles only (no custom tables).
  *
  * @package Rodieja\Contable
  */
@@ -14,8 +14,8 @@ use Rodieja\Contable\Roles\RoleRegistrar;
 final class Activator {
 
 	public static function activate(): void {
-		RoleRegistrar::install_roles();
-		update_option( 'rodieja_contable_version', RODIEJA_CONTABLE_VERSION, false );
+		update_option( 'rodieja_contable_version', RODIEJA_PLUGIN_VERSION, false );
+		( new RoleRegistrar() )->install();
 		flush_rewrite_rules( false );
 	}
 }
