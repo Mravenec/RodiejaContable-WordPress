@@ -37,11 +37,10 @@ final class ReportesAdminPage {
 
 		$sent = isset( $_GET['rodieja_resumen_sent'] ) && '1' === $_GET['rodieja_resumen_sent'];
 		$base = admin_url( 'admin-post.php' );
-		?>
 		$export_labels = array(
-			'vehiculos'      => __( 'Vehicles', 'rodieja-contable' ),
-			'repuestos'      => __( 'Parts', 'rodieja-contable' ),
-			'transacciones'  => __( 'Transactions', 'rodieja-contable' ),
+			'vehiculos'     => __( 'Vehicles', 'rodieja-contable' ),
+			'repuestos'     => __( 'Parts', 'rodieja-contable' ),
+			'transacciones' => __( 'Transactions', 'rodieja-contable' ),
 		);
 		?>
 		<div class="wrap rodieja-admin-wrap">
