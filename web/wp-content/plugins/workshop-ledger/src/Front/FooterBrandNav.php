@@ -29,7 +29,7 @@ final class FooterBrandNav {
 		$about = esc_url( home_url( '/about/' ) );
 		$app   = is_user_logged_in()
 			? esc_url( admin_url( 'admin.php?page=workshop-ledger' ) )
-			: esc_url( wp_login_url( home_url( '/' ) ) );
+			: esc_url( wp_login_url( admin_url( 'admin.php?page=workshop-ledger' ) ) );
 		$app_label = is_user_logged_in()
 			? esc_html__( 'Open app', 'workshop-ledger' )
 			: esc_html__( 'Login', 'workshop-ledger' );

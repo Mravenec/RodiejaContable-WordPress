@@ -1,0 +1,9 @@
+{"at":"2026-11-10T17:06:57.856Z","type":"create","issueId":"APP-39-1","column":"backlog"}
+{"at":"2026-11-10T17:07:00.195Z","type":"claim","issueId":"APP-39-1","agent":"plugin-agent-1"}
+{"at":"2026-11-10T17:07:28.996Z","type":"evidence","issueId":"APP-39-1","title":"login redirect native"}
+{"at":"2026-11-10T17:07:29.080Z","type":"checklist","issueId":"APP-39-1","item":"1"}
+{"at":"2026-11-10T17:07:29.171Z","type":"move","issueId":"APP-39-1","from":"doing","to":"testing"}
+{"at":"2026-11-10T17:07:35.429Z","type":"evidence","issueId":"APP-39-1","title":"verify login target"}
+{"at":"2026-11-10T17:07:35.525Z","type":"checklist","issueId":"APP-39-1","item":"2"}
+{"at":"2026-11-10T17:08:02.567Z","type":"evidence","issueId":"APP-39-1","title":"GATE_HTTP login redirect"}
+{"at":"2026-11-10T17:08:03.491Z","type":"move","issueId":"APP-39-1","from":"testing","to":"done"}
