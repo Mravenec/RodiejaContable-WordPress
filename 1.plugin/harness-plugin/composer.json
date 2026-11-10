@@ -1,0 +1,34 @@
+{
+  "name": "harness/harness-plugin",
+  "description": "Neutral WordPress plugin scaffold with native DI, SOLID layers, and security defaults.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "php": ">=8.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.5",
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+    "wp-coding-standards/wpcs": "^3.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Harness\\Plugin\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Harness\\Plugin\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "phpcs": "phpcs --standard=WordPress,WordPress-Extra src harness-plugin.php uninstall.php",
+    "test": "phpunit"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    },
+    "sort-packages": true
+  }
+}

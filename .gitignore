@@ -1,0 +1,36 @@
+# WordPress core & runtime
+/web/**
+!/web/.gitkeep
+
+# Keep tracked placeholders if added later
+!/web/wp-content/
+!/web/wp-content/mu-plugins/
+!/web/wp-content/mu-plugins/.gitkeep
+
+# Secrets & local
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+
+# Composer
+**/vendor/
+
+# IDE / tooling
+.idea/
+.vscode/
+*.swp
+
+# DDEV extras
+.ddev/.homeadditions/
+.ddev/xhprof/
+.ddev/import-db/
+.ddev/import-files/
+
+# Tests / coverage
+.phpunit.result.cache
+coverage/
+
+# Ticket worktrees (local only; never commit)
+.worktrees/

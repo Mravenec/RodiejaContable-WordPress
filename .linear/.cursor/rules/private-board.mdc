@@ -1,0 +1,20 @@
+---
+description: private.board — filesystem only, column + checklist epic %, no cloud issue tracker
+alwaysApply: true
+---
+
+# private.board
+
+When this repo (or a project containing `.linear/`) is the workspace:
+
+1. Use `node scripts/board.mjs` (or `.linear/scripts/board.mjs`) for all issue state.
+2. Do **not** call a cloud issue-tracker API or MCP unless the human asks for cloud sync.
+3. Flow: `next` → `claim` → do one checklist item → **immediately `checklist <ID> n`** → repeat in `doing` → **`move testing`** → harness tests. If verification fails: `fail <ID> --reason "…"` (testing → doing, claim kept) or `move doing --reason "…"`, fix, then `move testing` again. When flags pass: **`move done`** (park). The living HTML refreshes on every move. When **every** ticket is in `done`, **`move summarize`** and `handoff` (git command + Supervisor / Manager note into that HTML).
+4. Epic % is **column + checklist** (each marked checklist item and each move toward `summarize` raises %; 100% when all tickets are in `summarize` with checklists complete). Dependents unlock at `done`. Never fake %.
+5. Optional UI needs `node scripts/api.mjs` + `ui` — agents must work without it. Brand: **private.board**.
+6. Read [AGENTS.md](../../AGENTS.md).
+7. Large briefs: orchestrate all epics/tickets first. Stack, modules, and diagrams live in the host `AGENTS.md` / `.ai/` — not in this board.
+8. After host `claim`, **required** `node ../../.ai/scripts/worktree-add.mjs <ISSUE_ID>` — `.worktrees/{n}-{slug}/{ISSUE_ID}` on `ticket/{n}-{slug}/{ISSUE_ID}`, shared `epics` + `agents`, never a second board. One board ticket = one folder until integrate. Ticket → `done` is a local commit from that folder. When every ticket is in `done`, merge, `handoff` (git line + smoke note), then `worktree-push` (publishes `feature/{n}-{slug}`, drops `_epic` and leftover ticket folders).
+9. **Active time:** claim starts the clock; `handoff` freezes hours/minutes. Gaps longer than `time.idle_ms` (default 3 min) are not counted (Run / Approve wait). `ping` during long commands. UI **Hours worked** sums Active + Elapsed by month across all epics; CLI `hours [--month YYYY-MM]`.
+
+Host canonical rule: `.ai/rules/private-board.md` · skill: `.ai/skills/private-board/SKILL.md` · worktrees: `.ai/rules/worktrees.md`.

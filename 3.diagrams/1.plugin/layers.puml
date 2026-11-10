@@ -1,0 +1,46 @@
+@startuml harness-plugin-layers
+skinparam packageStyle rectangle
+
+package "Contracts" {
+  interface ItemRepositoryInterface
+}
+
+package "Repositories" {
+  class ItemRepository
+}
+
+package "Services" {
+  class ItemService
+  class HealthService
+}
+
+package "Controllers" {
+  class ItemController
+  class HealthController
+  class AdminController
+}
+
+package "Security" {
+  class CapabilityGate
+  class NonceGuard
+  class RequestSanitizer
+  class OutputEscaper
+  class SecurityHeaders
+}
+
+package "Core" {
+  class Container
+  class Plugin
+}
+
+ItemRepository ..|> ItemRepositoryInterface
+ItemService --> ItemRepositoryInterface
+ItemService --> RequestSanitizer
+ItemController --> ItemService
+ItemController --> CapabilityGate
+AdminController --> ItemService
+AdminController --> CapabilityGate
+AdminController --> NonceGuard
+HealthController --> HealthService
+Plugin --> Container
+@enduml

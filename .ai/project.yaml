@@ -1,0 +1,19 @@
+harness: mariadb-wordpress-php-plugins
+module_name: harness-plugin
+php_version: "8.3"
+wordpress_requires: "6.4"
+native_only: true
+forbidden_packages:
+  - illuminate/*
+  - laravel/*
+  - doctrine/*
+  - symfony/framework-bundle
+# Layer audit allowlist: services that read no table.
+# HealthService - read-only status; no persistence.
+services_without_repository:
+  - HealthService
+security:
+  disallow_file_edit: true
+  rest_public_routes_allowlist:
+    - harness/v1/health
+  require_capability_on_mutations: true

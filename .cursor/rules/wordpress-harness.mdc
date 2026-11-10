@@ -1,0 +1,12 @@
+---
+description: WordPress harness — native APIs and security defaults
+alwaysApply: true
+---
+
+# Harness WP rules
+
+- Stack is DDEV + WordPress + MariaDB + custom plugin in `1.plugin/harness-plugin`.
+- Native only: hooks, REST, `$wpdb`, capabilities, nonces, sanitize/escape.
+- No Laravel/Illuminate/Doctrine/Eloquent.
+- Mutating REST routes must not use `__return_true` as `permission_callback`.
+- Prefer constructor DI via `Core\Container` and `Providers\ServiceProvider`.
