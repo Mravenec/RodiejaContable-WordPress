@@ -1,2 +1,7 @@
 {"at":"2026-11-10T16:08:26.222Z","type":"create","issueId":"APP-31-1","column":"backlog"}
 {"at":"2026-11-10T16:08:26.297Z","type":"create","issueId":"APP-31-2","column":"backlog"}
+{"at":"2026-11-10T16:12:01.553Z","type":"claim","issueId":"APP-31-1","agent":"plugin-agent-1"}
+{"at":"2026-11-10T16:13:16.871Z","type":"checklist","issueId":"APP-31-1","item":"1"}
+{"at":"2026-11-10T16:13:16.993Z","type":"evidence","issueId":"APP-31-1","title":"part-modes-cascade"}
+{"at":"2026-11-10T16:13:17.119Z","type":"move","issueId":"APP-31-1","from":"doing","to":"testing"}
+{"at":"2026-11-10T16:13:17.196Z","type":"checklist","issueId":"APP-31-1","item":"2"}
