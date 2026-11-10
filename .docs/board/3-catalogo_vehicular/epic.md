@@ -5,7 +5,7 @@
 | Id | 3 |
 | Slug | catalogo_vehicular |
 | Status | in_progress |
-| Progress | **83%** (0/3 in summarize · column + checklist) |
+| Progress | **100%** (3/3 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,11 +35,11 @@ _empty_
 
 ### 3. done
 
-- `APP-3-1` Plugin · meta boxes + list columns Marca/Modelo/Gen/Vehículo _(role:plugin)_
-- `APP-3-2` Plugin · filtros admin WP_Query por estado_vehiculo _(role:plugin)_
-- `APP-3-3` Orchestrator · journey map Spring Vehiculos→CPT _(role:orchestrator)_
+_empty_
 
 ### 4. summarize
 
-_empty_
+- `APP-3-1` Plugin · meta boxes + list columns Marca/Modelo/Gen/Vehículo _(role:plugin)_
+- `APP-3-2` Plugin · filtros admin WP_Query por estado_vehiculo _(role:plugin)_
+- `APP-3-3` Orchestrator · journey map Spring Vehiculos→CPT _(role:orchestrator)_
 

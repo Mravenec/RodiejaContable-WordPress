@@ -19,3 +19,6 @@
 {"at":"2026-11-10T06:19:56.449Z","type":"move","issueId":"APP-16-3","from":"doing","to":"testing"}
 {"at":"2026-11-10T06:19:56.525Z","type":"checklist","issueId":"APP-16-3","item":"2"}
 {"at":"2026-11-10T06:19:56.662Z","type":"move","issueId":"APP-16-3","from":"testing","to":"done"}
+{"at":"2026-11-10T07:21:57.533Z","type":"move","issueId":"APP-16-1","from":"done","to":"summarize","summary_html":"summaries/16-tools-import-export-beginner.html"}
+{"at":"2026-11-10T07:21:57.606Z","type":"move","issueId":"APP-16-2","from":"done","to":"summarize","summary_html":"summaries/16-tools-import-export-beginner.html"}
+{"at":"2026-11-10T07:21:57.685Z","type":"move","issueId":"APP-16-3","from":"done","to":"summarize","summary_html":"summaries/16-tools-import-export-beginner.html"}

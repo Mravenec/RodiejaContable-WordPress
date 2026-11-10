@@ -11,3 +11,5 @@
 {"at":"2026-11-10T06:19:49.012Z","type":"move","issueId":"APP-10-1","from":"doing","to":"testing"}
 {"at":"2026-11-10T06:19:49.084Z","type":"checklist","issueId":"APP-10-1","item":"2"}
 {"at":"2026-11-10T06:19:49.221Z","type":"move","issueId":"APP-10-1","from":"testing","to":"done"}
+{"at":"2026-11-10T07:21:56.504Z","type":"move","issueId":"APP-10-1","from":"done","to":"summarize","summary_html":"summaries/10-reportes-export-beginner.html"}
+{"at":"2026-11-10T07:21:56.654Z","type":"move","issueId":"APP-10-2","from":"done","to":"summarize","summary_html":"summaries/10-reportes-export-beginner.html"}

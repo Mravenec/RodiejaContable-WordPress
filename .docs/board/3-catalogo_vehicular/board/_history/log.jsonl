@@ -19,3 +19,6 @@
 {"at":"2026-11-10T05:41:11.417Z","type":"move","issueId":"APP-3-3","from":"doing","to":"testing"}
 {"at":"2026-11-10T05:41:11.488Z","type":"checklist","issueId":"APP-3-3","item":"2"}
 {"at":"2026-11-10T05:41:11.562Z","type":"move","issueId":"APP-3-3","from":"testing","to":"done"}
+{"at":"2026-11-10T07:21:57.754Z","type":"move","issueId":"APP-3-1","from":"done","to":"summarize","summary_html":"summaries/3-catalogo-vehicular-beginner.html"}
+{"at":"2026-11-10T07:21:57.822Z","type":"move","issueId":"APP-3-2","from":"done","to":"summarize","summary_html":"summaries/3-catalogo-vehicular-beginner.html"}
+{"at":"2026-11-10T07:21:57.891Z","type":"move","issueId":"APP-3-3","from":"done","to":"summarize","summary_html":"summaries/3-catalogo-vehicular-beginner.html"}

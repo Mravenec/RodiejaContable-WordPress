@@ -14,6 +14,13 @@
           "ms": 85694,
           "close": "done",
           "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T07:21:58.175Z",
+          "end": "2026-11-10T07:21:58.175Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": "plugin-agent-1"
         }
       ]
     },
@@ -28,6 +35,13 @@
           "ms": 761,
           "close": "done",
           "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T07:21:58.246Z",
+          "end": "2026-11-10T07:21:58.246Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": "plugin-agent-1"
         }
       ]
     },
@@ -41,6 +55,13 @@
           "end": "2026-11-10T05:44:55.887Z",
           "ms": 754,
           "close": "done",
+          "agent": "security-agent-1"
+        },
+        {
+          "start": "2026-11-10T07:21:58.320Z",
+          "end": "2026-11-10T07:21:58.320Z",
+          "ms": 0,
+          "close": "summarize",
           "agent": "security-agent-1"
         }
       ]

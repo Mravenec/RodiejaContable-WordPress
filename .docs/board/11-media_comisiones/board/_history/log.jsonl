@@ -11,3 +11,5 @@
 {"at":"2026-11-10T06:19:50.010Z","type":"move","issueId":"APP-11-1","from":"doing","to":"testing"}
 {"at":"2026-11-10T06:19:50.078Z","type":"checklist","issueId":"APP-11-1","item":"2"}
 {"at":"2026-11-10T06:19:50.208Z","type":"move","issueId":"APP-11-1","from":"testing","to":"done"}
+{"at":"2026-11-10T07:21:56.752Z","type":"move","issueId":"APP-11-1","from":"done","to":"summarize","summary_html":"summaries/11-media-comisiones-beginner.html"}
+{"at":"2026-11-10T07:21:56.829Z","type":"move","issueId":"APP-11-2","from":"done","to":"summarize","summary_html":"summaries/11-media-comisiones-beginner.html"}

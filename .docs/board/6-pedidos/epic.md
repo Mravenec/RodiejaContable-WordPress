@@ -5,7 +5,7 @@
 | Id | 6 |
 | Slug | pedidos |
 | Status | in_progress |
-| Progress | **83%** (0/3 in summarize · column + checklist) |
+| Progress | **100%** (3/3 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,11 +35,11 @@ _empty_
 
 ### 3. done
 
-- `APP-6-1` Plugin · meta pedidos Audatex-shape (cotización/WAN/VIN/…) _(role:plugin)_
-- `APP-6-2` Plugin · CPT hijo rodieja_pedido_item + admin _(role:plugin)_
-- `APP-6-3` Plugin · REST CRUD pedidos permission_callback + seed _(role:plugin)_
+_empty_
 
 ### 4. summarize
 
-_empty_
+- `APP-6-1` Plugin · meta pedidos Audatex-shape (cotización/WAN/VIN/…) _(role:plugin)_
+- `APP-6-2` Plugin · CPT hijo rodieja_pedido_item + admin _(role:plugin)_
+- `APP-6-3` Plugin · REST CRUD pedidos permission_callback + seed _(role:plugin)_
 

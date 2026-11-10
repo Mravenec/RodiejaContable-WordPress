@@ -28,6 +28,13 @@
           "ms": 296,
           "close": "done",
           "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T07:21:58.389Z",
+          "end": "2026-11-10T07:21:58.389Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": "plugin-agent-1"
         }
       ]
     },
@@ -42,6 +49,13 @@
           "ms": 448,
           "close": "done",
           "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T07:21:58.466Z",
+          "end": "2026-11-10T07:21:58.466Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": "plugin-agent-1"
         }
       ]
     },
@@ -55,6 +69,13 @@
           "end": "2026-11-10T06:19:57.716Z",
           "ms": 443,
           "close": "done",
+          "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T07:21:58.538Z",
+          "end": "2026-11-10T07:21:58.538Z",
+          "ms": 0,
+          "close": "summarize",
           "agent": "plugin-agent-1"
         }
       ]

@@ -5,7 +5,7 @@
 | Id | 12 |
 | Slug | auth_profile_wp |
 | Status | in_progress |
-| Progress | **83%** (0/2 in summarize · column + checklist) |
+| Progress | **100%** (2/2 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,10 +35,10 @@ _empty_
 
 ### 3. done
 
-- `APP-12-1` Plugin · profile fields + link empleado↔user_id _(role:plugin)_
-- `APP-12-2` Security · roles/caps matrix verify contador vs admin _(role:security)_
+_empty_
 
 ### 4. summarize
 
-_empty_
+- `APP-12-1` Plugin · profile fields + link empleado↔user_id _(role:plugin)_
+- `APP-12-2` Security · roles/caps matrix verify contador vs admin _(role:security)_
 

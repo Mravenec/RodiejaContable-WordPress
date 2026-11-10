@@ -5,7 +5,7 @@
 | Id | 9 |
 | Slug | historiales_auditoria |
 | Status | in_progress |
-| Progress | **83%** (0/3 in summarize · column + checklist) |
+| Progress | **100%** (3/3 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,11 +35,11 @@ _empty_
 
 ### 3. done
 
-- `APP-9-1` Plugin · CPT rodieja_evento_historial + hooks save_post _(role:plugin)_
-- `APP-9-2` Plugin · admin list filtrable por CPT origen _(role:plugin)_
-- `APP-9-3` Security · solo caps manage_rodieja en historial _(role:security)_
+_empty_
 
 ### 4. summarize
 
-_empty_
+- `APP-9-1` Plugin · CPT rodieja_evento_historial + hooks save_post _(role:plugin)_
+- `APP-9-2` Plugin · admin list filtrable por CPT origen _(role:plugin)_
+- `APP-9-3` Security · solo caps manage_rodieja en historial _(role:security)_
 

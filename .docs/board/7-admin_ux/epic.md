@@ -5,7 +5,7 @@
 | Id | 7 |
 | Slug | admin_ux |
 | Status | in_progress |
-| Progress | **83%** (0/3 in summarize · column + checklist) |
+| Progress | **100%** (3/3 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,11 +35,11 @@ _empty_
 
 ### 3. done
 
-- `APP-7-1` Plugin · hub Rodieja links CPT + seed _(role:plugin)_
-- `APP-7-2` Plugin · pantallas resumen inventario/ventas nativas _(role:plugin)_
-- `APP-7-3` Plugin · empleado meta user_id ↔ WP user contador _(role:plugin)_
+_empty_
 
 ### 4. summarize
 
-_empty_
+- `APP-7-1` Plugin · hub Rodieja links CPT + seed _(role:plugin)_
+- `APP-7-2` Plugin · pantallas resumen inventario/ventas nativas _(role:plugin)_
+- `APP-7-3` Plugin · empleado meta user_id ↔ WP user contador _(role:plugin)_
 

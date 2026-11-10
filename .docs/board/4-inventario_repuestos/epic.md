@@ -5,7 +5,7 @@
 | Id | 4 |
 | Slug | inventario_repuestos |
 | Status | in_progress |
-| Progress | **83%** (0/3 in summarize · column + checklist) |
+| Progress | **100%** (3/3 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,11 +35,11 @@ _empty_
 
 ### 3. done
 
-- `APP-4-1` Plugin · stock/precio meta UI + tax rodieja_parte _(role:plugin)_
-- `APP-4-2` Plugin · vínculo repuesto↔vehículo en admin _(role:plugin)_
-- `APP-4-3` Plugin · listado stock crítico WP_Query admin page _(role:plugin)_
+_empty_
 
 ### 4. summarize
 
-_empty_
+- `APP-4-1` Plugin · stock/precio meta UI + tax rodieja_parte _(role:plugin)_
+- `APP-4-2` Plugin · vínculo repuesto↔vehículo en admin _(role:plugin)_
+- `APP-4-3` Plugin · listado stock crítico WP_Query admin page _(role:plugin)_
 

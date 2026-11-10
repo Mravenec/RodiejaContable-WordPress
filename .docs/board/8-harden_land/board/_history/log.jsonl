@@ -17,3 +17,6 @@
 {"at":"2026-11-10T06:20:04.187Z","type":"move","issueId":"APP-8-1","from":"doing","to":"testing"}
 {"at":"2026-11-10T06:20:04.269Z","type":"checklist","issueId":"APP-8-1","item":"2"}
 {"at":"2026-11-10T06:20:04.421Z","type":"move","issueId":"APP-8-1","from":"testing","to":"done"}
+{"at":"2026-11-10T07:21:58.834Z","type":"move","issueId":"APP-8-1","from":"done","to":"summarize","summary_html":"summaries/8-harden-land-beginner.html"}
+{"at":"2026-11-10T07:21:58.905Z","type":"move","issueId":"APP-8-2","from":"done","to":"summarize","summary_html":"summaries/8-harden-land-beginner.html"}
+{"at":"2026-11-10T07:21:58.976Z","type":"move","issueId":"APP-8-3","from":"done","to":"summarize","summary_html":"summaries/8-harden-land-beginner.html"}

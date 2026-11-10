@@ -14,6 +14,13 @@
           "ms": 446,
           "close": "done",
           "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T07:21:58.609Z",
+          "end": "2026-11-10T07:21:58.609Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": "plugin-agent-1"
         }
       ]
     },
@@ -28,6 +35,13 @@
           "ms": 368,
           "close": "done",
           "agent": null
+        },
+        {
+          "start": "2026-11-10T07:21:58.754Z",
+          "end": "2026-11-10T07:21:58.754Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": null
         }
       ]
     },
@@ -41,6 +55,13 @@
           "end": "2026-11-10T06:20:02.788Z",
           "ms": 512,
           "close": "done",
+          "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T07:21:58.681Z",
+          "end": "2026-11-10T07:21:58.681Z",
+          "ms": 0,
+          "close": "summarize",
           "agent": "plugin-agent-1"
         }
       ]

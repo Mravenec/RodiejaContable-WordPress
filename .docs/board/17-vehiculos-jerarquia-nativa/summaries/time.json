@@ -1,0 +1,64 @@
+{
+  "idle_ms": 180000,
+  "started_at": "2026-11-10T07:14:42.993Z",
+  "finished_at": null,
+  "issues": {
+    "APP-17-1": {
+      "active_ms": 87854,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T07:14:42.993Z",
+          "end": "2026-11-10T07:16:10.847Z",
+          "ms": 87854,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T07:18:32.270Z",
+          "end": "2026-11-10T07:18:32.270Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": "plugin-agent-1"
+        }
+      ]
+    },
+    "APP-17-2": {
+      "active_ms": 47226,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-10T07:16:13.133Z",
+          "end": "2026-11-10T07:17:00.359Z",
+          "ms": 47226,
+          "close": "done",
+          "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T07:18:32.350Z",
+          "end": "2026-11-10T07:18:32.350Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": "plugin-agent-1"
+        }
+      ]
+    }
+  },
+  "land": {
+    "started_at": "2026-11-10T07:18:41.157Z",
+    "finished_at": "2026-11-10T07:18:50.171Z",
+    "paused": false,
+    "open": null,
+    "segments": [
+      {
+        "start": "2026-11-10T07:18:41.157Z",
+        "end": "2026-11-10T07:18:50.171Z",
+        "ms": 9014,
+        "close": "land-finish",
+        "agent": "land-agent"
+      }
+    ]
+  }
+}

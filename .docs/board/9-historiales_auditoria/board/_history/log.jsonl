@@ -19,3 +19,6 @@
 {"at":"2026-11-10T06:20:05.841Z","type":"move","issueId":"APP-9-3","from":"doing","to":"testing"}
 {"at":"2026-11-10T06:20:05.916Z","type":"checklist","issueId":"APP-9-3","item":"2"}
 {"at":"2026-11-10T06:20:06.054Z","type":"move","issueId":"APP-9-3","from":"testing","to":"done"}
+{"at":"2026-11-10T07:21:59.046Z","type":"move","issueId":"APP-9-1","from":"done","to":"summarize","summary_html":"summaries/9-historiales-auditoria-beginner.html"}
+{"at":"2026-11-10T07:21:59.117Z","type":"move","issueId":"APP-9-2","from":"done","to":"summarize","summary_html":"summaries/9-historiales-auditoria-beginner.html"}
+{"at":"2026-11-10T07:21:59.187Z","type":"move","issueId":"APP-9-3","from":"done","to":"summarize","summary_html":"summaries/9-historiales-auditoria-beginner.html"}

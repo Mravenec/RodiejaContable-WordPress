@@ -5,7 +5,7 @@
 | Id | 11 |
 | Slug | media_comisiones |
 | Status | in_progress |
-| Progress | **83%** (0/2 in summarize · column + checklist) |
+| Progress | **100%** (2/2 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,10 +35,10 @@ _empty_
 
 ### 3. done
 
-- `APP-11-1` Plugin · featured image / gallery en vehículo y repuesto _(role:plugin)_
-- `APP-11-2` Plugin · meta comisión/pago en pedido + admin columns _(role:plugin)_
+_empty_
 
 ### 4. summarize
 
-_empty_
+- `APP-11-1` Plugin · featured image / gallery en vehículo y repuesto _(role:plugin)_
+- `APP-11-2` Plugin · meta comisión/pago en pedido + admin columns _(role:plugin)_
 

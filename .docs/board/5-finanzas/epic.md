@@ -5,7 +5,7 @@
 | Id | 5 |
 | Slug | finanzas |
 | Status | in_progress |
-| Progress | **83%** (0/3 in summarize · column + checklist) |
+| Progress | **100%** (3/3 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,11 +35,11 @@ _empty_
 
 ### 3. done
 
-- `APP-5-1` Plugin · transacciones ingreso/egreso + tax + vínculos _(role:plugin)_
-- `APP-5-2` Plugin · dashboard montos WP_Query/meta _(role:plugin)_
-- `APP-5-3` Security · caps contador en REST mutaciones _(role:security)_
+_empty_
 
 ### 4. summarize
 
-_empty_
+- `APP-5-1` Plugin · transacciones ingreso/egreso + tax + vínculos _(role:plugin)_
+- `APP-5-2` Plugin · dashboard montos WP_Query/meta _(role:plugin)_
+- `APP-5-3` Security · caps contador en REST mutaciones _(role:security)_
 

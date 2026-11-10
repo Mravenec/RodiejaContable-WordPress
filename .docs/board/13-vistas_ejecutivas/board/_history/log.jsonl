@@ -12,3 +12,5 @@
 {"at":"2026-11-10T06:19:52.044Z","type":"move","issueId":"APP-13-2","from":"doing","to":"testing"}
 {"at":"2026-11-10T06:19:52.119Z","type":"checklist","issueId":"APP-13-2","item":"2"}
 {"at":"2026-11-10T06:19:52.255Z","type":"move","issueId":"APP-13-2","from":"testing","to":"done"}
+{"at":"2026-11-10T07:21:57.036Z","type":"move","issueId":"APP-13-1","from":"done","to":"summarize","summary_html":"summaries/13-vistas-ejecutivas-beginner.html"}
+{"at":"2026-11-10T07:21:57.105Z","type":"move","issueId":"APP-13-2","from":"done","to":"summarize","summary_html":"summaries/13-vistas-ejecutivas-beginner.html"}

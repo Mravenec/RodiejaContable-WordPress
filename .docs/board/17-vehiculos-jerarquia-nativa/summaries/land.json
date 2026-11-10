@@ -1,0 +1,13 @@
+{
+  "status": "landed",
+  "started_at": "2026-11-10T07:18:41.149Z",
+  "finished_at": "2026-11-10T07:18:50.169Z",
+  "merge_commit": "e6cefdfb55d64917d8f452504daa52d31da38c8d",
+  "conflicts": [],
+  "smoke_ok": true,
+  "smoke_at": "2026-11-10T07:18:47.938Z",
+  "git": "git push origin main",
+  "note": "Epic 17 landed: Vista Ver por Generaciones (hierarchy) via native get_posts+meta; Contracts→Repo→Service→Admin; menu under Vehículos.",
+  "recorded_at": "2026-11-10T07:18:48.006Z",
+  "pushed_at": "2026-11-10T07:18:50.169Z"
+}

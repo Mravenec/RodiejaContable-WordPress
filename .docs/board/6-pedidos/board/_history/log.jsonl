@@ -21,3 +21,6 @@
 {"at":"2026-11-10T06:19:57.932Z","type":"evidence","issueId":"APP-6-1","title":"APP-6-1 implement"}
 {"at":"2026-11-10T06:19:58.010Z","type":"move","issueId":"APP-6-1","from":"done","to":"testing"}
 {"at":"2026-11-10T06:19:58.228Z","type":"move","issueId":"APP-6-1","from":"testing","to":"done"}
+{"at":"2026-11-10T07:21:58.396Z","type":"move","issueId":"APP-6-1","from":"done","to":"summarize","summary_html":"summaries/6-pedidos-beginner.html"}
+{"at":"2026-11-10T07:21:58.475Z","type":"move","issueId":"APP-6-2","from":"done","to":"summarize","summary_html":"summaries/6-pedidos-beginner.html"}
+{"at":"2026-11-10T07:21:58.547Z","type":"move","issueId":"APP-6-3","from":"done","to":"summarize","summary_html":"summaries/6-pedidos-beginner.html"}

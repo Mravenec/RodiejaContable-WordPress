@@ -5,7 +5,7 @@
 | Id | 16 |
 | Slug | tools_import_export |
 | Status | in_progress |
-| Progress | **83%** (0/3 in summarize · column + checklist) |
+| Progress | **100%** (3/3 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,11 +35,11 @@ _empty_
 
 ### 3. done
 
-- `APP-16-1` Plugin · Tools submenu export all CPT JSON/CSV nonce _(role:plugin)_
-- `APP-16-2` Plugin · Tools import JSON validate+wp_insert_post _(role:plugin)_
-- `APP-16-3` Orchestrator · map DatabaseImportExport→Tools nativos _(role:orchestrator)_
+_empty_
 
 ### 4. summarize
 
-_empty_
+- `APP-16-1` Plugin · Tools submenu export all CPT JSON/CSV nonce _(role:plugin)_
+- `APP-16-2` Plugin · Tools import JSON validate+wp_insert_post _(role:plugin)_
+- `APP-16-3` Orchestrator · map DatabaseImportExport→Tools nativos _(role:orchestrator)_
 

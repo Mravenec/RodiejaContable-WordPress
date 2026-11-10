@@ -5,7 +5,7 @@
 | Id | 8 |
 | Slug | harden_land |
 | Status | in_progress |
-| Progress | **83%** (0/3 in summarize · column + checklist) |
+| Progress | **100%** (3/3 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,11 +35,11 @@ _empty_
 
 ### 3. done
 
-- `APP-8-1` Security · MU audit + DISALLOW_FILE_EDIT + layer-audit _(role:security)_
-- `APP-8-2` Plugin · smoke DDEV health/stats/REST 401 anon _(role:plugin)_
-- `APP-8-3` Orchestrator · summarize handoff land.json all epics _(role:orchestrator)_
+_empty_
 
 ### 4. summarize
 
-_empty_
+- `APP-8-1` Security · MU audit + DISALLOW_FILE_EDIT + layer-audit _(role:security)_
+- `APP-8-2` Plugin · smoke DDEV health/stats/REST 401 anon _(role:plugin)_
+- `APP-8-3` Orchestrator · summarize handoff land.json all epics _(role:orchestrator)_
 

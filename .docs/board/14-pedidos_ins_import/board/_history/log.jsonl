@@ -19,3 +19,6 @@
 {"at":"2026-11-10T06:19:53.637Z","type":"move","issueId":"APP-14-3","from":"doing","to":"testing"}
 {"at":"2026-11-10T06:19:53.710Z","type":"checklist","issueId":"APP-14-3","item":"2"}
 {"at":"2026-11-10T06:19:53.847Z","type":"move","issueId":"APP-14-3","from":"testing","to":"done"}
+{"at":"2026-11-10T07:21:57.175Z","type":"move","issueId":"APP-14-1","from":"done","to":"summarize","summary_html":"summaries/14-pedidos-ins-import-beginner.html"}
+{"at":"2026-11-10T07:21:57.247Z","type":"move","issueId":"APP-14-2","from":"done","to":"summarize","summary_html":"summaries/14-pedidos-ins-import-beginner.html"}
+{"at":"2026-11-10T07:21:57.315Z","type":"move","issueId":"APP-14-3","from":"done","to":"summarize","summary_html":"summaries/14-pedidos-ins-import-beginner.html"}

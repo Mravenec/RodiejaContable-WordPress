@@ -5,7 +5,7 @@
 | Id | 15 |
 | Slug | geo_ubicaciones |
 | Status | in_progress |
-| Progress | **83%** (0/2 in summarize · column + checklist) |
+| Progress | **100%** (2/2 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -35,10 +35,10 @@ _empty_
 
 ### 3. done
 
-- `APP-15-1` Plugin · meta geo (provincia/cantón/lat/lng) + admin fields _(role:plugin)_
-- `APP-15-2` Plugin · Options lista cantones CR (native Options API) _(role:plugin)_
+_empty_
 
 ### 4. summarize
 
-_empty_
+- `APP-15-1` Plugin · meta geo (provincia/cantón/lat/lng) + admin fields _(role:plugin)_
+- `APP-15-2` Plugin · Options lista cantones CR (native Options API) _(role:plugin)_
 

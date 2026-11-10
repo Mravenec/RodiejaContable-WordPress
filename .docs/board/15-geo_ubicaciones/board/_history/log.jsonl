@@ -12,3 +12,5 @@
 {"at":"2026-11-10T06:19:54.682Z","type":"move","issueId":"APP-15-2","from":"doing","to":"testing"}
 {"at":"2026-11-10T06:19:54.766Z","type":"checklist","issueId":"APP-15-2","item":"2"}
 {"at":"2026-11-10T06:19:54.926Z","type":"move","issueId":"APP-15-2","from":"testing","to":"done"}
+{"at":"2026-11-10T07:21:57.384Z","type":"move","issueId":"APP-15-1","from":"done","to":"summarize","summary_html":"summaries/15-geo-ubicaciones-beginner.html"}
+{"at":"2026-11-10T07:21:57.461Z","type":"move","issueId":"APP-15-2","from":"done","to":"summarize","summary_html":"summaries/15-geo-ubicaciones-beginner.html"}

@@ -11,3 +11,5 @@
 {"at":"2026-11-10T06:19:51.010Z","type":"move","issueId":"APP-12-1","from":"doing","to":"testing"}
 {"at":"2026-11-10T06:19:51.085Z","type":"checklist","issueId":"APP-12-1","item":"2"}
 {"at":"2026-11-10T06:19:51.223Z","type":"move","issueId":"APP-12-1","from":"testing","to":"done"}
+{"at":"2026-11-10T07:21:56.895Z","type":"move","issueId":"APP-12-1","from":"done","to":"summarize","summary_html":"summaries/12-auth-profile-wp-beginner.html"}
+{"at":"2026-11-10T07:21:56.964Z","type":"move","issueId":"APP-12-2","from":"done","to":"summarize","summary_html":"summaries/12-auth-profile-wp-beginner.html"}

@@ -19,3 +19,6 @@
 {"at":"2026-11-10T05:44:55.741Z","type":"move","issueId":"APP-5-3","from":"doing","to":"testing"}
 {"at":"2026-11-10T05:44:55.813Z","type":"checklist","issueId":"APP-5-3","item":"2"}
 {"at":"2026-11-10T05:44:55.887Z","type":"move","issueId":"APP-5-3","from":"testing","to":"done"}
+{"at":"2026-11-10T07:21:58.183Z","type":"move","issueId":"APP-5-1","from":"done","to":"summarize","summary_html":"summaries/5-finanzas-beginner.html"}
+{"at":"2026-11-10T07:21:58.254Z","type":"move","issueId":"APP-5-2","from":"done","to":"summarize","summary_html":"summaries/5-finanzas-beginner.html"}
+{"at":"2026-11-10T07:21:58.327Z","type":"move","issueId":"APP-5-3","from":"done","to":"summarize","summary_html":"summaries/5-finanzas-beginner.html"}

@@ -19,3 +19,6 @@
 {"at":"2026-11-10T05:43:23.118Z","type":"move","issueId":"APP-4-3","from":"doing","to":"testing"}
 {"at":"2026-11-10T05:43:23.206Z","type":"checklist","issueId":"APP-4-3","item":"2"}
 {"at":"2026-11-10T05:43:23.280Z","type":"move","issueId":"APP-4-3","from":"testing","to":"done"}
+{"at":"2026-11-10T07:21:57.963Z","type":"move","issueId":"APP-4-1","from":"done","to":"summarize","summary_html":"summaries/4-inventario-repuestos-beginner.html"}
+{"at":"2026-11-10T07:21:58.038Z","type":"move","issueId":"APP-4-2","from":"done","to":"summarize","summary_html":"summaries/4-inventario-repuestos-beginner.html"}
+{"at":"2026-11-10T07:21:58.110Z","type":"move","issueId":"APP-4-3","from":"done","to":"summarize","summary_html":"summaries/4-inventario-repuestos-beginner.html"}

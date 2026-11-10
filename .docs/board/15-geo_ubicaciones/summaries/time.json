@@ -14,6 +14,13 @@
           "ms": 444,
           "close": "done",
           "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T07:21:57.377Z",
+          "end": "2026-11-10T07:21:57.377Z",
+          "ms": 0,
+          "close": "summarize",
+          "agent": "plugin-agent-1"
         }
       ]
     },
@@ -27,6 +34,13 @@
           "end": "2026-11-10T06:19:54.926Z",
           "ms": 478,
           "close": "done",
+          "agent": "plugin-agent-1"
+        },
+        {
+          "start": "2026-11-10T07:21:57.453Z",
+          "end": "2026-11-10T07:21:57.453Z",
+          "ms": 0,
+          "close": "summarize",
           "agent": "plugin-agent-1"
         }
       ]

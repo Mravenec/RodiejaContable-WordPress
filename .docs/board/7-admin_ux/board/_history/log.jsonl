@@ -18,3 +18,6 @@
 {"at":"2026-11-10T06:20:02.540Z","type":"move","issueId":"APP-7-2","from":"doing","to":"testing"}
 {"at":"2026-11-10T06:20:02.626Z","type":"checklist","issueId":"APP-7-2","item":"2"}
 {"at":"2026-11-10T06:20:02.788Z","type":"move","issueId":"APP-7-2","from":"testing","to":"done"}
+{"at":"2026-11-10T07:21:58.616Z","type":"move","issueId":"APP-7-1","from":"done","to":"summarize","summary_html":"summaries/7-admin-ux-beginner.html"}
+{"at":"2026-11-10T07:21:58.688Z","type":"move","issueId":"APP-7-2","from":"done","to":"summarize","summary_html":"summaries/7-admin-ux-beginner.html"}
+{"at":"2026-11-10T07:21:58.760Z","type":"move","issueId":"APP-7-3","from":"done","to":"summarize","summary_html":"summaries/7-admin-ux-beginner.html"}

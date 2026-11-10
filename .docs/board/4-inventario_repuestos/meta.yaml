@@ -2,8 +2,8 @@ id: 4
 slug: inventario_repuestos
 title: "Inventario repuestos: stock, partes, crítico"
 color: "#b45309"
-status: in_progress
+status: completed
 created_at: "2026-11-10T05:35:43.299Z"
-updated_at: "2026-11-10T05:43:23.283Z"
+updated_at: "2026-11-10T07:21:58.111Z"
 summary_html: summaries/4-inventario-repuestos-beginner.html
 summary_updated_at: "2026-11-10T05:43:23.287Z"
