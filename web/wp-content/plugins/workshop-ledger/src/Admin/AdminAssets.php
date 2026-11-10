@@ -15,8 +15,18 @@ final class AdminAssets {
 
 	public function register(): void {
 		add_filter( 'admin_body_class', array( $this, 'body_class' ) );
+		add_filter( 'body_class', array( $this, 'front_body_class' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_front' ) );
+	}
+
+	/**
+	 * @param string[] $classes
+	 * @return string[]
+	 */
+	public function front_body_class( array $classes ): array {
+		$classes[] = 'workshop-ledger-front';
+		return $classes;
 	}
 
 	public function body_class( string $classes ): string {
@@ -93,11 +103,13 @@ final class AdminAssets {
 		if ( is_admin() ) {
 			return;
 		}
+		$front_css = WL_PLUGIN_DIR . 'assets/css/front.css';
+		$ver_front = is_readable( $front_css ) ? (string) filemtime( $front_css ) : WL_PLUGIN_VERSION;
 		wp_enqueue_style(
 			'workshop-ledger-front',
 			WL_PLUGIN_URL . 'assets/css/front.css',
 			array(),
-			WL_PLUGIN_VERSION
+			$ver_front
 		);
 	}
 
