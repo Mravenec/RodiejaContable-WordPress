@@ -32,7 +32,7 @@ final class FooterBrandNav {
 			: esc_url( wp_login_url( home_url( '/' ) ) );
 		$app_label = is_user_logged_in()
 			? esc_html__( 'Open app', 'workshop-ledger' )
-			: esc_html__( 'Sign in', 'workshop-ledger' );
+			: esc_html__( 'Login', 'workshop-ledger' );
 
 		$primary = '<ul class="wp-block-navigation__container is-vertical wp-block-navigation">'
 			. $this->li( $home, esc_html__( 'Home', 'workshop-ledger' ) )
