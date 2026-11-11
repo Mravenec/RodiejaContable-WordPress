@@ -1,4 +1,0 @@
-{"at":"2026-11-11T03:14:10.602Z","type":"create","issueId":"APP-42-1","column":"backlog"}
-{"at":"2026-11-11T03:15:51.485Z","type":"claim","issueId":"APP-42-1","agent":"plugin-agent-42"}
-{"at":"2026-11-11T03:16:52.975Z","type":"checklist","issueId":"APP-42-1","item":"1"}
-{"at":"2026-11-11T03:16:53.124Z","type":"evidence","issueId":"APP-42-1","title":"Native pages and front.css"}
