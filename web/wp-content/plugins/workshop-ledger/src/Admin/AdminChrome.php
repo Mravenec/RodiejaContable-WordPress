@@ -1,7 +1,9 @@
 <?php
 /**
- * Soften core WP admin menus for WorkshopLedger operators (native remove_menu_page).
- * Mirrors Read-Only sider: product modules first; keep Media + Users.
+ * Core WordPress admin menus stay, under the Workshop Ledger product menu.
+ * Product slugs lead; Dashboard, Posts, Media, Pages, Comments, Appearance,
+ * Plugins, Users, Tools, and Settings follow. WordPress capabilities still
+ * hide screens the current role cannot use.
  *
  * @package WorkshopLedger
  */
@@ -9,8 +11,6 @@
 declare(strict_types=1);
 
 namespace WorkshopLedger\Admin;
-
-use WorkshopLedger\Security\CapabilityGate;
 
 final class AdminChrome {
 
@@ -20,26 +20,16 @@ final class AdminChrome {
 		add_filter( 'menu_order', array( $this, 'reorder' ) );
 	}
 
+	/**
+	 * Core menus stay. Do not remove Dashboard, Posts, Media, Pages,
+	 * Comments, Appearance, Plugins, Users, Tools, or Settings.
+	 */
 	public function tidy_core_menus(): void {
-		if ( ! current_user_can( CapabilityGate::MANAGE ) && ! current_user_can( 'manage_options' ) ) {
-			return;
-		}
-
-		// Hide WP chrome Read-Only never shows (still native — not removed from disk).
-		remove_menu_page( 'index.php' );           // WP Dashboard (WorkshopLedger Home replaces it)
-		remove_menu_page( 'edit.php' );            // Posts
-		remove_menu_page( 'edit-comments.php' );   // Comments
-		remove_menu_page( 'edit.php?post_type=page' ); // Pages
-		remove_menu_page( 'themes.php' );          // Appearance
-		remove_menu_page( 'plugins.php' );         // Plugins
-		remove_menu_page( 'tools.php' );           // WP Tools (Settings → Tools is ours)
-		remove_menu_page( 'options-general.php' ); // WP Settings (WorkshopLedger Settings replaces it)
-
-		// Keep: Media (upload.php), Users (users.php) — roles assignment is native Users.
+		// Core screens stay registered. WordPress hides what this role cannot open.
 	}
 
 	/**
-	 * Read-Only sider order: Home → Vehicles → Inventory → Finance → Audatex InPart → Reports → Settings.
+	 * Product menu first, then the default WordPress screens, then anything else.
 	 *
 	 * @param string[] $menu_order
 	 * @return string[]
@@ -53,8 +43,16 @@ final class AdminChrome {
 			AdminMenu::SLUG_INPART,
 			AdminMenu::SLUG_REPORTES,
 			AdminMenu::SLUG_CONFIG,
+			'index.php',
+			'edit.php',
 			'upload.php',
+			'edit.php?post_type=page',
+			'edit-comments.php',
+			'themes.php',
+			'plugins.php',
 			'users.php',
+			'tools.php',
+			'options-general.php',
 		);
 		$rest = array_values( array_diff( $menu_order, $preferred ) );
 		return array_values( array_unique( array_merge( $preferred, $rest ) ) );

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Epic 42 — Public home: a distinctive workshop landing — Living summary</title>
+<style>
+:root{
+  --green900:#0f3d2e; --green700:#1b5e42; --green500:#2e8b63;
+  --cream50:#f7f4ec; --cream100:#efe9dc; --copper600:#b06a2c;
+  --ink900:#1c2622; --ink600:#4a5852; --danger:#a23b2d;
+  --code-bg:#0f1a15; --code-fg:#e8f0ea;
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth;}
+body{
+  font-family:"Segoe UI",system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+  line-height:1.65; color:var(--ink900); background:var(--cream50);
+  margin:0; font-size:16px; overflow-x:hidden;
+}
+p,li{max-width:72ch;}
+.wrap{max-width:100%; margin:0 auto; padding:10px 14px calc(56px + env(safe-area-inset-bottom,0px));}
+header.hero{
+  background:linear-gradient(135deg,var(--green900),var(--green700));
+  color:#fff; border-radius:14px; padding:22px 18px; margin-bottom:18px;
+  box-shadow:0 4px 16px rgba(15,61,46,.14);
+}
+header.hero h1{margin:0 0 8px; font-size:1.35rem; font-weight:800; letter-spacing:-.3px;}
+header.hero p{margin:4px 0; opacity:.92; font-size:.94rem;}
+.badge{display:inline-block; background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.3);
+  padding:3px 10px; border-radius:999px; font-size:.76rem; margin:0 6px 6px 0;}
+h2{color:var(--green900); font-weight:800; margin-top:28px; font-size:1.22rem;
+  border-bottom:2px solid var(--cream100); padding-bottom:6px;}
+h3{color:var(--green700); font-weight:700; margin-top:20px; font-size:1.02rem;}
+a{color:var(--green700);}
+.card{background:#fff; border:1px solid var(--cream100); border-radius:12px;
+  padding:16px; margin:12px 0; box-shadow:0 1px 4px rgba(15,61,46,.06);}
+.step{border-left:5px solid var(--green500);}
+.note{border-left:5px solid var(--copper600); background:#fdf7f0;}
+.warn{border-left:5px solid var(--danger); background:#fbf0ee;}
+.ok{border-left:5px solid var(--green500); background:#f0f7f3;}
+.beginner p{margin:10px 0;}
+.beginner p:first-of-type{margin-top:0;}
+code{background:var(--cream100); padding:1px 6px; border-radius:5px; font-size:.9em;
+  font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace; color:var(--green900);}
+pre{background:var(--code-bg); color:var(--code-fg); padding:14px; border-radius:10px;
+  overflow-x:auto; font-size:.79rem; line-height:1.5;
+  font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;}
+pre code{background:none; color:inherit; padding:0;}
+.filepath{display:block; background:var(--green900); color:#cfe6da; font-size:.78rem;
+  padding:6px 12px; border-radius:8px 8px 0 0; margin-bottom:-8px; font-family:Consolas,monospace;}
+.filepath + pre{border-top-left-radius:0; border-top-right-radius:0;}
+.html-window{margin:12px 0;}
+.html-frame{display:block;width:100%;height:240px;border:1px solid var(--cream100);border-radius:0 0 10px 10px;background:#fff;}
+.html-window .filepath + .html-frame{margin-top:0;}
+table{width:100%; border-collapse:collapse; margin:14px 0; background:#fff;}
+th,td{border:1px solid var(--cream100); padding:10px 11px; text-align:left; font-size:.86rem;}
+th{background:var(--green700); color:#fff; font-weight:700;}
+tr:nth-child(even){background:var(--cream50);}
+.table-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch; margin:14px 0;}
+.table-scroll table{min-width:480px; margin:0;}
+.toc{columns:1;}
+.toc a{
+  display:block; padding:13px 14px; margin-bottom:8px;
+  background:var(--cream50); border:1px solid var(--cream100);
+  border-radius:10px; text-decoration:none; font-size:.94rem;
+}
+.faq dt{font-weight:700; color:var(--green900); margin-top:14px;}
+.faq dd{margin:6px 0 0 0; color:var(--ink600);}
+.checklist{list-style:none; padding-left:0;}
+.checklist li{padding:6px 0 6px 30px; position:relative;}
+.checklist li::before{content:"\2611"; position:absolute; left:0; font-size:1.2rem; color:var(--green700);}
+.checklist li.pending::before{content:"\2610";}
+.pill{font-size:.72rem; background:var(--green500); color:#fff; padding:1px 8px; border-radius:999px;}
+.pill-bounce{background:var(--danger);}
+.pill-fail{background:var(--danger);}
+.hist-bounce,.hist-fail{color:var(--danger);}
+.note-pre{white-space:pre-wrap; font-family:inherit; margin:0;}
+.small{font-size:.85rem; color:var(--ink600);}
+.diagram{background:var(--cream50); border:1px dashed var(--cream100); padding:14px; border-radius:8px;
+  font-family:monospace; font-size:.74rem; white-space:pre; overflow-x:auto; line-height:1.5;}
+.mobile-jump{
+  display:flex; gap:8px; position:sticky; top:0; z-index:20;
+  background:rgba(247,244,236,.94); backdrop-filter:blur(8px);
+  padding:8px 0 10px; margin:-10px -14px 14px; padding-left:14px; padding-right:14px;
+  border-bottom:1px solid var(--cream100);
+}
+.mobile-jump a{
+  flex:1; text-align:center; padding:10px 8px;
+  background:#fff; border:1px solid var(--cream100); border-radius:10px;
+  text-decoration:none; font-size:.82rem; font-weight:600; color:var(--green900);
+}
+.ticket{border-top:3px solid var(--green500); padding-top:8px; margin-top:36px;}
+hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+@media (min-width:900px){
+  body{
+    font-size:17px; line-height:1.7;
+    background:linear-gradient(180deg,#ddd8cb 0%,#e8e3d8 80px,#ebe6db 100%);
+    min-height:100vh;
+  }
+  .mobile-jump{display:none;}
+  .wrap{
+    max-width:920px; margin:32px auto 72px; padding:52px 60px 64px;
+    background:#fff; border-radius:10px;
+    box-shadow:0 1px 2px rgba(15,61,46,.04),0 8px 32px rgba(15,61,46,.10),0 0 0 1px rgba(15,61,46,.05);
+  }
+  header.hero{border-radius:18px; padding:36px 40px; margin-bottom:32px;}
+  header.hero h1{font-size:2rem; letter-spacing:-.6px;}
+  header.hero p{font-size:1rem;}
+  .badge{font-size:.8rem; margin-bottom:0;}
+  h2{font-size:1.45rem; margin-top:44px; padding-bottom:10px;}
+  h3{font-size:1.12rem; margin-top:28px;}
+  .card{padding:22px 26px; margin:18px 0; border-radius:14px;}
+  pre{font-size:.88rem; padding:18px 20px;}
+  .diagram{font-size:.84rem; padding:20px;}
+  .toc{columns:2; gap:28px;}
+  .toc a{padding:3px 0; margin-bottom:0; background:none; border:none; border-radius:0; font-size:inherit;}
+  .toc a:hover{text-decoration:underline;}
+  .table-scroll{overflow:visible;}
+  .table-scroll table{min-width:0; width:100%;}
+  th,td{padding:10px 14px; font-size:.93rem;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="mobile-jump" aria-label="Quick jumps">
+  <a href="#toc">Index</a>
+  <a href="#tickets">Tickets</a>
+  <a href="#handoff">Handoff</a>
+  <a href="#faq">FAQ</a>
+</nav>
+
+<header class="hero">
+  <div>
+    <span class="badge">Epic 42</span>
+    <span class="badge">42-public-home-ux</span>
+    <span class="badge">MariaDB · WordPress (unified) · Custom Plugins</span>
+    <span class="badge">living summary</span>
+  </div>
+  <h1>Public home: a distinctive workshop landing</h1>
+  <p>This page is a study guide for the epic. Tickets must show <strong>this work’s</strong> compact code, commands, and results — not the same glossary copied from every other summary. Dark windows are artifacts to study.</p>
+  <p class="small" style="opacity:.85;">Slug <code>public-home-ux</code> · 0/1 in summarize · Generated 2026-11-11T03:16:53.133Z · active work <strong>1m 1s</strong> (elapsed 1m 1s)</p>
+</header>
+
+<div class="card ok" id="time">
+  <strong>Active work time</strong>
+  <p>Counted only while the board sees work. Waiting for a Run / Approve click, overnight, or parked-in-done time is not included.</p>
+  <ul>
+    <li>Active (calendar of working windows): <strong>1m 1s</strong></li>
+    <li>Agent effort (sum of tickets): <strong>1m 1s</strong></li>
+    <li>Elapsed wall (first work → last event): <strong>1m 1s</strong></li>
+  </ul>
+  <p class="small">Started 2026-11-11T03:15:51.487Z · idle gap 3 min</p>
+</div>
+
+<div class="card beginner" id="for-whom">
+  <strong>Who this is for</strong>
+  <p>This is one WordPress site (web/), not a multi-app monorepo. DI/SOLID live inside the custom plugin under wp-content/plugins.</p>
+</div>
+
+<div class="card note" id="how">
+  <strong>How to read this page</strong>
+  <ul><li>Read Basic concepts (unified WP tree + plugin layers + security).</li>
+<li>Open What was built: SQL/dbDelta, repository, service, REST/admin, security checks.</li>
+<li>Walk the checklist as numbered steps.</li></ul>
+</div>
+
+<div class="card" id="toc">
+  <h3 style="margin-top:0">Index</h3>
+  <div class="toc">
+    <a href="#for-whom">Who this is for</a>
+    <a href="#concepts">Basic concepts</a>
+    <a href="#board">Board flow</a>
+    <a href="#layers">Stack layers</a>
+    <a href="#time">Active time</a>
+    <a href="#log">Epic work log</a>
+    <a href="#tickets">Tickets (sections)</a>
+    <a href="#APP-42-1">APP-42-1 — Plugin: reseed and restyle the public home and about pages <span class="small">(doing)</span></a>
+    <a href="#handoff">Git command + Supervisor / Manager</a>
+    <a href="#faq">FAQ for beginners</a>
+    <a href="#file">Where this file lives</a>
+  </div>
+</div>
+
+<h2 id="concepts">Basic concepts (read once)</h2>
+<div class="card beginner">
+<p><strong>Unified WordPress tree</strong> — Like a real WP/DDEV project: web/ is the docroot. Custom code lives in wp-content/plugins and mu-plugins — not in numbered 0/1/2 app folders.</p>
+<p><strong>Plugin architecture</strong> — Inside the plugin only: Contracts → Repositories ($wpdb) → Services → Controllers with constructor DI.</p>
+<p><strong>Native only</strong> — hooks/filters, REST API, $wpdb/dbDelta, capabilities, nonces, sanitize/escape, WP-CLI, Composer PSR-4.</p>
+<p><strong>GATE_HTTP</strong> — REST/admin smoke proves the contract before dependents proceed.</p>
+<p><strong>Worktrees</strong> — After every claim, isolate with node .ai/scripts/worktree-add.mjs &lt;ISSUE_ID&gt;.</p>
+</div>
+
+<h2 id="board">Board flow</h2>
+<div class="card">
+  <div class="diagram">backlog — waiting
+  → doing — implement
+  → testing — verify + flags
+  → done — park until epic complete
+  → summarize — handoff wrap-up</div>
+  <p class="small">This page refreshes on claim, checklist, fail, and every column move (including testing → doing). Epic % is column + checklist and reaches 100% when every issue is in <code>summarize</code> with its checklist complete.</p>
+</div>
+
+<h2 id="layers">Stack layers (this harness)</h2>
+<div class="table-scroll">
+<table>
+  <tr><th>Layer / path</th><th>Why it exists</th></tr>
+  <tr><td><code>web/</code></td><td>WordPress docroot (core mostly gitignored).</td></tr>
+<tr><td><code>web/wp-content/plugins/&lt;module_name&gt;/</code></td><td>Custom plugin (OOP DI SOLID). Role: plugin.</td></tr>
+<tr><td><code>web/wp-content/mu-plugins/</code></td><td>Always-on hardening. Role: security.</td></tr>
+<tr><td><code>docs/database/ · docs/diagrams/</code></td><td>Optional SQL/DBML/PlantUML twins — documentation, not separate apps.</td></tr>
+<tr><td><code>.linear/</code></td><td>Private board + worktree helpers.</td></tr>
+<tr><td><code>.docs/journey/</code></td><td>Epic narrative.</td></tr>
+</table>
+</div>
+<p class="small">Do not recreate Spring-style 0.database/1.backend/2.frontend. Keep one WP project; put architecture inside the plugin.</p>
+
+<h2 id="log">Epic work log</h2>
+<div class="card">
+  <p class="small">Board-wide timeline (same events as <code>board/_history/log.jsonl</code>). Returns to an earlier column are marked.</p>
+  <ul>
+<li class=""><code>2026-11-11T03:14:10.602Z</code> create APP-42-1</li>
+<li class=""><code>2026-11-11T03:15:51.485Z</code> APP-42-1 claimed by plugin-agent-42</li>
+<li class=""><code>2026-11-11T03:16:52.975Z</code> checklist APP-42-1</li>
+<li class=""><code>2026-11-11T03:16:53.124Z</code> evidence APP-42-1</li>
+  </ul>
+</div>
+
+<hr>
+
+<h2 id="tickets">Tickets (sections)</h2>
+<p class="small">Every ticket in this epic — not only those already in <code>summarize</code>.</p>
+
+<section class="ticket" id="APP-42-1">
+  <h2>APP-42-1 — Plugin: reseed and restyle the public home and about pages</h2>
+  <p><span class="pill" style="background:var(--copper600)">column:doing</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span> · agent <code>plugin-agent-42</code> · active <strong>1m 1s</strong></p>
+  <p class="small">Work folder (required after claim): <code>.worktrees/42-public-home-ux/APP-42-1</code> · ticket branch <code>ticket/42-public-home-ux/APP-42-1</code> · ships on <code>feature/42-public-home-ux</code> after integrate (one push).</p>
+
+  <h3>Goal</h3>
+  <div class="card ok">
+    <p>Plugin: reseed and restyle the public home and about pages</p>
+    <p class="small">Checklist progress: <strong>1/3</strong>.</p>
+  </div>
+
+  <h3>Role</h3>
+  <div class="card note">
+    <p>Owns web/wp-content/plugins/&lt;module&gt;/.</p>
+  </div>
+
+  <h3>Checklist</h3>
+  <div class="card">
+    <ul class="checklist">
+<li class=""><strong>Step 1.</strong> Native-first: Home and About stay WordPress pages. Design is seeded HTML plus front.css</li>
+<li class="pending"><strong>Step 2.</strong> Bump the public seed to v4 and restyle the landing so it no longer reads as one generic card <span class="pill">pending</span></li>
+<li class="pending"><strong>Step 3.</strong> Verify locally (in testing — after `move testing`) <span class="pill">pending</span></li>
+    </ul>
+  </div>
+
+  <h3>What was built (this ticket)</h3>
+  <div class="card ok beginner">
+  <p class="small">Windows this role should include:</p><ul><li>Contract</li>
+<li>Repository ($wpdb)</li>
+<li>Service</li>
+<li>REST/Admin controller</li>
+<li>DI provider</li>
+<li>HTTP result</li></ul>
+  <p>Layer artifacts for the living HTML (code, commands, results). Compact windows — not the whole file. After each checklist item: `evidence &lt;id&gt; --title …`.</p>
+<p>### Native pages and front.css</p>
+<span class="filepath">text</span><pre><code>upsert_page() uses wp_insert_post / wp_update_post as post_type page. show_on_front + page_on_front. CSS: AdminAssets enqueues assets/css/front.css on body.workshop-ledger-front. No page builder, theme, custom table, web font, or JS framework.</code></pre>
+<p>Ran:</p>
+<span class="filepath">bash</span><pre><code>rg -n &quot;front.css|PublicSiteSeed::maybe_run|wp_insert_post&quot; web/wp-content/plugins/workshop-ledger/src</code></pre>
+<p>Result:</p>
+<span class="filepath">text</span><pre><code>Home and About stay WordPress pages. Seeded post content. Existing front.css. Plugin::boot already calls maybe_run.</code></pre>
+</div>
+
+  <h3>Board history</h3>
+  <div class="card">
+    <p class="small">Forward moves, checklist marks, and returns (for example testing → doing when verification fails) all stay here. This is not a substitute for the code windows above.</p>
+    <ul>
+<li class=""><code>2026-11-11T03:16:52.973Z checklist item 1 marked</code></li>
+<li class=""><code>2026-11-11T03:15:51.484Z claimed by plugin-agent-42 → doing</code></li>
+<li class=""><code>2026-11-11T03:14:10.600Z created → backlog</code></li>
+    </ul>
+  </div>
+
+  <h3>How you can verify this ticket</h3>
+  <div class="card step">
+    <ul>
+<li>Contracts → Repository → Service → Controller order inside the plugin.</li>
+<li>health 200; protected routes 401 anonymous; authenticated 2xx.</li>
+    </ul>
+    <span class="filepath">copy-paste</span><pre><code>ddev wp plugin activate harness-plugin</code></pre>
+<span class="filepath">copy-paste</span><pre><code>curl -sk https://harness-wp.ddev.site/wp-json/harness/v1/health</code></pre>
+<span class="filepath">copy-paste</span><pre><code>ddev composer install</code></pre>
+  </div>
+</section>
+
+<h2 id="handoff">Git command + Supervisor / Manager</h2>
+<p class="small">Recorded on the board at wrap-up so the SUMMARIZE column tracks the same git line and note the agent proposed.</p>
+<div class="card warn">
+  <p>The Supervisor / Manager note is not on the board yet. When every ticket is in <code>summarize</code>, record it so this page can track the epic:</p>
+  <pre><code>node scripts/board.mjs handoff 42 --git &quot;cd .worktrees/42-public-home-ux/_epic &amp;&amp; git push -u origin feature/42-public-home-ux&quot; --note-file summaries/handoff-note.txt</code></pre>
+  <p class="small">Until then, the suggested git line is:</p>
+  <pre><code>cd .worktrees/42-public-home-ux/_epic &amp;&amp; git push -u origin feature/42-public-home-ux</code></pre>
+</div>
+
+<h2 id="faq">FAQ for beginners</h2>
+<div class="card">
+  <dl class="faq">
+<dt>Why no 0.database / 1.plugin folders?</dt><dd>Those mimic a multi-app Spring harness. A real WordPress site is one docroot with plugins inside wp-content.</dd>
+<dt>Where does DI/SOLID live?</dt><dd>Inside the custom plugin under web/wp-content/plugins/&lt;module&gt;/src/.</dd>
+<dt>Is Composer allowed?</dt><dd>Yes for PSR-4 and WPCS/PHPUnit — not for Laravel/Doctrine app frameworks.</dd>
+  </dl>
+</div>
+
+<h2 id="file">Where this file lives</h2>
+<div class="card note">
+  <p>Board path (relative to the private.board root):</p>
+  <pre><code>epics/42-public-home-ux/summaries/42-public-home-ux-beginner.html</code></pre>
+  <p class="small">Refreshes on board moves. Wrap-up: <code>node scripts/board.mjs handoff 42 --git "…" --note-file …</code> then <code>summarize-epic 42</code>.</p>
+</div>
+
+</div>
+</body>
+</html>

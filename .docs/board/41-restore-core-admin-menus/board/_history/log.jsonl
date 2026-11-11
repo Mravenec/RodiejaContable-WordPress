@@ -1,0 +1,10 @@
+{"at":"2026-11-11T03:14:10.120Z","type":"create","issueId":"APP-41-1","column":"backlog"}
+{"at":"2026-11-11T03:14:10.337Z","type":"create","issueId":"APP-41-2","column":"backlog"}
+{"at":"2026-11-11T03:15:44.711Z","type":"claim","issueId":"APP-41-1","agent":"plugin-agent-41"}
+{"at":"2026-11-11T03:15:56.114Z","type":"checklist","issueId":"APP-41-1","item":"1"}
+{"at":"2026-11-11T03:15:56.755Z","type":"evidence","issueId":"APP-41-1","title":"Native-first: core admin_menu and menu_order"}
+{"at":"2026-11-11T03:16:34.098Z","type":"checklist","issueId":"APP-41-1","item":"2"}
+{"at":"2026-11-11T03:16:34.204Z","type":"evidence","issueId":"APP-41-1","title":"Restore core menus under product slugs"}
+{"at":"2026-11-11T03:16:37.368Z","type":"move","issueId":"APP-41-1","from":"doing","to":"testing"}
+{"at":"2026-11-11T03:17:04.044Z","type":"checklist","issueId":"APP-41-1","item":"3"}
+{"at":"2026-11-11T03:17:04.170Z","type":"evidence","issueId":"APP-41-1","title":"Verify AdminChrome syntax and menu order"}

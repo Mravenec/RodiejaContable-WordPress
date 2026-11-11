@@ -1,0 +1,25 @@
+{
+  "idle_ms": 180000,
+  "started_at": "2026-11-11T03:15:44.713Z",
+  "finished_at": null,
+  "issues": {
+    "APP-41-1": {
+      "active_ms": 0,
+      "paused": false,
+      "open": {
+        "start": "2026-11-11T03:15:44.713Z",
+        "last": "2026-11-11T03:17:04.170Z",
+        "agent": "plugin-agent-41",
+        "event": "evidence"
+      },
+      "segments": []
+    }
+  },
+  "land": {
+    "started_at": null,
+    "finished_at": null,
+    "paused": false,
+    "open": null,
+    "segments": []
+  }
+}
