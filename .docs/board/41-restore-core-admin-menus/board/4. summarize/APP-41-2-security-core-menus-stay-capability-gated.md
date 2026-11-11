@@ -10,6 +10,7 @@ blocked_by:
 blocks: []
 agent: plugin-agent-41
 claimed_at: "2026-11-11T03:19:23.996Z"
+summary_html: summaries/41-restore-core-admin-menus-beginner.html
 ---
 ## Objetivo
 
@@ -74,6 +75,8 @@ Both PHP files lint clean. activate_plugins, manage_options, switch_themes, and 
 
 ## History
 
+- 2026-11-11T03:32:02.438Z epic summary HTML → summaries/41-restore-core-admin-menus-beginner.html
+- 2026-11-11T03:32:02.427Z moved done → summarize
 - 2026-11-11T03:20:25.329Z moved testing → done
 - 2026-11-11T03:20:10.820Z checklist item 2 marked
 - 2026-11-11T03:19:56.012Z moved doing → testing

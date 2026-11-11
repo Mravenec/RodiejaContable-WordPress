@@ -1,6 +1,6 @@
 # Epic 41 — restore-core-admin-menus
 
-**Status:** In progress · Board: `.linear/epics/41-restore-core-admin-menus/`
+**Status:** Landed on main · Board: `.linear/epics/41-restore-core-admin-menus/`
 
 ## Title
 
@@ -50,3 +50,14 @@ Administrator sidebar includes Plugins under the product block. Accountant still
 ## Outcome
 
 (Filled when the epic lands on origin/main.)
+
+
+## Land on main
+
+- Merge commit: `8246081943285fe37e78892b827b1c28fad38312`
+- Branch: `feature/41-restore-core-admin-menus` → `main`
+
+### Supervisor / Manager (land)
+
+Core WordPress menus now sit under the Workshop Ledger menu, including Plugins. An administrator sees Dashboard, Posts, Media, Pages, Comments, Appearance, Plugins, Users, Tools, and Settings below the product block. A workshop accountant still cannot open Plugins, Appearance, or Settings.
+

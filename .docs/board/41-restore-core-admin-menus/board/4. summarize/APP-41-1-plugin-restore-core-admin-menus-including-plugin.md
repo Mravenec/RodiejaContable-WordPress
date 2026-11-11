@@ -9,6 +9,7 @@ blocked_by: []
 blocks: []
 agent: plugin-agent-41
 claimed_at: "2026-11-11T03:15:44.706Z"
+summary_html: summaries/41-restore-core-admin-menus-beginner.html
 ---
 ## Objetivo
 
@@ -102,6 +103,8 @@ php -l: no syntax errors. remove_menu_page absent. layer-audit ok true, violatio
 
 ## History
 
+- 2026-11-11T03:32:02.330Z epic summary HTML → summaries/41-restore-core-admin-menus-beginner.html
+- 2026-11-11T03:32:02.317Z moved done → summarize
 - 2026-11-11T03:19:13.812Z moved testing → done
 - 2026-11-11T03:17:04.043Z checklist item 3 marked
 - 2026-11-11T03:16:37.366Z moved doing → testing

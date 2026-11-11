@@ -1,0 +1,13 @@
+{
+  "status": "landed",
+  "started_at": "2026-11-11T04:42:56.675Z",
+  "finished_at": "2026-11-11T04:44:14.207Z",
+  "merge_commit": "8246081943285fe37e78892b827b1c28fad38312",
+  "conflicts": [],
+  "smoke_ok": true,
+  "smoke_at": "2026-11-11T04:44:12.018Z",
+  "git": "git push origin main",
+  "note": "Core WordPress menus now sit under the Workshop Ledger menu, including Plugins. An administrator sees Dashboard, Posts, Media, Pages, Comments, Appearance, Plugins, Users, Tools, and Settings below the product block. A workshop accountant still cannot open Plugins, Appearance, or Settings.",
+  "recorded_at": "2026-11-11T04:44:12.082Z",
+  "pushed_at": "2026-11-11T04:44:14.207Z"
+}
