@@ -18,15 +18,18 @@
       ]
     },
     "APP-43-2": {
-      "active_ms": 0,
+      "active_ms": 43038,
       "paused": false,
-      "open": {
-        "start": "2026-11-11T03:41:11.516Z",
-        "last": "2026-11-11T03:41:39.283Z",
-        "agent": "plugin-agent-43",
-        "event": "evidence"
-      },
-      "segments": []
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-11T03:41:11.516Z",
+          "end": "2026-11-11T03:41:54.554Z",
+          "ms": 43038,
+          "close": "done",
+          "agent": "plugin-agent-43"
+        }
+      ]
     }
   },
   "land": {

@@ -15,3 +15,4 @@
 {"at":"2026-11-11T03:41:26.572Z","type":"move","issueId":"APP-43-2","from":"doing","to":"testing"}
 {"at":"2026-11-11T03:41:39.198Z","type":"checklist","issueId":"APP-43-2","item":"2"}
 {"at":"2026-11-11T03:41:39.282Z","type":"evidence","issueId":"APP-43-2","title":"php -l and layer-audit"}
+{"at":"2026-11-11T03:41:54.553Z","type":"move","issueId":"APP-43-2","from":"testing","to":"done"}

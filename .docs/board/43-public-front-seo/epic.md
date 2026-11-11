@@ -5,7 +5,7 @@
 | Id | 43 |
 | Slug | public-front-seo |
 | Status | in_progress |
-| Progress | **76%** (0/2 in summarize · column + checklist) |
+| Progress | **84%** (0/2 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -31,11 +31,12 @@ _empty_
 
 ### 2. testing
 
-- `APP-43-2` Security: escape public SEO head output _(role:security)_
+_empty_
 
 ### 3. done
 
 - `APP-43-1` Plugin: native title, description, canonical, Open Graph, and JSON-LD _(role:plugin)_
+- `APP-43-2` Security: escape public SEO head output _(role:security)_
 
 ### 4. summarize
 

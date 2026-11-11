@@ -66,6 +66,7 @@ No syntax errors detected. layer-audit ok true, violations [].
 
 ## History
 
+- 2026-11-11T03:41:54.551Z moved testing → done
 - 2026-11-11T03:41:39.197Z checklist item 2 marked
 - 2026-11-11T03:41:26.571Z moved doing → testing
 - 2026-11-11T03:41:24.603Z checklist item 1 marked
