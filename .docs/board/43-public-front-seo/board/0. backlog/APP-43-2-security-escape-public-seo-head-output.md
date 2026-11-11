@@ -1,24 +1,24 @@
 ---
-id: APP-41-2
-title: "Security: core menus stay capability-gated"
+id: APP-43-2
+title: "Security: escape public SEO head output"
 role: security
-epic: 41
+epic: 43
 estimate: 1
 blocked_by:
-  - APP-41-1
+  - APP-43-1
 blocks: []
 agent: null
 claimed_at: null
 ---
 ## Objetivo
 
-Security: core menus stay capability-gated
+Security: escape public SEO head output
 
 ## Checklist
 
 Mark in order, one `checklist <id> n` command per item, immediately after that step is finished.
 
-- [ ] Confirm workshop_accountant still lacks activate_plugins and manage_options
+- [ ] Implement
 - [ ] Verify locally (in testing — after `move testing`)
 
 ## Evidence
@@ -27,4 +27,4 @@ Layer artifacts for the living HTML (code, commands, results). Compact windows �
 
 ## History
 
-- 2026-11-11T03:14:10.335Z created → backlog
+- 2026-11-11T03:14:10.986Z created → backlog

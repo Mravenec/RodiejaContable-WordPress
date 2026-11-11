@@ -5,7 +5,7 @@
 | Id | 41 |
 | Slug | restore-core-admin-menus |
 | Status | in_progress |
-| Progress | **35%** (0/2 in summarize · column + checklist) |
+| Progress | **84%** (0/2 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -23,7 +23,7 @@ This folder is the **operational** board (claims, checklist, %). There is no `.a
 
 ### 0. backlog
 
-- `APP-41-2` Security: core menus stay capability-gated _(role:security)_
+_empty_
 
 ### 1. doing
 
@@ -31,11 +31,12 @@ _empty_
 
 ### 2. testing
 
-- `APP-41-1` Plugin: restore core admin menus, including Plugins, under the product menu _(role:plugin)_
+_empty_
 
 ### 3. done
 
-_empty_
+- `APP-41-1` Plugin: restore core admin menus, including Plugins, under the product menu _(role:plugin)_
+- `APP-41-2` Security: core menus stay capability-gated _(role:security)_
 
 ### 4. summarize
 

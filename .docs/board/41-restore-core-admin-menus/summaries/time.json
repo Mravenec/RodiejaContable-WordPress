@@ -4,15 +4,32 @@
   "finished_at": null,
   "issues": {
     "APP-41-1": {
-      "active_ms": 0,
+      "active_ms": 209101,
       "paused": false,
-      "open": {
-        "start": "2026-11-11T03:15:44.713Z",
-        "last": "2026-11-11T03:17:04.170Z",
-        "agent": "plugin-agent-41",
-        "event": "evidence"
-      },
-      "segments": []
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-11T03:15:44.713Z",
+          "end": "2026-11-11T03:19:13.814Z",
+          "ms": 209101,
+          "close": "done",
+          "agent": "plugin-agent-41"
+        }
+      ]
+    },
+    "APP-41-2": {
+      "active_ms": 61328,
+      "paused": false,
+      "open": null,
+      "segments": [
+        {
+          "start": "2026-11-11T03:19:24.004Z",
+          "end": "2026-11-11T03:20:25.332Z",
+          "ms": 61328,
+          "close": "done",
+          "agent": "plugin-agent-41"
+        }
+      ]
     }
   },
   "land": {
