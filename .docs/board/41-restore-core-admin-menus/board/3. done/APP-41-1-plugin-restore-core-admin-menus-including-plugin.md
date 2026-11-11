@@ -1,4 +1,5 @@
 ---
+tests_ok: true
 id: APP-41-1
 title: "Plugin: restore core admin menus, including Plugins, under the product menu"
 role: plugin
@@ -101,6 +102,7 @@ php -l: no syntax errors. remove_menu_page absent. layer-audit ok true, violatio
 
 ## History
 
+- 2026-11-11T03:19:13.812Z moved testing → done
 - 2026-11-11T03:17:04.043Z checklist item 3 marked
 - 2026-11-11T03:16:37.366Z moved doing → testing
 - 2026-11-11T03:16:34.097Z checklist item 2 marked
