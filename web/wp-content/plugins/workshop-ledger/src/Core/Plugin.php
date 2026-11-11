@@ -50,6 +50,7 @@ use WorkshopLedger\Controllers\Rest\PedidoController;
 use WorkshopLedger\Front\FooterBrandNav;
 use WorkshopLedger\Front\HeaderAuthLinks;
 use WorkshopLedger\Front\LoginChrome;
+use WorkshopLedger\Front\PublicSeo;
 use WorkshopLedger\Meta\MetaRegistrar;
 use WorkshopLedger\PostTypes\PostTypeRegistrar;
 use WorkshopLedger\Providers\ServiceProvider;
@@ -93,6 +94,7 @@ final class Plugin {
 		$this->container->get( ClassicEditorForce::class )->register();
 		$this->container->get( CptListChrome::class )->register();
 		$this->container->get( HeaderAuthLinks::class )->register();
+		$this->container->get( PublicSeo::class )->register();
 		$this->container->get( FooterBrandNav::class )->register();
 		$this->container->get( LoginChrome::class )->register();
 		$this->container->get( AdminMenu::class )->register();

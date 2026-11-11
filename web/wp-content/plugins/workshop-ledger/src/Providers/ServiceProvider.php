@@ -56,6 +56,7 @@ use WorkshopLedger\Core\Container;
 use WorkshopLedger\Front\FooterBrandNav;
 use WorkshopLedger\Front\HeaderAuthLinks;
 use WorkshopLedger\Front\LoginChrome;
+use WorkshopLedger\Front\PublicSeo;
 use WorkshopLedger\Meta\MetaRegistrar;
 use WorkshopLedger\PostTypes\PostTypeRegistrar;
 use WorkshopLedger\Roles\RoleRegistrar;
@@ -116,6 +117,7 @@ final class ServiceProvider {
 			)
 		);
 		$container->set( HeaderAuthLinks::class, static fn() => new HeaderAuthLinks() );
+		$container->set( PublicSeo::class, static fn() => new PublicSeo() );
 		$container->set( FooterBrandNav::class, static fn() => new FooterBrandNav() );
 		$container->set( LoginChrome::class, static fn() => new LoginChrome() );
 
