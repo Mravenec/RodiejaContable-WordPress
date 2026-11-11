@@ -1,0 +1,10 @@
+{"at":"2026-11-11T03:14:10.808Z","type":"create","issueId":"APP-43-1","column":"backlog"}
+{"at":"2026-11-11T03:14:10.989Z","type":"create","issueId":"APP-43-2","column":"backlog"}
+{"at":"2026-11-11T03:37:44.466Z","type":"claim","issueId":"APP-43-1","agent":"plugin-agent-43"}
+{"at":"2026-11-11T03:38:30.077Z","type":"checklist","issueId":"APP-43-1","item":"1"}
+{"at":"2026-11-11T03:38:30.159Z","type":"evidence","issueId":"APP-43-1","title":"Native title, canonical, sitemap"}
+{"at":"2026-11-11T03:40:07.914Z","type":"checklist","issueId":"APP-43-1","item":"2"}
+{"at":"2026-11-11T03:40:08.005Z","type":"evidence","issueId":"APP-43-1","title":"PublicSeo registered on wp_head"}
+{"at":"2026-11-11T03:40:10.779Z","type":"move","issueId":"APP-43-1","from":"doing","to":"testing"}
+{"at":"2026-11-11T03:40:36.792Z","type":"checklist","issueId":"APP-43-1","item":"3"}
+{"at":"2026-11-11T03:40:36.877Z","type":"evidence","issueId":"APP-43-1","title":"php -l and layer-audit"}
