@@ -8,3 +8,11 @@
 {"at":"2026-11-11T03:40:10.779Z","type":"move","issueId":"APP-43-1","from":"doing","to":"testing"}
 {"at":"2026-11-11T03:40:36.792Z","type":"checklist","issueId":"APP-43-1","item":"3"}
 {"at":"2026-11-11T03:40:36.877Z","type":"evidence","issueId":"APP-43-1","title":"php -l and layer-audit"}
+{"at":"2026-11-11T03:40:51.827Z","type":"move","issueId":"APP-43-1","from":"testing","to":"done"}
+{"at":"2026-11-11T03:41:11.515Z","type":"claim","issueId":"APP-43-2","agent":"plugin-agent-43"}
+{"at":"2026-11-11T03:41:24.604Z","type":"checklist","issueId":"APP-43-2","item":"1"}
+{"at":"2026-11-11T03:41:24.692Z","type":"evidence","issueId":"APP-43-2","title":"SEO head already escaped"}
+{"at":"2026-11-11T03:41:26.572Z","type":"move","issueId":"APP-43-2","from":"doing","to":"testing"}
+{"at":"2026-11-11T03:41:39.198Z","type":"checklist","issueId":"APP-43-2","item":"2"}
+{"at":"2026-11-11T03:41:39.282Z","type":"evidence","issueId":"APP-43-2","title":"php -l and layer-audit"}
+{"at":"2026-11-11T03:41:54.553Z","type":"move","issueId":"APP-43-2","from":"testing","to":"done"}
