@@ -5,7 +5,7 @@
 | Id | 43 |
 | Slug | public-front-seo |
 | Status | in_progress |
-| Progress | **35%** (0/2 in summarize · column + checklist) |
+| Progress | **76%** (0/2 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -23,7 +23,7 @@ This folder is the **operational** board (claims, checklist, %). There is no `.a
 
 ### 0. backlog
 
-- `APP-43-2` Security: escape public SEO head output _(role:security)_
+_empty_
 
 ### 1. doing
 
@@ -31,11 +31,11 @@ _empty_
 
 ### 2. testing
 
-- `APP-43-1` Plugin: native title, description, canonical, Open Graph, and JSON-LD _(role:plugin)_
+- `APP-43-2` Security: escape public SEO head output _(role:security)_
 
 ### 3. done
 
-_empty_
+- `APP-43-1` Plugin: native title, description, canonical, Open Graph, and JSON-LD _(role:plugin)_
 
 ### 4. summarize
 
