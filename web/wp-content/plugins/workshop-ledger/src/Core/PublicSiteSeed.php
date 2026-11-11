@@ -1,6 +1,6 @@
 <?php
 /**
- * Native public site seed — Home + About (professional product copy).
+ * Native public site seed — Home + About as WordPress pages.
  *
  * @package WorkshopLedger
  */
@@ -11,7 +11,7 @@ namespace WorkshopLedger\Core;
 
 final class PublicSiteSeed {
 
-	public const OPTION_FLAG = 'wl_public_site_seeded_v3';
+	public const OPTION_FLAG = 'wl_public_site_seeded_v4';
 
 	public static function maybe_run(): void {
 		if ( get_option( self::OPTION_FLAG ) ) {
@@ -21,6 +21,7 @@ final class PublicSiteSeed {
 		update_option( self::OPTION_FLAG, gmdate( 'c' ), false );
 		delete_option( 'wl_public_site_seeded_v1' );
 		delete_option( 'wl_public_site_seeded_v2' );
+		delete_option( 'wl_public_site_seeded_v3' );
 	}
 
 	private function run(): void {
@@ -58,57 +59,78 @@ final class PublicSiteSeed {
 		return '<article class="wl-landing">'
 			. '<header class="wl-hero">'
 			. '<p class="wl-front-kicker">' . esc_html__( 'Workshop Ledger', 'workshop-ledger' ) . '</p>'
-			. '<h2 class="wl-front-lead">' . esc_html__( 'The books of a workshop, explained before you sign in.', 'workshop-ledger' ) . '</h2>'
+			. '<h2 class="wl-front-lead">' . esc_html__( 'One desk for the whole shop.', 'workshop-ledger' ) . '</h2>'
 			. '<p class="wl-front-lede">' . esc_html__(
-				'Workshop Ledger is the operations desk for a vehicle workshop: what is in the yard, what is on the shelf, what money moved, and which Audatex InPart orders are open. This page is the introduction. The daily work waits behind Login.',
+				'Vehicles in the yard, parts off the shelf, money recorded, and Audatex InPart orders that stay open until the job is done.',
 				'workshop-ledger'
 			) . '</p>'
 			. '</header>'
-			. '<section class="wl-story">'
-			. '<h3>' . esc_html__( 'Why this site exists', 'workshop-ledger' ) . '</h3>'
-			. '<p>' . esc_html__(
-				'Staff should not meet a blank form first. The public site says what the product is for. Operators then use the header to open the application and work in the four modules below.',
-				'workshop-ledger'
-			) . '</p>'
-			. '</section>'
-			. '<ol class="wl-front-modules">'
-			. '<li><span class="wl-front-module__index">01</span><span class="wl-front-module__name">' . esc_html__( 'Vehicles', 'workshop-ledger' ) . '</span>'
-			. '<span class="wl-front-module__desc">' . esc_html__( 'Catalog brands, models, generations, and the status of each vehicle.', 'workshop-ledger' ) . '</span></li>'
-			. '<li><span class="wl-front-module__index">02</span><span class="wl-front-module__name">' . esc_html__( 'Inventory', 'workshop-ledger' ) . '</span>'
-			. '<span class="wl-front-module__desc">' . esc_html__( 'Parts with price, condition, and an optional link to a vehicle.', 'workshop-ledger' ) . '</span></li>'
-			. '<li><span class="wl-front-module__index">03</span><span class="wl-front-module__name">' . esc_html__( 'Finance', 'workshop-ledger' ) . '</span>'
-			. '<span class="wl-front-module__desc">' . esc_html__( 'Income and expenses recorded with the fields the workshop actually uses.', 'workshop-ledger' ) . '</span></li>'
-			. '<li><span class="wl-front-module__index">04</span><span class="wl-front-module__name">' . esc_html__( 'Audatex InPart', 'workshop-ledger' ) . '</span>'
-			. '<span class="wl-front-module__desc">' . esc_html__( 'Orders and INS imports in the same workspace as the rest of the books.', 'workshop-ledger' ) . '</span></li>'
+			. '<section class="wl-day">'
+			. '<h2>' . esc_html__( 'A day on the floor', 'workshop-ledger' ) . '</h2>'
+			. '<ol>'
+			. '<li class="wl-day__step">'
+			. '<p class="wl-day__when">' . esc_html__( 'Morning', 'workshop-ledger' ) . '</p>'
+			. '<p class="wl-day__what">' . esc_html__( 'A vehicle arrives and is written into the yard with its brand, model, and the reason it came in.', 'workshop-ledger' ) . '</p>'
+			. '</li>'
+			. '<li class="wl-day__step">'
+			. '<p class="wl-day__when">' . esc_html__( 'Late morning', 'workshop-ledger' ) . '</p>'
+			. '<p class="wl-day__what">' . esc_html__( 'A part leaves the shelf and is tied to that vehicle, with its price and condition.', 'workshop-ledger' ) . '</p>'
+			. '</li>'
+			. '<li class="wl-day__step">'
+			. '<p class="wl-day__when">' . esc_html__( 'Afternoon', 'workshop-ledger' ) . '</p>'
+			. '<p class="wl-day__what">' . esc_html__( 'The money is recorded: income for the job, or the expense for the part.', 'workshop-ledger' ) . '</p>'
+			. '</li>'
+			. '<li class="wl-day__step">'
+			. '<p class="wl-day__when">' . esc_html__( 'Before close', 'workshop-ledger' ) . '</p>'
+			. '<p class="wl-day__what">' . esc_html__( 'The Audatex InPart order stays open in the same books until the parts and the paperwork match.', 'workshop-ledger' ) . '</p>'
+			. '</li>'
 			. '</ol>'
-			. '<p class="wl-front-note">' . esc_html__(
-				'When you are ready, use Login in the header. There is no form on this page.',
-				'workshop-ledger'
-			) . '</p>'
+			. '</section>'
+			. '<section class="wl-modules">'
+			. '<h2>' . esc_html__( 'What opens after login', 'workshop-ledger' ) . '</h2>'
+			. '<article class="wl-module">'
+			. '<p class="wl-module__index">' . esc_html__( '01', 'workshop-ledger' ) . '</p>'
+			. '<h3 class="wl-module__name">' . esc_html__( 'Vehicles', 'workshop-ledger' ) . '</h3>'
+			. '<p class="wl-module__line">' . esc_html__( 'Open a vehicle and see its brand, model, generation, and whether it is still on the floor.', 'workshop-ledger' ) . '</p>'
+			. '</article>'
+			. '<article class="wl-module">'
+			. '<p class="wl-module__index">' . esc_html__( '02', 'workshop-ledger' ) . '</p>'
+			. '<h3 class="wl-module__name">' . esc_html__( 'Inventory', 'workshop-ledger' ) . '</h3>'
+			. '<p class="wl-module__line">' . esc_html__( 'See which part left the shelf, what it costs, and which vehicle it belongs to.', 'workshop-ledger' ) . '</p>'
+			. '</article>'
+			. '<article class="wl-module">'
+			. '<p class="wl-module__index">' . esc_html__( '03', 'workshop-ledger' ) . '</p>'
+			. '<h3 class="wl-module__name">' . esc_html__( 'Finance', 'workshop-ledger' ) . '</h3>'
+			. '<p class="wl-module__line">' . esc_html__( 'Record income and expenses with the fields the workshop actually uses.', 'workshop-ledger' ) . '</p>'
+			. '</article>'
+			. '<article class="wl-module">'
+			. '<p class="wl-module__index">' . esc_html__( '04', 'workshop-ledger' ) . '</p>'
+			. '<h3 class="wl-module__name">' . esc_html__( 'Audatex InPart', 'workshop-ledger' ) . '</h3>'
+			. '<p class="wl-module__line">' . esc_html__( 'Keep the order and the INS import visible until the job is closed.', 'workshop-ledger' ) . '</p>'
+			. '</article>'
+			. '</section>'
+			. '<p class="wl-front-note">' . esc_html__( 'Login stays in the header. There is no form on this page.', 'workshop-ledger' ) . '</p>'
 			. '</article>';
 	}
 
 	private function about_html(): string {
 		return '<article class="wl-landing">'
 			. '<header class="wl-hero">'
-			. '<p class="wl-front-kicker">' . esc_html__( 'About the product', 'workshop-ledger' ) . '</p>'
-			. '<h2 class="wl-front-lead">' . esc_html__( 'A workshop desk your staff can learn in a day.', 'workshop-ledger' ) . '</h2>'
+			. '<p class="wl-front-kicker">' . esc_html__( 'Workshop Ledger', 'workshop-ledger' ) . '</p>'
+			. '<h2 class="wl-front-lead">' . esc_html__( 'Accounts for the people who run the shop.', 'workshop-ledger' ) . '</h2>'
 			. '<p class="wl-front-lede">' . esc_html__(
-				'Workshop Ledger keeps the vehicle catalog, parts inventory, finance, and Audatex InPart orders in one WordPress application. The public pages introduce that desk. The work itself happens after Login.',
+				'Workshop Ledger is the desk for vehicles, parts, finance, and Audatex InPart orders.',
 				'workshop-ledger'
 			) . '</p>'
 			. '</header>'
-			. '<section class="wl-story">'
-			. '<h3>' . esc_html__( 'How a visit goes', 'workshop-ledger' ) . '</h3>'
+			. '<section class="wl-audience">'
+			. '<h2>' . esc_html__( 'Who it is for', 'workshop-ledger' ) . '</h2>'
 			. '<p>' . esc_html__(
-				'Read what the four modules cover. Ask an administrator for an account. Sign in from the header and open the application. Screens stay consistent so the books stay readable when the shop is busy.',
+				'Workshop staff record the vehicle, the part, the money, and the Audatex InPart order. The administrator is the person who issues those accounts.',
 				'workshop-ledger'
 			) . '</p>'
 			. '</section>'
-			. '<p class="wl-front-note">' . esc_html__(
-				'Need an account? Ask your administrator, then use Login in the header.',
-				'workshop-ledger'
-			) . '</p>'
+			. '<p class="wl-front-note">' . esc_html__( 'Login stays in the header. There is no form on this page.', 'workshop-ledger' ) . '</p>'
 			. '</article>';
 	}
 

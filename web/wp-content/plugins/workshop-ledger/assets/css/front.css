@@ -69,11 +69,11 @@ body.workshop-ledger-front .wp-block-site-title {
 	letter-spacing: -0.01em;
 }
 
-/* Content canvas */
+/* Content canvas — ink stays dark on the paper */
 body.workshop-ledger-front main,
 body.workshop-ledger-front .wp-block-post-content,
 body.workshop-ledger-front .wp-block-query {
-	color: var(--wl-ink);
+	color: var(--wl-ink-strong);
 }
 
 /* Page title is redundant next to the branded lead — keep for a11y */
@@ -90,17 +90,17 @@ body.workshop-ledger-front.page-template-default .wp-block-post-title {
 	border: 0;
 }
 
-/* Public landing — own composition. Admin chrome keeps the Ant tokens. */
+/* Public landing sits on the paper. It is not one bordered card. */
 body.workshop-ledger-front .wl-landing {
 	max-width: 68rem;
-	margin: 1.5rem auto 3rem;
-	padding: 0 1.25rem 2rem;
+	margin: 1.25rem auto 4rem;
+	padding: 0 1.25rem 1rem;
+	color: var(--wl-ink-strong);
 }
 
 body.workshop-ledger-front .wl-hero {
 	position: relative;
-	padding: 2.75rem 0 2rem;
-	border-bottom: 1px solid rgba(28, 25, 21, 0.12);
+	padding: 2.5rem 0 0;
 }
 
 body.workshop-ledger-front .wl-hero::before {
@@ -114,7 +114,7 @@ body.workshop-ledger-front .wl-hero::before {
 }
 
 body.workshop-ledger-front .wl-front-kicker {
-	margin: 0.85rem 0 0.75rem;
+	margin: 0.85rem 0 0.85rem;
 	font-size: 0.75rem;
 	font-weight: 700;
 	letter-spacing: 0.16em;
@@ -123,100 +123,212 @@ body.workshop-ledger-front .wl-front-kicker {
 }
 
 body.workshop-ledger-front .wl-front-lead {
-	max-width: 18ch;
-	margin: 0 0 1rem;
-	font-size: clamp(2.1rem, 4.6vw, 3.4rem);
+	max-width: 16ch;
+	margin: 0 0 1.15rem;
+	font-size: clamp(2.25rem, 5vw, 3.6rem);
 	font-weight: 650;
-	line-height: 1.05;
-	letter-spacing: -0.035em;
+	line-height: 0.98;
+	letter-spacing: -0.04em;
 	color: var(--wl-ink-strong);
 }
 
 body.workshop-ledger-front .wl-front-lede {
-	max-width: 42rem;
-	margin: 0;
-	font-size: 1.12rem;
-	line-height: 1.6;
-	color: rgba(28, 25, 21, 0.78);
-}
-
-body.workshop-ledger-front .wl-story {
-	display: grid;
-	gap: 0.65rem;
-	max-width: 40rem;
-	margin: 2rem 0 0;
-	padding: 1.25rem 0 0.25rem 1.25rem;
-	border-left: 3px solid var(--wl-navy);
-}
-
-body.workshop-ledger-front .wl-story h3 {
+	max-width: 38rem;
 	margin: 0;
 	font-size: 1.05rem;
+	line-height: 1.6;
+	color: var(--wl-ink-strong);
+}
+
+body.workshop-ledger-front .wl-day,
+body.workshop-ledger-front .wl-modules,
+body.workshop-ledger-front .wl-audience,
+body.workshop-ledger-front .wl-front-note {
+	margin-top: 4.5rem;
+}
+
+body.workshop-ledger-front .wl-day > h2,
+body.workshop-ledger-front .wl-modules > h2,
+body.workshop-ledger-front .wl-audience > h2 {
+	margin: 0 0 1.5rem;
+	font-size: clamp(1.45rem, 2.2vw, 1.85rem);
+	font-weight: 650;
+	line-height: 1.15;
+	letter-spacing: -0.03em;
+	color: var(--wl-ink-strong);
+}
+
+/* Day sequence: a vertical rail, then a four-column row. */
+body.workshop-ledger-front .wl-day ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+body.workshop-ledger-front .wl-day__step {
+	position: relative;
+	margin: 0;
+	padding: 0 0 1.85rem 1.4rem;
+}
+
+body.workshop-ledger-front .wl-day__step::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0.4rem;
+	bottom: 0;
+	width: 1px;
+	background: rgba(138, 90, 42, 0.55);
+}
+
+body.workshop-ledger-front .wl-day__step::after {
+	content: "";
+	position: absolute;
+	left: -4px;
+	top: 0.28rem;
+	width: 9px;
+	height: 9px;
+	background: var(--wl-brass);
+}
+
+body.workshop-ledger-front .wl-day__step:last-child {
+	padding-bottom: 0;
+}
+
+body.workshop-ledger-front .wl-day__step:last-child::before {
+	bottom: auto;
+	height: 0.55rem;
+}
+
+body.workshop-ledger-front .wl-day__when {
+	margin: 0;
+	font-size: 0.78rem;
+	font-weight: 700;
+	letter-spacing: 0.14em;
+	line-height: 1.4;
+	text-transform: uppercase;
+	color: var(--wl-brass);
+}
+
+body.workshop-ledger-front .wl-day__what {
+	margin: 0.4rem 0 0;
+	max-width: 36rem;
+	font-size: 1.05rem;
+	line-height: 1.6;
+	color: var(--wl-ink-strong);
+}
+
+body.workshop-ledger-front .wl-modules {
+	display: grid;
+	gap: 1rem;
+}
+
+body.workshop-ledger-front .wl-module {
+	margin: 0;
+	padding: 1.2rem 1.25rem 1.35rem;
+	background: rgba(255, 252, 247, 0.72);
+	border: 1px solid rgba(28, 25, 21, 0.14);
+	border-radius: 8px;
+	box-shadow: none;
+}
+
+body.workshop-ledger-front .wl-module__index {
+	margin: 0 0 0.7rem;
+	font-size: 0.8rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	line-height: 1;
+	color: var(--wl-navy);
+}
+
+body.workshop-ledger-front .wl-module__name {
+	margin: 0 0 0.4rem;
+	font-size: 1.15rem;
+	font-weight: 650;
 	letter-spacing: -0.02em;
 	color: var(--wl-ink-strong);
 }
 
-body.workshop-ledger-front .wl-story p {
+body.workshop-ledger-front .wl-module__line {
 	margin: 0;
-	font-size: 1rem;
-	line-height: 1.6;
-	color: rgba(28, 25, 21, 0.75);
-}
-
-body.workshop-ledger-front .wl-front-modules {
-	list-style: none;
-	margin: 2rem 0 0;
-	padding: 0;
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 0.85rem;
-}
-
-body.workshop-ledger-front .wl-front-modules li {
-	display: grid;
-	grid-template-columns: auto 1fr;
-	grid-template-rows: auto auto;
-	column-gap: 0.85rem;
-	row-gap: 0.2rem;
-	padding: 1.1rem 1.15rem 1.15rem;
-	background: rgba(255, 252, 247, 0.9);
-	border: 1px solid rgba(28, 25, 21, 0.08);
-	border-radius: 1.25rem 0.35rem;
-	box-shadow: 0 10px 30px rgba(28, 25, 21, 0.04);
-}
-
-body.workshop-ledger-front .wl-front-module__index {
-	grid-row: 1 / span 2;
-	align-self: start;
-	font-size: 0.8rem;
-	font-weight: 700;
-	letter-spacing: 0.08em;
-	color: var(--wl-brass);
-}
-
-body.workshop-ledger-front .wl-front-module__name {
 	font-size: 1.05rem;
-	font-weight: 650;
+	line-height: 1.6;
 	color: var(--wl-ink-strong);
 }
 
-body.workshop-ledger-front .wl-front-module__desc {
-	font-size: 0.95rem;
-	line-height: 1.5;
-	color: rgba(28, 25, 21, 0.68);
+body.workshop-ledger-front .wl-audience {
+	max-width: 40rem;
+}
+
+body.workshop-ledger-front .wl-audience p {
+	margin: 0;
+	font-size: 1.05rem;
+	line-height: 1.6;
+	color: var(--wl-ink-strong);
 }
 
 body.workshop-ledger-front .wl-front-note {
-	margin: 1.75rem 0 0;
-	max-width: 36rem;
-	font-size: 0.95rem;
-	line-height: 1.55;
-	color: rgba(28, 25, 21, 0.62);
+	max-width: 38rem;
+	margin-bottom: 0;
+	font-size: 1.05rem;
+	line-height: 1.6;
+	color: var(--wl-ink-strong);
 }
 
-@media (min-width: 782px) {
-	body.workshop-ledger-front .wl-front-modules {
+@media (min-width: 720px) {
+	body.workshop-ledger-front .wl-day ol {
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		column-gap: 1.35rem;
+		padding-top: 1.5rem;
+	}
+
+	body.workshop-ledger-front .wl-day ol::before {
+		content: "";
+		position: absolute;
+		top: 0.62rem;
+		left: 0;
+		width: calc(75% + 1rem);
+		height: 1px;
+		background: rgba(138, 90, 42, 0.55);
+	}
+
+	body.workshop-ledger-front .wl-day__step,
+	body.workshop-ledger-front .wl-day__step:last-child {
+		padding: 0;
+	}
+
+	body.workshop-ledger-front .wl-day__step::after {
+		content: none;
+	}
+
+	body.workshop-ledger-front .wl-day__step::before,
+	body.workshop-ledger-front .wl-day__step:last-child::before {
+		content: "";
+		top: -1.12rem;
+		left: 0;
+		bottom: auto;
+		width: 9px;
+		height: 9px;
+		background: var(--wl-brass);
+	}
+
+	body.workshop-ledger-front .wl-day__what {
+		max-width: none;
+	}
+
+	body.workshop-ledger-front .wl-modules {
 		grid-template-columns: 1fr 1fr;
+		column-gap: 1.25rem;
+		row-gap: 1rem;
+	}
+
+	body.workshop-ledger-front .wl-modules > h2 {
+		grid-column: 1 / -1;
+		margin-bottom: 0.25rem;
 	}
 }
 
@@ -259,19 +371,14 @@ body.workshop-ledger-front button[type="submit"]:hover {
 	color: #fff !important;
 }
 
-/* Cards / groups on surface */
-body.workshop-ledger-front .wp-block-group:where(.has-background),
-body.workshop-ledger-front .wp-block-post,
+/* The theme page wrapper is not a card around the landing. */
 body.workshop-ledger-front article.wp-block-post {
-	border-radius: var(--wl-radius-lg);
-}
-
-body.workshop-ledger-front article.wp-block-post {
-	background: var(--wl-card);
-	border: 1px solid var(--wl-line);
-	box-shadow: var(--wl-shadow);
-	padding: 1.25rem 1.5rem;
-	margin-bottom: 1rem;
+	background: transparent;
+	border: 0;
+	box-shadow: none;
+	padding: 0;
+	margin: 0;
+	border-radius: 0;
 }
 
 /* Footer soft navy strip */
