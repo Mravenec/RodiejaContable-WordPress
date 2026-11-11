@@ -7,3 +7,4 @@
 {"at":"2026-11-11T03:18:37.905Z","type":"move","issueId":"APP-42-1","from":"doing","to":"testing"}
 {"at":"2026-11-11T03:20:41.065Z","type":"checklist","issueId":"APP-42-1","item":"3"}
 {"at":"2026-11-11T03:20:41.202Z","type":"evidence","issueId":"APP-42-1","title":"Seed v4 syntax and layer audit"}
+{"at":"2026-11-11T03:22:46.365Z","type":"move","issueId":"APP-42-1","from":"testing","to":"done"}

@@ -5,7 +5,7 @@
 | Id | 42 |
 | Slug | public-home-ux |
 | Status | in_progress |
-| Progress | **71%** (0/1 in summarize · column + checklist) |
+| Progress | **85%** (0/1 in summarize · column + checklist) |
 | Color | #b45309 |
 
 ## Board
@@ -31,11 +31,11 @@ _empty_
 
 ### 2. testing
 
-- `APP-42-1` Plugin: reseed and restyle the public home and about pages _(role:plugin)_
+_empty_
 
 ### 3. done
 
-_empty_
+- `APP-42-1` Plugin: reseed and restyle the public home and about pages _(role:plugin)_
 
 ### 4. summarize
 

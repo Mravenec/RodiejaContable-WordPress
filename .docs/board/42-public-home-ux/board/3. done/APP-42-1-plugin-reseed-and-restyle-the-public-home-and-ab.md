@@ -8,6 +8,7 @@ blocked_by: []
 blocks: []
 agent: plugin-agent-42
 claimed_at: "2026-11-11T03:15:51.481Z"
+tests_ok: true
 ---
 ## Objetivo
 
@@ -81,6 +82,7 @@ No syntax errors detected in /dev/stdin. layer-audit ok true, violations []. Mar
 
 ## History
 
+- 2026-11-11T03:22:46.362Z moved testing → done
 - 2026-11-11T03:20:41.064Z checklist item 3 marked
 - 2026-11-11T03:18:37.891Z moved doing → testing
 - 2026-11-11T03:18:36.145Z checklist item 2 marked
