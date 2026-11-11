@@ -74,6 +74,7 @@ Both PHP files lint clean. activate_plugins, manage_options, switch_themes, and 
 
 ## History
 
+- 2026-11-11T03:20:25.329Z moved testing → done
 - 2026-11-11T03:20:10.820Z checklist item 2 marked
 - 2026-11-11T03:19:56.012Z moved doing → testing
 - 2026-11-11T03:19:54.398Z checklist item 1 marked

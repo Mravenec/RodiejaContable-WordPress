@@ -15,3 +15,4 @@
 {"at":"2026-11-11T03:19:56.014Z","type":"move","issueId":"APP-41-2","from":"doing","to":"testing"}
 {"at":"2026-11-11T03:20:10.823Z","type":"checklist","issueId":"APP-41-2","item":"2"}
 {"at":"2026-11-11T03:20:11.031Z","type":"evidence","issueId":"APP-41-2","title":"Verify caps and menu restore"}
+{"at":"2026-11-11T03:20:25.331Z","type":"move","issueId":"APP-41-2","from":"testing","to":"done"}
