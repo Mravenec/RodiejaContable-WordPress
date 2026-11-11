@@ -138,11 +138,11 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
     <span class="badge">Epic 42</span>
     <span class="badge">42-public-home-ux</span>
     <span class="badge">MariaDB · WordPress (unified) · Custom Plugins</span>
-    <span class="badge">living summary</span>
+    <span class="badge">summarize · handoff recorded</span>
   </div>
   <h1>Public home: a distinctive workshop landing</h1>
   <p>This page is a study guide for the epic. Tickets must show <strong>this work’s</strong> compact code, commands, and results — not the same glossary copied from every other summary. Dark windows are artifacts to study.</p>
-  <p class="small" style="opacity:.85;">Slug <code>public-home-ux</code> · 0/1 in summarize · Generated 2026-11-11T03:22:46.399Z · active work <strong>6m 54s</strong> (elapsed 6m 54s)</p>
+  <p class="small" style="opacity:.85;">Slug <code>public-home-ux</code> · 1/1 in summarize · Generated 2026-11-11T03:34:27.770Z · active work <strong>6m 54s</strong> (elapsed 18m 36s)</p>
 </header>
 
 <div class="card ok" id="time">
@@ -151,9 +151,9 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
   <ul>
     <li>Active (calendar of working windows): <strong>6m 54s</strong></li>
     <li>Agent effort (sum of tickets): <strong>6m 54s</strong></li>
-    <li>Elapsed wall (first work → last event): <strong>6m 54s</strong></li>
+    <li>Elapsed wall (first work → last event / handoff): <strong>18m 36s</strong></li>
   </ul>
-  <p class="small">Started 2026-11-11T03:15:51.487Z · idle gap 3 min</p>
+  <p class="small">Started 2026-11-11T03:15:51.487Z · finished 2026-11-11T03:34:27.763Z · idle gap 3 min</p>
 </div>
 
 <div class="card beginner" id="for-whom">
@@ -178,7 +178,7 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
     <a href="#time">Active time</a>
     <a href="#log">Epic work log</a>
     <a href="#tickets">Tickets (sections)</a>
-    <a href="#APP-42-1">APP-42-1 — Plugin: reseed and restyle the public home and about pages <span class="small">(done)</span></a>
+    <a href="#APP-42-1">APP-42-1 — Plugin: reseed and restyle the public home and about pages <span class="small">(summarize)</span></a>
     <a href="#handoff">Git command + Supervisor / Manager</a>
     <a href="#faq">FAQ for beginners</a>
     <a href="#file">Where this file lives</a>
@@ -232,6 +232,8 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 <li class=""><code>2026-11-11T03:20:41.065Z</code> checklist APP-42-1</li>
 <li class=""><code>2026-11-11T03:20:41.202Z</code> evidence APP-42-1</li>
 <li class=""><code>2026-11-11T03:22:46.365Z</code> APP-42-1 testing → done</li>
+<li class=""><code>2026-11-11T03:34:27.702Z</code> APP-42-1 done → summarize</li>
+<li class=""><code>2026-11-11T03:34:27.763Z</code> Supervisor / Manager note recorded</li>
   </ul>
 </div>
 
@@ -242,7 +244,7 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 
 <section class="ticket" id="APP-42-1">
   <h2>APP-42-1 — Plugin: reseed and restyle the public home and about pages</h2>
-  <p><span class="pill" style="background:var(--copper600)">column:done</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span> · agent <code>plugin-agent-42</code> · active <strong>6m 54s</strong></p>
+  <p><span class="pill">summarize</span> <span class="badge" style="background:var(--cream100);color:var(--green900);border-color:var(--cream100)">role:plugin</span> · agent <code>plugin-agent-42</code> · active <strong>6m 54s</strong></p>
   <p class="small">Work folder (required after claim): <code>.worktrees/42-public-home-ux/APP-42-1</code> · ticket branch <code>ticket/42-public-home-ux/APP-42-1</code> · ships on <code>feature/42-public-home-ux</code> after integrate (one push).</p>
 
   <h3>Goal</h3>
@@ -298,6 +300,8 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
   <div class="card">
     <p class="small">Forward moves, checklist marks, and returns (for example testing → doing when verification fails) all stay here. This is not a substitute for the code windows above.</p>
     <ul>
+<li class=""><code>2026-11-11T03:34:27.701Z epic summary HTML → summaries/42-public-home-ux-beginner.html</code></li>
+<li class=""><code>2026-11-11T03:34:27.691Z moved done → summarize</code></li>
 <li class=""><code>2026-11-11T03:22:46.362Z moved testing → done</code></li>
 <li class=""><code>2026-11-11T03:20:41.064Z checklist item 3 marked</code></li>
 <li class=""><code>2026-11-11T03:18:37.891Z moved doing → testing</code></li>
@@ -322,12 +326,15 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 
 <h2 id="handoff">Git command + Supervisor / Manager</h2>
 <p class="small">Recorded on the board at wrap-up so the SUMMARIZE column tracks the same git line and note the agent proposed.</p>
-<div class="card warn">
-  <p>The Supervisor / Manager note is not on the board yet. When every ticket is in <code>summarize</code>, record it so this page can track the epic:</p>
-  <pre><code>node scripts/board.mjs handoff 42 --git &quot;cd .worktrees/42-public-home-ux/_epic &amp;&amp; git push -u origin feature/42-public-home-ux&quot; --note-file summaries/handoff-note.txt</code></pre>
-  <p class="small">Until then, the suggested git line is:</p>
-  <pre><code>cd .worktrees/42-public-home-ux/_epic &amp;&amp; git push -u origin feature/42-public-home-ux</code></pre>
+<div class="card ok" id="handoff-body">
+  <strong>Supervisor / Manager</strong>
+  <p>I finished epic 42 after the home ticket reached done. The public home is seeded again as WordPress page content (flag wl_public_site_seeded_v4) and restyled in front.css. The layer audit on feature/42-public-home-ux reported no violations.</p>
+<p>You can confirm it doing the following:</p>
+<p>1. Open https://workshop-ledger.ddev.site/ after this epic is on main and hard-refresh.<br>2. The page opens with a workshop headline, then &quot;A day on the floor&quot; (Morning, Late morning, Afternoon, Before close).<br>3. Under that, &quot;What opens after login&quot; shows Vehicles, Inventory, Finance, and Audatex InPart.<br>4. The page body has no form and no Sign in button. Login stays in the header.<br>5. Open https://workshop-ledger.ddev.site/about/ and confirm it uses the same header treatment and a short audience section.</p>
 </div>
+<span class="filepath">copy-paste git (proposed — human runs it)</span>
+<pre><code>cd .worktrees/42-public-home-ux/_epic &amp;&amp; git push -u origin feature/42-public-home-ux</code></pre>
+<p class="small">Recorded 2026-11-11T03:34:27.762Z</p>
 
 <h2 id="faq">FAQ for beginners</h2>
 <div class="card">
@@ -346,5 +353,18 @@ hr{border:none; border-top:1px solid var(--cream100); margin:30px 0;}
 </div>
 
 </div>
+
+<section id="land-main" class="card ok">
+  <h2>Land on main</h2>
+  <p><strong>Status:</strong> landed · merge <code>e29d7fe78548fa66d9015a619ccc9a500be88727</code></p>
+  <p><strong>Git:</strong></p>
+  <pre><code>git push origin main</code></pre>
+  <h3>Supervisor / Manager (land)</h3>
+  <div id="land-handoff-body">
+    <p>The public home is a workshop landing again. It opens with the product headline, then A day on the floor, then Vehicles, Inventory, Finance, and Audatex InPart. Login stays in the header. There is no form on the page. About uses the same header treatment.</p>
+  </div>
+  <p class="small">Recorded 2026-11-11T04:44:43.560Z</p>
+</section>
+
 </body>
 </html>

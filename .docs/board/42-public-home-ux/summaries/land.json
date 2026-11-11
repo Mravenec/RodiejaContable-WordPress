@@ -1,0 +1,13 @@
+{
+  "status": "landed",
+  "started_at": "2026-11-11T04:44:40.236Z",
+  "finished_at": "2026-11-11T04:44:43.558Z",
+  "merge_commit": "e29d7fe78548fa66d9015a619ccc9a500be88727",
+  "conflicts": [],
+  "smoke_ok": true,
+  "smoke_at": "2026-11-11T04:44:41.368Z",
+  "git": "git push origin main",
+  "note": "The public home is a workshop landing again. It opens with the product headline, then A day on the floor, then Vehicles, Inventory, Finance, and Audatex InPart. Login stays in the header. There is no form on the page. About uses the same header treatment.",
+  "recorded_at": "2026-11-11T04:44:41.431Z",
+  "pushed_at": "2026-11-11T04:44:43.558Z"
+}

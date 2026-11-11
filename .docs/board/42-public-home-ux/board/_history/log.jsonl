@@ -8,3 +8,5 @@
 {"at":"2026-11-11T03:20:41.065Z","type":"checklist","issueId":"APP-42-1","item":"3"}
 {"at":"2026-11-11T03:20:41.202Z","type":"evidence","issueId":"APP-42-1","title":"Seed v4 syntax and layer audit"}
 {"at":"2026-11-11T03:22:46.365Z","type":"move","issueId":"APP-42-1","from":"testing","to":"done"}
+{"at":"2026-11-11T03:34:27.702Z","type":"move","issueId":"APP-42-1","from":"done","to":"summarize","summary_html":"summaries/42-public-home-ux-beginner.html"}
+{"at":"2026-11-11T03:34:27.763Z","type":"handoff","git":"cd .worktrees/42-public-home-ux/_epic && git push -u origin feature/42-public-home-ux"}

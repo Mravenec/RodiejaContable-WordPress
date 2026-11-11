@@ -1,6 +1,6 @@
 # Epic 42 — public-home-ux
 
-**Status:** In progress · Board: `.linear/epics/42-public-home-ux/`
+**Status:** Landed on main · Board: `.linear/epics/42-public-home-ux/`
 
 ## Title
 
@@ -48,3 +48,14 @@ Hard-refresh `https://workshop-ledger.ddev.site/` and `/about/` after the seed f
 ## Outcome
 
 APP-42-1 is implemented on its ticket branch. The epic is not on `origin/main` yet. Land is a later step.
+
+
+## Land on main
+
+- Merge commit: `e29d7fe78548fa66d9015a619ccc9a500be88727`
+- Branch: `feature/42-public-home-ux` → `main`
+
+### Supervisor / Manager (land)
+
+The public home is a workshop landing again. It opens with the product headline, then A day on the floor, then Vehicles, Inventory, Finance, and Audatex InPart. Login stays in the header. There is no form on the page. About uses the same header treatment.
+
